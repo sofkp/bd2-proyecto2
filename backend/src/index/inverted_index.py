@@ -2,7 +2,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from backend.src.index.models import HistogramRecord, validate_histogram_record
+from backend.src.index.metrics import cosine_similarity, top_k
+from backend.src.index.models import HistogramRecord, SearchResult, validate_histogram_record
 
 
 @dataclass(frozen=True)
@@ -23,8 +24,7 @@ class InvertedIndex:
 
     def add_record(self, record: dict) -> None:
         """Add one codebook histogram record to the index."""
-        histogram_record = validate_histogram_record(record)
-        self.add_histogram(histogram_record)
+        self.add_histogram(validate_histogram_record(record))
 
     def add_histogram(self, record: HistogramRecord) -> None:
         """Index one validated text histogram."""
@@ -51,13 +51,12 @@ class InvertedIndex:
         if query.ndim != 1:
             raise ValueError("query_histogram must be a 1D array")
 
-        candidates: set[str] = set()
-        for codeword, frequency in enumerate(query):
-            if frequency > 0:
-                candidates.update(
-                    posting.chunk_id for posting in self.get_postings(codeword)
-                )
-        return candidates
+        return {
+            posting.chunk_id
+            for codeword, frequency in enumerate(query)
+            if frequency > 0
+            for posting in self.get_postings(codeword)
+        }
 
     def get_histogram(self, chunk_id: str) -> np.ndarray:
         """Return the stored histogram for a chunk."""
@@ -67,6 +66,35 @@ class InvertedIndex:
         """Return metadata stored for a chunk."""
         return self._metadata.get(chunk_id, {})
 
+    def search(self, query_histogram: np.ndarray, k: int = 10) -> list[SearchResult]:
+        """Search text chunks ranked by cosine similarity."""
+        query = self._validate_query(query_histogram)
+        candidates = self.candidate_chunk_ids(query)
+
+        ranked = top_k(
+            candidates,
+            score_fn=lambda chunk_id: cosine_similarity(
+                query, self.get_histogram(chunk_id)
+            ),
+            k=k,
+        )
+        return [
+            SearchResult(chunk_id, score, self.get_metadata(chunk_id))
+            for chunk_id, score in ranked
+            if score > 0
+        ]
+
     def __len__(self) -> int:
         """Return the number of indexed chunks."""
         return len(self._histograms)
+
+    def _validate_query(self, query_histogram: np.ndarray) -> np.ndarray:
+        query = np.asarray(query_histogram, dtype=float)
+        if query.ndim != 1:
+            raise ValueError("query_histogram must be a 1D array")
+        if not self._histograms:
+            return query
+        indexed_shape = next(iter(self._histograms.values())).shape
+        if query.shape != indexed_shape:
+            raise ValueError("query_histogram must match indexed histogram shape")
+        return query
