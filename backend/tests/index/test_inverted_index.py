@@ -62,3 +62,4 @@ def test_add_record_rejects_duplicate_chunk_id() -> None:
 
     with pytest.raises(ValueError, match="already indexed"):
         index.add_record(record)
+
