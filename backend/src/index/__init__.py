@@ -1,3 +1,4 @@
+from backend.src.index.inverted_index import InvertedIndex, Posting
 from backend.src.index.metrics import (
     cosine_similarity,
     l2_distance,
@@ -13,6 +14,8 @@ from backend.src.index.models import (
 
 __all__ = [
     "HistogramRecord",
+    "InvertedIndex",
+    "Posting",
     "SearchResult",
     "cosine_similarity",
     "format_search_results",
