@@ -1,0 +1,21 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: bd2_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-bd2}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bd2}
+      POSTGRES_DB: ${POSTGRES_DB:-bd2_proyecto2}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-bd2} -d ${POSTGRES_DB:-bd2_proyecto2}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:
