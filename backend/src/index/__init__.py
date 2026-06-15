@@ -11,12 +11,15 @@ from backend.src.index.models import (
     format_search_results,
     validate_histogram_record,
 )
+from backend.src.index.spimi import SpimiBlock, SpimiIndexer
 
 __all__ = [
     "HistogramRecord",
     "InvertedIndex",
     "Posting",
     "SearchResult",
+    "SpimiBlock",
+    "SpimiIndexer",
     "cosine_similarity",
     "format_search_results",
     "l2_distance",
