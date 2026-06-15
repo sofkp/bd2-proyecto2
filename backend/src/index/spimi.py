@@ -27,7 +27,7 @@ class SpimiBlock:
 
 
 class SpimiIndexer:
-    """Create SPIMI blocks from text codeword histograms."""
+    """Create and merge SPIMI blocks from text codeword histograms."""
 
     def __init__(self, block_size: int = 1000) -> None:
         if block_size <= 0:
@@ -59,6 +59,18 @@ class SpimiIndexer:
         if current:
             blocks.append(self._build_block(len(blocks), current))
         return blocks
+
+    def merge_blocks(self, blocks: list[SpimiBlock]) -> dict[int, list[Posting]]:
+        """Merge SPIMI blocks into one inverted index posting map."""
+        merged: dict[int, list[Posting]] = {}
+        for block in sorted(blocks, key=lambda item: item.block_id):
+            for codeword, postings in block.postings.items():
+                merged.setdefault(codeword, []).extend(postings)
+
+        return {
+            codeword: sorted(postings, key=lambda item: item.chunk_id)
+            for codeword, postings in sorted(merged.items())
+        }
 
     def _add_histogram(
         self,
