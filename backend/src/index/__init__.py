@@ -1,3 +1,4 @@
+from backend.src.index.audio_search import AudioSearchIndex
 from backend.src.index.inverted_index import InvertedIndex, Posting
 from backend.src.index.metrics import (
     cosine_similarity,
@@ -16,6 +17,7 @@ from backend.src.index.visual_search import VisualSearchIndex
 
 __all__ = [
     "HistogramRecord",
+    "AudioSearchIndex",
     "InvertedIndex",
     "Posting",
     "SearchResult",
