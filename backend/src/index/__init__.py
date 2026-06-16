@@ -12,6 +12,7 @@ from backend.src.index.models import (
     validate_histogram_record,
 )
 from backend.src.index.spimi import SpimiBlock, SpimiIndexer
+from backend.src.index.visual_search import VisualSearchIndex
 
 __all__ = [
     "HistogramRecord",
@@ -20,6 +21,7 @@ __all__ = [
     "SearchResult",
     "SpimiBlock",
     "SpimiIndexer",
+    "VisualSearchIndex",
     "cosine_similarity",
     "format_search_results",
     "l2_distance",
