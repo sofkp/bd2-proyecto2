@@ -116,6 +116,14 @@ cython_debug/
 
 .abstra/
 
+
+# Visual Studio Code
+#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore
+#   that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+#   and can be added to the global gitignore or merged into this file. However, if you prefer,
+#   you could uncomment the following to ignore the entire vscode folder
+# .vscode/
+# Temporary file for partial code execution
 tempCodeRunnerFile.py
 
 .ruff_cache/
@@ -128,3 +136,8 @@ marimo/_lsp/
 __marimo__/
 
 .streamlit/secrets.toml
+
+#documentación
+Proyecto2.md
+README.md
+
