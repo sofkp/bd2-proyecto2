@@ -1,27 +1,3 @@
-"""
-Extractor de características SIFT para patches de imagen.
-
-SIFT (Scale-Invariant Feature Transform) detecta puntos clave locales y produce
-descriptores de 128 dimensiones invariantes a escala y rotación. Estos
-descriptores luego son cuantizados en palabras visuales por el módulo Codebook.
-
-Pipeline
---------
-  fit(patches)       → no-op (SIFT no tiene parámetros entrenables)
-  transform(patches) → lista de arrays de descriptores, uno por patch
-
-Forma de salida
----------------
-  transform() retorna una lista de numpy arrays. El array para el patch i tiene
-  forma (n_keypoints_i, 128) con dtype float32. Si no se encuentran puntos clave
-  en un patch (ej. región en blanco), se retorna un array vacío de forma (0, 128)
-  para que el código posterior siempre espere la misma estructura.
-
-Dependencias
-------------
-  opencv-contrib-python >= 4.5  (provee cv2.SIFT_create)
-"""
-
 import numpy as np
 
 try:
@@ -103,7 +79,7 @@ class SIFTExtractor(BaseExtractor):
 
 
     # Auxiliares
-   
+
 
     @staticmethod
     def _to_gray(image: np.ndarray) -> np.ndarray:

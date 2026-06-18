@@ -2,5 +2,6 @@
 from .base import BaseExtractor
 from .tfidf import TFIDFExtractor
 from .sift import SIFTExtractor
+from .mfcc import MFCCExtractor
 
-__all__ = ["BaseExtractor", "TFIDFExtractor", "SIFTExtractor"]
+__all__ = ["BaseExtractor", "TFIDFExtractor", "SIFTExtractor", "MFCCExtractor"]

@@ -1,12 +1,3 @@
-"""
-Clase base para todos los extractores de características.
-
-Todos los extractores siguen la misma interfaz:
-  fit(data)       → aprende los parámetros (vocabulario, estadísticas, etc.)
-  transform(data) → calcula las representaciones de características
-  fit_transform   → atajo conveniente (fit seguido de transform)
-"""
-
 from abc import ABC, abstractmethod
 from typing import Any
 

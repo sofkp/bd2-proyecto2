@@ -1,26 +1,4 @@
-"""
-Extractor de características TF-IDF para fragmentos de texto.
 
-Pipeline
---------
-  fit(corpus)       → construye el vocabulario y los pesos IDF a partir de todos los fragmentos
-  transform(corpus) → retorna la matriz TF-IDF normalizada con L2
-
-Fórmula utilizada
------------------
-  TF(t, d)   = 1 + log(count(t, d))   si count > 0, de lo contrario 0
-  IDF(t)     = log((1 + N) / (1 + df(t))) + 1     (IDF suavizado)
-  tfidf(t,d) = TF(t,d) * IDF(t)       luego normalizado con L2 por documento
-
-donde N = número de documentos, df(t) = documentos que contienen el término t.
-
-Nota sobre la tokenización
---------------------------
-Este extractor espera fragmentos de texto ya divididos (strings planos). Realiza
-únicamente tokenización básica por espacios + conversión a minúsculas. La eliminación
-de stopwords, stemming y restricción del vocabulario (top-k) son responsabilidad
-del módulo Codebook, para que cada módulo tenga una única responsabilidad.
-"""
 
 import math
 from collections import Counter
