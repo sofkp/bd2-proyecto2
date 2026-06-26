@@ -7,10 +7,12 @@ from fastapi.staticfiles import StaticFiles
 
 from backend.api.routes import router as search_router
 from backend.api.routes.pipeline import router as pipeline_router
+from backend.api.routes.postgres import router as postgres_router
 from backend.api.pipeline_state import text_pipeline
 from backend.api.music_pipeline import music_pipeline
 from backend.api.image_pipeline import image_pipeline
 from backend.api.mfcc_pipeline import mfcc_pipeline
+from backend.api import postgres_indexer
 
 IMAGES_DIR = Path(__file__).parent.parent.parent / "data" / "samples" / "images"
 AUDIO_DIR = Path(__file__).parent.parent.parent / "data" / "full" / "audio"
@@ -34,6 +36,23 @@ async def lifespan(app: FastAPI):
     if audio_dir.exists() and any(audio_dir.rglob("*.wav")):
         mfcc_pipeline.index_directory(audio_dir)
 
+    # PostgreSQL: crear schema y poblar con los mismos datos
+    try:
+        postgres_indexer.create_schema()
+        postgres_indexer.index_text([sample_dir, arxiv_dir])
+        if image_pipeline.ready:
+            postgres_indexer.index_images(
+                image_pipeline._index._histograms,
+                image_pipeline._index._metadata,
+            )
+        if mfcc_pipeline.ready:
+            postgres_indexer.index_audio(
+                mfcc_pipeline._index._histograms,
+                mfcc_pipeline._index._metadata,
+            )
+    except Exception as e:
+        print(f"[postgres] Error al indexar: {e}")
+
     yield
 
 
@@ -55,6 +74,7 @@ if AUDIO_DIR.exists():
 
 app.include_router(search_router)
 app.include_router(pipeline_router)
+app.include_router(postgres_router)
 
 
 @app.get("/health")

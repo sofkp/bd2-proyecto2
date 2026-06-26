@@ -290,14 +290,46 @@ export default function Home() {
         })));
         applyStats(data.stats ?? {}, elapsed);
 
+      } else if (approach === "postgres" && modality === "text") {
+        const res = await fetch(`${API_URL}/postgres/search/text`, {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: queryText, k: topN }),
+        });
+        const data = await res.json();
+        const elapsed = parseFloat((performance.now() - t0).toFixed(2));
+        setResults((data.results ?? []).map((r: any) => ({
+          id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
+          category: r.metadata.source || "arxiv", snippet: r.metadata.snippet || "",
+        })));
+        applyStats({ query_ms: data.stats?.query_ms, n_comparisons: data.stats?.n_comparisons }, elapsed);
+
+      } else if (approach === "postgres" && modality === "image" && imageFile) {
+        const form = new FormData();
+        form.append("file", imageFile);
+        const res = await fetch(`${API_URL}/postgres/search/image?k=${topN}`, { method: "POST", body: form });
+        const data = await res.json();
+        const elapsed = parseFloat((performance.now() - t0).toFixed(2));
+        setResults((data.results ?? []).map((r: any) => ({
+          id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
+          category: "Imagen", imgUrl: `${API_URL}${r.metadata.image_url}`,
+        })));
+        applyStats({ query_ms: data.stats?.query_ms, n_comparisons: data.stats?.n_comparisons }, elapsed);
+
+      } else if (approach === "postgres" && modality === "audio" && audioFileRaw) {
+        const form = new FormData();
+        form.append("file", audioFileRaw);
+        const res = await fetch(`${API_URL}/postgres/search/audio?k=${topN}`, { method: "POST", body: form });
+        const data = await res.json();
+        const elapsed = parseFloat((performance.now() - t0).toFixed(2));
+        setResults((data.results ?? []).map((r: any) => ({
+          id: r.chunk_id, title: r.metadata.title || r.chunk_id,
+          artist: r.metadata.genre || "", similarity: r.score, duration: "–",
+          genres: r.metadata.genre || "", audio_url: r.metadata.audio_url || null,
+        })));
+        applyStats({ query_ms: data.stats?.query_ms, n_comparisons: data.stats?.n_comparisons }, elapsed);
+
       } else {
-        // Postgres → mock por ahora
-        await new Promise((r) => setTimeout(r, 800));
-        if (modality === "image") {
-          setResults(MOCK_IMAGE_RESULTS.slice(0, topN));
-        } else {
-          setResults(MOCK_TEXT_RESULTS.slice(0, topN));
-        }
+        setResults([]);
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
         setStats({ time: elapsed, queryMs: 0, indexMb: 0, comparisons: 0, vectorDim: 0 });
       }
@@ -568,26 +600,65 @@ export default function Home() {
             {modality === "audio" && approach === "postgres" && (
               <div className="flex flex-col gap-3">
                 {audioFile ? (
-                  <div className="border border-zinc-900 bg-zinc-950 p-4 rounded-2xl flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <Music className="h-5 w-5 text-purple-500" />
-                      <span className="text-xs font-medium text-zinc-300 max-w-[150px] truncate">{audioFile}</span>
+                  <div className="border border-zinc-900 bg-zinc-950 p-4 rounded-2xl flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <Music className="h-5 w-5 text-purple-500 shrink-0" />
+                      <span className="text-xs font-medium text-zinc-300 truncate">{audioFile}</span>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <button
+                        onClick={() => handlePlayAudio("__query__", URL.createObjectURL(audioFileRaw!))}
+                        className={`h-7 w-7 rounded-full flex items-center justify-center transition-colors ${
+                          playingId === "__query__"
+                            ? "bg-purple-600 text-white"
+                            : "bg-zinc-800 hover:bg-purple-600 hover:text-white text-zinc-400"
+                        }`}
+                      >
+                        {playingId === "__query__"
+                          ? <Pause className="h-3 w-3 fill-current" />
+                          : <Play className="h-3 w-3 fill-current ml-0.5" />}
+                      </button>
+                      <button
+                        onClick={() => { audioPlayerRef.current?.pause(); setPlayingId(null); setAudioFile(null); setAudioFileRaw(null); setResults([]); setHasSearched(false); }}
+                        className="bg-red-600/80 hover:bg-red-600 text-white text-[10px] font-bold py-1 px-2.5 rounded-full transition-all"
+                      >
+                        Remover
+                      </button>
+                    </div>
+                  </div>
+                ) : isRecording ? (
+                  <div className="border border-red-800 bg-red-950/20 p-5 rounded-2xl flex flex-col items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <span className="h-2.5 w-2.5 rounded-full bg-red-500 animate-pulse" />
+                      <span className="text-xs font-semibold text-red-400">Grabando... tararea o canta</span>
                     </div>
                     <button
-                      onClick={() => setAudioFile(null)}
-                      className="bg-red-600/80 hover:bg-red-600 text-white text-[10px] font-bold py-1 px-2.5 rounded-full transition-all"
+                      onClick={stopRecording}
+                      className="bg-red-600 hover:bg-red-500 text-white text-xs font-bold py-2 px-5 rounded-full transition-all"
                     >
-                      Remover
+                      Detener grabación
                     </button>
                   </div>
                 ) : (
-                  <label className="border border-dashed border-zinc-800 hover:border-purple-600 bg-zinc-950/50 p-6 rounded-2xl flex flex-col items-center justify-center gap-2 cursor-pointer transition-all group">
-                    <Music className="h-8 w-8 text-zinc-600 group-hover:text-purple-500 transition-colors" />
-                    <span className="text-xs font-medium text-zinc-400">Arrastra o sube un archivo de audio</span>
-                    <span className="text-[10px] text-zinc-600">MP3, WAV o OGG</span>
-                    <input type="file" accept="audio/*" className="hidden" onChange={handleAudioUpload} />
-                  </label>
+                  <div className="flex flex-col gap-2">
+                    <label className="border border-dashed border-zinc-800 hover:border-purple-600 bg-zinc-950/50 p-5 rounded-2xl flex flex-col items-center justify-center gap-2 cursor-pointer transition-all group">
+                      <Music className="h-7 w-7 text-zinc-600 group-hover:text-purple-500 transition-colors" />
+                      <span className="text-xs font-medium text-zinc-400">Sube un archivo de audio</span>
+                      <span className="text-[10px] text-zinc-600">WAV, MP3 u OGG</span>
+                      <input type="file" accept="audio/*" className="hidden" onChange={handleAudioUpload} />
+                    </label>
+                    <button
+                      onClick={startRecording}
+                      className="w-full flex items-center justify-center gap-2 border border-zinc-800 hover:border-purple-600 bg-zinc-950/50 hover:bg-zinc-950 text-zinc-400 hover:text-purple-400 text-xs font-medium py-2.5 rounded-2xl transition-all"
+                    >
+                      <span className="h-2 w-2 rounded-full bg-red-500" />
+                      Grabar desde micrófono
+                    </button>
+                  </div>
                 )}
+                <span className="text-[10px] text-zinc-500 flex items-center gap-1">
+                  <Music className="h-3 w-3" /> MFCC + pgvector HNSW — búsqueda en PostgreSQL
+                </span>
               </div>
             )}
           </div>
@@ -679,7 +750,7 @@ export default function Home() {
           {/* Botón Ejecutar */}
           <button
             onClick={handleSearch}
-            disabled={isLoading || (modality === "text" && !queryText && !pdfFile) || (modality === "image" && !imagePreview) || (modality === "audio" && approach === "postgres" && !audioFile) || (modality === "audio" && approach === "custom" && !audioFileRaw)}
+            disabled={isLoading || (modality === "text" && !queryText && !pdfFile) || (modality === "image" && !imagePreview) || (modality === "audio" && !audioFileRaw)}
             className="w-full py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 disabled:from-zinc-800 disabled:to-zinc-800 disabled:text-zinc-600 text-white font-bold rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-purple-950/20 active:scale-[0.98] transition-all cursor-pointer"
           >
             {isLoading ? (
@@ -713,23 +784,37 @@ export default function Home() {
               <div className="bg-zinc-950 p-4 rounded-2xl border border-zinc-900/80 flex flex-col gap-1">
                 <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Tiempo Query</span>
                 <span className="text-xl font-bold text-emerald-400">
-                  {hasSearched && approach === "custom" ? `${stats.queryMs} ms` : "--"}
+                  {hasSearched ? `${stats.queryMs} ms` : "--"}
                 </span>
-                <span className="text-[9px] text-zinc-600">Solo búsqueda en índice</span>
+                <span className="text-[9px] text-zinc-600">
+                  {approach === "custom" ? "Solo búsqueda en índice" : "Query GIN / HNSW en DB"}
+                </span>
               </div>
               <div className="bg-zinc-950 p-4 rounded-2xl border border-zinc-900/80 flex flex-col gap-1">
-                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">RAM Índice</span>
-                <span className="text-xl font-bold text-purple-400">
-                  {hasSearched && approach === "custom" ? `${stats.indexMb} MB` : "--"}
+                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">
+                  {approach === "custom" ? "RAM Índice" : "Motor Índice"}
                 </span>
-                <span className="text-[9px] text-zinc-600">Histogramas en memoria</span>
+                <span className="text-xl font-bold text-purple-400">
+                  {hasSearched
+                    ? approach === "custom"
+                      ? `${stats.indexMb} MB`
+                      : modality === "text" ? "GIN" : "HNSW"
+                    : "--"}
+                </span>
+                <span className="text-[9px] text-zinc-600">
+                  {approach === "custom" ? "Histogramas en memoria" : "pgvector en PostgreSQL"}
+                </span>
               </div>
               <div className="bg-zinc-950 p-4 rounded-2xl border border-zinc-900/80 flex flex-col gap-1">
                 <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Comparaciones</span>
                 <span className="text-xl font-bold text-emerald-400">
-                  {hasSearched && approach === "custom" ? stats.comparisons.toLocaleString() : "--"}
+                  {hasSearched ? stats.comparisons.toLocaleString() : "--"}
                 </span>
-                <span className="text-[9px] text-zinc-600">Vectores comparados · dim {hasSearched && approach === "custom" ? stats.vectorDim : "–"}</span>
+                <span className="text-[9px] text-zinc-600">
+                  {approach === "custom"
+                    ? `Vectores comparados · dim ${hasSearched ? stats.vectorDim : "–"}`
+                    : "Resultados devueltos por DB"}
+                </span>
               </div>
             </div>
           </div>
