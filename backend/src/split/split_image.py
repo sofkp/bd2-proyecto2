@@ -28,6 +28,9 @@ class SplitImage:
         return self.split_image(image, document_id, str(file_path))
 
     def split_image(self, image, document_id: str, source_path: str = None):
+        if isinstance(image, np.ndarray):
+            image = Image.fromarray(image.astype(np.uint8)).convert("RGB")
+
         width, height = image.size
         positions_x = self.get_positions(width)
         positions_y = self.get_positions(height)
