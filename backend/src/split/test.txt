@@ -1,0 +1,46 @@
+1. Introducción
+En este proyecto diseñarás e implementarás un sistema unificado de recuperación y búsqueda que funciona sobre múltiples modalidades (texto, imágenes, audio) bajo una arquitectura común. El objetivo es entender cómo diferentes tipos de contenido pueden indexarse y recuperarse mediante el mismo paradigma fundamental:
+•	Dividir (split) el contenido en unidades atómicas (chunks).
+•	Extraer características (features/descriptores) adaptados a cada modalidad.
+•	Construir un diccionario compartido (codebook) mediante técnicas específicas de cada modalidad.
+•	Generar índices invertidos que mapean palabras/conceptos a chunks.
+•	Comparar tu implementación (índices invertidos + codebook) con técnicas nativas de PostgreSQL: GIN/GiST para texto, pgvector para imágenes y audio.
+•	Implementar al menos dos de las aplicaciones sugeridas para interactuar con el motor de búsqueda multimodal.
+•	Analizar diferencias en rendimiento, precisión y trade-offs entre enfoques.
+
+Objetivos de Aprendizaje
+•	Entender la arquitectura unificada: cómo split + codebook + índice invertido se aplica de manera agnóstica a modalidades.
+•	Analizar diferencias técnicas: GIN (Generalized Inverted Index) vs. tu índice invertido; pgvector (búsqueda vectorial aproximada) vs. codebook + histogramas.
+•	Medir y comparar: latencia, precisión (recall), impacto de dimensionalidad, accesos a disco en cada enfoque.
+•	Identificar trade-offs: exactitud vs. velocidad, memoria vs. latencia, simplicidad vs. sofisticación.
+•	Justificar decisiones de diseño basadas en evidencia experimental rigurosa.
+
+2. Especificación Funcional
+Arquitectura Unificada Multimodal
+Tu sistema implementará una arquitectura común aplicable a texto, imágenes y audio:
+Fases del Proyecto
+
+Fase 1: Análisis, Diseño y Selección del Dataset
+•	Especificar requisitos funcionales (modalidades soportadas, tipos de consultas) y no-funcionales (latencia, precisión).
+•	Seleccionar dataset público. Documentar: tamaño, características, distribución.
+•	Diseñar arquitectura: adaptación de split, extracción y codebook a cada modalidad.
+•	Definir métricas: latencia (ms), throughput (consultas/seg), precisión, memoria y accesos a disco.
+•	Seleccionar al menos dos aplicaciones para implementar en el backend, sustentar importancia. 
+
+Fase 2: Implementación del Sistema Multimodal
+•	Módulo Split: dividir contenido (párrafos para texto, descriptores locales para imágenes, ventanas deslizantes para audio).
+•	Módulo Extractor: TF-IDF para texto, SIFT para imágenes, MFCC para audio.
+•	Módulo Codebook: técnicas lingüísticas para texto (tokenizar, eliminar stopwords, stemming, top-k); K-Means/K-Medoids para imágenes y audio.
+•	Módulo Índice Invertido: para cada chunk, generar histograma de codewords. Para Texto implementar el SPIMI. 
+•	Backend extensible: arquitectura que soporte al menos dos aplicaciones diferentes (RAG para texto, búsqueda de imágenes, búsqueda de música, etc.).
+•	Persistencia: almacenar en PostgreSQL (codebook, histogramas, metadatos, etc.).
+
+Fase 3: Implementación de Comparativas en PostgreSQL
+•	GIN/GiST (Texto): índices nativos PostgreSQL. Ejecutar consultas full-text. Medir latencia, memoria.
+•	pgvector (Imagen/Audio): almacenar histogramas como vectores. Crear índice HNSW o IVF. Medir latencia, precisión, memoria.
+
+Fase 4: Evaluación Experimental y Análisis
+•	Marco: cargas variadas (pequeña: 1K chunks, mediana: 10K, grande: 100K).
+•	Métricas: latencia, throughput, precisión, memoria, accesos I/O.
+•	Comparar: tu índice invertido vs. GIN/GiST vs. pgvector. Analizar trade-offs, generar gráficos comparativos.
+Conclusiones: ¿Qué técnica ganó en qué métrica? ¿Se recuperó la misma información (precisión)?, limitaciones y recomendaciones.
