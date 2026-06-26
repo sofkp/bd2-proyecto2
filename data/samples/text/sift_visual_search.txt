@@ -1,0 +1,11 @@
+SIFT Features and Visual Search with Bag of Visual Words
+
+Scale-Invariant Feature Transform (SIFT) is a computer vision algorithm that detects and describes local features in images. SIFT features are invariant to image scale and rotation, making them robust for matching images under different viewpoints and lighting conditions.
+
+The SIFT algorithm works by detecting keypoints at multiple scales using a Difference of Gaussians approach. For each detected keypoint, a 128-dimensional descriptor vector is computed based on the gradient orientations in the local neighborhood.
+
+The Bag of Visual Words (BoVW) model extends the text retrieval bag-of-words model to images. A visual codebook is built by clustering SIFT descriptors from a training set using K-Means. Each cluster centroid becomes a visual word. An image is then represented as a histogram of visual word frequencies.
+
+For image search, a query image is processed through SIFT extraction followed by visual word assignment using the codebook. The resulting histogram is compared against indexed histograms using L2 distance or cosine similarity to retrieve the most visually similar images.
+
+This approach has been applied successfully to fashion product retrieval, where users can upload an image of a clothing item and find visually similar products in a catalog. The visual codebook captures discriminative features such as texture, color patterns, and shape.

@@ -1,0 +1,11 @@
+Multimodal Retrieval Systems
+
+Multimodal retrieval systems allow users to search across different types of content including text, images, and audio using a unified architecture. The pipeline typically consists of four stages: splitting, feature extraction, codebook construction, and inverted index retrieval.
+
+In the splitting stage, raw documents are divided into smaller chunks. Text documents are split into paragraphs or sentences. Images are divided into patches. Audio files are segmented into overlapping windows using sliding window techniques.
+
+Feature extraction converts each chunk into a numerical representation. For text, TF-IDF vectorization captures the importance of each term relative to the document collection. For images, SIFT descriptors capture local keypoint features invariant to scale and rotation. For audio, MFCC coefficients represent the spectral characteristics of sound.
+
+The codebook is built using K-Means clustering over the extracted features. Each cluster centroid becomes a visual word or acoustic word. This quantization step reduces high-dimensional feature vectors to compact histogram representations.
+
+The inverted index stores posting lists for each codeword. A posting list contains the identifiers of all chunks that contain that codeword along with their frequency. At query time, the query is processed through the same pipeline and cosine similarity is computed against indexed histograms to retrieve the top-k most relevant chunks.

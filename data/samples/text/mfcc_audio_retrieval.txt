@@ -1,0 +1,11 @@
+MFCC Features for Audio Retrieval
+
+Mel-Frequency Cepstral Coefficients (MFCC) are widely used features for audio and speech analysis. They represent the short-term power spectrum of a sound signal on a mel frequency scale, which approximates the human auditory system's response.
+
+Computing MFCCs involves several steps. First, the audio signal is divided into short overlapping frames of approximately 25 milliseconds with a hop length of 10 milliseconds. Each frame is then multiplied by a Hamming window to reduce spectral leakage. Next, the Fast Fourier Transform is applied to obtain the power spectrum.
+
+The mel filterbank is applied to the power spectrum, converting it to the mel scale. The logarithm of the filterbank energies is computed, followed by the Discrete Cosine Transform to produce the final MFCC coefficients. Typically 13 to 20 coefficients are used, along with their delta and delta-delta features.
+
+For music retrieval, MFCC features capture timbral characteristics such as instrument type, vocal quality, and sound texture. An acoustic codebook is built by clustering MFCC vectors from a training set. Songs are represented as histograms over the acoustic codebook.
+
+Audio similarity search allows users to find songs similar to a given audio query. Applications include music recommendation, audio fingerprinting, and cover song detection. The acoustic codebook approach achieves a good balance between retrieval accuracy and computational efficiency.

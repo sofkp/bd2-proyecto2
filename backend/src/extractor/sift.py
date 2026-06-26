@@ -73,6 +73,9 @@ class SIFTExtractor(BaseExtractor):
                 descriptors = np.empty((0, self.DESCRIPTOR_DIM), dtype=np.float32)
             else:
                 descriptors = descriptors.astype(np.float32)
+                # RootSIFT: mejora la similitud coseno (Arandjelovic & Zisserman, 2012)
+                l1 = descriptors.sum(axis=1, keepdims=True) + 1e-7
+                descriptors = np.sqrt(descriptors / l1)
 
             result.append(descriptors)
 

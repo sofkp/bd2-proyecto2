@@ -1,0 +1,11 @@
+TF-IDF and Inverted Index for Text Retrieval
+
+Term Frequency-Inverse Document Frequency (TF-IDF) is a numerical statistic used to reflect the importance of a word in a document relative to a collection. The TF component measures how often a term appears in a document, while the IDF component penalizes terms that appear in many documents.
+
+The formula for TF-IDF combines both components: TF-IDF(t, d) = TF(t, d) * IDF(t). The logarithmic TF is computed as 1 + log(count(t, d)) to avoid zero values. The smoothed IDF is computed as log((1 + N) / (1 + df(t))) + 1, where N is the total number of documents and df(t) is the document frequency of term t.
+
+Preprocessing steps before TF-IDF computation include lowercasing, removal of special characters, tokenization, stopword removal, and stemming. Stemming reduces words to their root form, for example reducing "learning" and "learned" to "learn".
+
+An inverted index maps each term to a list of documents that contain it. This data structure enables efficient retrieval: given a query, the system looks up each query term in the index and retrieves the corresponding posting lists. SPIMI (Single-Pass In-Memory Indexing) is an efficient algorithm for building inverted indexes over large collections.
+
+Cosine similarity between the query vector and document vectors is used to rank results. A higher cosine score indicates greater semantic similarity between the query and the document.

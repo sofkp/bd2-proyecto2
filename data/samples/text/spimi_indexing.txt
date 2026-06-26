@@ -1,0 +1,11 @@
+SPIMI: Single-Pass In-Memory Indexing
+
+SPIMI (Single-Pass In-Memory Indexing) is an efficient algorithm for constructing inverted indexes over large document collections. Unlike traditional approaches that sort term-docID pairs, SPIMI builds the index in a single pass through the collection using hash tables.
+
+The SPIMI algorithm processes documents one at a time. For each token in a document, it checks if the term already has a posting list in the current block. If not, a new entry is created. If the term exists, the document identifier is appended to its posting list. When available memory is exhausted, the current block is written to disk and a new block starts.
+
+The final step merges all blocks by reading them simultaneously and combining posting lists for the same term. This merge operation produces a single sorted inverted index.
+
+SPIMI has several advantages over traditional indexing methods. It does not require sorting of term-docID pairs in memory. It handles variable-length posting lists efficiently. The algorithm scales to collections much larger than available RAM.
+
+In the context of multimodal retrieval with codebooks, SPIMI can be applied to histogram-based inverted indexes. Each codeword (visual word or acoustic word) has a posting list containing the identifiers of all indexed chunks that contain that codeword. This enables efficient candidate retrieval before computing final similarity scores.

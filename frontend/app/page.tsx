@@ -104,8 +104,106 @@ export default function Home() {
   const [queryText, setQueryText] = useState("");
   const [kValue, setKValue] = useState(500);
   const [topN, setTopN] = useState(5);
+  const [pdfFile, setPdfFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [imageFile, setImageFile] = useState<File | null>(null);
   const [audioFile, setAudioFile] = useState<string | null>(null);
+  const [audioFileRaw, setAudioFileRaw] = useState<File | null>(null);
+  const [isRecording, setIsRecording] = useState(false);
+
+  const [mfccReady, setMfccReady] = useState(false);
+  const [playingId, setPlayingId] = useState<string | null>(null);
+  const audioPlayerRef = React.useRef<HTMLAudioElement | null>(null);
+  const audioContextRef = React.useRef<AudioContext | null>(null);
+  const streamRef = React.useRef<MediaStream | null>(null);
+  const samplesRef = React.useRef<Float32Array[]>([]);
+  const processorRef = React.useRef<ScriptProcessorNode | null>(null);
+
+  // Encodea muestras Float32 a WAV (PCM 16-bit mono)
+  const encodeWAV = (samples: Float32Array[], sampleRate: number): Blob => {
+    const allSamples = new Float32Array(samples.reduce((n, s) => n + s.length, 0));
+    let offset = 0;
+    for (const chunk of samples) { allSamples.set(chunk, offset); offset += chunk.length; }
+    const buf = new ArrayBuffer(44 + allSamples.length * 2);
+    const view = new DataView(buf);
+    const ws = (o: number, s: string) => { for (let i = 0; i < s.length; i++) view.setUint8(o + i, s.charCodeAt(i)); };
+    ws(0, "RIFF"); view.setUint32(4, 36 + allSamples.length * 2, true); ws(8, "WAVE");
+    ws(12, "fmt "); view.setUint32(16, 16, true); view.setUint16(20, 1, true);
+    view.setUint16(22, 1, true); view.setUint32(24, sampleRate, true);
+    view.setUint32(28, sampleRate * 2, true); view.setUint16(32, 2, true); view.setUint16(34, 16, true);
+    ws(36, "data"); view.setUint32(40, allSamples.length * 2, true);
+    let o = 44;
+    for (let i = 0; i < allSamples.length; i++) {
+      const s = Math.max(-1, Math.min(1, allSamples[i]));
+      view.setInt16(o, s < 0 ? s * 0x8000 : s * 0x7FFF, true); o += 2;
+    }
+    return new Blob([buf], { type: "audio/wav" });
+  };
+
+  const startRecording = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+      streamRef.current = stream;
+      const ctx = new AudioContext({ sampleRate: 22050 });
+      audioContextRef.current = ctx;
+      const source = ctx.createMediaStreamSource(stream);
+      const processor = ctx.createScriptProcessor(4096, 1, 1);
+      samplesRef.current = [];
+      processor.onaudioprocess = (e) => {
+        samplesRef.current.push(new Float32Array(e.inputBuffer.getChannelData(0)));
+      };
+      source.connect(processor);
+      processor.connect(ctx.destination);
+      processorRef.current = processor;
+      setIsRecording(true);
+    } catch {
+      alert("No se pudo acceder al micrófono. Verifica los permisos del navegador.");
+    }
+  };
+
+  const stopRecording = () => {
+    processorRef.current?.disconnect();
+    streamRef.current?.getTracks().forEach((t) => t.stop());
+    const sampleRate = audioContextRef.current?.sampleRate ?? 22050;
+    audioContextRef.current?.close();
+    const wav = encodeWAV(samplesRef.current, sampleRate);
+    const file = new File([wav], "grabacion.wav", { type: "audio/wav" });
+    setAudioFile("grabacion.wav");
+    setAudioFileRaw(file);
+    setIsRecording(false);
+  };
+
+  // Verificar estado del pipeline MFCC al montar
+  React.useEffect(() => {
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    fetch(`${API_URL}/pipeline/status`)
+      .then((r) => r.json())
+      .then((d) => setMfccReady(d?.audio_mfcc?.ready ?? false))
+      .catch(() => {});
+  }, []);
+
+  // Limpiar audio al desmontar
+  React.useEffect(() => {
+    return () => { audioPlayerRef.current?.pause(); };
+  }, []);
+
+  const handlePlayAudio = (id: string, audioUrl: string) => {
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    if (playingId === id) {
+      audioPlayerRef.current?.pause();
+      setPlayingId(null);
+    } else {
+      if (audioPlayerRef.current) {
+        audioPlayerRef.current.pause();
+      }
+      // blob: URLs son locales, no necesitan el prefijo del backend
+      const fullUrl = audioUrl.startsWith("blob:") ? audioUrl : `${API_URL}${audioUrl}`;
+      audioPlayerRef.current = new Audio(fullUrl);
+      audioPlayerRef.current.play();
+      audioPlayerRef.current.onended = () => setPlayingId(null);
+      setPlayingId(id);
+    }
+  };
 
   // Estados de Ejecución y Resultados
   const [isLoading, setIsLoading] = useState(false);
@@ -113,61 +211,132 @@ export default function Home() {
   const [results, setResults] = useState<any[]>([]);
   const [stats, setStats] = useState({
     time: 0,
-    diskIO: 0,
-    memory: 0,
-    recall: 0
+    queryMs: 0,
+    indexMb: 0,
+    comparisons: 0,
+    vectorDim: 0,
   });
 
-  // Simular Búsqueda
-  const handleSearch = () => {
+  // Búsqueda real contra la API
+  const handleSearch = async () => {
     setIsLoading(true);
     setHasSearched(false);
 
-    // Simular retraso de red
-    setTimeout(() => {
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    const t0 = performance.now();
+
+    const applyStats = (raw: { query_ms?: number; index_mb?: number; n_comparisons?: number; vector_dim?: number }, elapsed: number) => {
+      setStats({
+        time: elapsed,
+        queryMs: raw.query_ms ?? 0,
+        indexMb: raw.index_mb ?? 0,
+        comparisons: raw.n_comparisons ?? 0,
+        vectorDim: raw.vector_dim ?? 0,
+      });
+    };
+
+    try {
+      if (approach === "custom" && modality === "text" && pdfFile) {
+        const form = new FormData();
+        form.append("file", pdfFile);
+        const res = await fetch(`${API_URL}/pipeline/search/text/pdf?k=${topN}`, { method: "POST", body: form });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const elapsed = parseFloat((performance.now() - t0).toFixed(2));
+        setResults((data.results ?? data).map((r: any) => ({
+          id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
+          category: r.metadata.source || "arxiv", snippet: r.metadata.snippet || "",
+        })));
+        applyStats(data.stats ?? {}, elapsed);
+
+      } else if (approach === "custom" && modality === "text") {
+        const res = await fetch(`${API_URL}/pipeline/search/text`, {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: queryText, k: topN }),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const elapsed = parseFloat((performance.now() - t0).toFixed(2));
+        setResults((data.results ?? data).map((r: any) => ({
+          id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
+          category: r.metadata.source || "arxiv", snippet: r.metadata.snippet || "",
+        })));
+        applyStats(data.stats ?? {}, elapsed);
+
+      } else if (approach === "custom" && modality === "audio" && audioFileRaw) {
+        const form = new FormData();
+        form.append("file", audioFileRaw);
+        const res = await fetch(`${API_URL}/pipeline/search/audio-file?k=${topN}`, { method: "POST", body: form });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const elapsed = parseFloat((performance.now() - t0).toFixed(2));
+        setResults((data.results ?? data).map((r: any) => ({
+          id: r.chunk_id, title: r.metadata.title || r.chunk_id,
+          artist: r.metadata.genre || "", similarity: r.score, duration: "–", genres: r.metadata.genre || "",
+          audio_url: r.metadata.audio_url || null,
+        })));
+        applyStats(data.stats ?? {}, elapsed);
+
+      } else if (approach === "custom" && modality === "image" && imageFile) {
+        const form = new FormData();
+        form.append("file", imageFile);
+        const res = await fetch(`${API_URL}/pipeline/search/image?k=${topN}`, { method: "POST", body: form });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const elapsed = parseFloat((performance.now() - t0).toFixed(2));
+        setResults((data.results ?? data).map((r: any) => ({
+          id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
+          category: "Imagen", imgUrl: `${API_URL}${r.metadata.image_url}`,
+        })));
+        applyStats(data.stats ?? {}, elapsed);
+
+      } else {
+        // Postgres → mock por ahora
+        await new Promise((r) => setTimeout(r, 800));
+        if (modality === "image") {
+          setResults(MOCK_IMAGE_RESULTS.slice(0, topN));
+        } else {
+          setResults(MOCK_TEXT_RESULTS.slice(0, topN));
+        }
+        const elapsed = parseFloat((performance.now() - t0).toFixed(2));
+        setStats({ time: elapsed, queryMs: 0, indexMb: 0, comparisons: 0, vectorDim: 0 });
+      }
+    } catch (err) {
+      console.error("Error en búsqueda:", err);
+      setResults([]);
+    } finally {
       setIsLoading(false);
       setHasSearched(true);
-
-      // Definir estadísticas según enfoque (Nuestra impl vs Postgres nativo)
-      if (approach === "custom") {
-        setStats({
-          time: parseFloat((Math.random() * 2 + 1).toFixed(2)), // 1ms - 3ms (Rápido con índice invertido)
-          diskIO: Math.floor(Math.random() * 10 + 5),         // Bajo I/O
-          memory: parseFloat((Math.random() * 0.8 + 0.5).toFixed(2)), // ~1MB
-          recall: parseFloat((Math.random() * 5 + 88).toFixed(1))     // ~90% por cuantización
-        });
-      } else {
-        // Enfoque Postgres Nativo (pgvector / GIN)
-        setStats({
-          time: parseFloat((Math.random() * 15 + 8).toFixed(2)),   // ~15ms (HNSW o Full-text)
-          diskIO: Math.floor(Math.random() * 50 + 30),         // Mayor I/O en disco
-          memory: parseFloat((Math.random() * 5 + 8).toFixed(2)),     // ~10MB por carga de índices HNSW
-          recall: parseFloat((Math.random() * 2 + 97).toFixed(1))     // ~98% (más exacto)
-        });
-      }
-
-      // Asignar resultados según modalidad
-      if (modality === "text") {
-        setResults(MOCK_TEXT_RESULTS.slice(0, topN));
-      } else if (modality === "image") {
-        setResults(MOCK_IMAGE_RESULTS.slice(0, topN));
-      } else {
-        setResults(MOCK_AUDIO_RESULTS.slice(0, topN));
-      }
-    }, 800);
+    }
   };
 
   // Manejar Carga de Archivos Falsa
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
+      setImageFile(file);
       setImagePreview(URL.createObjectURL(file));
     }
   };
 
   const handleAudioUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setAudioFile(e.target.files[0].name);
+      const file = e.target.files[0];
+      setAudioFile(file.name);
+      setAudioFileRaw(file);
+    }
+  };
+
+  // Cargar imagen de muestra como File real para poder enviarla al backend
+  const loadSampleImage = async (url: string, filename: string) => {
+    try {
+      const res = await fetch(url);
+      const blob = await res.blob();
+      const file = new File([blob], filename, { type: blob.type || "image/jpeg" });
+      setImageFile(file);
+      setImagePreview(URL.createObjectURL(blob));
+    } catch {
+      setImagePreview(url); // fallback visual si hay error CORS
     }
   };
 
@@ -247,12 +416,44 @@ export default function Home() {
 
             {/* Input de Texto */}
             {modality === "text" && (
-              <textarea
-                value={queryText}
-                onChange={(e) => setQueryText(e.target.value)}
-                placeholder="Ingresa texto, paper, o palabras clave a buscar..."
-                className="w-full min-h-[120px] bg-zinc-950 border border-zinc-900 rounded-2xl p-4 text-sm text-zinc-200 placeholder-zinc-600 focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600 resize-none transition-all"
-              />
+              <div className="flex flex-col gap-2">
+                {pdfFile ? (
+                  <div className="border border-purple-800 bg-purple-950/20 p-4 rounded-2xl flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <FileText className="h-5 w-5 text-purple-400" />
+                      <div>
+                        <p className="text-xs font-semibold text-zinc-200 max-w-[180px] truncate">{pdfFile.name}</p>
+                        <p className="text-[10px] text-zinc-500">Se buscará por contenido del PDF</p>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => { setPdfFile(null); setResults([]); setHasSearched(false); }}
+                      className="bg-red-600/80 hover:bg-red-600 text-white text-[10px] font-bold py-1 px-2.5 rounded-full transition-all"
+                    >
+                      Remover
+                    </button>
+                  </div>
+                ) : (
+                  <textarea
+                    value={queryText}
+                    onChange={(e) => setQueryText(e.target.value)}
+                    placeholder="Ingresa texto, paper, o palabras clave a buscar..."
+                    className="w-full min-h-[100px] bg-zinc-950 border border-zinc-900 rounded-2xl p-4 text-sm text-zinc-200 placeholder-zinc-600 focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600 resize-none transition-all"
+                  />
+                )}
+                <label className="flex items-center gap-2 cursor-pointer self-start">
+                  <div className="flex items-center gap-1.5 text-[11px] text-zinc-500 hover:text-purple-400 border border-zinc-800 hover:border-purple-700 bg-zinc-950 px-3 py-1.5 rounded-lg transition-all">
+                    <FileText className="h-3.5 w-3.5" />
+                    {pdfFile ? "Cambiar PDF" : "Subir PDF"}
+                  </div>
+                  <input
+                    type="file"
+                    accept=".pdf"
+                    className="hidden"
+                    onChange={(e) => { if (e.target.files?.[0]) { setPdfFile(e.target.files[0]); setQueryText(""); } }}
+                  />
+                </label>
+              </div>
             )}
 
             {/* Input de Imagen */}
@@ -261,8 +462,8 @@ export default function Home() {
                 {imagePreview ? (
                   <div className="relative h-32 w-full rounded-2xl overflow-hidden border border-zinc-900 bg-zinc-950 flex items-center justify-center">
                     <img src={imagePreview} alt="Preview" className="h-full object-contain" />
-                    <button 
-                      onClick={() => setImagePreview(null)}
+                    <button
+                      onClick={() => { setImagePreview(null); setImageFile(null); setResults([]); setHasSearched(false); }}
                       className="absolute top-2 right-2 bg-red-600/80 hover:bg-red-600 text-white text-[10px] font-bold py-1 px-2.5 rounded-full backdrop-blur-sm transition-all"
                     >
                       Remover
@@ -281,14 +482,14 @@ export default function Home() {
                 <div className="flex flex-col gap-1.5">
                   <span className="text-[10px] text-zinc-500">¿No tienes imagen? Selecciona una de muestra:</span>
                   <div className="flex gap-2">
-                    <button 
-                      onClick={() => setImagePreview("https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80")}
+                    <button
+                      onClick={() => loadSampleImage("https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80", "zapatilla_roja.jpg")}
                       className="text-[10px] bg-zinc-900 border border-zinc-800 hover:border-purple-600 text-zinc-300 py-1 px-2.5 rounded-lg transition-all"
                     >
                       👟 Zapatilla Roja
                     </button>
-                    <button 
-                      onClick={() => setImagePreview("https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&q=80")}
+                    <button
+                      onClick={() => loadSampleImage("https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&q=80", "tacon_rosa.jpg")}
                       className="text-[10px] bg-zinc-900 border border-zinc-800 hover:border-purple-600 text-zinc-300 py-1 px-2.5 rounded-lg transition-all"
                     >
                       👠 Tacón Rosa
@@ -298,8 +499,73 @@ export default function Home() {
               </div>
             )}
 
-            {/* Input de Audio */}
-            {modality === "audio" && (
+            {/* Input de Audio - Nuestra Implementación (MFCC) */}
+            {modality === "audio" && approach === "custom" && (
+              <div className="flex flex-col gap-3">
+                {audioFile && approach === "custom" ? (
+                  <div className="border border-zinc-900 bg-zinc-950 p-4 rounded-2xl flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <Music className="h-5 w-5 text-purple-500 shrink-0" />
+                      <span className="text-xs font-medium text-zinc-300 truncate">{audioFile}</span>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <button
+                        onClick={() => handlePlayAudio("__query__", URL.createObjectURL(audioFileRaw!))}
+                        className={`h-7 w-7 rounded-full flex items-center justify-center transition-colors ${
+                          playingId === "__query__"
+                            ? "bg-purple-600 text-white"
+                            : "bg-zinc-800 hover:bg-purple-600 hover:text-white text-zinc-400"
+                        }`}
+                      >
+                        {playingId === "__query__"
+                          ? <Pause className="h-3 w-3 fill-current" />
+                          : <Play className="h-3 w-3 fill-current ml-0.5" />}
+                      </button>
+                      <button
+                        onClick={() => { audioPlayerRef.current?.pause(); setPlayingId(null); setAudioFile(null); setAudioFileRaw(null); setResults([]); setHasSearched(false); }}
+                        className="bg-red-600/80 hover:bg-red-600 text-white text-[10px] font-bold py-1 px-2.5 rounded-full transition-all"
+                      >
+                        Remover
+                      </button>
+                    </div>
+                  </div>
+                ) : isRecording ? (
+                  <div className="border border-red-800 bg-red-950/20 p-5 rounded-2xl flex flex-col items-center gap-3">
+                    <div className="flex items-center gap-2">
+                      <span className="h-2.5 w-2.5 rounded-full bg-red-500 animate-pulse" />
+                      <span className="text-xs font-semibold text-red-400">Grabando... tararea o canta</span>
+                    </div>
+                    <button
+                      onClick={stopRecording}
+                      className="bg-red-600 hover:bg-red-500 text-white text-xs font-bold py-2 px-5 rounded-full transition-all"
+                    >
+                      Detener grabación
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex flex-col gap-2">
+                    <label className="border border-dashed border-zinc-800 hover:border-purple-600 bg-zinc-950/50 p-5 rounded-2xl flex flex-col items-center justify-center gap-2 cursor-pointer transition-all group">
+                      <Music className="h-7 w-7 text-zinc-600 group-hover:text-purple-500 transition-colors" />
+                      <span className="text-xs font-medium text-zinc-400">Sube un archivo de audio</span>
+                      <span className="text-[10px] text-zinc-600">WAV, MP3 u OGG</span>
+                      <input type="file" accept="audio/*" className="hidden" onChange={handleAudioUpload} />
+                    </label>
+                    <button
+                      onClick={startRecording}
+                      className="w-full flex items-center justify-center gap-2 border border-zinc-800 hover:border-purple-600 bg-zinc-950/50 hover:bg-zinc-950 text-zinc-400 hover:text-purple-400 text-xs font-medium py-2.5 rounded-2xl transition-all"
+                    >
+                      <span className="h-2 w-2 rounded-full bg-red-500" />
+                      Grabar desde micrófono
+                    </button>
+                  </div>
+                )}
+                <span className="text-[10px] text-zinc-500 flex items-center gap-1">
+                  <Music className="h-3 w-3" /> MFCC + KMeans codebook acústico — {mfccReady ? "listo" : "esperando datos"}
+                </span>
+              </div>
+            )}
+
+            {modality === "audio" && approach === "postgres" && (
               <div className="flex flex-col gap-3">
                 {audioFile ? (
                   <div className="border border-zinc-900 bg-zinc-950 p-4 rounded-2xl flex items-center justify-between">
@@ -307,40 +573,21 @@ export default function Home() {
                       <Music className="h-5 w-5 text-purple-500" />
                       <span className="text-xs font-medium text-zinc-300 max-w-[150px] truncate">{audioFile}</span>
                     </div>
-                    <button 
+                    <button
                       onClick={() => setAudioFile(null)}
-                      className="bg-red-600/80 hover:bg-red-600 text-white text-[10px] font-bold py-1 px-2.5 rounded-full backdrop-blur-sm transition-all"
+                      className="bg-red-600/80 hover:bg-red-600 text-white text-[10px] font-bold py-1 px-2.5 rounded-full transition-all"
                     >
                       Remover
                     </button>
                   </div>
                 ) : (
-                  <label className="border border-dashed border-zinc-800 hover:border-purple-600 bg-zinc-950/50 hover:bg-zinc-950 p-6 rounded-2xl flex flex-col items-center justify-center gap-2 cursor-pointer transition-all group">
+                  <label className="border border-dashed border-zinc-800 hover:border-purple-600 bg-zinc-950/50 p-6 rounded-2xl flex flex-col items-center justify-center gap-2 cursor-pointer transition-all group">
                     <Music className="h-8 w-8 text-zinc-600 group-hover:text-purple-500 transition-colors" />
                     <span className="text-xs font-medium text-zinc-400">Arrastra o sube un archivo de audio</span>
                     <span className="text-[10px] text-zinc-600">MP3, WAV o OGG</span>
                     <input type="file" accept="audio/*" className="hidden" onChange={handleAudioUpload} />
                   </label>
                 )}
-
-                {/* Audios rápidos de muestra */}
-                <div className="flex flex-col gap-1.5">
-                  <span className="text-[10px] text-zinc-500">¿No tienes audio? Selecciona una de muestra:</span>
-                  <div className="flex gap-2">
-                    <button 
-                      onClick={() => setAudioFile("cancion_synthwave_test.mp3")}
-                      className="text-[10px] bg-zinc-900 border border-zinc-800 hover:border-purple-600 text-zinc-300 py-1 px-2.5 rounded-lg transition-all"
-                    >
-                      🎵 Synthwave Beat
-                    </button>
-                    <button 
-                      onClick={() => setAudioFile("ritmo_rock_retro.wav")}
-                      className="text-[10px] bg-zinc-900 border border-zinc-800 hover:border-purple-600 text-zinc-300 py-1 px-2.5 rounded-lg transition-all"
-                    >
-                      🎸 Retro Rock
-                    </button>
-                  </div>
-                </div>
               </div>
             )}
           </div>
@@ -393,17 +640,23 @@ export default function Home() {
             <div className="flex flex-col gap-1.5">
               <div className="flex justify-between items-center text-xs">
                 <span className="font-semibold text-zinc-400">Tamaño K (Codewords)</span>
-                <span className="font-bold text-purple-400">{kValue} clusters</span>
+                <span className="font-bold text-purple-400">
+                  {modality === "text" ? "200 words" : modality === "image" ? "100 clusters" : "50 clusters"}
+                </span>
               </div>
-              <input
-                type="range"
-                min="50"
-                max="2000"
-                step="50"
-                value={kValue}
-                onChange={(e) => setKValue(parseInt(e.target.value))}
-                className="w-full accent-purple-600"
-              />
+              <div className="w-full bg-zinc-900 rounded-full h-1.5">
+                <div
+                  className="bg-purple-600 h-1.5 rounded-full transition-all"
+                  style={{ width: modality === "text" ? "10%" : modality === "image" ? "5%" : "2.5%" }}
+                />
+              </div>
+              <span className="text-[10px] text-zinc-600">
+                {modality === "text"
+                  ? "Top-200 palabras por TF-IDF · fijo al indexar"
+                  : modality === "image"
+                  ? "100 visual words · KMeans sobre descriptores SIFT"
+                  : "50 acoustic words · MiniBatchKMeans sobre MFCC"}
+              </span>
             </div>
 
             <div className="flex flex-col gap-1.5">
@@ -414,7 +667,8 @@ export default function Home() {
               <input
                 type="range"
                 min="1"
-                max="3"
+                max="20"
+                step="1"
                 value={topN}
                 onChange={(e) => setTopN(parseInt(e.target.value))}
                 className="w-full accent-purple-600"
@@ -425,7 +679,7 @@ export default function Home() {
           {/* Botón Ejecutar */}
           <button
             onClick={handleSearch}
-            disabled={isLoading || (modality === "text" && !queryText) || (modality === "image" && !imagePreview) || (modality === "audio" && !audioFile)}
+            disabled={isLoading || (modality === "text" && !queryText && !pdfFile) || (modality === "image" && !imagePreview) || (modality === "audio" && approach === "postgres" && !audioFile) || (modality === "audio" && approach === "custom" && !audioFileRaw)}
             className="w-full py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 disabled:from-zinc-800 disabled:to-zinc-800 disabled:text-zinc-600 text-white font-bold rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-purple-950/20 active:scale-[0.98] transition-all cursor-pointer"
           >
             {isLoading ? (
@@ -450,32 +704,32 @@ export default function Home() {
             
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div className="bg-zinc-950 p-4 rounded-2xl border border-zinc-900/80 flex flex-col gap-1">
-                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Tiempo / Latencia</span>
+                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Latencia Total</span>
                 <span className="text-xl font-bold text-purple-400">
                   {hasSearched ? `${stats.time} ms` : "--"}
                 </span>
-                <span className="text-[9px] text-zinc-600">Calculado en el backend</span>
+                <span className="text-[9px] text-zinc-600">Red + query + render</span>
               </div>
               <div className="bg-zinc-950 p-4 rounded-2xl border border-zinc-900/80 flex flex-col gap-1">
-                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Lecturas de Disco</span>
-                <span className="text-xl font-bold text-purple-400">
-                  {hasSearched ? stats.diskIO : "--"}
-                </span>
-                <span className="text-[9px] text-zinc-600">Accesos I/O simulados</span>
-              </div>
-              <div className="bg-zinc-950 p-4 rounded-2xl border border-zinc-900/80 flex flex-col gap-1">
-                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Memoria RAM</span>
-                <span className="text-xl font-bold text-purple-400">
-                  {hasSearched ? `${stats.memory} MB` : "--"}
-                </span>
-                <span className="text-[9px] text-zinc-600">Consumo de carga de índice</span>
-              </div>
-              <div className="bg-zinc-950 p-4 rounded-2xl border border-zinc-900/80 flex flex-col gap-1">
-                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Efectividad (Recall)</span>
+                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Tiempo Query</span>
                 <span className="text-xl font-bold text-emerald-400">
-                  {hasSearched ? `${stats.recall}%` : "--"}
+                  {hasSearched && approach === "custom" ? `${stats.queryMs} ms` : "--"}
                 </span>
-                <span className="text-[9px] text-zinc-600">Precisión promedio aproximada</span>
+                <span className="text-[9px] text-zinc-600">Solo búsqueda en índice</span>
+              </div>
+              <div className="bg-zinc-950 p-4 rounded-2xl border border-zinc-900/80 flex flex-col gap-1">
+                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">RAM Índice</span>
+                <span className="text-xl font-bold text-purple-400">
+                  {hasSearched && approach === "custom" ? `${stats.indexMb} MB` : "--"}
+                </span>
+                <span className="text-[9px] text-zinc-600">Histogramas en memoria</span>
+              </div>
+              <div className="bg-zinc-950 p-4 rounded-2xl border border-zinc-900/80 flex flex-col gap-1">
+                <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Comparaciones</span>
+                <span className="text-xl font-bold text-emerald-400">
+                  {hasSearched && approach === "custom" ? stats.comparisons.toLocaleString() : "--"}
+                </span>
+                <span className="text-[9px] text-zinc-600">Vectores comparados · dim {hasSearched && approach === "custom" ? stats.vectorDim : "–"}</span>
               </div>
             </div>
           </div>
@@ -528,28 +782,31 @@ export default function Home() {
                   </div>
                 ))}
 
-                {/* Resultados Imagen (E-commerce) */}
+                {/* Resultados Imagen */}
                 {modality === "image" && (
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                     {results.map((item, idx) => (
-                      <div key={item.id} className="bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-900 hover:border-zinc-800 transition-all flex flex-col">
-                        <div className="relative h-44 bg-zinc-900 flex items-center justify-center overflow-hidden">
-                          <img src={item.imgUrl} alt={item.title} className="w-full h-full object-cover" />
+                      <div key={item.id} className="bg-zinc-950 rounded-xl overflow-hidden border border-zinc-800 hover:border-purple-700 transition-all flex flex-col group">
+                        {/* Contenedor de imagen: fondo blanco, tamaño fijo 200px que no estira thumbnails pequeños */}
+                        <div className="relative bg-white flex items-center justify-center" style={{ height: "200px" }}>
+                          <img
+                            src={item.imgUrl}
+                            alt={item.title}
+                            style={{ maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto" }}
+                          />
                           <span className="absolute top-2 left-2 text-[9px] bg-purple-600 text-white font-bold px-2 py-0.5 rounded-md shadow-md">
                             Rank #{idx + 1}
                           </span>
+                          <span className="absolute bottom-2 right-2 text-[10px] font-bold text-emerald-400 bg-zinc-950/85 px-2 py-0.5 rounded-full">
+                            {(item.similarity * 100).toFixed(1)}%
+                          </span>
                         </div>
-                        <div className="p-4 flex flex-col gap-1.5 flex-1 justify-between">
-                          <div>
-                            <span className="text-[9px] text-zinc-500 block uppercase font-bold">{item.category}</span>
-                            <h3 className="text-xs font-bold text-white mt-1 line-clamp-1">{item.title}</h3>
-                          </div>
-                          <div className="flex justify-between items-center mt-3 pt-2 border-t border-zinc-900/60">
-                            <span className="text-xs font-black text-white">{item.price}</span>
-                            <span className="text-[10px] font-bold text-emerald-400">
-                              {(item.similarity * 100).toFixed(1)}% Sim.
-                            </span>
-                          </div>
+                        <div className="p-3 flex flex-col gap-0.5">
+                          <span className="text-[9px] text-zinc-500 uppercase font-bold tracking-wider">{item.category}</span>
+                          <h3 className="text-xs font-bold text-white line-clamp-1">{item.title}</h3>
+                          {item.price && (
+                            <span className="text-xs font-black text-white mt-0.5">{item.price}</span>
+                          )}
                         </div>
                       </div>
                     ))}
@@ -575,8 +832,18 @@ export default function Home() {
                       <span className="text-xs font-bold text-emerald-400">
                         {(item.similarity * 100).toFixed(1)}%
                       </span>
-                      <button className="h-8 w-8 rounded-full bg-zinc-900 hover:bg-purple-600 hover:text-white text-zinc-400 flex items-center justify-center transition-colors">
-                        <Play className="h-3.5 w-3.5 fill-current ml-0.5" />
+                      <button
+                        onClick={() => item.audio_url && handlePlayAudio(item.id, item.audio_url)}
+                        disabled={!item.audio_url}
+                        className={`h-8 w-8 rounded-full flex items-center justify-center transition-colors ${
+                          playingId === item.id
+                            ? "bg-purple-600 text-white"
+                            : "bg-zinc-900 hover:bg-purple-600 hover:text-white text-zinc-400"
+                        } disabled:opacity-30`}
+                      >
+                        {playingId === item.id
+                          ? <Pause className="h-3.5 w-3.5 fill-current" />
+                          : <Play className="h-3.5 w-3.5 fill-current ml-0.5" />}
                       </button>
                     </div>
                   </div>
