@@ -31,13 +31,6 @@ class SplitText:
             return self.split_pdf(file_path, document_id)
 
         raise ValueError(f"formato no soportado: {extension}")
-    
-    def read_txt(self, file_path: str):
-        if not os.path.exists(file_path):
-            raise FileNotFoundError(f"no existe el archivo: {file_path}")
-
-        with open(file_path, "r", encoding=DEFAULT_ENCODING) as file:
-            return file.read()
 
     def split_text(self, text: str, document_id: str, source_path: str = None):
         text = self.clean_text(text)
@@ -55,9 +48,11 @@ class SplitText:
             for part in parts:
                 chunk = {
                     "chunk_id": f"{document_id}_text_{chunk_index}",
+                    "doc_id": document_id,
                     "document_id": document_id,
                     "modality": "text",
                     "chunk_index": chunk_index,
+                    "text": part,
                     "content": part,
                     "metadata": {
                         "source_path": source_path,
@@ -70,7 +65,10 @@ class SplitText:
 
         return chunks
     
-    def read_txt(self, file_path):
+    def read_txt(self, file_path: str):
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"no existe el archivo: {file_path}")
+
         with open(file_path, "r", encoding=DEFAULT_ENCODING) as file:
             return file.read()
 
