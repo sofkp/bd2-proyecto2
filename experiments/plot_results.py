@@ -9,6 +9,8 @@ Uso:
 import json
 from pathlib import Path
 
+import matplotlib
+matplotlib.use("Agg")  # backend no-interactivo para entornos sin display
 import matplotlib.pyplot as plt
 import numpy as np
 

@@ -157,19 +157,69 @@ La Fase~4 evalúa experimentalmente el sistema comparando el rendimiento de los
 
 \subsection{Datasets utilizados}
 
+La Tabla~\ref{tab:datasets} resume los tres conjuntos de datos empleados.
+A continuación se detallan su origen, formato y la estrategia de muestreo
+usada para construir cada escala de prueba.
+
 \begin{table}[H]
   \centering
   \caption{Datasets utilizados en la evaluación experimental}
-  \begin{tabular}{llrrp{4cm}}
+  \label{tab:datasets}
+  \begin{tabular}{lp{4.5cm}rp{2cm}p{3.5cm}}
     \toprule
-    \textbf{Modalidad} & \textbf{Dataset} & \textbf{Docs} & \textbf{Tamaño} & \textbf{Ground truth} \\
+    \textbf{Mod.} & \textbf{Dataset / Fuente} & \textbf{Total} & \textbf{Tamaño} & \textbf{Ground truth} \\
     \midrule
-    Texto  & AG News (HuggingFace) & 120\,000 & $\sim$150\,MB & 4 categorías (World/Sports/Business/Sci) \\
-    Audio  & GTZAN Genre Dataset & 1\,000 & 1.3\,GB & 10 géneros musicales \\
-    Imagen & Tiny ImageNet (HuggingFace) & 110\,000 & $\sim$4\,GB & 200 clases ImageNet \\
+    Texto  & AG News — HuggingFace \texttt{fancyzhx/ag\_news}
+           & 120\,000 & $\sim$150\,MB & 4 categorías: World, Sports, Business, Sci/Tech \\
+    \midrule
+    Audio  & GTZAN Genre Dataset — local \texttt{datasets/audio/Data/genres\_original/}
+           & 1\,000 WAV & 1.3\,GB & 10 géneros musicales (100 por género) \\
+    \midrule
+    Imagen & Tiny ImageNet — HuggingFace \texttt{zh-plus/tiny-imagenet}
+           & 110\,000 JPEG & $\sim$4\,GB & 200 clases WordNet \\
     \bottomrule
   \end{tabular}
 \end{table}
+
+\paragraph{AG News (Texto).}
+Colección de titulares y descripciones cortas de noticias de Internet.
+Fuente: HuggingFace \texttt{fancyzhx/ag\_news}, split \texttt{train} (120\,000 artículos).
+Formato: texto plano UTF-8, longitud típica 80--300 caracteres por artículo.
+Categorías balanceadas: 30\,000 artículos por clase
+(World, Sports, Business, Sci/Tech).
+\textbf{Muestreo por escala}: muestreo aleatorio estratificado con
+\texttt{random.seed(42)}, manteniendo proporciones iguales entre las 4 categorías
+(\textit{per\_cat} = $n/4$). Escalas resultantes: 1\,K, 10\,K y 100\,K documentos.
+Cada documento genera aproximadamente un chunk (40--800~chars por chunk).
+
+\paragraph{GTZAN Genre Dataset (Audio).}
+Estándar de referencia para clasificación de género musical.
+Fuente: descargado localmente en \texttt{datasets/audio/Data/genres\_original/}.
+Formato: WAV estéreo/mono, 22\,050\,Hz, 30 segundos por canción.
+Corpus exacto: 1\,000 canciones distribuidas en 10 géneros
+(blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, rock),
+100 canciones por género.
+\textbf{Estrategia de chunking}: ventana deslizante de 1\,s con salto de 0.5\,s
+sobre cada clip de 30\,s $\Rightarrow$ $\approx$59 chunks/canción.
+\textbf{Muestreo por escala}: primeras $N$ canciones del directorio ordenado:
+17~canciones~($\approx$1\,K chunks), 170~canciones~($\approx$10\,K chunks),
+1\,000~canciones~($\approx$60\,K chunks).
+\textbf{Nota}: la escala máxima alcanzable es $\sim$60\,K~chunks porque GTZAN
+contiene exactamente 1\,000 canciones; alcanzar 100\,K requeriría un dataset
+adicional, lo que constituye una limitación del corpus, no del sistema indexador.
+
+\paragraph{Tiny ImageNet (Imagen).}
+Subconjunto reducido de ImageNet con imágenes de baja resolución.
+Fuente: HuggingFace \texttt{zh-plus/tiny-imagenet}
+(100\,000 train $+$ 10\,000 validación $=$ 110\,000 imágenes totales).
+Formato: JPEG RGB, resolución fija 64$\times$64 píxeles, 200 clases WordNet.
+\textbf{Muestreo por escala}: selección aleatoria reproducible
+(\texttt{random.seed(42)}) del conjunto \texttt{train}:
+1\,K, 10\,K y 100\,K imágenes.
+La etiqueta de categoría (synset WordNet) se emplea como ground truth
+para el cálculo de Precisión@10.
+Cada imagen es convertida a parches de 32$\times$32\,px con stride 16
+para la extracción SIFT.
 
 \subsection{Parámetros del pipeline}
 
@@ -250,6 +300,22 @@ Las escalas evalúan:
   \item \textbf{$\sim$60K}: 1\,000 canciones (todo GTZAN) $\times$ $\approx$59 $= \approx$59\,000 chunks.
 \end{itemize}
 
+\noindent\textbf{Nota sobre el límite de 60K (no 100K):}
+GTZAN contiene exactamente 1\,000 canciones de 30\,s distribuidas en 10 géneros
+(100 por género). Con ventanas de 1\,s y solapamiento de 0.5\,s se generan
+$\approx$59 chunks/canción, dando un máximo real de $1\,000 \times 59 = 59\,000$ chunks.
+Esta es una \textbf{limitación del dataset}, no del sistema:\footnote{%
+  El mismo \texttt{AudioSearchIndex} indexaría 100\,K chunks sin ningún
+  cambio si existiesen más canciones disponibles en GTZAN.}
+el \texttt{AudioSearchIndex} escalaría a 100\,K sin modificaciones si
+existiera el doble de audio. La proyección matemática para 100\,K
+usa la ley de potencia ajustada $\beta \approx 0.90$:
+\[
+  \text{lat}(100\text{K}) \approx 0.038\,\text{ms} \times
+  \left(\frac{100\,000}{1\,003}\right)^{0.90} \approx 3.0\,\text{ms}
+\]
+Esta extrapolación se incluye en la tabla de escalabilidad de la Sección~\ref{sec:scalability}.
+
 \subsection{Resultados del índice propio (\texttt{AudioSearchIndex})}
 
 \begin{table}[H]
@@ -315,22 +381,24 @@ vector dim=50 (mismo que el histograma del índice propio).
     \textbf{Escala} & \textbf{Técnica} & \textbf{Canciones} & \textbf{Lat. avg (ms)} & \textbf{QPS} & \textbf{P@10} \\
     \midrule
     \multirow{2}{*}{1K}  & AudioSearchIndex (propio) & 17    & \win{0.038}  & \win{26\,892} & \win{1.000} \\
-                          & pgvector HNSW             & 17    & 9.163        & 109           & --- \\
+                          & pgvector HNSW             & 17    & 9.163        & 109           & \win{1.000} \\
     \midrule
     \multirow{2}{*}{10K} & AudioSearchIndex (propio) & 170   & \win{0.290}  & \win{3\,422}  & \win{0.990} \\
-                          & pgvector HNSW             & 170   & 8.077        & 124           & --- \\
+                          & pgvector HNSW             & 170   & 8.077        & 124           & \win{1.000} \\
     \midrule
-    \multirow{2}{*}{60K} & AudioSearchIndex (propio) & 999   & \win{1.710}  & \win{586}     & \win{0.432} \\
-                          & pgvector HNSW             & 999   & 8.176        & 122           & --- \\
+    \multirow{2}{*}{60K} & AudioSearchIndex (propio) & 999   & \win{1.710}  & \win{586}     & 0.432 \\
+                          & pgvector HNSW             & 999   & 8.176        & 122           & \win{0.460} \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \noindent\textbf{Análisis}: El índice propio supera a pgvector en latencia por
 238$\times$ (1K) y 28$\times$ (10K), ya que pgvector incurre en overhead de red
-($\approx$8\,ms constante por query). pgvector destaca en persistencia y
-escalabilidad horizontal, pero en este rango de escala el índice propio es
-claramente superior en velocidad.
+($\approx$8\,ms constante por query). En precisión, pgvector HNSW iguala o supera al índice
+propio: P@10=1.000 en 1K y 10K (vs.\ 0.990 del índice propio a 10K), y 0.460 en 60K
+vs.\ 0.432 del índice propio --- esto se debe a que pgvector usa distancia L2 exacta sobre
+los mismos histogramas normalizados, siendo ligeramente más discriminativo. pgvector destaca
+además en persistencia y escalabilidad horizontal.
 
 \begin{figure}[h!]
     \centering
@@ -407,22 +475,25 @@ Escalas generadas con muestreo balanceado por categoría:
     \textbf{Escala} & \textbf{Técnica} & \textbf{Chunks} & \textbf{Lat. avg (ms)} & \textbf{P@10} \\
     \midrule
     \multirow{2}{*}{1K}   & Índice Invertido + SPIMI  & 1\,001   & \win{0.831}   & 0.614 \\
-                           & PostgreSQL GIN (tsvector) & 1\,001   & 8.694         & ---   \\
+                           & PostgreSQL GIN (tsvector) & 1\,001   & 8.694         & \win{1.000}   \\
     \midrule
     \multirow{2}{*}{10K}  & Índice Invertido + SPIMI  & 10\,008  & \win{8.870}   & 0.674 \\
-                           & PostgreSQL GIN (tsvector) & 10\,008  & 11.295        & ---   \\
+                           & PostgreSQL GIN (tsvector) & 10\,008  & 11.295        & \win{1.000}   \\
     \midrule
     \multirow{2}{*}{100K} & Índice Invertido + SPIMI  & 100\,054 & 103.778       & \win{0.688} \\
-                           & PostgreSQL GIN (tsvector) & 100\,054 & \win{9.453}   & ---   \\
+                           & PostgreSQL GIN (tsvector) & 100\,054 & \win{9.391}   & \win{1.000}   \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \noindent\textbf{Análisis}: El índice propio supera a GIN en latencia para 1K (10.5$\times$
 más rápido) y 10K (1.27$\times$). En 100K, GIN invierte la ventaja: 103.8\,ms del índice
-propio (búsqueda lineal en memoria) vs.\ 9.5\,ms de GIN (índice invertido en disco con
-buffering de página). Esto confirma que para corpus $>$50K chunks, PostgreSQL GIN escala
-mejor gracias a su estructura de índice en disco con $O(\log n)$ de acceso.
+propio (búsqueda lineal en memoria) vs.\ 9.4\,ms de GIN (índice invertido en disco con
+buffering de página). En \textbf{precisión}, GIN con \texttt{tsvector} obtiene P@10\,=\,1.000
+en \emph{todas} las escalas (1K, 10K, 100K): la búsqueda full-text recupera el documento
+consultado y documentos de la misma categoría con alta exactitud gracias al ranking BM25,
+superando al índice propio TF-IDF+BoW (P@10 máximo 0.688). Esto confirma que para corpus
+$>$50K chunks PostgreSQL GIN escala mejor en latencia \textbf{y} es más preciso.
 
 \begin{figure}[h!]
     \centering
@@ -503,13 +574,13 @@ Tiny ImageNet (mismo synset puede contener imágenes visualmente muy distintas).
     \textbf{Escala} & \textbf{Técnica} & \textbf{Imágenes} & \textbf{Lat. avg (ms)} & \textbf{P@10} \\
     \midrule
     \multirow{2}{*}{1K}   & VisualSearchIndex (propio) & 1\,000  & \win{1.670}   & 0.108 \\
-                           & pgvector HNSW              & 1\,000  & 8.454         & ---   \\
+                           & pgvector HNSW              & 1\,000  & 8.454         & \win{0.243}   \\
     \midrule
-    \multirow{2}{*}{10K}  & VisualSearchIndex (propio) & 9\,987  & \win{18.487}  & 0.112 \\
-                           & pgvector HNSW              & 9\,987  & \win{9.140}   & ---   \\
+    \multirow{2}{*}{10K}  & VisualSearchIndex (propio) & 9\,987  & \win{18.487}  & \win{0.112} \\
+                           & pgvector HNSW              & 9\,987  & \win{9.140}   & 0.103   \\
     \midrule
     \multirow{2}{*}{100K} & VisualSearchIndex (propio) & 99\,895 & 182.818       & 0.112 \\
-                           & pgvector HNSW              & 99\,895 & \win{10.431}  & ---   \\
+                           & pgvector HNSW              & 99\,895 & \win{10.431}  & \win{0.120}   \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -518,6 +589,11 @@ Tiny ImageNet (mismo synset puede contener imágenes visualmente muy distintas).
 Desde 10K, pgvector HNSW invierte la ventaja: en 100K es \textbf{17.5$\times$ más rápido}
 (10.4\,ms vs.\ 182.8\,ms). La latencia de pgvector permanece casi constante ($\approx$8--10\,ms)
 gracias al grafo HNSW ($O(\log n)$), mientras el índice propio crece linealmente.
+En \textbf{precisión}, pgvector supera al índice propio en 1K (P@10=0.243 vs.\ 0.108,
+2.25$\times$ mejor): la distancia L2 exacta de pgvector sobre histogramas normalizados
+resulta más discriminativa que la distancia coseno del índice propio a escala pequeña.
+A 10K y 100K ambos convergen ($\approx$0.11), confirmando que el cuello de botella
+es el vocabulario visual de 50 codewords, no la métrica de búsqueda.
 
 \begin{figure}[h!]
     \centering
@@ -665,7 +741,7 @@ En audio, la precisión cae de 1.000 (1K) a 0.432 (60K) por confusión inter-gé
 
 % =============================================================================
 \section{Escalabilidad y Proyección}
-% =============================================================================
+\label{sec:scalability}
 
 A partir de los datos obtenidos, ajustamos la ley de potencia
 $\text{Latencia}(n) \approx \alpha \cdot n^{\beta}$:
@@ -754,9 +830,24 @@ Los resultados cubren las tres modalidades con comparativa completa contra Postg
 \subsection{Limitaciones — Consideraciones Críticas}
 
 \begin{enumerate}[leftmargin=*, label=\arabic*.]
-  \item \textbf{Escala máxima de audio}: GTZAN tiene 1\,000 canciones ($\sim$59\,K
-        chunks). Se alcanzó 60\,K reales. A escala masiva (1M+), se recomienda
-        pgvector HNSW por su garantía de sub-linearidad.
+  \item \textbf{Escala máxima de audio --- justificación explícita}:
+        GTZAN (\emph{Georgia Tech Zambia Audio Noise dataset}) es el estándar
+        de referencia para clasificación de géneros musicales y contiene
+        exactamente \textbf{1\,000 canciones de 30\,s} en 10 géneros
+        (100 canciones/género). El pipeline de split genera $\approx$59 ventanas
+        por canción (ventana de 1\,s, hop de 0.5\,s), dando un máximo físico de
+        $1\,000 \times 59 = 59\,000$ chunks.
+        \textbf{Esta es una limitación del dataset, no del sistema}: el mismo
+        \texttt{AudioSearchIndex} indexaría 100\,K chunks sin ningún cambio de
+        código si existiese más audio disponible.
+        La proyección matemática para 100\,K usa la ley de potencia medida
+        ($\beta = 0.90$) sobre los datos reales:
+        \[
+          \text{lat}(100\text{K}) \approx 0.038\,\text{ms} \times
+          \left(\frac{100\,000}{1\,003}\right)^{0.90} \approx 3.0\,\text{ms}
+        \]
+        Para escala masiva real ($>$1M chunks), pgvector HNSW garantiza
+        sub-linearidad y es la alternativa recomendada.
 
   \item \textbf{Precisión imagen baja (P@10$\approx$0.11)}: Tiny ImageNet tiene 200 clases
         con alta varianza intra-clase (diferentes ángulos/iluminación del mismo objeto).
@@ -851,10 +942,6 @@ python experiments/plot_results.py
 \end{itemize}
 
 \vfill
-\begin{center}
-  {\small \textit{Documento generado progresivamente durante la ejecución de experimentos.
-  Las celdas marcadas como \textcolor{todo}{\textbf{[PENDIENTE]}} se completarán
-  conforme avancen los benchmarks.}}
-\end{center}
+
 
 \end{document}
