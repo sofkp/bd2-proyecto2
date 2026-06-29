@@ -1,0 +1,5002 @@
+[
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03796401/0056818.jpg",
+    "id": "tinyimg_0056818",
+    "category": "n03796401"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03255030/0045755.jpg",
+    "id": "tinyimg_0045755",
+    "category": "n03255030"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123045/0013871.jpg",
+    "id": "tinyimg_0013871",
+    "category": "n02123045"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04486054/0077481.jpg",
+    "id": "tinyimg_0077481",
+    "category": "n04486054"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02815834/0033366.jpg",
+    "id": "tinyimg_0033366",
+    "category": "n02815834"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02788148/0029008.jpg",
+    "id": "tinyimg_0029008",
+    "category": "n02788148"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03977966/0061832.jpg",
+    "id": "tinyimg_0061832",
+    "category": "n03977966"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02480495/0024661.jpg",
+    "id": "tinyimg_0024661",
+    "category": "n02480495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07920052/0091921.jpg",
+    "id": "tinyimg_0091921",
+    "category": "n07920052"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774750/0004571.jpg",
+    "id": "tinyimg_0004571",
+    "category": "n01774750"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02321529/0020643.jpg",
+    "id": "tinyimg_0020643",
+    "category": "n02321529"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07715103/0087602.jpg",
+    "id": "tinyimg_0087602",
+    "category": "n07715103"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01641577/0001223.jpg",
+    "id": "tinyimg_0001223",
+    "category": "n01641577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02837789/0034025.jpg",
+    "id": "tinyimg_0034025",
+    "category": "n02837789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07711569/0108714.jpg",
+    "id": "tinyimg_0108714",
+    "category": "n07711569"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04598010/0082095.jpg",
+    "id": "tinyimg_0082095",
+    "category": "n04598010"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652335/0098168.jpg",
+    "id": "tinyimg_0098168",
+    "category": "n13652335"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02165456/0016735.jpg",
+    "id": "tinyimg_0016735",
+    "category": "n02165456"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01443537/0000228.jpg",
+    "id": "tinyimg_0000228",
+    "category": "n01443537"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02669723/0027969.jpg",
+    "id": "tinyimg_0027969",
+    "category": "n02669723"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03763968/0055629.jpg",
+    "id": "tinyimg_0055629",
+    "category": "n03763968"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02132136/0016462.jpg",
+    "id": "tinyimg_0016462",
+    "category": "n02132136"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04356056/0072798.jpg",
+    "id": "tinyimg_0072798",
+    "category": "n04356056"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08620881/0093470.jpg",
+    "id": "tinyimg_0093470",
+    "category": "n08620881"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02841315/0034683.jpg",
+    "id": "tinyimg_0034683",
+    "category": "n02841315"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04376876/0074152.jpg",
+    "id": "tinyimg_0074152",
+    "category": "n04376876"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774750/0004581.jpg",
+    "id": "tinyimg_0004581",
+    "category": "n01774750"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02791270/0029659.jpg",
+    "id": "tinyimg_0029659",
+    "category": "n02791270"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04070727/0064964.jpg",
+    "id": "tinyimg_0064964",
+    "category": "n04070727"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774750/0004796.jpg",
+    "id": "tinyimg_0004796",
+    "category": "n01774750"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02509815/0026771.jpg",
+    "id": "tinyimg_0026771",
+    "category": "n02509815"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03670208/0054284.jpg",
+    "id": "tinyimg_0054284",
+    "category": "n03670208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07720875/0088076.jpg",
+    "id": "tinyimg_0088076",
+    "category": "n07720875"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09256479/0095022.jpg",
+    "id": "tinyimg_0095022",
+    "category": "n09256479"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n14991210/0109999.jpg",
+    "id": "tinyimg_0109999",
+    "category": "n14991210"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07657664/0086420.jpg",
+    "id": "tinyimg_0086420",
+    "category": "n07657664"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03026506/0041308.jpg",
+    "id": "tinyimg_0041308",
+    "category": "n03026506"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04023962/0064313.jpg",
+    "id": "tinyimg_0064313",
+    "category": "n04023962"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02509815/0026821.jpg",
+    "id": "tinyimg_0026821",
+    "category": "n02509815"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03706229/0054519.jpg",
+    "id": "tinyimg_0054519",
+    "category": "n03706229"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03404251/0048736.jpg",
+    "id": "tinyimg_0048736",
+    "category": "n03404251"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03042490/0041811.jpg",
+    "id": "tinyimg_0041811",
+    "category": "n03042490"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04465666/0076734.jpg",
+    "id": "tinyimg_0076734",
+    "category": "n04465666"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08496334/0092972.jpg",
+    "id": "tinyimg_0092972",
+    "category": "n08496334"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03089624/0042586.jpg",
+    "id": "tinyimg_0042586",
+    "category": "n03089624"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01944390/0007234.jpg",
+    "id": "tinyimg_0007234",
+    "category": "n01944390"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532670/0079501.jpg",
+    "id": "tinyimg_0079501",
+    "category": "n04532670"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02165456/0016521.jpg",
+    "id": "tinyimg_0016521",
+    "category": "n02165456"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02988304/0040316.jpg",
+    "id": "tinyimg_0040316",
+    "category": "n02988304"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01629819/0000642.jpg",
+    "id": "tinyimg_0000642",
+    "category": "n01629819"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01443537/0000025.jpg",
+    "id": "tinyimg_0000025",
+    "category": "n01443537"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02843684/0035391.jpg",
+    "id": "tinyimg_0035391",
+    "category": "n02843684"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07583066/0083749.jpg",
+    "id": "tinyimg_0083749",
+    "category": "n07583066"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099712/0012305.jpg",
+    "id": "tinyimg_0012305",
+    "category": "n02099712"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04118538/0066221.jpg",
+    "id": "tinyimg_0066221",
+    "category": "n04118538"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07720875/0088158.jpg",
+    "id": "tinyimg_0088158",
+    "category": "n07720875"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02415577/0023292.jpg",
+    "id": "tinyimg_0023292",
+    "category": "n02415577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02395406/0021551.jpg",
+    "id": "tinyimg_0021551",
+    "category": "n02395406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03770439/0056117.jpg",
+    "id": "tinyimg_0056117",
+    "category": "n03770439"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03617480/0052478.jpg",
+    "id": "tinyimg_0052478",
+    "category": "n03617480"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03255030/0045624.jpg",
+    "id": "tinyimg_0045624",
+    "category": "n03255030"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04099969/0065823.jpg",
+    "id": "tinyimg_0065823",
+    "category": "n04099969"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01770393/0003970.jpg",
+    "id": "tinyimg_0003970",
+    "category": "n01770393"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04399382/0075412.jpg",
+    "id": "tinyimg_0075412",
+    "category": "n04399382"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07711569/0087129.jpg",
+    "id": "tinyimg_0087129",
+    "category": "n07711569"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04328186/0072177.jpg",
+    "id": "tinyimg_0072177",
+    "category": "n04328186"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01984695/0008771.jpg",
+    "id": "tinyimg_0008771",
+    "category": "n01984695"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02795169/0030757.jpg",
+    "id": "tinyimg_0030757",
+    "category": "n02795169"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652335/0098279.jpg",
+    "id": "tinyimg_0098279",
+    "category": "n13652335"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04074963/0065257.jpg",
+    "id": "tinyimg_0065257",
+    "category": "n04074963"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03649909/0053472.jpg",
+    "id": "tinyimg_0053472",
+    "category": "n03649909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03937543/0060588.jpg",
+    "id": "tinyimg_0060588",
+    "category": "n03937543"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02132136/0016065.jpg",
+    "id": "tinyimg_0016065",
+    "category": "n02132136"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02669723/0027575.jpg",
+    "id": "tinyimg_0027575",
+    "category": "n02669723"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01742172/0002844.jpg",
+    "id": "tinyimg_0002844",
+    "category": "n01742172"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07975909/0092080.jpg",
+    "id": "tinyimg_0092080",
+    "category": "n07975909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04023962/0064377.jpg",
+    "id": "tinyimg_0064377",
+    "category": "n04023962"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04008634/0063726.jpg",
+    "id": "tinyimg_0063726",
+    "category": "n04008634"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03763968/0055984.jpg",
+    "id": "tinyimg_0055984",
+    "category": "n03763968"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03637318/0052638.jpg",
+    "id": "tinyimg_0052638",
+    "category": "n03637318"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02074367/0010757.jpg",
+    "id": "tinyimg_0010757",
+    "category": "n02074367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07695742/0086825.jpg",
+    "id": "tinyimg_0086825",
+    "category": "n07695742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03201208/0045435.jpg",
+    "id": "tinyimg_0045435",
+    "category": "n03201208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12520864/0097092.jpg",
+    "id": "tinyimg_0097092",
+    "category": "n12520864"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01882714/0005873.jpg",
+    "id": "tinyimg_0005873",
+    "category": "n01882714"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02321529/0020687.jpg",
+    "id": "tinyimg_0020687",
+    "category": "n02321529"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01698640/0002432.jpg",
+    "id": "tinyimg_0002432",
+    "category": "n01698640"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07749582/0088771.jpg",
+    "id": "tinyimg_0088771",
+    "category": "n07749582"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02410509/0022502.jpg",
+    "id": "tinyimg_0022502",
+    "category": "n02410509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03902125/0059656.jpg",
+    "id": "tinyimg_0059656",
+    "category": "n03902125"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03838899/0105845.jpg",
+    "id": "tinyimg_0105845",
+    "category": "n03838899"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09193705/0094467.jpg",
+    "id": "tinyimg_0094467",
+    "category": "n09193705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02125311/0015433.jpg",
+    "id": "tinyimg_0015433",
+    "category": "n02125311"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04465666/0076775.jpg",
+    "id": "tinyimg_0076775",
+    "category": "n04465666"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09332890/0109558.jpg",
+    "id": "tinyimg_0109558",
+    "category": "n09332890"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02279972/0019600.jpg",
+    "id": "tinyimg_0019600",
+    "category": "n02279972"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02058221/0010163.jpg",
+    "id": "tinyimg_0010163",
+    "category": "n02058221"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04417672/0075948.jpg",
+    "id": "tinyimg_0075948",
+    "category": "n04417672"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07695742/0086984.jpg",
+    "id": "tinyimg_0086984",
+    "category": "n07695742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02481823/0025070.jpg",
+    "id": "tinyimg_0025070",
+    "category": "n02481823"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03424325/0049065.jpg",
+    "id": "tinyimg_0049065",
+    "category": "n03424325"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02917067/0037028.jpg",
+    "id": "tinyimg_0037028",
+    "category": "n02917067"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02058221/0010390.jpg",
+    "id": "tinyimg_0010390",
+    "category": "n02058221"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09332890/0095793.jpg",
+    "id": "tinyimg_0095793",
+    "category": "n09332890"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03637318/0052938.jpg",
+    "id": "tinyimg_0052938",
+    "category": "n03637318"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04540053/0080473.jpg",
+    "id": "tinyimg_0080473",
+    "category": "n04540053"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04417672/0075582.jpg",
+    "id": "tinyimg_0075582",
+    "category": "n04417672"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02321529/0020932.jpg",
+    "id": "tinyimg_0020932",
+    "category": "n02321529"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02002724/0009370.jpg",
+    "id": "tinyimg_0009370",
+    "category": "n02002724"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07695742/0086544.jpg",
+    "id": "tinyimg_0086544",
+    "category": "n07695742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04070727/0064935.jpg",
+    "id": "tinyimg_0064935",
+    "category": "n04070727"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652994/0098846.jpg",
+    "id": "tinyimg_0098846",
+    "category": "n13652994"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01641577/0001095.jpg",
+    "id": "tinyimg_0001095",
+    "category": "n01641577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123394/0014080.jpg",
+    "id": "tinyimg_0014080",
+    "category": "n02123394"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04133789/0066732.jpg",
+    "id": "tinyimg_0066732",
+    "category": "n04133789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123045/0013814.jpg",
+    "id": "tinyimg_0013814",
+    "category": "n02123045"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02837789/0034242.jpg",
+    "id": "tinyimg_0034242",
+    "category": "n02837789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03662601/0053835.jpg",
+    "id": "tinyimg_0053835",
+    "category": "n03662601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01882714/0005714.jpg",
+    "id": "tinyimg_0005714",
+    "category": "n01882714"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04179913/0068105.jpg",
+    "id": "tinyimg_0068105",
+    "category": "n04179913"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03983396/0062695.jpg",
+    "id": "tinyimg_0062695",
+    "category": "n03983396"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07875152/0091383.jpg",
+    "id": "tinyimg_0091383",
+    "category": "n07875152"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02481823/0025082.jpg",
+    "id": "tinyimg_0025082",
+    "category": "n02481823"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01443537/0000250.jpg",
+    "id": "tinyimg_0000250",
+    "category": "n01443537"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03649909/0053051.jpg",
+    "id": "tinyimg_0053051",
+    "category": "n03649909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04501370/0078418.jpg",
+    "id": "tinyimg_0078418",
+    "category": "n04501370"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03937543/0060749.jpg",
+    "id": "tinyimg_0060749",
+    "category": "n03937543"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03447447/0050430.jpg",
+    "id": "tinyimg_0050430",
+    "category": "n03447447"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07646821/0085152.jpg",
+    "id": "tinyimg_0085152",
+    "category": "n07646821"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08496334/0092737.jpg",
+    "id": "tinyimg_0092737",
+    "category": "n08496334"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03796401/0056617.jpg",
+    "id": "tinyimg_0056617",
+    "category": "n03796401"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02113799/0101343.jpg",
+    "id": "tinyimg_0101343",
+    "category": "n02113799"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03838899/0058042.jpg",
+    "id": "tinyimg_0058042",
+    "category": "n03838899"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123394/0014087.jpg",
+    "id": "tinyimg_0014087",
+    "category": "n02123394"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02268443/0019420.jpg",
+    "id": "tinyimg_0019420",
+    "category": "n02268443"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08620881/0093009.jpg",
+    "id": "tinyimg_0093009",
+    "category": "n08620881"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03544143/0050899.jpg",
+    "id": "tinyimg_0050899",
+    "category": "n03544143"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07647870/0085829.jpg",
+    "id": "tinyimg_0085829",
+    "category": "n07647870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01984695/0008769.jpg",
+    "id": "tinyimg_0008769",
+    "category": "n01984695"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01983481/0100811.jpg",
+    "id": "tinyimg_0100811",
+    "category": "n01983481"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04540053/0108030.jpg",
+    "id": "tinyimg_0108030",
+    "category": "n04540053"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02281406/0020111.jpg",
+    "id": "tinyimg_0020111",
+    "category": "n02281406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07583066/0083648.jpg",
+    "id": "tinyimg_0083648",
+    "category": "n07583066"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03393912/0047950.jpg",
+    "id": "tinyimg_0047950",
+    "category": "n03393912"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03179701/0104456.jpg",
+    "id": "tinyimg_0104456",
+    "category": "n03179701"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03763968/0055656.jpg",
+    "id": "tinyimg_0055656",
+    "category": "n03763968"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04259630/0069554.jpg",
+    "id": "tinyimg_0069554",
+    "category": "n04259630"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03424325/0049219.jpg",
+    "id": "tinyimg_0049219",
+    "category": "n03424325"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04399382/0075311.jpg",
+    "id": "tinyimg_0075311",
+    "category": "n04399382"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814533/0032114.jpg",
+    "id": "tinyimg_0032114",
+    "category": "n02814533"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01784675/0005464.jpg",
+    "id": "tinyimg_0005464",
+    "category": "n01784675"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02364673/0021255.jpg",
+    "id": "tinyimg_0021255",
+    "category": "n02364673"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03584254/0051225.jpg",
+    "id": "tinyimg_0051225",
+    "category": "n03584254"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07695742/0086895.jpg",
+    "id": "tinyimg_0086895",
+    "category": "n07695742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01768244/0003094.jpg",
+    "id": "tinyimg_0003094",
+    "category": "n01768244"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652994/0098617.jpg",
+    "id": "tinyimg_0098617",
+    "category": "n13652994"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03042490/0041829.jpg",
+    "id": "tinyimg_0041829",
+    "category": "n03042490"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652335/0098263.jpg",
+    "id": "tinyimg_0098263",
+    "category": "n13652335"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07657664/0086392.jpg",
+    "id": "tinyimg_0086392",
+    "category": "n07657664"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02977058/0039627.jpg",
+    "id": "tinyimg_0039627",
+    "category": "n02977058"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04275548/0107085.jpg",
+    "id": "tinyimg_0107085",
+    "category": "n04275548"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09246464/0094994.jpg",
+    "id": "tinyimg_0094994",
+    "category": "n09246464"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02927161/0037767.jpg",
+    "id": "tinyimg_0037767",
+    "category": "n02927161"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04376876/0074230.jpg",
+    "id": "tinyimg_0074230",
+    "category": "n04376876"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03930313/0060330.jpg",
+    "id": "tinyimg_0060330",
+    "category": "n03930313"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532670/0079913.jpg",
+    "id": "tinyimg_0079913",
+    "category": "n04532670"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04259630/0069655.jpg",
+    "id": "tinyimg_0069655",
+    "category": "n04259630"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123045/0013614.jpg",
+    "id": "tinyimg_0013614",
+    "category": "n02123045"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01770393/0003770.jpg",
+    "id": "tinyimg_0003770",
+    "category": "n01770393"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02950826/0038894.jpg",
+    "id": "tinyimg_0038894",
+    "category": "n02950826"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02281406/0020254.jpg",
+    "id": "tinyimg_0020254",
+    "category": "n02281406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02802426/0031003.jpg",
+    "id": "tinyimg_0031003",
+    "category": "n02802426"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07056680/0083279.jpg",
+    "id": "tinyimg_0083279",
+    "category": "n07056680"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02509815/0026744.jpg",
+    "id": "tinyimg_0026744",
+    "category": "n02509815"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03388043/0104733.jpg",
+    "id": "tinyimg_0104733",
+    "category": "n03388043"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02236044/0018599.jpg",
+    "id": "tinyimg_0018599",
+    "category": "n02236044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07583066/0083967.jpg",
+    "id": "tinyimg_0083967",
+    "category": "n07583066"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02395406/0021742.jpg",
+    "id": "tinyimg_0021742",
+    "category": "n02395406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02236044/0018694.jpg",
+    "id": "tinyimg_0018694",
+    "category": "n02236044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08496334/0109259.jpg",
+    "id": "tinyimg_0109259",
+    "category": "n08496334"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03393912/0047744.jpg",
+    "id": "tinyimg_0047744",
+    "category": "n03393912"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03255030/0045551.jpg",
+    "id": "tinyimg_0045551",
+    "category": "n03255030"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03649909/0053186.jpg",
+    "id": "tinyimg_0053186",
+    "category": "n03649909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02165456/0016846.jpg",
+    "id": "tinyimg_0016846",
+    "category": "n02165456"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01910747/0006273.jpg",
+    "id": "tinyimg_0006273",
+    "category": "n01910747"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01644900/0001929.jpg",
+    "id": "tinyimg_0001929",
+    "category": "n01644900"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02795169/0103050.jpg",
+    "id": "tinyimg_0103050",
+    "category": "n02795169"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02791270/0029770.jpg",
+    "id": "tinyimg_0029770",
+    "category": "n02791270"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02481823/0025190.jpg",
+    "id": "tinyimg_0025190",
+    "category": "n02481823"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07875152/0091367.jpg",
+    "id": "tinyimg_0091367",
+    "category": "n07875152"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02129165/0015819.jpg",
+    "id": "tinyimg_0015819",
+    "category": "n02129165"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01770393/0003544.jpg",
+    "id": "tinyimg_0003544",
+    "category": "n01770393"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04023962/0106443.jpg",
+    "id": "tinyimg_0106443",
+    "category": "n04023962"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03670208/0054388.jpg",
+    "id": "tinyimg_0054388",
+    "category": "n03670208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02699494/0028250.jpg",
+    "id": "tinyimg_0028250",
+    "category": "n02699494"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02791270/0029609.jpg",
+    "id": "tinyimg_0029609",
+    "category": "n02791270"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04328186/0072245.jpg",
+    "id": "tinyimg_0072245",
+    "category": "n04328186"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n06596364/0082972.jpg",
+    "id": "tinyimg_0082972",
+    "category": "n06596364"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02815834/0033215.jpg",
+    "id": "tinyimg_0033215",
+    "category": "n02815834"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02793495/0030288.jpg",
+    "id": "tinyimg_0030288",
+    "category": "n02793495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02892201/0036197.jpg",
+    "id": "tinyimg_0036197",
+    "category": "n02892201"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03796401/0056671.jpg",
+    "id": "tinyimg_0056671",
+    "category": "n03796401"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03126707/0043650.jpg",
+    "id": "tinyimg_0043650",
+    "category": "n03126707"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04366367/0073237.jpg",
+    "id": "tinyimg_0073237",
+    "category": "n04366367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07920052/0091750.jpg",
+    "id": "tinyimg_0091750",
+    "category": "n07920052"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02892201/0036228.jpg",
+    "id": "tinyimg_0036228",
+    "category": "n02892201"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13719102/0099077.jpg",
+    "id": "tinyimg_0099077",
+    "category": "n13719102"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02129165/0015882.jpg",
+    "id": "tinyimg_0015882",
+    "category": "n02129165"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03970156/0061344.jpg",
+    "id": "tinyimg_0061344",
+    "category": "n03970156"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04008634/0063801.jpg",
+    "id": "tinyimg_0063801",
+    "category": "n04008634"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02793495/0030351.jpg",
+    "id": "tinyimg_0030351",
+    "category": "n02793495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03160309/0044393.jpg",
+    "id": "tinyimg_0044393",
+    "category": "n03160309"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02793495/0030208.jpg",
+    "id": "tinyimg_0030208",
+    "category": "n02793495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02948072/0038321.jpg",
+    "id": "tinyimg_0038321",
+    "category": "n02948072"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04328186/0072076.jpg",
+    "id": "tinyimg_0072076",
+    "category": "n04328186"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02963159/0039001.jpg",
+    "id": "tinyimg_0039001",
+    "category": "n02963159"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03393912/0047579.jpg",
+    "id": "tinyimg_0047579",
+    "category": "n03393912"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02233338/0018484.jpg",
+    "id": "tinyimg_0018484",
+    "category": "n02233338"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04356056/0072961.jpg",
+    "id": "tinyimg_0072961",
+    "category": "n04356056"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03160309/0044466.jpg",
+    "id": "tinyimg_0044466",
+    "category": "n03160309"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04008634/0063517.jpg",
+    "id": "tinyimg_0063517",
+    "category": "n04008634"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02481823/0025240.jpg",
+    "id": "tinyimg_0025240",
+    "category": "n02481823"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04023962/0064484.jpg",
+    "id": "tinyimg_0064484",
+    "category": "n04023962"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07056680/0083494.jpg",
+    "id": "tinyimg_0083494",
+    "category": "n07056680"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04507155/0078921.jpg",
+    "id": "tinyimg_0078921",
+    "category": "n04507155"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03085013/0042452.jpg",
+    "id": "tinyimg_0042452",
+    "category": "n03085013"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04562935/0081134.jpg",
+    "id": "tinyimg_0081134",
+    "category": "n04562935"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03100240/0043095.jpg",
+    "id": "tinyimg_0043095",
+    "category": "n03100240"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03599486/0051844.jpg",
+    "id": "tinyimg_0051844",
+    "category": "n03599486"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04254777/0069116.jpg",
+    "id": "tinyimg_0069116",
+    "category": "n04254777"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03126707/0043750.jpg",
+    "id": "tinyimg_0043750",
+    "category": "n03126707"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02823428/0033658.jpg",
+    "id": "tinyimg_0033658",
+    "category": "n02823428"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02841315/0034754.jpg",
+    "id": "tinyimg_0034754",
+    "category": "n02841315"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01698640/0002284.jpg",
+    "id": "tinyimg_0002284",
+    "category": "n01698640"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04251144/0068980.jpg",
+    "id": "tinyimg_0068980",
+    "category": "n04251144"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04487081/0077593.jpg",
+    "id": "tinyimg_0077593",
+    "category": "n04487081"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07647870/0085886.jpg",
+    "id": "tinyimg_0085886",
+    "category": "n07647870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02321529/0020959.jpg",
+    "id": "tinyimg_0020959",
+    "category": "n02321529"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02769748/0028948.jpg",
+    "id": "tinyimg_0028948",
+    "category": "n02769748"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04023962/0064249.jpg",
+    "id": "tinyimg_0064249",
+    "category": "n04023962"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02281406/0102049.jpg",
+    "id": "tinyimg_0102049",
+    "category": "n02281406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03085013/0042218.jpg",
+    "id": "tinyimg_0042218",
+    "category": "n03085013"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02002724/0100921.jpg",
+    "id": "tinyimg_0100921",
+    "category": "n02002724"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07749582/0088582.jpg",
+    "id": "tinyimg_0088582",
+    "category": "n07749582"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03838899/0058438.jpg",
+    "id": "tinyimg_0058438",
+    "category": "n03838899"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02106662/0012656.jpg",
+    "id": "tinyimg_0012656",
+    "category": "n02106662"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03404251/0048892.jpg",
+    "id": "tinyimg_0048892",
+    "category": "n03404251"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07920052/0109193.jpg",
+    "id": "tinyimg_0109193",
+    "category": "n07920052"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07753592/0089499.jpg",
+    "id": "tinyimg_0089499",
+    "category": "n07753592"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02437312/0024488.jpg",
+    "id": "tinyimg_0024488",
+    "category": "n02437312"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03937543/0060961.jpg",
+    "id": "tinyimg_0060961",
+    "category": "n03937543"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07711569/0087155.jpg",
+    "id": "tinyimg_0087155",
+    "category": "n07711569"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n06596364/0082620.jpg",
+    "id": "tinyimg_0082620",
+    "category": "n06596364"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02666347/0027323.jpg",
+    "id": "tinyimg_0027323",
+    "category": "n02666347"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04398044/0074795.jpg",
+    "id": "tinyimg_0074795",
+    "category": "n04398044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02948072/0103823.jpg",
+    "id": "tinyimg_0103823",
+    "category": "n02948072"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03637318/0052585.jpg",
+    "id": "tinyimg_0052585",
+    "category": "n03637318"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03026506/0041415.jpg",
+    "id": "tinyimg_0041415",
+    "category": "n03026506"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02950826/0038760.jpg",
+    "id": "tinyimg_0038760",
+    "category": "n02950826"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02165456/0016507.jpg",
+    "id": "tinyimg_0016507",
+    "category": "n02165456"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03891332/0059370.jpg",
+    "id": "tinyimg_0059370",
+    "category": "n03891332"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814860/0032878.jpg",
+    "id": "tinyimg_0032878",
+    "category": "n02814860"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03444034/0049977.jpg",
+    "id": "tinyimg_0049977",
+    "category": "n03444034"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04487081/0077856.jpg",
+    "id": "tinyimg_0077856",
+    "category": "n04487081"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04254777/0069489.jpg",
+    "id": "tinyimg_0069489",
+    "category": "n04254777"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03980874/0062264.jpg",
+    "id": "tinyimg_0062264",
+    "category": "n03980874"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02437312/0024058.jpg",
+    "id": "tinyimg_0024058",
+    "category": "n02437312"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02281406/0020194.jpg",
+    "id": "tinyimg_0020194",
+    "category": "n02281406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814533/0032036.jpg",
+    "id": "tinyimg_0032036",
+    "category": "n02814533"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04507155/0078837.jpg",
+    "id": "tinyimg_0078837",
+    "category": "n04507155"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04398044/0074949.jpg",
+    "id": "tinyimg_0074949",
+    "category": "n04398044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03977966/0061999.jpg",
+    "id": "tinyimg_0061999",
+    "category": "n03977966"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08620881/0093294.jpg",
+    "id": "tinyimg_0093294",
+    "category": "n08620881"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02769748/0028661.jpg",
+    "id": "tinyimg_0028661",
+    "category": "n02769748"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02058221/0010394.jpg",
+    "id": "tinyimg_0010394",
+    "category": "n02058221"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02125311/0015271.jpg",
+    "id": "tinyimg_0015271",
+    "category": "n02125311"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01644900/0001725.jpg",
+    "id": "tinyimg_0001725",
+    "category": "n01644900"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03617480/0052169.jpg",
+    "id": "tinyimg_0052169",
+    "category": "n03617480"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07657664/0086193.jpg",
+    "id": "tinyimg_0086193",
+    "category": "n07657664"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03814639/0057319.jpg",
+    "id": "tinyimg_0057319",
+    "category": "n03814639"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04259630/0069575.jpg",
+    "id": "tinyimg_0069575",
+    "category": "n04259630"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02480495/0102464.jpg",
+    "id": "tinyimg_0102464",
+    "category": "n02480495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02423022/0023803.jpg",
+    "id": "tinyimg_0023803",
+    "category": "n02423022"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01984695/0008938.jpg",
+    "id": "tinyimg_0008938",
+    "category": "n01984695"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02226429/0017069.jpg",
+    "id": "tinyimg_0017069",
+    "category": "n02226429"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532106/0079258.jpg",
+    "id": "tinyimg_0079258",
+    "category": "n04532106"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04598010/0082014.jpg",
+    "id": "tinyimg_0082014",
+    "category": "n04598010"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02791270/0029778.jpg",
+    "id": "tinyimg_0029778",
+    "category": "n02791270"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04465666/0076679.jpg",
+    "id": "tinyimg_0076679",
+    "category": "n04465666"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02226429/0017072.jpg",
+    "id": "tinyimg_0017072",
+    "category": "n02226429"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07614500/0084424.jpg",
+    "id": "tinyimg_0084424",
+    "category": "n07614500"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532106/0079322.jpg",
+    "id": "tinyimg_0079322",
+    "category": "n04532106"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03662601/0053965.jpg",
+    "id": "tinyimg_0053965",
+    "category": "n03662601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04074963/0065313.jpg",
+    "id": "tinyimg_0065313",
+    "category": "n04074963"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02233338/0018135.jpg",
+    "id": "tinyimg_0018135",
+    "category": "n02233338"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814860/0032651.jpg",
+    "id": "tinyimg_0032651",
+    "category": "n02814860"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04562935/0081448.jpg",
+    "id": "tinyimg_0081448",
+    "category": "n04562935"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04099969/0065697.jpg",
+    "id": "tinyimg_0065697",
+    "category": "n04099969"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03891332/0059443.jpg",
+    "id": "tinyimg_0059443",
+    "category": "n03891332"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13001041/0097925.jpg",
+    "id": "tinyimg_0097925",
+    "category": "n13001041"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02883205/0035727.jpg",
+    "id": "tinyimg_0035727",
+    "category": "n02883205"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02279972/0019847.jpg",
+    "id": "tinyimg_0019847",
+    "category": "n02279972"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01641577/0001030.jpg",
+    "id": "tinyimg_0001030",
+    "category": "n01641577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09256479/0095302.jpg",
+    "id": "tinyimg_0095302",
+    "category": "n09256479"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02988304/0040307.jpg",
+    "id": "tinyimg_0040307",
+    "category": "n02988304"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03373237/0046936.jpg",
+    "id": "tinyimg_0046936",
+    "category": "n03373237"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04149813/0067546.jpg",
+    "id": "tinyimg_0067546",
+    "category": "n04149813"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03706229/0054729.jpg",
+    "id": "tinyimg_0054729",
+    "category": "n03706229"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01768244/0003352.jpg",
+    "id": "tinyimg_0003352",
+    "category": "n01768244"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04285008/0071439.jpg",
+    "id": "tinyimg_0071439",
+    "category": "n04285008"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13719102/0099406.jpg",
+    "id": "tinyimg_0099406",
+    "category": "n13719102"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03544143/0050860.jpg",
+    "id": "tinyimg_0050860",
+    "category": "n03544143"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n14991210/0099592.jpg",
+    "id": "tinyimg_0099592",
+    "category": "n14991210"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02364673/0021453.jpg",
+    "id": "tinyimg_0021453",
+    "category": "n02364673"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03444034/0049711.jpg",
+    "id": "tinyimg_0049711",
+    "category": "n03444034"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814533/0032077.jpg",
+    "id": "tinyimg_0032077",
+    "category": "n02814533"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02233338/0018497.jpg",
+    "id": "tinyimg_0018497",
+    "category": "n02233338"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02802426/0031341.jpg",
+    "id": "tinyimg_0031341",
+    "category": "n02802426"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01443537/0000114.jpg",
+    "id": "tinyimg_0000114",
+    "category": "n01443537"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02395406/0021670.jpg",
+    "id": "tinyimg_0021670",
+    "category": "n02395406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03854065/0105868.jpg",
+    "id": "tinyimg_0105868",
+    "category": "n03854065"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03992509/0106302.jpg",
+    "id": "tinyimg_0106302",
+    "category": "n03992509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099712/0012108.jpg",
+    "id": "tinyimg_0012108",
+    "category": "n02099712"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04398044/0074561.jpg",
+    "id": "tinyimg_0074561",
+    "category": "n04398044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02504458/0026267.jpg",
+    "id": "tinyimg_0026267",
+    "category": "n02504458"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04328186/0072002.jpg",
+    "id": "tinyimg_0072002",
+    "category": "n04328186"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01629819/0000932.jpg",
+    "id": "tinyimg_0000932",
+    "category": "n01629819"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02666347/0027009.jpg",
+    "id": "tinyimg_0027009",
+    "category": "n02666347"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03670208/0054431.jpg",
+    "id": "tinyimg_0054431",
+    "category": "n03670208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02486410/0025913.jpg",
+    "id": "tinyimg_0025913",
+    "category": "n02486410"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04133789/0066803.jpg",
+    "id": "tinyimg_0066803",
+    "category": "n04133789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01768244/0003099.jpg",
+    "id": "tinyimg_0003099",
+    "category": "n01768244"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02415577/0023498.jpg",
+    "id": "tinyimg_0023498",
+    "category": "n02415577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02808440/0031952.jpg",
+    "id": "tinyimg_0031952",
+    "category": "n02808440"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814860/0032940.jpg",
+    "id": "tinyimg_0032940",
+    "category": "n02814860"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07875152/0091441.jpg",
+    "id": "tinyimg_0091441",
+    "category": "n07875152"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03444034/0049838.jpg",
+    "id": "tinyimg_0049838",
+    "category": "n03444034"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01698640/0002348.jpg",
+    "id": "tinyimg_0002348",
+    "category": "n01698640"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n06596364/0108260.jpg",
+    "id": "tinyimg_0108260",
+    "category": "n06596364"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03670208/0054083.jpg",
+    "id": "tinyimg_0054083",
+    "category": "n03670208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04149813/0067629.jpg",
+    "id": "tinyimg_0067629",
+    "category": "n04149813"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02124075/0014631.jpg",
+    "id": "tinyimg_0014631",
+    "category": "n02124075"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07871810/0090102.jpg",
+    "id": "tinyimg_0090102",
+    "category": "n07871810"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03404251/0048641.jpg",
+    "id": "tinyimg_0048641",
+    "category": "n03404251"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04501370/0078328.jpg",
+    "id": "tinyimg_0078328",
+    "category": "n04501370"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09332890/0095735.jpg",
+    "id": "tinyimg_0095735",
+    "category": "n09332890"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02699494/0028271.jpg",
+    "id": "tinyimg_0028271",
+    "category": "n02699494"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01950731/0007774.jpg",
+    "id": "tinyimg_0007774",
+    "category": "n01950731"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04366367/0073464.jpg",
+    "id": "tinyimg_0073464",
+    "category": "n04366367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02113799/0013000.jpg",
+    "id": "tinyimg_0013000",
+    "category": "n02113799"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03400231/0048343.jpg",
+    "id": "tinyimg_0048343",
+    "category": "n03400231"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03937543/0060751.jpg",
+    "id": "tinyimg_0060751",
+    "category": "n03937543"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07715103/0108788.jpg",
+    "id": "tinyimg_0108788",
+    "category": "n07715103"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04099969/0065689.jpg",
+    "id": "tinyimg_0065689",
+    "category": "n04099969"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03355925/0046324.jpg",
+    "id": "tinyimg_0046324",
+    "category": "n03355925"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04399382/0075479.jpg",
+    "id": "tinyimg_0075479",
+    "category": "n04399382"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04265275/0070311.jpg",
+    "id": "tinyimg_0070311",
+    "category": "n04265275"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02883205/0035704.jpg",
+    "id": "tinyimg_0035704",
+    "category": "n02883205"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03854065/0058512.jpg",
+    "id": "tinyimg_0058512",
+    "category": "n03854065"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04275548/0070926.jpg",
+    "id": "tinyimg_0070926",
+    "category": "n04275548"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03837869/0057748.jpg",
+    "id": "tinyimg_0057748",
+    "category": "n03837869"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03373237/0046662.jpg",
+    "id": "tinyimg_0046662",
+    "category": "n03373237"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01944390/0007323.jpg",
+    "id": "tinyimg_0007323",
+    "category": "n01944390"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02226429/0017060.jpg",
+    "id": "tinyimg_0017060",
+    "category": "n02226429"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03977966/0061686.jpg",
+    "id": "tinyimg_0061686",
+    "category": "n03977966"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02909870/0036836.jpg",
+    "id": "tinyimg_0036836",
+    "category": "n02909870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04149813/0067799.jpg",
+    "id": "tinyimg_0067799",
+    "category": "n04149813"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02132136/0016230.jpg",
+    "id": "tinyimg_0016230",
+    "category": "n02132136"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01641577/0100117.jpg",
+    "id": "tinyimg_0100117",
+    "category": "n01641577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02094433/0011300.jpg",
+    "id": "tinyimg_0011300",
+    "category": "n02094433"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02917067/0037118.jpg",
+    "id": "tinyimg_0037118",
+    "category": "n02917067"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774384/0004080.jpg",
+    "id": "tinyimg_0004080",
+    "category": "n01774384"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02279972/0019562.jpg",
+    "id": "tinyimg_0019562",
+    "category": "n02279972"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099712/0101212.jpg",
+    "id": "tinyimg_0101212",
+    "category": "n02099712"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02268443/0019362.jpg",
+    "id": "tinyimg_0019362",
+    "category": "n02268443"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03014705/0040930.jpg",
+    "id": "tinyimg_0040930",
+    "category": "n03014705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03838899/0058379.jpg",
+    "id": "tinyimg_0058379",
+    "category": "n03838899"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01742172/0002720.jpg",
+    "id": "tinyimg_0002720",
+    "category": "n01742172"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07749582/0088907.jpg",
+    "id": "tinyimg_0088907",
+    "category": "n07749582"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01641577/0001238.jpg",
+    "id": "tinyimg_0001238",
+    "category": "n01641577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07647870/0085966.jpg",
+    "id": "tinyimg_0085966",
+    "category": "n07647870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02950826/0038694.jpg",
+    "id": "tinyimg_0038694",
+    "category": "n02950826"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13001041/0097874.jpg",
+    "id": "tinyimg_0097874",
+    "category": "n13001041"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04328186/0072160.jpg",
+    "id": "tinyimg_0072160",
+    "category": "n04328186"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02403003/0022218.jpg",
+    "id": "tinyimg_0022218",
+    "category": "n02403003"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03770439/0056262.jpg",
+    "id": "tinyimg_0056262",
+    "category": "n03770439"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03854065/0058570.jpg",
+    "id": "tinyimg_0058570",
+    "category": "n03854065"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02415577/0023271.jpg",
+    "id": "tinyimg_0023271",
+    "category": "n02415577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123045/0013559.jpg",
+    "id": "tinyimg_0013559",
+    "category": "n02123045"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04179913/0068129.jpg",
+    "id": "tinyimg_0068129",
+    "category": "n04179913"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07768694/0089536.jpg",
+    "id": "tinyimg_0089536",
+    "category": "n07768694"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09256479/0095405.jpg",
+    "id": "tinyimg_0095405",
+    "category": "n09256479"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08742578/0093661.jpg",
+    "id": "tinyimg_0093661",
+    "category": "n08742578"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03891332/0059470.jpg",
+    "id": "tinyimg_0059470",
+    "category": "n03891332"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02504458/0026209.jpg",
+    "id": "tinyimg_0026209",
+    "category": "n02504458"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02892201/0036408.jpg",
+    "id": "tinyimg_0036408",
+    "category": "n02892201"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04398044/0074669.jpg",
+    "id": "tinyimg_0074669",
+    "category": "n04398044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07715103/0087950.jpg",
+    "id": "tinyimg_0087950",
+    "category": "n07715103"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02268443/0019441.jpg",
+    "id": "tinyimg_0019441",
+    "category": "n02268443"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02480495/0102493.jpg",
+    "id": "tinyimg_0102493",
+    "category": "n02480495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814860/0032630.jpg",
+    "id": "tinyimg_0032630",
+    "category": "n02814860"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07615774/0108469.jpg",
+    "id": "tinyimg_0108469",
+    "category": "n07615774"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07768694/0089570.jpg",
+    "id": "tinyimg_0089570",
+    "category": "n07768694"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03733131/0055041.jpg",
+    "id": "tinyimg_0055041",
+    "category": "n03733131"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12267677/0096540.jpg",
+    "id": "tinyimg_0096540",
+    "category": "n12267677"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02058221/0010065.jpg",
+    "id": "tinyimg_0010065",
+    "category": "n02058221"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04596742/0081662.jpg",
+    "id": "tinyimg_0081662",
+    "category": "n04596742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02364673/0021100.jpg",
+    "id": "tinyimg_0021100",
+    "category": "n02364673"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02666347/0027307.jpg",
+    "id": "tinyimg_0027307",
+    "category": "n02666347"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02486410/0025752.jpg",
+    "id": "tinyimg_0025752",
+    "category": "n02486410"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02279972/0019555.jpg",
+    "id": "tinyimg_0019555",
+    "category": "n02279972"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02977058/0039821.jpg",
+    "id": "tinyimg_0039821",
+    "category": "n02977058"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03584254/0051446.jpg",
+    "id": "tinyimg_0051446",
+    "category": "n03584254"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03733131/0055031.jpg",
+    "id": "tinyimg_0055031",
+    "category": "n03733131"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02423022/0023694.jpg",
+    "id": "tinyimg_0023694",
+    "category": "n02423022"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07871810/0090454.jpg",
+    "id": "tinyimg_0090454",
+    "category": "n07871810"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02788148/0029306.jpg",
+    "id": "tinyimg_0029306",
+    "category": "n02788148"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09193705/0094309.jpg",
+    "id": "tinyimg_0094309",
+    "category": "n09193705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02236044/0018596.jpg",
+    "id": "tinyimg_0018596",
+    "category": "n02236044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09332890/0095550.jpg",
+    "id": "tinyimg_0095550",
+    "category": "n09332890"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09332890/0095508.jpg",
+    "id": "tinyimg_0095508",
+    "category": "n09332890"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03089624/0104277.jpg",
+    "id": "tinyimg_0104277",
+    "category": "n03089624"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03160309/0044199.jpg",
+    "id": "tinyimg_0044199",
+    "category": "n03160309"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03400231/0048240.jpg",
+    "id": "tinyimg_0048240",
+    "category": "n03400231"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04070727/0064852.jpg",
+    "id": "tinyimg_0064852",
+    "category": "n04070727"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04285008/0071061.jpg",
+    "id": "tinyimg_0071061",
+    "category": "n04285008"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09428293/0096256.jpg",
+    "id": "tinyimg_0096256",
+    "category": "n09428293"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04366367/0073072.jpg",
+    "id": "tinyimg_0073072",
+    "category": "n04366367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03584254/0051499.jpg",
+    "id": "tinyimg_0051499",
+    "category": "n03584254"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04486054/0077284.jpg",
+    "id": "tinyimg_0077284",
+    "category": "n04486054"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04254777/0069066.jpg",
+    "id": "tinyimg_0069066",
+    "category": "n04254777"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04265275/0070152.jpg",
+    "id": "tinyimg_0070152",
+    "category": "n04265275"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02802426/0031045.jpg",
+    "id": "tinyimg_0031045",
+    "category": "n02802426"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02410509/0022888.jpg",
+    "id": "tinyimg_0022888",
+    "category": "n02410509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099712/0012182.jpg",
+    "id": "tinyimg_0012182",
+    "category": "n02099712"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02909870/0036859.jpg",
+    "id": "tinyimg_0036859",
+    "category": "n02909870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03637318/0052527.jpg",
+    "id": "tinyimg_0052527",
+    "category": "n03637318"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02236044/0018916.jpg",
+    "id": "tinyimg_0018916",
+    "category": "n02236044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07753592/0089324.jpg",
+    "id": "tinyimg_0089324",
+    "category": "n07753592"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01698640/0002163.jpg",
+    "id": "tinyimg_0002163",
+    "category": "n01698640"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02403003/0022410.jpg",
+    "id": "tinyimg_0022410",
+    "category": "n02403003"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02909870/0103671.jpg",
+    "id": "tinyimg_0103671",
+    "category": "n02909870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01983481/0008146.jpg",
+    "id": "tinyimg_0008146",
+    "category": "n01983481"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03977966/0061717.jpg",
+    "id": "tinyimg_0061717",
+    "category": "n03977966"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13719102/0099374.jpg",
+    "id": "tinyimg_0099374",
+    "category": "n13719102"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09256479/0095281.jpg",
+    "id": "tinyimg_0095281",
+    "category": "n09256479"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02843684/0035481.jpg",
+    "id": "tinyimg_0035481",
+    "category": "n02843684"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04501370/0078341.jpg",
+    "id": "tinyimg_0078341",
+    "category": "n04501370"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03544143/0050805.jpg",
+    "id": "tinyimg_0050805",
+    "category": "n03544143"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07614500/0108420.jpg",
+    "id": "tinyimg_0108420",
+    "category": "n07614500"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03763968/0055520.jpg",
+    "id": "tinyimg_0055520",
+    "category": "n03763968"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03447447/0050389.jpg",
+    "id": "tinyimg_0050389",
+    "category": "n03447447"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02795169/0103067.jpg",
+    "id": "tinyimg_0103067",
+    "category": "n02795169"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03617480/0105246.jpg",
+    "id": "tinyimg_0105246",
+    "category": "n03617480"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04311004/0071601.jpg",
+    "id": "tinyimg_0071601",
+    "category": "n04311004"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03393912/0047781.jpg",
+    "id": "tinyimg_0047781",
+    "category": "n03393912"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03649909/0053388.jpg",
+    "id": "tinyimg_0053388",
+    "category": "n03649909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13719102/0099231.jpg",
+    "id": "tinyimg_0099231",
+    "category": "n13719102"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02823428/0033916.jpg",
+    "id": "tinyimg_0033916",
+    "category": "n02823428"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07583066/0083892.jpg",
+    "id": "tinyimg_0083892",
+    "category": "n07583066"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n06596364/0082657.jpg",
+    "id": "tinyimg_0082657",
+    "category": "n06596364"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04366367/0073295.jpg",
+    "id": "tinyimg_0073295",
+    "category": "n04366367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04371430/0073739.jpg",
+    "id": "tinyimg_0073739",
+    "category": "n04371430"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04486054/0107731.jpg",
+    "id": "tinyimg_0107731",
+    "category": "n04486054"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02669723/0027602.jpg",
+    "id": "tinyimg_0027602",
+    "category": "n02669723"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02963159/0039372.jpg",
+    "id": "tinyimg_0039372",
+    "category": "n02963159"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02486410/0025583.jpg",
+    "id": "tinyimg_0025583",
+    "category": "n02486410"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07871810/0090092.jpg",
+    "id": "tinyimg_0090092",
+    "category": "n07871810"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02988304/0040418.jpg",
+    "id": "tinyimg_0040418",
+    "category": "n02988304"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03100240/0043317.jpg",
+    "id": "tinyimg_0043317",
+    "category": "n03100240"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03983396/0106279.jpg",
+    "id": "tinyimg_0106279",
+    "category": "n03983396"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01770393/0003627.jpg",
+    "id": "tinyimg_0003627",
+    "category": "n01770393"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03983396/0062587.jpg",
+    "id": "tinyimg_0062587",
+    "category": "n03983396"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07753592/0089389.jpg",
+    "id": "tinyimg_0089389",
+    "category": "n07753592"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099601/0011945.jpg",
+    "id": "tinyimg_0011945",
+    "category": "n02099601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04456115/0076093.jpg",
+    "id": "tinyimg_0076093",
+    "category": "n04456115"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02480495/0024558.jpg",
+    "id": "tinyimg_0024558",
+    "category": "n02480495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02963159/0103932.jpg",
+    "id": "tinyimg_0103932",
+    "category": "n02963159"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02226429/0017032.jpg",
+    "id": "tinyimg_0017032",
+    "category": "n02226429"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02074367/0010617.jpg",
+    "id": "tinyimg_0010617",
+    "category": "n02074367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03733131/0055204.jpg",
+    "id": "tinyimg_0055204",
+    "category": "n03733131"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04265275/0070121.jpg",
+    "id": "tinyimg_0070121",
+    "category": "n04265275"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03424325/0049417.jpg",
+    "id": "tinyimg_0049417",
+    "category": "n03424325"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01629819/0000532.jpg",
+    "id": "tinyimg_0000532",
+    "category": "n01629819"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08496334/0092760.jpg",
+    "id": "tinyimg_0092760",
+    "category": "n08496334"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02504458/0026429.jpg",
+    "id": "tinyimg_0026429",
+    "category": "n02504458"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12520864/0097134.jpg",
+    "id": "tinyimg_0097134",
+    "category": "n12520864"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07056680/0083483.jpg",
+    "id": "tinyimg_0083483",
+    "category": "n07056680"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04417672/0107562.jpg",
+    "id": "tinyimg_0107562",
+    "category": "n04417672"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774750/0004733.jpg",
+    "id": "tinyimg_0004733",
+    "category": "n01774750"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02509815/0026634.jpg",
+    "id": "tinyimg_0026634",
+    "category": "n02509815"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03373237/0046956.jpg",
+    "id": "tinyimg_0046956",
+    "category": "n03373237"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02843684/0035163.jpg",
+    "id": "tinyimg_0035163",
+    "category": "n02843684"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04251144/0068688.jpg",
+    "id": "tinyimg_0068688",
+    "category": "n04251144"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03400231/0048327.jpg",
+    "id": "tinyimg_0048327",
+    "category": "n03400231"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04146614/0067183.jpg",
+    "id": "tinyimg_0067183",
+    "category": "n04146614"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03891332/0105901.jpg",
+    "id": "tinyimg_0105901",
+    "category": "n03891332"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02837789/0034422.jpg",
+    "id": "tinyimg_0034422",
+    "category": "n02837789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07753592/0108946.jpg",
+    "id": "tinyimg_0108946",
+    "category": "n07753592"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03042490/0041793.jpg",
+    "id": "tinyimg_0041793",
+    "category": "n03042490"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02165456/0016725.jpg",
+    "id": "tinyimg_0016725",
+    "category": "n02165456"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04118538/0066495.jpg",
+    "id": "tinyimg_0066495",
+    "category": "n04118538"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03706229/0054553.jpg",
+    "id": "tinyimg_0054553",
+    "category": "n03706229"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03706229/0054858.jpg",
+    "id": "tinyimg_0054858",
+    "category": "n03706229"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12267677/0096951.jpg",
+    "id": "tinyimg_0096951",
+    "category": "n12267677"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04371430/0073702.jpg",
+    "id": "tinyimg_0073702",
+    "category": "n04371430"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03992509/0063246.jpg",
+    "id": "tinyimg_0063246",
+    "category": "n03992509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04311004/0071583.jpg",
+    "id": "tinyimg_0071583",
+    "category": "n04311004"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652335/0109813.jpg",
+    "id": "tinyimg_0109813",
+    "category": "n13652335"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02793495/0030270.jpg",
+    "id": "tinyimg_0030270",
+    "category": "n02793495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01917289/0006973.jpg",
+    "id": "tinyimg_0006973",
+    "category": "n01917289"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02988304/0104019.jpg",
+    "id": "tinyimg_0104019",
+    "category": "n02988304"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03770439/0056476.jpg",
+    "id": "tinyimg_0056476",
+    "category": "n03770439"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04366367/0073289.jpg",
+    "id": "tinyimg_0073289",
+    "category": "n04366367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123394/0014070.jpg",
+    "id": "tinyimg_0014070",
+    "category": "n02123394"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08742578/0093806.jpg",
+    "id": "tinyimg_0093806",
+    "category": "n08742578"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04560804/0080708.jpg",
+    "id": "tinyimg_0080708",
+    "category": "n04560804"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02125311/0015216.jpg",
+    "id": "tinyimg_0015216",
+    "category": "n02125311"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02486410/0025540.jpg",
+    "id": "tinyimg_0025540",
+    "category": "n02486410"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12520864/0097302.jpg",
+    "id": "tinyimg_0097302",
+    "category": "n12520864"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02977058/0039941.jpg",
+    "id": "tinyimg_0039941",
+    "category": "n02977058"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02056570/0009593.jpg",
+    "id": "tinyimg_0009593",
+    "category": "n02056570"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04399382/0075278.jpg",
+    "id": "tinyimg_0075278",
+    "category": "n04399382"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04562935/0081496.jpg",
+    "id": "tinyimg_0081496",
+    "category": "n04562935"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02837789/0034181.jpg",
+    "id": "tinyimg_0034181",
+    "category": "n02837789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04179913/0068012.jpg",
+    "id": "tinyimg_0068012",
+    "category": "n04179913"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02841315/0034840.jpg",
+    "id": "tinyimg_0034840",
+    "category": "n02841315"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09428293/0096140.jpg",
+    "id": "tinyimg_0096140",
+    "category": "n09428293"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02977058/0039571.jpg",
+    "id": "tinyimg_0039571",
+    "category": "n02977058"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02769748/0028809.jpg",
+    "id": "tinyimg_0028809",
+    "category": "n02769748"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04456115/0076330.jpg",
+    "id": "tinyimg_0076330",
+    "category": "n04456115"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02917067/0037339.jpg",
+    "id": "tinyimg_0037339",
+    "category": "n02917067"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02132136/0016253.jpg",
+    "id": "tinyimg_0016253",
+    "category": "n02132136"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03179701/0044505.jpg",
+    "id": "tinyimg_0044505",
+    "category": "n03179701"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03179701/0044651.jpg",
+    "id": "tinyimg_0044651",
+    "category": "n03179701"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02481823/0025069.jpg",
+    "id": "tinyimg_0025069",
+    "category": "n02481823"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774384/0004387.jpg",
+    "id": "tinyimg_0004387",
+    "category": "n01774384"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02231487/0017572.jpg",
+    "id": "tinyimg_0017572",
+    "category": "n02231487"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03599486/0051529.jpg",
+    "id": "tinyimg_0051529",
+    "category": "n03599486"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04179913/0068291.jpg",
+    "id": "tinyimg_0068291",
+    "category": "n04179913"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02843684/0035110.jpg",
+    "id": "tinyimg_0035110",
+    "category": "n02843684"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12267677/0096816.jpg",
+    "id": "tinyimg_0096816",
+    "category": "n12267677"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03355925/0046475.jpg",
+    "id": "tinyimg_0046475",
+    "category": "n03355925"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01910747/0100646.jpg",
+    "id": "tinyimg_0100646",
+    "category": "n01910747"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03814639/0057406.jpg",
+    "id": "tinyimg_0057406",
+    "category": "n03814639"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03584254/0051279.jpg",
+    "id": "tinyimg_0051279",
+    "category": "n03584254"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07615774/0084502.jpg",
+    "id": "tinyimg_0084502",
+    "category": "n07615774"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07711569/0087037.jpg",
+    "id": "tinyimg_0087037",
+    "category": "n07711569"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02268443/0019433.jpg",
+    "id": "tinyimg_0019433",
+    "category": "n02268443"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03355925/0046136.jpg",
+    "id": "tinyimg_0046136",
+    "category": "n03355925"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774384/0004300.jpg",
+    "id": "tinyimg_0004300",
+    "category": "n01774384"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03388043/0047283.jpg",
+    "id": "tinyimg_0047283",
+    "category": "n03388043"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02963159/0039201.jpg",
+    "id": "tinyimg_0039201",
+    "category": "n02963159"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532106/0079465.jpg",
+    "id": "tinyimg_0079465",
+    "category": "n04532106"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02002724/0009224.jpg",
+    "id": "tinyimg_0009224",
+    "category": "n02002724"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03902125/0059680.jpg",
+    "id": "tinyimg_0059680",
+    "category": "n03902125"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02788148/0029106.jpg",
+    "id": "tinyimg_0029106",
+    "category": "n02788148"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n14991210/0099514.jpg",
+    "id": "tinyimg_0099514",
+    "category": "n14991210"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01882714/0005863.jpg",
+    "id": "tinyimg_0005863",
+    "category": "n01882714"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09428293/0096360.jpg",
+    "id": "tinyimg_0096360",
+    "category": "n09428293"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07720875/0088419.jpg",
+    "id": "tinyimg_0088419",
+    "category": "n07720875"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03388043/0047253.jpg",
+    "id": "tinyimg_0047253",
+    "category": "n03388043"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07657664/0086244.jpg",
+    "id": "tinyimg_0086244",
+    "category": "n07657664"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04596742/0081818.jpg",
+    "id": "tinyimg_0081818",
+    "category": "n04596742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04371430/0073617.jpg",
+    "id": "tinyimg_0073617",
+    "category": "n04371430"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04376876/0074272.jpg",
+    "id": "tinyimg_0074272",
+    "category": "n04376876"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01882714/0005879.jpg",
+    "id": "tinyimg_0005879",
+    "category": "n01882714"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04562935/0081294.jpg",
+    "id": "tinyimg_0081294",
+    "category": "n04562935"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02802426/0031433.jpg",
+    "id": "tinyimg_0031433",
+    "category": "n02802426"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04371430/0073770.jpg",
+    "id": "tinyimg_0073770",
+    "category": "n04371430"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03400231/0048292.jpg",
+    "id": "tinyimg_0048292",
+    "category": "n03400231"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01917289/0006724.jpg",
+    "id": "tinyimg_0006724",
+    "category": "n01917289"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03201208/0045109.jpg",
+    "id": "tinyimg_0045109",
+    "category": "n03201208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02125311/0015205.jpg",
+    "id": "tinyimg_0015205",
+    "category": "n02125311"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814533/0032152.jpg",
+    "id": "tinyimg_0032152",
+    "category": "n02814533"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02815834/0033315.jpg",
+    "id": "tinyimg_0033315",
+    "category": "n02815834"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07615774/0084773.jpg",
+    "id": "tinyimg_0084773",
+    "category": "n07615774"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03837869/0057604.jpg",
+    "id": "tinyimg_0057604",
+    "category": "n03837869"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12267677/0096534.jpg",
+    "id": "tinyimg_0096534",
+    "category": "n12267677"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03544143/0050506.jpg",
+    "id": "tinyimg_0050506",
+    "category": "n03544143"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02233338/0018219.jpg",
+    "id": "tinyimg_0018219",
+    "category": "n02233338"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01950731/0007567.jpg",
+    "id": "tinyimg_0007567",
+    "category": "n01950731"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04486054/0077452.jpg",
+    "id": "tinyimg_0077452",
+    "category": "n04486054"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02231487/0101776.jpg",
+    "id": "tinyimg_0101776",
+    "category": "n02231487"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02281406/0020196.jpg",
+    "id": "tinyimg_0020196",
+    "category": "n02281406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02504458/0026323.jpg",
+    "id": "tinyimg_0026323",
+    "category": "n02504458"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02124075/0014669.jpg",
+    "id": "tinyimg_0014669",
+    "category": "n02124075"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02074367/0010979.jpg",
+    "id": "tinyimg_0010979",
+    "category": "n02074367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07975909/0092246.jpg",
+    "id": "tinyimg_0092246",
+    "category": "n07975909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04596742/0081624.jpg",
+    "id": "tinyimg_0081624",
+    "category": "n04596742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04275548/0070889.jpg",
+    "id": "tinyimg_0070889",
+    "category": "n04275548"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02883205/0035971.jpg",
+    "id": "tinyimg_0035971",
+    "category": "n02883205"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02279972/0019912.jpg",
+    "id": "tinyimg_0019912",
+    "category": "n02279972"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03902125/0059945.jpg",
+    "id": "tinyimg_0059945",
+    "category": "n03902125"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04259630/0106953.jpg",
+    "id": "tinyimg_0106953",
+    "category": "n04259630"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04133789/0066698.jpg",
+    "id": "tinyimg_0066698",
+    "category": "n04133789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03617480/0052130.jpg",
+    "id": "tinyimg_0052130",
+    "category": "n03617480"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01950731/0007716.jpg",
+    "id": "tinyimg_0007716",
+    "category": "n01950731"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02226429/0017234.jpg",
+    "id": "tinyimg_0017234",
+    "category": "n02226429"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07768694/0089794.jpg",
+    "id": "tinyimg_0089794",
+    "category": "n07768694"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07583066/0083695.jpg",
+    "id": "tinyimg_0083695",
+    "category": "n07583066"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04275548/0070961.jpg",
+    "id": "tinyimg_0070961",
+    "category": "n04275548"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02808440/0031665.jpg",
+    "id": "tinyimg_0031665",
+    "category": "n02808440"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03014705/0040912.jpg",
+    "id": "tinyimg_0040912",
+    "category": "n03014705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01983481/0008217.jpg",
+    "id": "tinyimg_0008217",
+    "category": "n01983481"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03662601/0053716.jpg",
+    "id": "tinyimg_0053716",
+    "category": "n03662601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04598010/0082116.jpg",
+    "id": "tinyimg_0082116",
+    "category": "n04598010"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03930313/0060274.jpg",
+    "id": "tinyimg_0060274",
+    "category": "n03930313"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08620881/0093476.jpg",
+    "id": "tinyimg_0093476",
+    "category": "n08620881"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07768694/0089740.jpg",
+    "id": "tinyimg_0089740",
+    "category": "n07768694"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02074367/0010511.jpg",
+    "id": "tinyimg_0010511",
+    "category": "n02074367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03179701/0044749.jpg",
+    "id": "tinyimg_0044749",
+    "category": "n03179701"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02002724/0009408.jpg",
+    "id": "tinyimg_0009408",
+    "category": "n02002724"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07615774/0084848.jpg",
+    "id": "tinyimg_0084848",
+    "category": "n07615774"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03388043/0047265.jpg",
+    "id": "tinyimg_0047265",
+    "category": "n03388043"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02231487/0017838.jpg",
+    "id": "tinyimg_0017838",
+    "category": "n02231487"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04251144/0068951.jpg",
+    "id": "tinyimg_0068951",
+    "category": "n04251144"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07871810/0090444.jpg",
+    "id": "tinyimg_0090444",
+    "category": "n07871810"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04596742/0081529.jpg",
+    "id": "tinyimg_0081529",
+    "category": "n04596742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07657664/0086239.jpg",
+    "id": "tinyimg_0086239",
+    "category": "n07657664"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04070727/0064838.jpg",
+    "id": "tinyimg_0064838",
+    "category": "n04070727"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03089624/0042790.jpg",
+    "id": "tinyimg_0042790",
+    "category": "n03089624"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03026506/0041000.jpg",
+    "id": "tinyimg_0041000",
+    "category": "n03026506"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04356056/0072981.jpg",
+    "id": "tinyimg_0072981",
+    "category": "n04356056"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04356056/0072918.jpg",
+    "id": "tinyimg_0072918",
+    "category": "n04356056"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03854065/0058930.jpg",
+    "id": "tinyimg_0058930",
+    "category": "n03854065"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04487081/0107753.jpg",
+    "id": "tinyimg_0107753",
+    "category": "n04487081"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01950731/0007822.jpg",
+    "id": "tinyimg_0007822",
+    "category": "n01950731"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03388043/0047460.jpg",
+    "id": "tinyimg_0047460",
+    "category": "n03388043"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01644900/0001959.jpg",
+    "id": "tinyimg_0001959",
+    "category": "n01644900"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03179701/0044909.jpg",
+    "id": "tinyimg_0044909",
+    "category": "n03179701"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774384/0004370.jpg",
+    "id": "tinyimg_0004370",
+    "category": "n01774384"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03014705/0040802.jpg",
+    "id": "tinyimg_0040802",
+    "category": "n03014705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01944390/0007032.jpg",
+    "id": "tinyimg_0007032",
+    "category": "n01944390"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04399382/0075127.jpg",
+    "id": "tinyimg_0075127",
+    "category": "n04399382"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03814639/0057384.jpg",
+    "id": "tinyimg_0057384",
+    "category": "n03814639"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03584254/0051224.jpg",
+    "id": "tinyimg_0051224",
+    "category": "n03584254"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02423022/0023658.jpg",
+    "id": "tinyimg_0023658",
+    "category": "n02423022"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03706229/0054981.jpg",
+    "id": "tinyimg_0054981",
+    "category": "n03706229"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02950826/0038545.jpg",
+    "id": "tinyimg_0038545",
+    "category": "n02950826"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02113799/0013331.jpg",
+    "id": "tinyimg_0013331",
+    "category": "n02113799"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02231487/0017785.jpg",
+    "id": "tinyimg_0017785",
+    "category": "n02231487"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04133789/0066789.jpg",
+    "id": "tinyimg_0066789",
+    "category": "n04133789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03544143/0050929.jpg",
+    "id": "tinyimg_0050929",
+    "category": "n03544143"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652994/0098979.jpg",
+    "id": "tinyimg_0098979",
+    "category": "n13652994"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099712/0101219.jpg",
+    "id": "tinyimg_0101219",
+    "category": "n02099712"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13001041/0097705.jpg",
+    "id": "tinyimg_0097705",
+    "category": "n13001041"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02791270/0029618.jpg",
+    "id": "tinyimg_0029618",
+    "category": "n02791270"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04486054/0077185.jpg",
+    "id": "tinyimg_0077185",
+    "category": "n04486054"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123394/0014246.jpg",
+    "id": "tinyimg_0014246",
+    "category": "n02123394"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02395406/0021515.jpg",
+    "id": "tinyimg_0021515",
+    "category": "n02395406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07749582/0088980.jpg",
+    "id": "tinyimg_0088980",
+    "category": "n07749582"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02321529/0020785.jpg",
+    "id": "tinyimg_0020785",
+    "category": "n02321529"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01629819/0000589.jpg",
+    "id": "tinyimg_0000589",
+    "category": "n01629819"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01882714/0005666.jpg",
+    "id": "tinyimg_0005666",
+    "category": "n01882714"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03970156/0061029.jpg",
+    "id": "tinyimg_0061029",
+    "category": "n03970156"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02988304/0040334.jpg",
+    "id": "tinyimg_0040334",
+    "category": "n02988304"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02410509/0022560.jpg",
+    "id": "tinyimg_0022560",
+    "category": "n02410509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09428293/0096224.jpg",
+    "id": "tinyimg_0096224",
+    "category": "n09428293"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02808440/0031633.jpg",
+    "id": "tinyimg_0031633",
+    "category": "n02808440"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03662601/0053845.jpg",
+    "id": "tinyimg_0053845",
+    "category": "n03662601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03444034/0049563.jpg",
+    "id": "tinyimg_0049563",
+    "category": "n03444034"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07873807/0090832.jpg",
+    "id": "tinyimg_0090832",
+    "category": "n07873807"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02788148/0102941.jpg",
+    "id": "tinyimg_0102941",
+    "category": "n02788148"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02094433/0011114.jpg",
+    "id": "tinyimg_0011114",
+    "category": "n02094433"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04507155/0078795.jpg",
+    "id": "tinyimg_0078795",
+    "category": "n04507155"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02843684/0035039.jpg",
+    "id": "tinyimg_0035039",
+    "category": "n02843684"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07646821/0108501.jpg",
+    "id": "tinyimg_0108501",
+    "category": "n07646821"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03617480/0052027.jpg",
+    "id": "tinyimg_0052027",
+    "category": "n03617480"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04259630/0069910.jpg",
+    "id": "tinyimg_0069910",
+    "category": "n04259630"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04285008/0071304.jpg",
+    "id": "tinyimg_0071304",
+    "category": "n04285008"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08742578/0093853.jpg",
+    "id": "tinyimg_0093853",
+    "category": "n08742578"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03201208/0045224.jpg",
+    "id": "tinyimg_0045224",
+    "category": "n03201208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03980874/0062348.jpg",
+    "id": "tinyimg_0062348",
+    "category": "n03980874"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03444034/0049925.jpg",
+    "id": "tinyimg_0049925",
+    "category": "n03444034"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03100240/0043203.jpg",
+    "id": "tinyimg_0043203",
+    "category": "n03100240"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03201208/0045180.jpg",
+    "id": "tinyimg_0045180",
+    "category": "n03201208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02669723/0027718.jpg",
+    "id": "tinyimg_0027718",
+    "category": "n02669723"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01983481/0008469.jpg",
+    "id": "tinyimg_0008469",
+    "category": "n01983481"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01784675/0005238.jpg",
+    "id": "tinyimg_0005238",
+    "category": "n01784675"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03992509/0063487.jpg",
+    "id": "tinyimg_0063487",
+    "category": "n03992509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04254777/0069052.jpg",
+    "id": "tinyimg_0069052",
+    "category": "n04254777"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02129165/0101579.jpg",
+    "id": "tinyimg_0101579",
+    "category": "n02129165"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07647870/0085840.jpg",
+    "id": "tinyimg_0085840",
+    "category": "n07647870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01984695/0008642.jpg",
+    "id": "tinyimg_0008642",
+    "category": "n01984695"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07715103/0087967.jpg",
+    "id": "tinyimg_0087967",
+    "category": "n07715103"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03838899/0058355.jpg",
+    "id": "tinyimg_0058355",
+    "category": "n03838899"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04560804/0108060.jpg",
+    "id": "tinyimg_0108060",
+    "category": "n04560804"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04376876/0074145.jpg",
+    "id": "tinyimg_0074145",
+    "category": "n04376876"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02927161/0037539.jpg",
+    "id": "tinyimg_0037539",
+    "category": "n02927161"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02132136/0016123.jpg",
+    "id": "tinyimg_0016123",
+    "category": "n02132136"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02841315/0034773.jpg",
+    "id": "tinyimg_0034773",
+    "category": "n02841315"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07753592/0089336.jpg",
+    "id": "tinyimg_0089336",
+    "category": "n07753592"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09193705/0094203.jpg",
+    "id": "tinyimg_0094203",
+    "category": "n09193705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02950826/0038618.jpg",
+    "id": "tinyimg_0038618",
+    "category": "n02950826"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04507155/0078910.jpg",
+    "id": "tinyimg_0078910",
+    "category": "n04507155"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04540053/0080192.jpg",
+    "id": "tinyimg_0080192",
+    "category": "n04540053"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04465666/0076541.jpg",
+    "id": "tinyimg_0076541",
+    "category": "n04465666"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n06596364/0082798.jpg",
+    "id": "tinyimg_0082798",
+    "category": "n06596364"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04562935/0081273.jpg",
+    "id": "tinyimg_0081273",
+    "category": "n04562935"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02124075/0101495.jpg",
+    "id": "tinyimg_0101495",
+    "category": "n02124075"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01944390/0007057.jpg",
+    "id": "tinyimg_0007057",
+    "category": "n01944390"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03026506/0041388.jpg",
+    "id": "tinyimg_0041388",
+    "category": "n03026506"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04311004/0071712.jpg",
+    "id": "tinyimg_0071712",
+    "category": "n04311004"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03837869/0057623.jpg",
+    "id": "tinyimg_0057623",
+    "category": "n03837869"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02124075/0014628.jpg",
+    "id": "tinyimg_0014628",
+    "category": "n02124075"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02236044/0018984.jpg",
+    "id": "tinyimg_0018984",
+    "category": "n02236044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01629819/0000604.jpg",
+    "id": "tinyimg_0000604",
+    "category": "n01629819"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02883205/0035812.jpg",
+    "id": "tinyimg_0035812",
+    "category": "n02883205"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04501370/0078164.jpg",
+    "id": "tinyimg_0078164",
+    "category": "n04501370"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02808440/0031768.jpg",
+    "id": "tinyimg_0031768",
+    "category": "n02808440"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02669723/0102768.jpg",
+    "id": "tinyimg_0102768",
+    "category": "n02669723"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02233338/0018248.jpg",
+    "id": "tinyimg_0018248",
+    "category": "n02233338"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01742172/0002604.jpg",
+    "id": "tinyimg_0002604",
+    "category": "n01742172"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02666347/0027074.jpg",
+    "id": "tinyimg_0027074",
+    "category": "n02666347"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04285008/0071453.jpg",
+    "id": "tinyimg_0071453",
+    "category": "n04285008"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04146614/0067014.jpg",
+    "id": "tinyimg_0067014",
+    "category": "n04146614"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03980874/0062282.jpg",
+    "id": "tinyimg_0062282",
+    "category": "n03980874"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07875152/0091057.jpg",
+    "id": "tinyimg_0091057",
+    "category": "n07875152"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03814639/0057026.jpg",
+    "id": "tinyimg_0057026",
+    "category": "n03814639"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07056680/0108321.jpg",
+    "id": "tinyimg_0108321",
+    "category": "n07056680"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652994/0098993.jpg",
+    "id": "tinyimg_0098993",
+    "category": "n13652994"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03983396/0062747.jpg",
+    "id": "tinyimg_0062747",
+    "category": "n03983396"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04008634/0063595.jpg",
+    "id": "tinyimg_0063595",
+    "category": "n04008634"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13001041/0097635.jpg",
+    "id": "tinyimg_0097635",
+    "category": "n13001041"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03126707/0043986.jpg",
+    "id": "tinyimg_0043986",
+    "category": "n03126707"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02415577/0023465.jpg",
+    "id": "tinyimg_0023465",
+    "category": "n02415577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03854065/0058849.jpg",
+    "id": "tinyimg_0058849",
+    "category": "n03854065"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02769748/0028878.jpg",
+    "id": "tinyimg_0028878",
+    "category": "n02769748"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532670/0079831.jpg",
+    "id": "tinyimg_0079831",
+    "category": "n04532670"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07920052/0091684.jpg",
+    "id": "tinyimg_0091684",
+    "category": "n07920052"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07646821/0085495.jpg",
+    "id": "tinyimg_0085495",
+    "category": "n07646821"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02883205/0035858.jpg",
+    "id": "tinyimg_0035858",
+    "category": "n02883205"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04598010/0082230.jpg",
+    "id": "tinyimg_0082230",
+    "category": "n04598010"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02410509/0022899.jpg",
+    "id": "tinyimg_0022899",
+    "category": "n02410509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03424325/0049424.jpg",
+    "id": "tinyimg_0049424",
+    "category": "n03424325"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04146614/0067309.jpg",
+    "id": "tinyimg_0067309",
+    "category": "n04146614"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09193705/0094434.jpg",
+    "id": "tinyimg_0094434",
+    "category": "n09193705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652335/0109843.jpg",
+    "id": "tinyimg_0109843",
+    "category": "n13652335"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03599486/0051914.jpg",
+    "id": "tinyimg_0051914",
+    "category": "n03599486"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03891332/0059108.jpg",
+    "id": "tinyimg_0059108",
+    "category": "n03891332"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02074367/0101091.jpg",
+    "id": "tinyimg_0101091",
+    "category": "n02074367"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02892201/0036233.jpg",
+    "id": "tinyimg_0036233",
+    "category": "n02892201"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02808440/0031937.jpg",
+    "id": "tinyimg_0031937",
+    "category": "n02808440"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03970156/0106106.jpg",
+    "id": "tinyimg_0106106",
+    "category": "n03970156"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02788148/0029137.jpg",
+    "id": "tinyimg_0029137",
+    "category": "n02788148"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01784675/0005389.jpg",
+    "id": "tinyimg_0005389",
+    "category": "n01784675"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532106/0079037.jpg",
+    "id": "tinyimg_0079037",
+    "category": "n04532106"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03100240/0043230.jpg",
+    "id": "tinyimg_0043230",
+    "category": "n03100240"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04487081/0077946.jpg",
+    "id": "tinyimg_0077946",
+    "category": "n04487081"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02892201/0036024.jpg",
+    "id": "tinyimg_0036024",
+    "category": "n02892201"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03085013/0042476.jpg",
+    "id": "tinyimg_0042476",
+    "category": "n03085013"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07875152/0091300.jpg",
+    "id": "tinyimg_0091300",
+    "category": "n07875152"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09246464/0094742.jpg",
+    "id": "tinyimg_0094742",
+    "category": "n09246464"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02823428/0033862.jpg",
+    "id": "tinyimg_0033862",
+    "category": "n02823428"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07646821/0085305.jpg",
+    "id": "tinyimg_0085305",
+    "category": "n07646821"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03837869/0057577.jpg",
+    "id": "tinyimg_0057577",
+    "category": "n03837869"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07749582/0088846.jpg",
+    "id": "tinyimg_0088846",
+    "category": "n07749582"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01910747/0006073.jpg",
+    "id": "tinyimg_0006073",
+    "category": "n01910747"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03796401/0056610.jpg",
+    "id": "tinyimg_0056610",
+    "category": "n03796401"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07975909/0092391.jpg",
+    "id": "tinyimg_0092391",
+    "category": "n07975909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02948072/0038353.jpg",
+    "id": "tinyimg_0038353",
+    "category": "n02948072"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04417672/0107555.jpg",
+    "id": "tinyimg_0107555",
+    "category": "n04417672"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04456115/0076256.jpg",
+    "id": "tinyimg_0076256",
+    "category": "n04456115"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02056570/0009612.jpg",
+    "id": "tinyimg_0009612",
+    "category": "n02056570"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03160309/0044424.jpg",
+    "id": "tinyimg_0044424",
+    "category": "n03160309"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02056570/0100955.jpg",
+    "id": "tinyimg_0100955",
+    "category": "n02056570"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01984695/0008752.jpg",
+    "id": "tinyimg_0008752",
+    "category": "n01984695"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07873807/0090529.jpg",
+    "id": "tinyimg_0090529",
+    "category": "n07873807"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01917289/0006776.jpg",
+    "id": "tinyimg_0006776",
+    "category": "n01917289"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03404251/0048582.jpg",
+    "id": "tinyimg_0048582",
+    "category": "n03404251"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04265275/0070254.jpg",
+    "id": "tinyimg_0070254",
+    "category": "n04265275"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02129165/0015908.jpg",
+    "id": "tinyimg_0015908",
+    "category": "n02129165"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02948072/0038446.jpg",
+    "id": "tinyimg_0038446",
+    "category": "n02948072"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02504458/0102635.jpg",
+    "id": "tinyimg_0102635",
+    "category": "n02504458"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04179913/0106802.jpg",
+    "id": "tinyimg_0106802",
+    "category": "n04179913"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04487081/0077981.jpg",
+    "id": "tinyimg_0077981",
+    "category": "n04487081"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03126707/0043547.jpg",
+    "id": "tinyimg_0043547",
+    "category": "n03126707"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814533/0032009.jpg",
+    "id": "tinyimg_0032009",
+    "category": "n02814533"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02056570/0009548.jpg",
+    "id": "tinyimg_0009548",
+    "category": "n02056570"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04398044/0074814.jpg",
+    "id": "tinyimg_0074814",
+    "category": "n04398044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03089624/0042673.jpg",
+    "id": "tinyimg_0042673",
+    "category": "n03089624"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03014705/0040696.jpg",
+    "id": "tinyimg_0040696",
+    "category": "n03014705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04540053/0080423.jpg",
+    "id": "tinyimg_0080423",
+    "category": "n04540053"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02841315/0034921.jpg",
+    "id": "tinyimg_0034921",
+    "category": "n02841315"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03085013/0104223.jpg",
+    "id": "tinyimg_0104223",
+    "category": "n03085013"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02415577/0023433.jpg",
+    "id": "tinyimg_0023433",
+    "category": "n02415577"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07614500/0084139.jpg",
+    "id": "tinyimg_0084139",
+    "category": "n07614500"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532670/0107976.jpg",
+    "id": "tinyimg_0107976",
+    "category": "n04532670"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02403003/0022416.jpg",
+    "id": "tinyimg_0022416",
+    "category": "n02403003"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04371430/0073935.jpg",
+    "id": "tinyimg_0073935",
+    "category": "n04371430"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03770439/0056377.jpg",
+    "id": "tinyimg_0056377",
+    "category": "n03770439"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04507155/0107857.jpg",
+    "id": "tinyimg_0107857",
+    "category": "n04507155"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04133789/0066602.jpg",
+    "id": "tinyimg_0066602",
+    "category": "n04133789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13001041/0097679.jpg",
+    "id": "tinyimg_0097679",
+    "category": "n13001041"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099601/0011964.jpg",
+    "id": "tinyimg_0011964",
+    "category": "n02099601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04311004/0071770.jpg",
+    "id": "tinyimg_0071770",
+    "category": "n04311004"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07975909/0092179.jpg",
+    "id": "tinyimg_0092179",
+    "category": "n07975909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03160309/0044074.jpg",
+    "id": "tinyimg_0044074",
+    "category": "n03160309"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03977966/0061863.jpg",
+    "id": "tinyimg_0061863",
+    "category": "n03977966"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03599486/0051898.jpg",
+    "id": "tinyimg_0051898",
+    "category": "n03599486"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09256479/0095367.jpg",
+    "id": "tinyimg_0095367",
+    "category": "n09256479"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02793495/0030215.jpg",
+    "id": "tinyimg_0030215",
+    "category": "n02793495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03670208/0054258.jpg",
+    "id": "tinyimg_0054258",
+    "category": "n03670208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07871810/0090100.jpg",
+    "id": "tinyimg_0090100",
+    "category": "n07871810"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13719102/0099144.jpg",
+    "id": "tinyimg_0099144",
+    "category": "n13719102"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02815834/0033040.jpg",
+    "id": "tinyimg_0033040",
+    "category": "n02815834"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04598010/0082417.jpg",
+    "id": "tinyimg_0082417",
+    "category": "n04598010"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03770439/0056223.jpg",
+    "id": "tinyimg_0056223",
+    "category": "n03770439"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03902125/0059776.jpg",
+    "id": "tinyimg_0059776",
+    "category": "n03902125"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04070727/0064860.jpg",
+    "id": "tinyimg_0064860",
+    "category": "n04070727"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04008634/0063914.jpg",
+    "id": "tinyimg_0063914",
+    "category": "n04008634"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02699494/0028135.jpg",
+    "id": "tinyimg_0028135",
+    "category": "n02699494"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07647870/0085853.jpg",
+    "id": "tinyimg_0085853",
+    "category": "n07647870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01917289/0006888.jpg",
+    "id": "tinyimg_0006888",
+    "category": "n01917289"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07720875/0088147.jpg",
+    "id": "tinyimg_0088147",
+    "category": "n07720875"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03980874/0062286.jpg",
+    "id": "tinyimg_0062286",
+    "category": "n03980874"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02814860/0032542.jpg",
+    "id": "tinyimg_0032542",
+    "category": "n02814860"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01983481/0008405.jpg",
+    "id": "tinyimg_0008405",
+    "category": "n01983481"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01950731/0007910.jpg",
+    "id": "tinyimg_0007910",
+    "category": "n01950731"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08496334/0092646.jpg",
+    "id": "tinyimg_0092646",
+    "category": "n08496334"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04356056/0072533.jpg",
+    "id": "tinyimg_0072533",
+    "category": "n04356056"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03447447/0050020.jpg",
+    "id": "tinyimg_0050020",
+    "category": "n03447447"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n13652994/0098802.jpg",
+    "id": "tinyimg_0098802",
+    "category": "n13652994"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07975909/0092174.jpg",
+    "id": "tinyimg_0092174",
+    "category": "n07975909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03126707/0043525.jpg",
+    "id": "tinyimg_0043525",
+    "category": "n03126707"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03026506/0041178.jpg",
+    "id": "tinyimg_0041178",
+    "category": "n03026506"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03424325/0049156.jpg",
+    "id": "tinyimg_0049156",
+    "category": "n03424325"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07920052/0091649.jpg",
+    "id": "tinyimg_0091649",
+    "category": "n07920052"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01768244/0003389.jpg",
+    "id": "tinyimg_0003389",
+    "category": "n01768244"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04099969/0106598.jpg",
+    "id": "tinyimg_0106598",
+    "category": "n04099969"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03373237/0046986.jpg",
+    "id": "tinyimg_0046986",
+    "category": "n03373237"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02795169/0030552.jpg",
+    "id": "tinyimg_0030552",
+    "category": "n02795169"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03649909/0053266.jpg",
+    "id": "tinyimg_0053266",
+    "category": "n03649909"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04146614/0106746.jpg",
+    "id": "tinyimg_0106746",
+    "category": "n04146614"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04540053/0080055.jpg",
+    "id": "tinyimg_0080055",
+    "category": "n04540053"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09193705/0094256.jpg",
+    "id": "tinyimg_0094256",
+    "category": "n09193705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774384/0004196.jpg",
+    "id": "tinyimg_0004196",
+    "category": "n01774384"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03983396/0062916.jpg",
+    "id": "tinyimg_0062916",
+    "category": "n03983396"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12520864/0097334.jpg",
+    "id": "tinyimg_0097334",
+    "category": "n12520864"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03599486/0051997.jpg",
+    "id": "tinyimg_0051997",
+    "category": "n03599486"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03355925/0104643.jpg",
+    "id": "tinyimg_0104643",
+    "category": "n03355925"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02094433/0011273.jpg",
+    "id": "tinyimg_0011273",
+    "category": "n02094433"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03937543/0060785.jpg",
+    "id": "tinyimg_0060785",
+    "category": "n03937543"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03637318/0052903.jpg",
+    "id": "tinyimg_0052903",
+    "category": "n03637318"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02917067/0037409.jpg",
+    "id": "tinyimg_0037409",
+    "category": "n02917067"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532670/0079618.jpg",
+    "id": "tinyimg_0079618",
+    "category": "n04532670"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03255030/0045967.jpg",
+    "id": "tinyimg_0045967",
+    "category": "n03255030"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03404251/0048654.jpg",
+    "id": "tinyimg_0048654",
+    "category": "n03404251"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01917289/0006667.jpg",
+    "id": "tinyimg_0006667",
+    "category": "n01917289"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04456115/0076026.jpg",
+    "id": "tinyimg_0076026",
+    "category": "n04456115"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099601/0011661.jpg",
+    "id": "tinyimg_0011661",
+    "category": "n02099601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03662601/0053834.jpg",
+    "id": "tinyimg_0053834",
+    "category": "n03662601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03100240/0043240.jpg",
+    "id": "tinyimg_0043240",
+    "category": "n03100240"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04417672/0075540.jpg",
+    "id": "tinyimg_0075540",
+    "category": "n04417672"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02106662/0012665.jpg",
+    "id": "tinyimg_0012665",
+    "category": "n02106662"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01784675/0005284.jpg",
+    "id": "tinyimg_0005284",
+    "category": "n01784675"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02666347/0027468.jpg",
+    "id": "tinyimg_0027468",
+    "category": "n02666347"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07711569/0108707.jpg",
+    "id": "tinyimg_0108707",
+    "category": "n07711569"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01644900/0001703.jpg",
+    "id": "tinyimg_0001703",
+    "category": "n01644900"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02815834/0033373.jpg",
+    "id": "tinyimg_0033373",
+    "category": "n02815834"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03930313/0060446.jpg",
+    "id": "tinyimg_0060446",
+    "category": "n03930313"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02437312/0024051.jpg",
+    "id": "tinyimg_0024051",
+    "category": "n02437312"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07720875/0088015.jpg",
+    "id": "tinyimg_0088015",
+    "category": "n07720875"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04560804/0080552.jpg",
+    "id": "tinyimg_0080552",
+    "category": "n04560804"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02909870/0036785.jpg",
+    "id": "tinyimg_0036785",
+    "category": "n02909870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01644900/0001527.jpg",
+    "id": "tinyimg_0001527",
+    "category": "n01644900"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02113799/0013019.jpg",
+    "id": "tinyimg_0013019",
+    "category": "n02113799"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01742172/0002659.jpg",
+    "id": "tinyimg_0002659",
+    "category": "n01742172"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04149813/0067780.jpg",
+    "id": "tinyimg_0067780",
+    "category": "n04149813"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02094433/0011348.jpg",
+    "id": "tinyimg_0011348",
+    "category": "n02094433"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02231487/0017743.jpg",
+    "id": "tinyimg_0017743",
+    "category": "n02231487"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04596742/0081745.jpg",
+    "id": "tinyimg_0081745",
+    "category": "n04596742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02486410/0025622.jpg",
+    "id": "tinyimg_0025622",
+    "category": "n02486410"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09246464/0094893.jpg",
+    "id": "tinyimg_0094893",
+    "category": "n09246464"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02113799/0101300.jpg",
+    "id": "tinyimg_0101300",
+    "category": "n02113799"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02124075/0014986.jpg",
+    "id": "tinyimg_0014986",
+    "category": "n02124075"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02699494/0028070.jpg",
+    "id": "tinyimg_0028070",
+    "category": "n02699494"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01443537/0000281.jpg",
+    "id": "tinyimg_0000281",
+    "category": "n01443537"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03970156/0061475.jpg",
+    "id": "tinyimg_0061475",
+    "category": "n03970156"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04560804/0080952.jpg",
+    "id": "tinyimg_0080952",
+    "category": "n04560804"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02125311/0101540.jpg",
+    "id": "tinyimg_0101540",
+    "category": "n02125311"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04532106/0079090.jpg",
+    "id": "tinyimg_0079090",
+    "category": "n04532106"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02823428/0033605.jpg",
+    "id": "tinyimg_0033605",
+    "category": "n02823428"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02423022/0023722.jpg",
+    "id": "tinyimg_0023722",
+    "category": "n02423022"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07056680/0083425.jpg",
+    "id": "tinyimg_0083425",
+    "category": "n07056680"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02403003/0022497.jpg",
+    "id": "tinyimg_0022497",
+    "category": "n02403003"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03930313/0060495.jpg",
+    "id": "tinyimg_0060495",
+    "category": "n03930313"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02364673/0021077.jpg",
+    "id": "tinyimg_0021077",
+    "category": "n02364673"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03796401/0056667.jpg",
+    "id": "tinyimg_0056667",
+    "category": "n03796401"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04501370/0078107.jpg",
+    "id": "tinyimg_0078107",
+    "category": "n04501370"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07615774/0084789.jpg",
+    "id": "tinyimg_0084789",
+    "category": "n07615774"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01944390/0007332.jpg",
+    "id": "tinyimg_0007332",
+    "category": "n01944390"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02364673/0021473.jpg",
+    "id": "tinyimg_0021473",
+    "category": "n02364673"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03837869/0057808.jpg",
+    "id": "tinyimg_0057808",
+    "category": "n03837869"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07768694/0089732.jpg",
+    "id": "tinyimg_0089732",
+    "category": "n07768694"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02106662/0012882.jpg",
+    "id": "tinyimg_0012882",
+    "category": "n02106662"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02480495/0102470.jpg",
+    "id": "tinyimg_0102470",
+    "category": "n02480495"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02837789/0034166.jpg",
+    "id": "tinyimg_0034166",
+    "category": "n02837789"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04560804/0080870.jpg",
+    "id": "tinyimg_0080870",
+    "category": "n04560804"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01784675/0005103.jpg",
+    "id": "tinyimg_0005103",
+    "category": "n01784675"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01698640/0002006.jpg",
+    "id": "tinyimg_0002006",
+    "category": "n01698640"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03970156/0061388.jpg",
+    "id": "tinyimg_0061388",
+    "category": "n03970156"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04074963/0065123.jpg",
+    "id": "tinyimg_0065123",
+    "category": "n04074963"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04099969/0065622.jpg",
+    "id": "tinyimg_0065622",
+    "category": "n04099969"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02395406/0021595.jpg",
+    "id": "tinyimg_0021595",
+    "category": "n02395406"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04149813/0067555.jpg",
+    "id": "tinyimg_0067555",
+    "category": "n04149813"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02002724/0009141.jpg",
+    "id": "tinyimg_0009141",
+    "category": "n02002724"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n14991210/0099770.jpg",
+    "id": "tinyimg_0099770",
+    "category": "n14991210"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12520864/0097373.jpg",
+    "id": "tinyimg_0097373",
+    "category": "n12520864"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07695742/0086890.jpg",
+    "id": "tinyimg_0086890",
+    "category": "n07695742"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02106662/0101269.jpg",
+    "id": "tinyimg_0101269",
+    "category": "n02106662"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02268443/0019478.jpg",
+    "id": "tinyimg_0019478",
+    "category": "n02268443"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02699494/0028357.jpg",
+    "id": "tinyimg_0028357",
+    "category": "n02699494"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03014705/0040630.jpg",
+    "id": "tinyimg_0040630",
+    "category": "n03014705"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01910747/0006175.jpg",
+    "id": "tinyimg_0006175",
+    "category": "n01910747"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02909870/0036571.jpg",
+    "id": "tinyimg_0036571",
+    "category": "n02909870"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04118538/0066196.jpg",
+    "id": "tinyimg_0066196",
+    "category": "n04118538"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03763968/0055744.jpg",
+    "id": "tinyimg_0055744",
+    "category": "n03763968"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02927161/0037682.jpg",
+    "id": "tinyimg_0037682",
+    "category": "n02927161"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04265275/0070087.jpg",
+    "id": "tinyimg_0070087",
+    "category": "n04265275"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08742578/0093575.jpg",
+    "id": "tinyimg_0093575",
+    "category": "n08742578"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02917067/0103749.jpg",
+    "id": "tinyimg_0103749",
+    "category": "n02917067"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07715103/0087839.jpg",
+    "id": "tinyimg_0087839",
+    "category": "n07715103"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02437312/0024321.jpg",
+    "id": "tinyimg_0024321",
+    "category": "n02437312"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03255030/0045975.jpg",
+    "id": "tinyimg_0045975",
+    "category": "n03255030"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03201208/0104530.jpg",
+    "id": "tinyimg_0104530",
+    "category": "n03201208"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02403003/0022492.jpg",
+    "id": "tinyimg_0022492",
+    "category": "n02403003"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09246464/0094890.jpg",
+    "id": "tinyimg_0094890",
+    "category": "n09246464"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04275548/0070731.jpg",
+    "id": "tinyimg_0070731",
+    "category": "n04275548"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01768244/0003367.jpg",
+    "id": "tinyimg_0003367",
+    "category": "n01768244"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02769748/0028791.jpg",
+    "id": "tinyimg_0028791",
+    "category": "n02769748"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03042490/0041715.jpg",
+    "id": "tinyimg_0041715",
+    "category": "n03042490"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03992509/0106300.jpg",
+    "id": "tinyimg_0106300",
+    "category": "n03992509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03447447/0050398.jpg",
+    "id": "tinyimg_0050398",
+    "category": "n03447447"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07646821/0085457.jpg",
+    "id": "tinyimg_0085457",
+    "category": "n07646821"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02058221/0010432.jpg",
+    "id": "tinyimg_0010432",
+    "category": "n02058221"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04146614/0067369.jpg",
+    "id": "tinyimg_0067369",
+    "category": "n04146614"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03085013/0042484.jpg",
+    "id": "tinyimg_0042484",
+    "category": "n03085013"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07873807/0090806.jpg",
+    "id": "tinyimg_0090806",
+    "category": "n07873807"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02129165/0015948.jpg",
+    "id": "tinyimg_0015948",
+    "category": "n02129165"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04376876/0074073.jpg",
+    "id": "tinyimg_0074073",
+    "category": "n04376876"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09246464/0094609.jpg",
+    "id": "tinyimg_0094609",
+    "category": "n09246464"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03930313/0060476.jpg",
+    "id": "tinyimg_0060476",
+    "category": "n03930313"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03089624/0042843.jpg",
+    "id": "tinyimg_0042843",
+    "category": "n03089624"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03733131/0055253.jpg",
+    "id": "tinyimg_0055253",
+    "category": "n03733131"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04285008/0071312.jpg",
+    "id": "tinyimg_0071312",
+    "category": "n04285008"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04456115/0076442.jpg",
+    "id": "tinyimg_0076442",
+    "category": "n04456115"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04251144/0068990.jpg",
+    "id": "tinyimg_0068990",
+    "category": "n04251144"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02927161/0037611.jpg",
+    "id": "tinyimg_0037611",
+    "category": "n02927161"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03355925/0046453.jpg",
+    "id": "tinyimg_0046453",
+    "category": "n03355925"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02977058/0039838.jpg",
+    "id": "tinyimg_0039838",
+    "category": "n02977058"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123045/0013745.jpg",
+    "id": "tinyimg_0013745",
+    "category": "n02123045"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03733131/0055070.jpg",
+    "id": "tinyimg_0055070",
+    "category": "n03733131"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07873807/0090547.jpg",
+    "id": "tinyimg_0090547",
+    "category": "n07873807"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02437312/0024062.jpg",
+    "id": "tinyimg_0024062",
+    "category": "n02437312"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02056570/0009656.jpg",
+    "id": "tinyimg_0009656",
+    "category": "n02056570"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099601/0011503.jpg",
+    "id": "tinyimg_0011503",
+    "category": "n02099601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03447447/0050488.jpg",
+    "id": "tinyimg_0050488",
+    "category": "n03447447"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02802426/0031283.jpg",
+    "id": "tinyimg_0031283",
+    "category": "n02802426"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01770393/0100399.jpg",
+    "id": "tinyimg_0100399",
+    "category": "n01770393"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01774750/0004546.jpg",
+    "id": "tinyimg_0004546",
+    "category": "n01774750"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02123394/0014497.jpg",
+    "id": "tinyimg_0014497",
+    "category": "n02123394"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02099601/0011769.jpg",
+    "id": "tinyimg_0011769",
+    "category": "n02099601"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03042490/0041940.jpg",
+    "id": "tinyimg_0041940",
+    "category": "n03042490"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04118538/0106637.jpg",
+    "id": "tinyimg_0106637",
+    "category": "n04118538"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02795169/0030594.jpg",
+    "id": "tinyimg_0030594",
+    "category": "n02795169"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04311004/0071716.jpg",
+    "id": "tinyimg_0071716",
+    "category": "n04311004"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08620881/0093261.jpg",
+    "id": "tinyimg_0093261",
+    "category": "n08620881"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03393912/0047996.jpg",
+    "id": "tinyimg_0047996",
+    "category": "n03393912"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07614500/0084282.jpg",
+    "id": "tinyimg_0084282",
+    "category": "n07614500"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04074963/0065277.jpg",
+    "id": "tinyimg_0065277",
+    "category": "n04074963"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01910747/0006250.jpg",
+    "id": "tinyimg_0006250",
+    "category": "n01910747"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04118538/0066283.jpg",
+    "id": "tinyimg_0066283",
+    "category": "n04118538"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02410509/0022668.jpg",
+    "id": "tinyimg_0022668",
+    "category": "n02410509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03980874/0062010.jpg",
+    "id": "tinyimg_0062010",
+    "category": "n03980874"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n08742578/0093952.jpg",
+    "id": "tinyimg_0093952",
+    "category": "n08742578"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02823428/0033755.jpg",
+    "id": "tinyimg_0033755",
+    "category": "n02823428"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03814639/0057203.jpg",
+    "id": "tinyimg_0057203",
+    "category": "n03814639"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n12267677/0096599.jpg",
+    "id": "tinyimg_0096599",
+    "category": "n12267677"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07873807/0090670.jpg",
+    "id": "tinyimg_0090670",
+    "category": "n07873807"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03992509/0063458.jpg",
+    "id": "tinyimg_0063458",
+    "category": "n03992509"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n01742172/0002784.jpg",
+    "id": "tinyimg_0002784",
+    "category": "n01742172"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03400231/0048278.jpg",
+    "id": "tinyimg_0048278",
+    "category": "n03400231"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02423022/0023559.jpg",
+    "id": "tinyimg_0023559",
+    "category": "n02423022"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04254777/0069258.jpg",
+    "id": "tinyimg_0069258",
+    "category": "n04254777"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02094433/0101149.jpg",
+    "id": "tinyimg_0101149",
+    "category": "n02094433"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02948072/0038444.jpg",
+    "id": "tinyimg_0038444",
+    "category": "n02948072"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n09428293/0096194.jpg",
+    "id": "tinyimg_0096194",
+    "category": "n09428293"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04074963/0065236.jpg",
+    "id": "tinyimg_0065236",
+    "category": "n04074963"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n07614500/0084071.jpg",
+    "id": "tinyimg_0084071",
+    "category": "n07614500"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02963159/0039446.jpg",
+    "id": "tinyimg_0039446",
+    "category": "n02963159"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03902125/0105984.jpg",
+    "id": "tinyimg_0105984",
+    "category": "n03902125"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02509815/0026905.jpg",
+    "id": "tinyimg_0026905",
+    "category": "n02509815"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n14991210/0099904.jpg",
+    "id": "tinyimg_0099904",
+    "category": "n14991210"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04465666/0076521.jpg",
+    "id": "tinyimg_0076521",
+    "category": "n04465666"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n04251144/0068848.jpg",
+    "id": "tinyimg_0068848",
+    "category": "n04251144"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02927161/0037771.jpg",
+    "id": "tinyimg_0037771",
+    "category": "n02927161"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n03373237/0104666.jpg",
+    "id": "tinyimg_0104666",
+    "category": "n03373237"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/data/full/tiny_imagenet/n02106662/0012703.jpg",
+    "id": "tinyimg_0012703",
+    "category": "n02106662"
+  }
+]

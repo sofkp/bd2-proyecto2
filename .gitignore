@@ -141,3 +141,21 @@ __marimo__/
 Proyecto2.md
 README.md
 
+# LaTeX build artifacts
+*.aux
+*.toc
+*.out
+*.log
+analisis.pdf
+
+# Datasets (descargados localmente, no commitear)
+datasets/
+
+# Experimentos — artefactos generados
+experiments/grafica_analisis/
+experiments/results/
+# Dependencias y builds de Node/Next.js
+**/node_modules/
+**/dist/
+**/.next/
+

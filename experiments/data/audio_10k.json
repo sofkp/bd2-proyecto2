@@ -1,0 +1,852 @@
+[
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00000.wav",
+    "genre": "blues",
+    "song_id": "blues.00000"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00001.wav",
+    "genre": "blues",
+    "song_id": "blues.00001"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00002.wav",
+    "genre": "blues",
+    "song_id": "blues.00002"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00003.wav",
+    "genre": "blues",
+    "song_id": "blues.00003"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00004.wav",
+    "genre": "blues",
+    "song_id": "blues.00004"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00005.wav",
+    "genre": "blues",
+    "song_id": "blues.00005"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00006.wav",
+    "genre": "blues",
+    "song_id": "blues.00006"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00007.wav",
+    "genre": "blues",
+    "song_id": "blues.00007"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00008.wav",
+    "genre": "blues",
+    "song_id": "blues.00008"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00009.wav",
+    "genre": "blues",
+    "song_id": "blues.00009"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00010.wav",
+    "genre": "blues",
+    "song_id": "blues.00010"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00011.wav",
+    "genre": "blues",
+    "song_id": "blues.00011"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00012.wav",
+    "genre": "blues",
+    "song_id": "blues.00012"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00013.wav",
+    "genre": "blues",
+    "song_id": "blues.00013"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00014.wav",
+    "genre": "blues",
+    "song_id": "blues.00014"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00015.wav",
+    "genre": "blues",
+    "song_id": "blues.00015"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00016.wav",
+    "genre": "blues",
+    "song_id": "blues.00016"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00017.wav",
+    "genre": "blues",
+    "song_id": "blues.00017"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00018.wav",
+    "genre": "blues",
+    "song_id": "blues.00018"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00019.wav",
+    "genre": "blues",
+    "song_id": "blues.00019"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00020.wav",
+    "genre": "blues",
+    "song_id": "blues.00020"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00021.wav",
+    "genre": "blues",
+    "song_id": "blues.00021"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00022.wav",
+    "genre": "blues",
+    "song_id": "blues.00022"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00023.wav",
+    "genre": "blues",
+    "song_id": "blues.00023"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00024.wav",
+    "genre": "blues",
+    "song_id": "blues.00024"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00025.wav",
+    "genre": "blues",
+    "song_id": "blues.00025"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00026.wav",
+    "genre": "blues",
+    "song_id": "blues.00026"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00027.wav",
+    "genre": "blues",
+    "song_id": "blues.00027"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00028.wav",
+    "genre": "blues",
+    "song_id": "blues.00028"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00029.wav",
+    "genre": "blues",
+    "song_id": "blues.00029"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00030.wav",
+    "genre": "blues",
+    "song_id": "blues.00030"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00031.wav",
+    "genre": "blues",
+    "song_id": "blues.00031"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00032.wav",
+    "genre": "blues",
+    "song_id": "blues.00032"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00033.wav",
+    "genre": "blues",
+    "song_id": "blues.00033"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00034.wav",
+    "genre": "blues",
+    "song_id": "blues.00034"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00035.wav",
+    "genre": "blues",
+    "song_id": "blues.00035"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00036.wav",
+    "genre": "blues",
+    "song_id": "blues.00036"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00037.wav",
+    "genre": "blues",
+    "song_id": "blues.00037"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00038.wav",
+    "genre": "blues",
+    "song_id": "blues.00038"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00039.wav",
+    "genre": "blues",
+    "song_id": "blues.00039"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00040.wav",
+    "genre": "blues",
+    "song_id": "blues.00040"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00041.wav",
+    "genre": "blues",
+    "song_id": "blues.00041"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00042.wav",
+    "genre": "blues",
+    "song_id": "blues.00042"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00043.wav",
+    "genre": "blues",
+    "song_id": "blues.00043"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00044.wav",
+    "genre": "blues",
+    "song_id": "blues.00044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00045.wav",
+    "genre": "blues",
+    "song_id": "blues.00045"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00046.wav",
+    "genre": "blues",
+    "song_id": "blues.00046"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00047.wav",
+    "genre": "blues",
+    "song_id": "blues.00047"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00048.wav",
+    "genre": "blues",
+    "song_id": "blues.00048"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00049.wav",
+    "genre": "blues",
+    "song_id": "blues.00049"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00050.wav",
+    "genre": "blues",
+    "song_id": "blues.00050"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00051.wav",
+    "genre": "blues",
+    "song_id": "blues.00051"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00052.wav",
+    "genre": "blues",
+    "song_id": "blues.00052"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00053.wav",
+    "genre": "blues",
+    "song_id": "blues.00053"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00054.wav",
+    "genre": "blues",
+    "song_id": "blues.00054"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00055.wav",
+    "genre": "blues",
+    "song_id": "blues.00055"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00056.wav",
+    "genre": "blues",
+    "song_id": "blues.00056"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00057.wav",
+    "genre": "blues",
+    "song_id": "blues.00057"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00058.wav",
+    "genre": "blues",
+    "song_id": "blues.00058"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00059.wav",
+    "genre": "blues",
+    "song_id": "blues.00059"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00060.wav",
+    "genre": "blues",
+    "song_id": "blues.00060"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00061.wav",
+    "genre": "blues",
+    "song_id": "blues.00061"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00062.wav",
+    "genre": "blues",
+    "song_id": "blues.00062"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00063.wav",
+    "genre": "blues",
+    "song_id": "blues.00063"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00064.wav",
+    "genre": "blues",
+    "song_id": "blues.00064"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00065.wav",
+    "genre": "blues",
+    "song_id": "blues.00065"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00066.wav",
+    "genre": "blues",
+    "song_id": "blues.00066"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00067.wav",
+    "genre": "blues",
+    "song_id": "blues.00067"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00068.wav",
+    "genre": "blues",
+    "song_id": "blues.00068"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00069.wav",
+    "genre": "blues",
+    "song_id": "blues.00069"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00070.wav",
+    "genre": "blues",
+    "song_id": "blues.00070"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00071.wav",
+    "genre": "blues",
+    "song_id": "blues.00071"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00072.wav",
+    "genre": "blues",
+    "song_id": "blues.00072"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00073.wav",
+    "genre": "blues",
+    "song_id": "blues.00073"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00074.wav",
+    "genre": "blues",
+    "song_id": "blues.00074"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00075.wav",
+    "genre": "blues",
+    "song_id": "blues.00075"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00076.wav",
+    "genre": "blues",
+    "song_id": "blues.00076"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00077.wav",
+    "genre": "blues",
+    "song_id": "blues.00077"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00078.wav",
+    "genre": "blues",
+    "song_id": "blues.00078"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00079.wav",
+    "genre": "blues",
+    "song_id": "blues.00079"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00080.wav",
+    "genre": "blues",
+    "song_id": "blues.00080"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00081.wav",
+    "genre": "blues",
+    "song_id": "blues.00081"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00082.wav",
+    "genre": "blues",
+    "song_id": "blues.00082"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00083.wav",
+    "genre": "blues",
+    "song_id": "blues.00083"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00084.wav",
+    "genre": "blues",
+    "song_id": "blues.00084"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00085.wav",
+    "genre": "blues",
+    "song_id": "blues.00085"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00086.wav",
+    "genre": "blues",
+    "song_id": "blues.00086"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00087.wav",
+    "genre": "blues",
+    "song_id": "blues.00087"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00088.wav",
+    "genre": "blues",
+    "song_id": "blues.00088"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00089.wav",
+    "genre": "blues",
+    "song_id": "blues.00089"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00090.wav",
+    "genre": "blues",
+    "song_id": "blues.00090"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00091.wav",
+    "genre": "blues",
+    "song_id": "blues.00091"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00092.wav",
+    "genre": "blues",
+    "song_id": "blues.00092"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00093.wav",
+    "genre": "blues",
+    "song_id": "blues.00093"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00094.wav",
+    "genre": "blues",
+    "song_id": "blues.00094"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00095.wav",
+    "genre": "blues",
+    "song_id": "blues.00095"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00096.wav",
+    "genre": "blues",
+    "song_id": "blues.00096"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00097.wav",
+    "genre": "blues",
+    "song_id": "blues.00097"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00098.wav",
+    "genre": "blues",
+    "song_id": "blues.00098"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00099.wav",
+    "genre": "blues",
+    "song_id": "blues.00099"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00000.wav",
+    "genre": "classical",
+    "song_id": "classical.00000"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00001.wav",
+    "genre": "classical",
+    "song_id": "classical.00001"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00002.wav",
+    "genre": "classical",
+    "song_id": "classical.00002"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00003.wav",
+    "genre": "classical",
+    "song_id": "classical.00003"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00004.wav",
+    "genre": "classical",
+    "song_id": "classical.00004"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00005.wav",
+    "genre": "classical",
+    "song_id": "classical.00005"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00006.wav",
+    "genre": "classical",
+    "song_id": "classical.00006"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00007.wav",
+    "genre": "classical",
+    "song_id": "classical.00007"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00008.wav",
+    "genre": "classical",
+    "song_id": "classical.00008"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00009.wav",
+    "genre": "classical",
+    "song_id": "classical.00009"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00010.wav",
+    "genre": "classical",
+    "song_id": "classical.00010"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00011.wav",
+    "genre": "classical",
+    "song_id": "classical.00011"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00012.wav",
+    "genre": "classical",
+    "song_id": "classical.00012"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00013.wav",
+    "genre": "classical",
+    "song_id": "classical.00013"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00014.wav",
+    "genre": "classical",
+    "song_id": "classical.00014"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00015.wav",
+    "genre": "classical",
+    "song_id": "classical.00015"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00016.wav",
+    "genre": "classical",
+    "song_id": "classical.00016"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00017.wav",
+    "genre": "classical",
+    "song_id": "classical.00017"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00018.wav",
+    "genre": "classical",
+    "song_id": "classical.00018"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00019.wav",
+    "genre": "classical",
+    "song_id": "classical.00019"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00020.wav",
+    "genre": "classical",
+    "song_id": "classical.00020"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00021.wav",
+    "genre": "classical",
+    "song_id": "classical.00021"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00022.wav",
+    "genre": "classical",
+    "song_id": "classical.00022"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00023.wav",
+    "genre": "classical",
+    "song_id": "classical.00023"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00024.wav",
+    "genre": "classical",
+    "song_id": "classical.00024"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00025.wav",
+    "genre": "classical",
+    "song_id": "classical.00025"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00026.wav",
+    "genre": "classical",
+    "song_id": "classical.00026"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00027.wav",
+    "genre": "classical",
+    "song_id": "classical.00027"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00028.wav",
+    "genre": "classical",
+    "song_id": "classical.00028"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00029.wav",
+    "genre": "classical",
+    "song_id": "classical.00029"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00030.wav",
+    "genre": "classical",
+    "song_id": "classical.00030"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00031.wav",
+    "genre": "classical",
+    "song_id": "classical.00031"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00032.wav",
+    "genre": "classical",
+    "song_id": "classical.00032"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00033.wav",
+    "genre": "classical",
+    "song_id": "classical.00033"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00034.wav",
+    "genre": "classical",
+    "song_id": "classical.00034"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00035.wav",
+    "genre": "classical",
+    "song_id": "classical.00035"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00036.wav",
+    "genre": "classical",
+    "song_id": "classical.00036"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00037.wav",
+    "genre": "classical",
+    "song_id": "classical.00037"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00038.wav",
+    "genre": "classical",
+    "song_id": "classical.00038"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00039.wav",
+    "genre": "classical",
+    "song_id": "classical.00039"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00040.wav",
+    "genre": "classical",
+    "song_id": "classical.00040"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00041.wav",
+    "genre": "classical",
+    "song_id": "classical.00041"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00042.wav",
+    "genre": "classical",
+    "song_id": "classical.00042"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00043.wav",
+    "genre": "classical",
+    "song_id": "classical.00043"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00044.wav",
+    "genre": "classical",
+    "song_id": "classical.00044"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00045.wav",
+    "genre": "classical",
+    "song_id": "classical.00045"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00046.wav",
+    "genre": "classical",
+    "song_id": "classical.00046"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00047.wav",
+    "genre": "classical",
+    "song_id": "classical.00047"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00048.wav",
+    "genre": "classical",
+    "song_id": "classical.00048"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00049.wav",
+    "genre": "classical",
+    "song_id": "classical.00049"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00050.wav",
+    "genre": "classical",
+    "song_id": "classical.00050"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00051.wav",
+    "genre": "classical",
+    "song_id": "classical.00051"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00052.wav",
+    "genre": "classical",
+    "song_id": "classical.00052"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00053.wav",
+    "genre": "classical",
+    "song_id": "classical.00053"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00054.wav",
+    "genre": "classical",
+    "song_id": "classical.00054"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00055.wav",
+    "genre": "classical",
+    "song_id": "classical.00055"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00056.wav",
+    "genre": "classical",
+    "song_id": "classical.00056"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00057.wav",
+    "genre": "classical",
+    "song_id": "classical.00057"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00058.wav",
+    "genre": "classical",
+    "song_id": "classical.00058"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00059.wav",
+    "genre": "classical",
+    "song_id": "classical.00059"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00060.wav",
+    "genre": "classical",
+    "song_id": "classical.00060"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00061.wav",
+    "genre": "classical",
+    "song_id": "classical.00061"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00062.wav",
+    "genre": "classical",
+    "song_id": "classical.00062"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00063.wav",
+    "genre": "classical",
+    "song_id": "classical.00063"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00064.wav",
+    "genre": "classical",
+    "song_id": "classical.00064"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00065.wav",
+    "genre": "classical",
+    "song_id": "classical.00065"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00066.wav",
+    "genre": "classical",
+    "song_id": "classical.00066"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00067.wav",
+    "genre": "classical",
+    "song_id": "classical.00067"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00068.wav",
+    "genre": "classical",
+    "song_id": "classical.00068"
+  },
+  {
+    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/classical/classical.00069.wav",
+    "genre": "classical",
+    "song_id": "classical.00069"
+  }
+]

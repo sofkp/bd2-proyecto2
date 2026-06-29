@@ -1,0 +1,89 @@
+% ─────────────────────────────────────────────────────────────────────────────
+% INSTRUCCIONES: Insertar gráficos en analisis.tex
+% ─────────────────────────────────────────────────────────────────────────────
+
+% 1. Descomentar el paquete de gráficos (ya está en el preámbulo):
+%    \usepackage{graphicx}  ← YA ESTÁ
+
+% 2. En la sección "Resultados: Modalidad Audio", después de Tabla~\ref{tab:audio-custom},
+%    insertar aproximadamente en línea 287:
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8\textwidth]{grafica_analisis/audio_latency.png}
+      \caption{Audio: Latencia promedio del AudioSearchIndex por escala}
+      \label{fig:audio-latency}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8\textwidth]{grafica_analisis/audio_precision.png}
+      \caption{Audio: Precision@10 del AudioSearchIndex por escala}
+      \label{fig:audio-precision}
+    \end{figure}
+
+% 3. En la sección "Comparativa contra pgvector HNSW" (~línea 310),
+%    después de la Tabla~\ref{tab:audio-comparativa}, insertar:
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8\textwidth]{grafica_analisis/audio_throughput.png}
+      \caption{Audio: Throughput (QPS) del AudioSearchIndex por escala}
+      \label{fig:audio-throughput}
+    \end{figure}
+
+% 4. En la sección "Resultados: Modalidad Texto" (~línea 350),
+%    después de Tabla~\ref{tab:text-custom}, insertar:
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8\textwidth]{grafica_analisis/text_latency.png}
+      \caption{Texto: Latencia promedio del InvertedIndex vs. PostgreSQL GIN}
+      \label{fig:text-latency}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8\textwidth]{grafica_analisis/text_throughput.png}
+      \caption{Texto: Throughput (QPS) del InvertedIndex por escala}
+      \label{fig:text-throughput}
+    \end{figure}
+
+% 5. En la sección "Resultados: Modalidad Imagen" (~línea 420),
+%    después de Tabla~\ref{tab:image-comparativa}, insertar:
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8\textwidth]{grafica_analisis/image_latency.png}
+      \caption{Imagen: Latencia promedio del VisualSearchIndex vs. pgvector HNSW}
+      \label{fig:image-latency}
+    \end{figure}
+
+% 6. En la sección "Análisis Comparativo Global" (~línea 450),
+%    después de Tabla~\ref{tab:latency-resumen}, insertar:
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.9\textwidth]{grafica_analisis/comparison_all_latency.png}
+      \caption{Comparación global: Latencia promedio por modalidad (10K/100)}
+      \label{fig:global-latency}
+    \end{figure}
+
+% ─────────────────────────────────────────────────────────────────────────────
+% NOTAS:
+% ─────────────────────────────────────────────────────────────────────────────
+% • Los gráficos están en: experiments/grafica_analisis/
+% • Las rutas son relativas al directorio raíz del proyecto (donde está analisis.tex)
+% • [H] = float specifier: "aquí exactamente" (requiere \usepackage{float})
+% • width=0.8\textwidth para que no se corten al margen
+% • Asegúrate de que el compilador LaTeX puede encontrar los PNG:
+%   - Ruta relativa: grafica_analisis/audio_latency.png
+%   - O ruta absoluta: /Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/experiments/grafica_analisis/audio_latency.png
+
+% ─────────────────────────────────────────────────────────────────────────────
+% COMPILACIÓN:
+% ─────────────────────────────────────────────────────────────────────────────
+% macOS:  pdflatex -interaction=nonstopmode analisis.tex
+%         xelatex -interaction=nonstopmode analisis.tex (si hay caracteres Unicode)
+% Salida: analisis.pdf en el mismo directorio
+

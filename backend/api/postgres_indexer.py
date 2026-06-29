@@ -20,14 +20,14 @@ CREATE TABLE IF NOT EXISTS pg_text_docs (
 );
 CREATE INDEX IF NOT EXISTS idx_pg_text_gin ON pg_text_docs USING GIN(tsv);
 
--- Imágenes: pgvector HNSW (SIFT RootSIFT + HSV color, 116 dims)
+-- Imágenes: pgvector HNSW (SIFT BoVW, 50 dims)
 CREATE TABLE IF NOT EXISTS pg_image_docs (
     id        SERIAL PRIMARY KEY,
     chunk_id  TEXT UNIQUE NOT NULL,
     filename  TEXT,
     image_url TEXT,
     title     TEXT,
-    embedding vector(116)
+    embedding vector(50)
 );
 CREATE INDEX IF NOT EXISTS idx_pg_image_hnsw
     ON pg_image_docs USING hnsw(embedding vector_l2_ops)
