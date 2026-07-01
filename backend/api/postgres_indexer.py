@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS pg_image_docs (
     filename  TEXT,
     image_url TEXT,
     title     TEXT,
-    embedding vector(50)
+    embedding vector(116)
 );
 CREATE INDEX IF NOT EXISTS idx_pg_image_hnsw
     ON pg_image_docs USING hnsw(embedding vector_l2_ops)
