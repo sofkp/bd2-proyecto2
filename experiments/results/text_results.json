@@ -1,0 +1,41 @@
+[
+  {
+    "scale": "1k",
+    "n_source_docs": 1000,
+    "n_chunks": 1000,
+    "n_codewords": 500,
+    "k": 10,
+    "avg_latency_ms": 0.83,
+    "throughput_qps": 1212,
+    "precision_at_k": 0.614,
+    "gin_avg_latency_ms": 10.976,
+    "gin_precision_at_k": 1.0,
+    "gin_available": true
+  },
+  {
+    "scale": "10k",
+    "n_source_docs": 10000,
+    "n_chunks": 10000,
+    "n_codewords": 500,
+    "k": 10,
+    "avg_latency_ms": 10.99,
+    "throughput_qps": 91,
+    "precision_at_k": 0.772,
+    "gin_avg_latency_ms": 15.179,
+    "gin_precision_at_k": 1.0,
+    "gin_available": true
+  },
+  {
+    "scale": "100k",
+    "n_source_docs": 100000,
+    "n_chunks": 100000,
+    "n_codewords": 500,
+    "k": 10,
+    "avg_latency_ms": 114.48,
+    "throughput_qps": 9,
+    "precision_at_k": 0.75,
+    "gin_avg_latency_ms": 9.391,
+    "gin_precision_at_k": 1.0,
+    "gin_available": true
+  }
+]

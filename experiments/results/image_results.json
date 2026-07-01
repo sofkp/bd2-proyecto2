@@ -1,0 +1,41 @@
+[
+  {
+    "scale": "1k",
+    "n_images": 1000,
+    "n_indexed": 1000,
+    "n_codewords": 50,
+    "k": 10,
+    "avg_latency_ms": 1.721,
+    "throughput_qps": 581,
+    "precision_at_k": 0.108,
+    "pgvector_avg_latency_ms": 9.801,
+    "pgvector_precision_at_k": 0.243,
+    "pgvector_available": true
+  },
+  {
+    "scale": "10k",
+    "n_images": 10000,
+    "n_indexed": 10000,
+    "n_codewords": 50,
+    "k": 10,
+    "avg_latency_ms": 20.811,
+    "throughput_qps": 48,
+    "precision_at_k": 0.112,
+    "pgvector_avg_latency_ms": 8.825,
+    "pgvector_precision_at_k": 0.103,
+    "pgvector_available": true
+  },
+  {
+    "scale": "100k",
+    "n_images": 100000,
+    "n_indexed": 100000,
+    "n_codewords": 50,
+    "k": 10,
+    "avg_latency_ms": 191.058,
+    "throughput_qps": 5,
+    "precision_at_k": 0.112,
+    "pgvector_avg_latency_ms": 9.469,
+    "pgvector_precision_at_k": 0.12,
+    "pgvector_available": true
+  }
+]

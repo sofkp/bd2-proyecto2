@@ -139,7 +139,6 @@ __marimo__/
 
 #documentación
 Proyecto2.md
-README.md
 
 # LaTeX build artifacts
 *.aux
@@ -152,10 +151,8 @@ analisis.pdf
 datasets/
 
 # Experimentos — artefactos generados
-experiments/grafica_analisis/
-experiments/results/
+# Experiments outputs are kept for the report.
 # Dependencias y builds de Node/Next.js
 **/node_modules/
 **/dist/
 **/.next/
-

@@ -353,6 +353,9 @@ def plot_text_ram():
         return
 
     results = json.loads(path.read_text())
+    if not results or "peak_ram_mb" not in results[0]:
+        print("  [SKIP] Sin datos de RAM en text_results.json")
+        return
 
     scales = [r["scale"].upper() for r in results]
     ram = [r["peak_ram_mb"] for r in results]
@@ -546,7 +549,9 @@ def plot_precision_comparison():
 
 
 
-    print("Generando gráficos...\n[Audio]")
+def main():
+    """Genera todos los graficos comparativos disponibles."""
+    print("Generando graficos...\n[Audio]")
     plot_audio_latency()
     plot_audio_throughput()
     plot_audio_precision()
@@ -567,3 +572,7 @@ def plot_precision_comparison():
     plot_precision_comparison()
 
     print(f"\nGráficos guardados en: {GRAPHICS_DIR}/")
+
+
+if __name__ == "__main__":
+    main()
