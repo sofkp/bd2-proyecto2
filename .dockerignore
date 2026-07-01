@@ -1,0 +1,16 @@
+.git
+.pytest_cache
+.venv
+**/__pycache__
+**/*.pyc
+**/node_modules
+**/.next
+data/full
+datasets
+experiments/results
+experiments/grafica_analisis
+*.aux
+*.log
+*.out
+*.toc
+analisis.pdf
