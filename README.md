@@ -8,7 +8,7 @@ Split -> Extractor -> Codebook -> Indice Invertido
 
 La idea es llevar datos de naturalezas distintas a una representación comparable. Para texto se usan tokens y pesos TF-IDF; para imágenes se usan descriptores SIFT y un histograma visual; y para audio se usan MFCC y un histograma acústico. Luego se compara nuestra implementación con PostgreSQL usando GIN para texto y pgvector con HNSW para imagen/audio.
 
-Presentación del proyecto: [Canva](https://canva.link/22lr13wcgn4i94v)
+Presentación del proyecto: [Canva](https://canva.link/6w43yqgg9iwkh0e)
 
 ## 1. Objetivo
 
