@@ -24,9 +24,13 @@ class MFCCPipeline:
         self.indexed_files = 0
 
     def index_directory(self, audio_dir: Path) -> None:
+        self.index_directories([audio_dir])
+
+    def index_directories(self, audio_dirs: list[Path]) -> None:
         audio_files: list[Path] = []
-        for ext in SUPPORTED:
-            audio_files.extend(audio_dir.rglob(f"*{ext}"))
+        for audio_dir in audio_dirs:
+            for ext in SUPPORTED:
+                audio_files.extend(audio_dir.rglob(f"*{ext}"))
         audio_files = sorted(audio_files)[:MAX_FILES]
 
         if not audio_files:
@@ -44,12 +48,13 @@ class MFCCPipeline:
                     continue
                 all_frames.append(frames)
                 genre = audio_file.parent.name
+                url_prefix = "audio-samples" if "samples" in audio_file.parts else "audio"
                 per_file.append({
                     "file_id": audio_file.stem,
                     "filename": audio_file.name,
                     "genre": genre,
                     "windows": windows,
-                    "audio_url": f"/audio/{genre}/{audio_file.name}",
+                    "audio_url": f"/{url_prefix}/{genre}/{audio_file.name}",
                 })
             except Exception:
                 continue

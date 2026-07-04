@@ -146,6 +146,10 @@ export default function Home() {
       streamRef.current = stream;
       const ctx = new AudioContext({ sampleRate: 22050 });
       audioContextRef.current = ctx;
+      // Algunos navegadores crean el AudioContext suspendido por políticas
+      // de autoplay; sin resume() el callback onaudioprocess no dispara y
+      // la grabación queda vacía.
+      await ctx.resume();
       const source = ctx.createMediaStreamSource(stream);
       const processor = ctx.createScriptProcessor(4096, 1, 1);
       samplesRef.current = [];
@@ -166,6 +170,14 @@ export default function Home() {
     streamRef.current?.getTracks().forEach((t) => t.stop());
     const sampleRate = audioContextRef.current?.sampleRate ?? 22050;
     audioContextRef.current?.close();
+
+    const totalSamples = samplesRef.current.reduce((n, s) => n + s.length, 0);
+    if (totalSamples < sampleRate * 0.5) {
+      alert("La grabación quedó vacía o muy corta. Verifica el micrófono e intenta de nuevo.");
+      setIsRecording(false);
+      return;
+    }
+
     const wav = encodeWAV(samplesRef.current, sampleRate);
     const file = new File([wav], "grabacion.wav", { type: "audio/wav" });
     setAudioFile("grabacion.wav");
@@ -198,9 +210,19 @@ export default function Home() {
       }
       // blob: URLs son locales, no necesitan el prefijo del backend
       const fullUrl = audioUrl.startsWith("blob:") ? audioUrl : `${API_URL}${audioUrl}`;
-      audioPlayerRef.current = new Audio(fullUrl);
-      audioPlayerRef.current.play();
-      audioPlayerRef.current.onended = () => setPlayingId(null);
+      const player = new Audio(fullUrl);
+      audioPlayerRef.current = player;
+      player.onended = () => setPlayingId(null);
+      player.onerror = () => {
+        console.error("No se pudo reproducir el audio:", fullUrl, player.error);
+        alert(`No se pudo reproducir el audio (código ${player.error?.code}). Revisa la consola.`);
+        setPlayingId(null);
+      };
+      player.play().catch((err) => {
+        console.error("play() rechazado:", err);
+        alert(`No se pudo iniciar la reproducción: ${err.name} - ${err.message}`);
+        setPlayingId(null);
+      });
       setPlayingId(id);
     }
   };
