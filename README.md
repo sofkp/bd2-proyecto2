@@ -76,8 +76,8 @@ El módulo de split convierte archivos grandes en unidades pequeñas para indexa
 | Modalidad | Implementación | Decisiones principales |
 |---|---|---|
 | Texto | `SplitText` | Fragmentos entre 40 y 800 caracteres. Se separa por párrafos y, si un párrafo es muy largo, se divide por oraciones. También soporta PDF usando PyMuPDF. |
-| Imagen | `SplitImage` | Patches de 224x224 px con stride 112 en el pipeline de la app. Para benchmarks de Tiny ImageNet se usan patches de 32x32 con stride 16 porque las imágenes son de 64x64 px. |
-| Audio | `SplitAudio` | En el pipeline MFCC se usan ventanas de 3.0 s con hop de 1.5 s a 22050 Hz. En benchmarks GTZAN se usan ventanas de 1.0 s con hop de 0.5 s para obtener más chunks por canción. |
+| Imagen | `SplitImage` | Patches de 224x224 px con stride 112 en el pipeline de la app. Para benchmarks de Fashion200K se usan patches de 32x32 con stride 16 para mantener acotado el costo experimental. |
+| Audio | `SplitAudio` | En el pipeline MFCC se usan ventanas de 3.0 s con hop de 1.5 s a 22050 Hz. En benchmarks FMA cada archivo de audio se resume en un histograma acústico. |
 
 Esta etapa conserva metadatos como ruta de origen, posición del patch, página del PDF, tiempos de inicio/fin del audio y tamaño original del chunk.
 
@@ -89,7 +89,6 @@ Esta etapa conserva metadatos como ruta de origen, posición del patch, página 
 | Imagen | `SIFTExtractor` | Usa OpenCV SIFT. Cada descriptor tiene 128 dimensiones. Se aplica RootSIFT para mejorar comparación por similitud. Si un patch no tiene keypoints, se retorna un arreglo vacío controlado. |
 | Audio | `MFCCExtractor` | Extrae 20 coeficientes MFCC por frame con `librosa`. Aplica pre-enfasis 0.97, `n_fft=2048`, `hop_length=512` y 128 bandas Mel. |
 
-Además existe un pipeline musical para Spotify que usa letras con TF-IDF y 12 atributos numéricos de audio (`danceability`, `energy`, `tempo`, etc.) normalizados entre mínimo y máximo.
 
 ### 3.3. Codebook
 
@@ -131,28 +130,25 @@ El usuario sube una imagen. El sistema divide la imagen en patches, extrae SIFT,
 
 El usuario puede subir un archivo de audio o grabar desde el micrófono. El frontend convierte la grabación a WAV y la envía al backend. El backend extrae MFCC, construye el histograma acústico y busca canciones/audios similares. También existe comparación con pgvector.
 
-### 4.4. Búsqueda musical por letras y atributos
+### 4.4. Búsqueda por audio crudo
 
-Si se carga el CSV de Spotify, el sistema permite búsqueda musical por letras y por características numéricas de audio. Para letras se usa el mismo flujo textual; para atributos se normalizan 12 features y se consulta por similitud.
+Para audio crudo/MFCC se usa el pipeline de archivos WAV/MP3/FLAC basado en FMA.
 
 ## 5. Datasets
 
 Los datos grandes no se versionan completos. Se descargan localmente con:
 
 ```bash
-./scripts/download_data.sh arxiv
-./scripts/download_data.sh spotify
-./scripts/download_data.sh fashion
+./scripts/download_data.sh agnews
+./scripts/download_data.sh fma-audio
+./scripts/download_data.sh fashion200k
 ```
 
 | Dataset | Modalidad | Características | Uso |
 |---|---|---|---|
 | AG News | Texto | 120,000 noticias cortas en 4 clases balanceadas: World, Sports, Business y Sci/Tech. | Benchmarks de texto en 1K, 10K y 100K documentos. |
-| GTZAN Genre Dataset | Audio | 1,000 canciones WAV de 30 s, 10 géneros, 100 canciones por género. | Evaluación acústica. El máximo real fue ~60K chunks por límite del dataset. |
-| Tiny ImageNet | Imagen | 110,000 imágenes RGB de 64x64 px, 200 clases. | Benchmarks de imagen en 1K, 10K y 100K imágenes. |
-| SciMMIR / arXiv | Texto + imagen | Papers o abstracts con posible contenido visual asociado. | Datos de prueba para búsqueda documental multimodal. |
-| Spotify songs | Audio + letras | Canciones con letras y atributos como energía, tempo, valence y danceability. | Búsqueda musical por letra y atributos de audio. |
-| Fashion product images | Imagen | Imágenes de productos de moda. | Caso de búsqueda visual tipo e-commerce. |
+| FMA 100K WAV | Audio | Dataset Kaggle `noahbadoa/fma-dataset-100k-music-wav-files` con archivos WAV. | Benchmarks de audio en 1K, 10K y 100K archivos. |
+| Fashion200K | Imagen | Dataset HuggingFace `Marqo/fashion200k` con 202K filas de ropa/moda, imagen y metadatos de categoría/texto. | Benchmarks de imagen en 1K, 10K y 100K imágenes. |
 
 Estructura local esperada:
 
@@ -160,10 +156,20 @@ Estructura local esperada:
 data/
 ├── samples/
 └── full/
-    ├── scimmir/
-    ├── spotify_songs.csv
-    └── audio/
+    ├── agnews/
+    ├── fashion200k/
+    ├── audio/fma_100k/
+    └── .kaggle_cache/
 ```
+
+FMA tambien se puede descargar desde Docker para no instalar `kagglehub` localmente. Configurar `KAGGLE_USERNAME` y `KAGGLE_KEY` en `.env` y ejecutar:
+
+```bash
+docker compose --profile datasets run --rm datasets
+docker compose restart backend
+```
+
+El script deja un subconjunto deterministico en `data/full/audio/fma_100k/` y limpia el cache de Kaggle para no duplicar almacenamiento. No queda dentro de la imagen de Docker ni se commitea.
 
 ## 6. Ejecución con Docker
 
@@ -187,6 +193,8 @@ POSTGRES_PORT=5432
 BACKEND_PORT=8000
 FRONTEND_PORT=3000
 NEXT_PUBLIC_API_URL=http://localhost:8000
+KAGGLE_USERNAME=
+KAGGLE_KEY=
 ```
 
 ### 6.2. Levantar todo
@@ -250,6 +258,12 @@ docker compose exec backend python experiments/bench_audio.py
 docker compose exec backend python experiments/plot_results.py
 ```
 
+Para regenerar los manifests de audio/texto/imagen:
+
+```bash
+docker compose exec backend python experiments/prepare_data.py
+```
+
 Los resultados resumidos se guardan en:
 
 ```text
@@ -268,7 +282,7 @@ experiments/grafica_analisis/
 |---|---:|---:|---:|---:|---:|
 | Audio | 1K | 0.037 ms | 1.000 | 9.163 ms | 1.000 |
 | Audio | 10K | 0.292 ms | 0.990 | 8.077 ms | 1.000 |
-| Audio | 60K | 1.706 ms | 0.432 | 8.176 ms | 0.460 |
+| Audio | 100K | Pendiente de regenerar con FMA | Pendiente | Pendiente | Pendiente |
 | Texto | 1K | 0.83 ms | 0.614 | 10.976 ms | 1.000 |
 | Texto | 10K | 10.99 ms | 0.772 | 15.179 ms | 1.000 |
 | Texto | 100K | 114.48 ms | 0.750 | 9.391 ms | 1.000 |
@@ -290,7 +304,7 @@ experiments/grafica_analisis/
 
 ## 9. Análisis de resultados
 
-En audio, el índice propio tuvo la mejor latencia. En 1K y 10K fue claramente más rápido que pgvector porque todo se resuelve en memoria y con histogramas pequeños. En 60K la precisión baja porque GTZAN tiene géneros musicales con mucho solapamiento real. Por ejemplo, blues, jazz y rock pueden compartir instrumentos, ritmo o timbre.
+En audio, los resultados deben regenerarse con FMA para reportar 1K, 10K y 100K archivos. El flujo de benchmark ya usa `audio_100k.json` y mantiene una entrada de índice por archivo de audio.
 
 En texto, PostgreSQL GIN fue el enfoque más sólido en precisión. El `tsvector` recuperó documentos de la misma categoría con P@10 de 1.0 en todas las escalas medidas. El índice propio fue competitivo en escalas pequeñas, pero en 100K la latencia subió bastante porque la búsqueda en memoria compara más candidatos y no tiene las optimizaciones internas de GIN.
 

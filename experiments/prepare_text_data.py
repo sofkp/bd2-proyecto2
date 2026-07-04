@@ -5,9 +5,9 @@ Dataset: AG News (fancyzhx/ag_news) — 120K artículos de noticias, 4 categorí
 Categorías: World (0), Sports (1), Business (2), Sci/Tech (3)
 
 Genera:
-  experiments/data/text_1k.json   →   1 000 docs  (~1 000 chunks)
-  experiments/data/text_10k.json  →  10 000 docs  (~10 000 chunks)
-  experiments/data/text_100k.json → 100 000 docs  (~100 000 chunks)
+  experiments/data/text_1k.json   ->   1 000 documents
+  experiments/data/text_10k.json  ->  10 000 documents
+  experiments/data/text_100k.json -> 100 000 documents
 
 Uso:
     python experiments/prepare_text_data.py
@@ -82,7 +82,7 @@ def main() -> None:
         out_path = DATA_DIR / f"text_{label}.json"
         if out_path.exists():
             existing = json.loads(out_path.read_text())
-            # Solo reescribir si no es el mismo dataset (AG News, no ArXiv/newsgroups)
+            # Solo reescribir si no es el mismo dataset (AG News)
             if existing and "source" in existing[0] and existing[0]["source"].startswith("agnews"):
                 print(f"  [{label.upper()}] Ya existe con AG News, saltando.")
                 continue

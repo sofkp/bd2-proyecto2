@@ -3,7 +3,6 @@ from pydantic import BaseModel, Field
 from fastapi import APIRouter, File, UploadFile
 
 from backend.api.pipeline_state import text_pipeline
-from backend.api.music_pipeline import music_pipeline
 from backend.api.image_pipeline import image_pipeline
 from backend.api.mfcc_pipeline import mfcc_pipeline
 
@@ -12,11 +11,6 @@ router = APIRouter(prefix="/pipeline", tags=["pipeline"])
 
 class TextSearchRequest(BaseModel):
     query: str = Field(min_length=1)
-    k: int = Field(default=10, ge=1, le=100)
-
-
-class AudioFeaturesRequest(BaseModel):
-    features: list[float] = Field(min_length=1)
     k: int = Field(default=10, ge=1, le=100)
 
 
@@ -31,10 +25,6 @@ def pipeline_status() -> dict:
             "ready": text_pipeline.ready,
             "indexed_docs": text_pipeline.indexed_docs,
             "indexed_chunks": text_pipeline.indexed_chunks,
-        },
-        "music": {
-            "ready": music_pipeline.ready,
-            "indexed_songs": music_pipeline.indexed_songs,
         },
         "image": {
             "ready": image_pipeline.ready,
@@ -68,20 +58,6 @@ async def pipeline_search_text_pdf(file: UploadFile = File(...), k: int = 10) ->
     return _wrap(results, text_pipeline.index_stats(), (time.perf_counter() - t0) * 1000)
 
 
-@router.post("/search/music/lyrics")
-def pipeline_search_music_lyrics(request: TextSearchRequest) -> dict:
-    t0 = time.perf_counter()
-    results = music_pipeline.search_by_lyrics(request.query, k=request.k)
-    return _wrap(results, music_pipeline.index_stats(), (time.perf_counter() - t0) * 1000)
-
-
-@router.post("/search/music/audio")
-def pipeline_search_music_audio(request: AudioFeaturesRequest) -> dict:
-    t0 = time.perf_counter()
-    results = music_pipeline.search_by_audio_features(request.features, k=request.k)
-    return _wrap(results, music_pipeline.index_stats(), (time.perf_counter() - t0) * 1000)
-
-
 @router.post("/search/image")
 async def pipeline_search_image(file: UploadFile = File(...), k: int = 10) -> dict:
     image_bytes = await file.read()
@@ -96,8 +72,3 @@ async def pipeline_search_audio_file(file: UploadFile = File(...), k: int = 10) 
     t0 = time.perf_counter()
     results = mfcc_pipeline.search(audio_bytes, k=k)
     return _wrap(results, mfcc_pipeline.index_stats(), (time.perf_counter() - t0) * 1000)
-
-
-@router.get("/music/feature-names")
-def music_feature_names() -> list[str]:
-    return music_pipeline.audio_feature_names()

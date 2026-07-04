@@ -3,7 +3,7 @@ Convierte el manifest de AG News (generado por experiments/prepare_text_data.py)
 en archivos .txt individuales dentro de data/full/agnews/, en el mismo formato
 que ya usa la app en vivo para texto (primera línea = título/categoría, resto =
 contenido) — así el backend los indexa automáticamente al arrancar, igual que
-data/full/arxiv.
+data/full/agnews.
 
 Requiere haber corrido antes:
     python experiments/prepare_text_data.py
@@ -14,7 +14,7 @@ Uso:
 import json
 from pathlib import Path
 
-MANIFEST = Path(__file__).parent.parent / "experiments" / "data" / "text_1k.json"
+MANIFEST = Path(__file__).parent.parent / "experiments" / "data" / "text_100k.json"
 OUTPUT_DIR = Path(__file__).parent.parent / "data" / "full" / "agnews"
 
 

@@ -21,48 +21,48 @@ import {
 // --- DATOS SIMULADOS PARA DEMOSTRACIONES (FALLBACK) ---
 const MOCK_TEXT_RESULTS = [
   {
-    id: "arxiv_042",
-    title: "Deep Multimodal Representation Learning for Image-Text Retrieval",
+    id: "agnews_042",
+    title: "Technology Markets React to New Search Infrastructure",
     similarity: 0.9421,
-    category: "cs.CV (Computer Vision)",
+    category: "Sci/Tech",
     snippet: "We propose a novel framework for learning shared vector spaces (embeddings) across different modalities. By using a visual codebook combined with contrastive learning, our method outperforms state-of-the-art architectures in both latency and recall..."
   },
   {
-    id: "arxiv_108",
-    title: "Bag of Visual Words meets pgvector: Scalable Multimedia Search in PostgreSQL",
+    id: "agnews_108",
+    title: "Business Analysts Compare Database Search Performance",
     similarity: 0.8872,
-    category: "cs.DB (Databases)",
+    category: "Business",
     snippet: "This paper analyzes the trade-offs of storing quantized image descriptors (codewords) in traditional inverted indexes vs storing raw high-dimensional embeddings in pgvector. Experimental results show that the codebook approach reduces disk I/O by 4x..."
   },
   {
-    id: "arxiv_012",
-    title: "Unifying Text, Image and Audio under a Shared Codebook Architecture",
+    id: "agnews_012",
+    title: "Researchers Benchmark Multimodal Retrieval Systems",
     similarity: 0.8143,
-    category: "cs.IR (Information Retrieval)",
+    category: "Sci/Tech",
     snippet: "A common paradigm for multimodal retrieval consists of splitting raw data into atomic chunks, extracting local SIFT/MFCC features, clustering them with K-Means to build a joint codebook, and query execution using inverted lists..."
   }
 ];
 
 const MOCK_IMAGE_RESULTS = [
   {
-    id: "fashion_001",
-    title: "Zapatilla Nike Air Max Roja",
+    id: "fashion200k_001",
+    title: "Fashion200K: Zapatilla deportiva",
     similarity: 0.9634,
     price: "S/ 389.00",
     category: "Calzado Deportivo",
     imgUrl: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80"
   },
   {
-    id: "fashion_002",
-    title: "Zapatilla Running Confort Sport",
+    id: "fashion200k_002",
+    title: "Fashion200K: Zapatilla running",
     similarity: 0.8912,
     price: "S/ 249.00",
     category: "Calzado Running",
     imgUrl: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&q=80"
   },
   {
-    id: "fashion_003",
-    title: "Zapatillas Urbanas de Cuero Negro",
+    id: "fashion200k_003",
+    title: "Fashion200K: Calzado casual",
     similarity: 0.8245,
     price: "S/ 299.00",
     category: "Calzado Casual",
@@ -72,7 +72,7 @@ const MOCK_IMAGE_RESULTS = [
 
 const MOCK_AUDIO_RESULTS = [
   {
-    id: "spotify_001",
+    id: "fma_001",
     title: "Midnight City Groove",
     artist: "The Synthwave Project",
     similarity: 0.9512,
@@ -80,7 +80,7 @@ const MOCK_AUDIO_RESULTS = [
     genres: "Electronic, Synthwave"
   },
   {
-    id: "spotify_002",
+    id: "fma_002",
     title: "Electric Dreams",
     artist: "Retro Wave Orchestra",
     similarity: 0.8741,
@@ -88,7 +88,7 @@ const MOCK_AUDIO_RESULTS = [
     genres: "Electronic, Retro"
   },
   {
-    id: "spotify_003",
+    id: "fma_003",
     title: "Starlight Disco",
     artist: "Neon Horizon",
     similarity: 0.8105,
@@ -267,7 +267,7 @@ export default function Home() {
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
         setResults((data.results ?? data).map((r: any) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
-          category: r.metadata.source || "arxiv", snippet: r.metadata.snippet || "",
+          category: r.metadata.source || "AG News", snippet: r.metadata.snippet || "",
         })));
         applyStats(data.stats ?? {}, elapsed);
 
@@ -281,7 +281,7 @@ export default function Home() {
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
         setResults((data.results ?? data).map((r: any) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
-          category: r.metadata.source || "arxiv", snippet: r.metadata.snippet || "",
+          category: r.metadata.source || "AG News", snippet: r.metadata.snippet || "",
         })));
         applyStats(data.stats ?? {}, elapsed);
 
@@ -321,7 +321,7 @@ export default function Home() {
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
         setResults((data.results ?? []).map((r: any) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
-          category: r.metadata.source || "arxiv", snippet: r.metadata.snippet || "",
+          category: r.metadata.source || "AG News", snippet: r.metadata.snippet || "",
         })));
         applyStats({ query_ms: data.stats?.query_ms, n_comparisons: data.stats?.n_comparisons }, elapsed);
 

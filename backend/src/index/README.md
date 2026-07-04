@@ -45,7 +45,7 @@ Available endpoints:
 ```text
 GET  /health
 POST /search/text
-POST /search/music
+POST /search/audio
 POST /search/visual
 ```
 

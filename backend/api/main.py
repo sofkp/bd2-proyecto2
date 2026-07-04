@@ -9,39 +9,35 @@ from backend.api.routes import router as search_router
 from backend.api.routes.pipeline import router as pipeline_router
 from backend.api.routes.postgres import router as postgres_router
 from backend.api.pipeline_state import text_pipeline
-from backend.api.music_pipeline import music_pipeline
 from backend.api.image_pipeline import image_pipeline
 from backend.api.mfcc_pipeline import mfcc_pipeline
 from backend.api import postgres_indexer
 
 IMAGES_DIR = Path(__file__).parent.parent.parent / "data" / "samples" / "images"
-IMAGES_FULL_DIR = Path(__file__).parent.parent.parent / "data" / "full" / "tiny_imagenet"
+IMAGES_FULL_DIR = Path(__file__).parent.parent.parent / "data" / "full" / "fashion200k"
 AUDIO_DIR = Path(__file__).parent.parent.parent / "data" / "full" / "audio"
+AUDIO_FULL_DIR = Path(__file__).parent.parent.parent / "data" / "full"
 AUDIO_SAMPLES_DIR = Path(__file__).parent.parent.parent / "data" / "samples" / "audio"
+AUDIO_EXTENSIONS = {".wav", ".mp3", ".ogg", ".flac"}
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     root = Path(__file__).parent.parent.parent
     sample_dir = root / "data" / "samples" / "text"
-    arxiv_dir = root / "data" / "full" / "arxiv"
     agnews_dir = root / "data" / "full" / "agnews"
-    text_dirs = [sample_dir, arxiv_dir, agnews_dir]
+    text_dirs = [sample_dir, agnews_dir]
     text_pipeline.index_directories(text_dirs)
-
-    spotify_csv = Path(__file__).parent.parent.parent / "data" / "full" / "spotify_songs.csv"
-    if spotify_csv.exists():
-        music_pipeline.load_csv(spotify_csv)
 
     image_dirs = [d for d in (IMAGES_DIR, IMAGES_FULL_DIR) if d.exists()]
     if image_dirs:
         image_pipeline.index_directories(image_dirs)
 
     audio_sample_dir = root / "data" / "samples" / "audio"
-    audio_full_dir = root / "data" / "full" / "audio"
+    audio_full_dir = root / "data" / "full"
     audio_dirs = [
         d for d in (audio_sample_dir, audio_full_dir)
-        if d.exists() and any(d.rglob("*.wav"))
+        if d.exists() and any(p.suffix.lower() in AUDIO_EXTENSIONS for p in d.rglob("*"))
     ]
     if audio_dirs:
         mfcc_pipeline.index_directories(audio_dirs)
@@ -84,6 +80,9 @@ if IMAGES_FULL_DIR.exists():
 
 if AUDIO_DIR.exists():
     app.mount("/audio", StaticFiles(directory=str(AUDIO_DIR)), name="audio")
+
+if AUDIO_FULL_DIR.exists():
+    app.mount("/audio-full", StaticFiles(directory=str(AUDIO_FULL_DIR)), name="audio-full")
 
 if AUDIO_SAMPLES_DIR.exists():
     app.mount("/audio-samples", StaticFiles(directory=str(AUDIO_SAMPLES_DIR)), name="audio-samples")

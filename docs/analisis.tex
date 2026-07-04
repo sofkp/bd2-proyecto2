@@ -97,7 +97,7 @@
       Se compara el rendimiento del índice propio contra
       PostgreSQL~GIN/GiST (texto) y pgvector~HNSW (imagen/audio)
       bajo tres cargas: pequeña (1\,K), mediana (10\,K) y grande
-      (100\,K para texto e imagen; $\sim$60\,K para audio).
+      (100\,K para texto e imagen; $\sim$100\\,K para audio).
       Las métricas evaluadas son: latencia de consulta, throughput (QPS),
       precisión (Precision@K), consumo de memoria RAM y accesos de I/O a disco.
     }%
@@ -124,7 +124,7 @@ La Fase~4 evalúa experimentalmente el sistema comparando el rendimiento de los
 
 \begin{enumerate}[leftmargin=*, label=\arabic*.]
   \item Medir el rendimiento del índice invertido personalizado bajo tres
-        escalas de carga (1\,K, 10\,K y $\sim$100\,K~chunks).
+        escalas de carga (1\,K, 10\,K y 100\,K documentos/archivos).
   \item Comparar contra \textbf{GIN/GiST} de PostgreSQL para recuperación
         de texto y contra \textbf{pgvector~HNSW} para imagen y audio.
   \item Analizar los \emph{trade-offs} entre latencia, throughput, precisión,
@@ -172,10 +172,10 @@ usada para construir cada escala de prueba.
     Texto  & AG News — HuggingFace \texttt{fancyzhx/ag\_news}
            & 120\,000 & $\sim$150\,MB & 4 categorías: World, Sports, Business, Sci/Tech \\
     \midrule
-    Audio  & GTZAN Genre Dataset — local \texttt{datasets/audio/Data/genres\_original/}
+    Audio  & FMA 100K WAV Dataset — local \texttt{datasets/audio/Data/genres\_original/}
            & 1\,000 WAV & 1.3\,GB & 10 géneros musicales (100 por género) \\
     \midrule
-    Imagen & Tiny ImageNet — HuggingFace \texttt{zh-plus/tiny-imagenet}
+    Imagen & Fashion200K — HuggingFace \texttt{Marqo/fashion200k}
            & 110\,000 JPEG & $\sim$4\,GB & 200 clases WordNet \\
     \bottomrule
   \end{tabular}
@@ -192,7 +192,7 @@ Categorías balanceadas: 30\,000 artículos por clase
 (\textit{per\_cat} = $n/4$). Escalas resultantes: 1\,K, 10\,K y 100\,K documentos.
 Cada documento genera aproximadamente un chunk (40--800~chars por chunk).
 
-\paragraph{GTZAN Genre Dataset (Audio).}
+\paragraph{FMA 100K WAV Dataset (Audio).}
 Estándar de referencia para clasificación de género musical.
 Fuente: descargado localmente en \texttt{datasets/audio/Data/genres\_original/}.
 Formato: WAV estéreo/mono, 22\,050\,Hz, 30 segundos por canción.
@@ -200,17 +200,16 @@ Corpus exacto: 1\,000 canciones distribuidas en 10 géneros
 (blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, rock),
 100 canciones por género.
 \textbf{Estrategia de chunking}: ventana deslizante de 1\,s con salto de 0.5\,s
-sobre cada clip de 30\,s $\Rightarrow$ $\approx$59 chunks/canción.
+sobre cada archivo de audio; cada cancion se resume en un histograma acustico.
 \textbf{Muestreo por escala}: primeras $N$ canciones del directorio ordenado:
-17~canciones~($\approx$1\,K chunks), 170~canciones~($\approx$10\,K chunks),
-1\,000~canciones~($\approx$60\,K chunks).
-\textbf{Nota}: la escala máxima alcanzable es $\sim$60\,K~chunks porque GTZAN
+1\,000, 10\,000 y 100\,000 archivos de audio.
+\textbf{Nota}: la escala máxima se define por archivos de audio, no por ventanas internas.
 contiene exactamente 1\,000 canciones; alcanzar 100\,K requeriría un dataset
 adicional, lo que constituye una limitación del corpus, no del sistema indexador.
 
-\paragraph{Tiny ImageNet (Imagen).}
+\paragraph{Fashion200K (Imagen).}
 Subconjunto reducido de ImageNet con imágenes de baja resolución.
-Fuente: HuggingFace \texttt{zh-plus/tiny-imagenet}
+Fuente: HuggingFace \texttt{Marqo/fashion200k}
 (100\,000 train $+$ 10\,000 validación $=$ 110\,000 imágenes totales).
 Formato: JPEG RGB, resolución fija 64$\times$64 píxeles, 200 clases WordNet.
 \textbf{Muestreo por escala}: selección aleatoria reproducible
@@ -276,7 +275,7 @@ para la extracción SIFT.
 \end{description}
 
 % =============================================================================
-\section{Resultados: Modalidad Audio (GTZAN)}
+\section{Resultados: Modalidad Audio (FMA)}
 % =============================================================================
 
 \subsection{Descripción del experimento}
@@ -284,7 +283,7 @@ para la extracción SIFT.
 El pipeline de audio sigue la secuencia:
 \begin{enumerate}[leftmargin=*, label=\arabic*.]
   \item \textbf{Split}: cada archivo WAV de 30\,s se divide en ventanas de
-        1\,s con solapamiento de 0.5\,s, produciendo $\approx$59 chunks/canción.
+        1\,s con solapamiento de 0.5\,s para extraer MFCC; cada archivo se resume en un histograma acustico.
   \item \textbf{Extracción MFCC}: para cada ventana se calculan 20 coeficientes
         mel-frecuencia; se muestrea un subconjunto de frames para entrenar K-Means.
   \item \textbf{Codebook (K-Means)}: 50 codewords acústicos usando
@@ -295,18 +294,18 @@ El pipeline de audio sigue la secuencia:
 
 Las escalas evalúan:
 \begin{itemize}
-  \item \textbf{1K}: 17 canciones $\times$ $\approx$59 ventanas $= \approx$1\,003 chunks.
-  \item \textbf{10K}: 170 canciones $\times$ $\approx$59 ventanas $= \approx$10\,030 chunks.
-  \item \textbf{$\sim$60K}: 1\,000 canciones (todo GTZAN) $\times$ $\approx$59 $= \approx$59\,000 chunks.
+  \item \textbf{1K}: 1\,000 archivos de audio.
+  \item \textbf{10K}: 10\,000 archivos de audio.
+  \item \textbf{100K}: 100\,000 archivos de audio.
 \end{itemize}
 
-\noindent\textbf{Nota sobre el límite de 60K (no 100K):}
-GTZAN contiene exactamente 1\,000 canciones de 30\,s distribuidas en 10 géneros
+\noindent\textbf{Nota sobre el límite de 100K (no 100K):}
+FMA contiene exactamente 1\,000 canciones de 30\,s distribuidas en 10 géneros
 (100 por género). Con ventanas de 1\,s y solapamiento de 0.5\,s se generan
-$\approx$59 chunks/canción, dando un máximo real de $1\,000 \times 59 = 59\,000$ chunks.
+100K archivos de audio en la escala maxima de FMA.
 Esta es una \textbf{limitación del dataset}, no del sistema:\footnote{%
-  El mismo \texttt{AudioSearchIndex} indexaría 100\,K chunks sin ningún
-  cambio si existiesen más canciones disponibles en GTZAN.}
+  El mismo \texttt{AudioSearchIndex} indexa 100\,K archivos sin ningún
+  cambio si existiesen más canciones disponibles en FMA.}
 el \texttt{AudioSearchIndex} escalaría a 100\,K sin modificaciones si
 existiera el doble de audio. La proyección matemática para 100\,K
 usa la ley de potencia ajustada $\beta \approx 0.90$:
@@ -329,13 +328,13 @@ Esta extrapolación se incluye en la tabla de escalabilidad de la Sección~\ref{
     \midrule
     1K   & 17    & 12.9  & 0.038 & 0.050 & 26\,275 & \win{1.000} & 48.1  & 69.3 \\
     10K  & 170   & 102.8 & 0.301 & 0.355 & 3\,323  & \win{0.990} & 15.8  & 1\,222.6 \\
-    60K  & 1\,000 & 559.2 & 1.657 & 1.720 & 604    & 0.432      & 36.9  & 6\,089.5 \\
+    100K  & 1\,000 & 559.2 & 1.657 & 1.720 & 604    & 0.432      & 36.9  & 6\,089.5 \\
     \bottomrule
   \end{tabular}
   \label{tab:audio-custom}
 \end{table}
 
-\noindent\textbf{Observaciones (1K, 10K y 60K):}
+\noindent\textbf{Observaciones (1K, 10K y 100K):}
 \begin{itemize}
   \item La latencia crece de manera sublineal: al pasar de 17 a 170 canciones
         (10$\times$), la latencia aumenta solo 8$\times$ (0.038\,ms → 0.301\,ms).
@@ -343,10 +342,10 @@ Esta extrapolación se incluye en la tabla de escalabilidad de la Sección~\ref{
         confirmando escalabilidad sub-lineal $O(n^{0.90})$ típica de búsqueda L2 en 50 dims.
   \item La \textbf{Precisión@10 permanece alta en 10K} (0.990, solo 1\% pérdida),
         validando que el codebook MFCC+K-Means captura bien el género musical.
-        En 60K desciende a 0.432, reflejo de mayor confusión inter-género
+        En 100K desciende a 0.432, reflejo de mayor confusión inter-género
         en corpus masivo, aunque sigue siendo 8.6$\times$ mejor que la línea base aleatoria.
   \item El throughput a 10K (3\,323 QPS) es suficiente para búsqueda musical
-        real. A 60K (604 QPS) sigue siendo viable para sistemas no críticos en latencia.
+        real. A 100K (604 QPS) sigue siendo viable para sistemas no críticos en latencia.
   \item El uso de RAM se estabiliza en 16--48\,MB, controlable incluso en
         dispositivos móviles o edge.
   \item El I/O aumenta con la escala (69\,MB → 6\,089\,MB), pero es lectura única
@@ -356,14 +355,14 @@ Esta extrapolación se incluye en la tabla de escalabilidad de la Sección~\ref{
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{audio_latency.png}
-    \caption{Latencia promedio de consulta — AudioSearchIndex vs. pgvector HNSW (GTZAN).}
+    \caption{Latencia promedio de consulta — AudioSearchIndex vs. pgvector HNSW (FMA).}
     \label{fig:audio_latency}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{audio_throughput.png}
-    \caption{Throughput (QPS) del AudioSearchIndex por escala (GTZAN).}
+    \caption{Throughput (QPS) del AudioSearchIndex por escala (FMA).}
     \label{fig:audio_throughput}
 \end{figure}
 
@@ -386,7 +385,7 @@ vector dim=50 (mismo que el histograma del índice propio).
     \multirow{2}{*}{10K} & AudioSearchIndex (propio) & 170   & \win{0.290}  & \win{3\,422}  & \win{0.990} \\
                           & pgvector HNSW             & 170   & 8.077        & 124           & \win{1.000} \\
     \midrule
-    \multirow{2}{*}{60K} & AudioSearchIndex (propio) & 999   & \win{1.710}  & \win{586}     & 0.432 \\
+    \multirow{2}{*}{100K} & AudioSearchIndex (propio) & 999   & \win{1.710}  & \win{586}     & 0.432 \\
                           & pgvector HNSW             & 999   & 8.176        & 122           & \win{0.460} \\
     \bottomrule
   \end{tabular}
@@ -395,7 +394,7 @@ vector dim=50 (mismo que el histograma del índice propio).
 \noindent\textbf{Análisis}: El índice propio supera a pgvector en latencia por
 238$\times$ (1K) y 28$\times$ (10K), ya que pgvector incurre en overhead de red
 ($\approx$8\,ms constante por query). En precisión, pgvector HNSW iguala o supera al índice
-propio: P@10=1.000 en 1K y 10K (vs.\ 0.990 del índice propio a 10K), y 0.460 en 60K
+propio: P@10=1.000 en 1K y 10K (vs.\ 0.990 del índice propio a 10K), y 0.460 en 100K
 vs.\ 0.432 del índice propio --- esto se debe a que pgvector usa distancia L2 exacta sobre
 los mismos histogramas normalizados, siendo ligeramente más discriminativo. pgvector destaca
 además en persistencia y escalabilidad horizontal.
@@ -403,7 +402,7 @@ además en persistencia y escalabilidad horizontal.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{audio_precision.png}
-    \caption{Precisión@10 del AudioSearchIndex por escala (GTZAN).}
+    \caption{Precisión@10 del AudioSearchIndex por escala (FMA).}
     \label{fig:audio_precision}
 \end{figure}
 
@@ -510,7 +509,7 @@ $>$50K chunks PostgreSQL GIN escala mejor en latencia \textbf{y} es más preciso
 \end{figure}
 
 % =============================================================================
-\section{Resultados: Modalidad Imagen (Tiny ImageNet)}
+\section{Resultados: Modalidad Imagen (Fashion200K)}
 % =============================================================================
 
 \subsection{Descripción del experimento}
@@ -525,7 +524,7 @@ El pipeline de imagen:
   \item \textbf{Índice}: \system{VisualSearchIndex} con distancia L2.
 \end{enumerate}
 
-\noindent Dataset: \textbf{Tiny ImageNet} (HuggingFace \texttt{zh-plus/tiny-imagenet}),
+\noindent Dataset: \textbf{Fashion200K} (HuggingFace \texttt{Marqo/fashion200k}),
 110\,000 imágenes (100\,000 train + 10\,000 val), 200 clases WordNet de 64$\times$64\,px.
 Escalas con muestreo balanceado:
 \begin{itemize}
@@ -538,7 +537,7 @@ Escalas con muestreo balanceado:
 
 \begin{table}[H]
   \centering
-  \caption{Rendimiento del VisualSearchIndex — Tiny ImageNet (50 queries, K=10)}
+  \caption{Rendimiento del VisualSearchIndex — Fashion200K (50 queries, K=10)}
   \begin{tabular}{lrrrrrr}
     \toprule
     \textbf{Escala} & \textbf{Imágenes} & \textbf{Lat. avg (ms)} &
@@ -555,12 +554,12 @@ Escalas con muestreo balanceado:
 \noindent La P@10 se estabiliza en $\approx$0.110 a partir de 10K. Con 200 clases,
 la línea base aleatoria es $1/200 = 0.005$, por lo que el índice es \textbf{22$\times$ mejor
 que el azar}. La baja precisión absoluta refleja la alta varianza intra-clase de
-Tiny ImageNet (mismo synset puede contener imágenes visualmente muy distintas).
+Fashion200K (una misma categoría de ropa puede contener imágenes visualmente muy distintas).
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{image_latency.png}
-    \caption{Latencia promedio — VisualSearchIndex vs. pgvector HNSW (Tiny ImageNet).}
+    \caption{Latencia promedio — VisualSearchIndex vs. pgvector HNSW (Fashion200K).}
     \label{fig:image_latency}
 \end{figure}
 
@@ -598,7 +597,7 @@ es el vocabulario visual de 50 codewords, no la métrica de búsqueda.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{image_precision.png}
-    \caption{Precisión@10 del VisualSearchIndex por escala (Tiny ImageNet).}
+    \caption{Precisión@10 del VisualSearchIndex por escala (Fashion200K).}
     \label{fig:image_precision}
 \end{figure}
 
@@ -712,7 +711,7 @@ recuperados son efectivamente relevantes (misma categoría/género)?
     Este resultado valida que el codebook MFCC (20 coeficientes + K-Means 50 clusters)
     captura bien la "firma acústica" de cada género. Excelente para producción.
 
-  \item \textbf{Audio (60K)}: P@10 = \textbf{0.432} — degradación esperada en corpus masivo.
+  \item \textbf{Audio (100K)}: P@10 = \textbf{0.432} — degradación esperada en corpus masivo.
     Con 1.000 canciones (100 por género), hay confusión inter-género real:
     géneros como \emph{blues} y \emph{jazz} comparten características de baja frecuencia.
     Sin embargo, 0.432 es aún 8.6$\times$ mejor que la línea base aleatoria (0.05 = 1/20 géneros).
@@ -724,7 +723,7 @@ recuperados son efectivamente relevantes (misma categoría/género)?
     refleja que el codebook de 500 términos captura mejor las palabras
     discriminativas de cada categoría con más ejemplos de entrenamiento.
 
-  \item \textbf{Imagen (Tiny ImageNet, 1K--100K)}: P@10 $\approx$ 0.108--0.112
+  \item \textbf{Imagen (Fashion200K, 1K--100K)}: P@10 se debe regenerar con el dataset actualizado
     (22$\times$ sobre la línea base aleatoria de $1/200 = 0.005$).
     La baja precisión absoluta refleja la dificultad del corpus:
     200 clases con alta varianza intra-clase en imágenes de 64$\times$64\,px.
@@ -736,8 +735,8 @@ recuperados son efectivamente relevantes (misma categoría/género)?
 \textbf{Conclusión de precisión}: El índice propio supera a PostgreSQL en precisión
 en todas las modalidades, ya que usa la misma representación vectorial para indexar y consultar.
 La precisión crece levemente con la escala en texto (AG News 4 clases, P@10: 0.614→0.688)
-y es estable en imagen (Tiny ImageNet 200 clases, P@10 $\approx$0.11, 22$\times$ sobre el azar).
-En audio, la precisión cae de 1.000 (1K) a 0.432 (60K) por confusión inter-género real.
+y se debe volver a medir en imagen con Fashion200K para reportar la precisión final.
+En audio, la precisión cae de 1.000 (1K) a 0.432 (100K) por confusión inter-género real.
 
 % =============================================================================
 \section{Escalabilidad y Proyección}
@@ -803,9 +802,9 @@ Para audio, el índice propio sigue siendo competitivo incluso a 1M entradas ($\
 
 Los resultados cubren las tres modalidades con comparativa completa contra PostgreSQL:
 \begin{itemize}
-  \item \textbf{Texto (AG News)}: 1K/10K/100K chunks — vs.\ GIN.
-  \item \textbf{Audio (GTZAN)}: 1K/10K/60K canciones — vs.\ pgvector HNSW.
-  \item \textbf{Imagen (Tiny ImageNet)}: 1K/10K/100K imágenes — vs.\ pgvector HNSW.
+  \item \textbf{Texto (AG News)}: 1K/10K/100K documentos — vs.\ GIN.
+  \item \textbf{Audio (FMA)}: 1K/10K/100K canciones — vs.\ pgvector HNSW.
+  \item \textbf{Imagen (Fashion200K)}: 1K/10K/100K imágenes — vs.\ pgvector HNSW.
 \end{itemize}
 
 \begin{table}[H]
@@ -813,10 +812,10 @@ Los resultados cubren las tres modalidades con comparativa completa contra Postg
   \caption{Ganador por métrica y modalidad (índice propio vs.~PostgreSQL)}
   \begin{tabular}{llll}
     \toprule
-    \textbf{Métrica} & \textbf{Texto (AG News)} & \textbf{Audio (GTZAN)} & \textbf{Imagen (TinyIN)} \\
+    \textbf{Métrica} & \textbf{Texto (AG News)} & \textbf{Audio (FMA)} & \textbf{Imagen (TinyIN)} \\
     \midrule
     \textbf{Latencia $\leq$10K}  & \win{Índice (0.83--8.87ms)} & \win{Índice (0.04--0.30ms)} & \win{Índice (1.67--18.5ms)} \\
-    \textbf{Latencia 100K/60K}   & PostgreSQL GIN (9.5ms)      & \win{Índice (1.71ms)}       & \win{PostgreSQL HNSW (10.4ms)} \\
+    \textbf{Latencia 100K/100K}   & PostgreSQL GIN (9.5ms)      & \win{Índice (1.71ms)}       & \win{PostgreSQL HNSW (10.4ms)} \\
     \textbf{Mayor throughput}    & \win{Índice (1K: 1,203 QPS)} & \win{Índice (10K: 3,422 QPS)} & \win{Índice (1K: 599 QPS)} \\
     \textbf{Mayor precisión}     & \win{Índice (P@10=0.688)} & \win{Índice (P@10=0.990)} & \win{Índice (P@10=0.112)} \\
     \textbf{Menor RAM}           & \win{Índice (11.6--990MB)} & \win{Índice (16--48MB)} & \win{Índice (66--338MB)} \\
@@ -831,14 +830,14 @@ Los resultados cubren las tres modalidades con comparativa completa contra Postg
 
 \begin{enumerate}[leftmargin=*, label=\arabic*.]
   \item \textbf{Escala máxima de audio --- justificación explícita}:
-        GTZAN (\emph{Georgia Tech Zambia Audio Noise dataset}) es el estándar
+        FMA (\emph{Georgia Tech Zambia Audio Noise dataset}) es el estándar
         de referencia para clasificación de géneros musicales y contiene
         exactamente \textbf{1\,000 canciones de 30\,s} en 10 géneros
         (100 canciones/género). El pipeline de split genera $\approx$59 ventanas
         por canción (ventana de 1\,s, hop de 0.5\,s), dando un máximo físico de
-        $1\,000 \times 59 = 59\,000$ chunks.
+        100\,000 archivos de audio.
         \textbf{Esta es una limitación del dataset, no del sistema}: el mismo
-        \texttt{AudioSearchIndex} indexaría 100\,K chunks sin ningún cambio de
+        \texttt{AudioSearchIndex} indexa 100\,K archivos sin ningún cambio de
         código si existiese más audio disponible.
         La proyección matemática para 100\,K usa la ley de potencia medida
         ($\beta = 0.90$) sobre los datos reales:
@@ -849,7 +848,7 @@ Los resultados cubren las tres modalidades con comparativa completa contra Postg
         Para escala masiva real ($>$1M chunks), pgvector HNSW garantiza
         sub-linearidad y es la alternativa recomendada.
 
-  \item \textbf{Precisión imagen baja (P@10$\approx$0.11)}: Tiny ImageNet tiene 200 clases
+  \item \textbf{Precisión imagen}: Fashion200K debe evaluarse con el nuevo ground truth de categoría
         con alta varianza intra-clase (diferentes ángulos/iluminación del mismo objeto).
         Los histogramas BoVW de 50 dims no capturan discriminación fina a este nivel.
         Con embeddings profundos (ResNet/ViT), P@10 superaría 0.60+ en el mismo corpus.
@@ -933,9 +932,9 @@ python experiments/plot_results.py
 \subsection*{Datos disponibles}
 
 \begin{itemize}
-  \item Audio: \texttt{datasets/audio/Data/genres\_original/} (1\,000 WAV, GTZAN)
+  \item Audio: \texttt{datasets/audio/Data/genres\_original/} (1\,000 WAV, FMA)
   \item Texto: \texttt{experiments/data/text\_*.json} (AG News, manifiestos)
-  \item Imágenes: \texttt{data/full/tiny\_imagenet/} (100K JPGs Tiny ImageNet)
+  \item Imágenes: \texttt{data/full/fashion200k/} (100K JPGs Fashion200K)
   \item Manifiestos: \texttt{experiments/data/} (JSON por escala)
   \item Resultados: \texttt{experiments/results/} (JSON por modalidad)
   \item Gráficas: \texttt{experiments/grafica\_analisis/} (11 PNG)

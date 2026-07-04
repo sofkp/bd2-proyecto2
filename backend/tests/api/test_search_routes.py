@@ -38,7 +38,7 @@ def test_health_endpoint_returns_ok() -> None:
     ("path", "modality", "expected_score"),
     [
         ("/search/text", "text", 1.0),
-        ("/search/music", "audio", 0.0),
+        ("/search/audio", "audio", 0.0),
         ("/search/visual", "image", 0.0),
     ],
 )

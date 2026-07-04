@@ -64,7 +64,7 @@ class ImagePipeline:
                     continue
                 all_desc.append(desc)
                 # Prefijo con la carpeta padre: evita colisiones de chunk_id
-                # entre fuentes distintas (samples vs. data/full/tiny_imagenet)
+                # entre fuentes distintas (samples vs. data/full/fashion200k)
                 # que puedan compartir el mismo nombre de archivo.
                 img_id = f"{img_file.parent.name}_{img_file.stem}"
                 url_prefix = "images-full" if "full" in img_file.parts else "images"

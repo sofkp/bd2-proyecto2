@@ -37,9 +37,9 @@ def search_text(request: SearchRequest) -> list[SearchResultResponse]:
     return _execute_search(request, InvertedIndex)
 
 
-@router.post("/music", response_model=list[SearchResultResponse])
-def search_music(request: SearchRequest) -> list[SearchResultResponse]:
-    """Search music chunks using acoustic histogram distance."""
+@router.post("/audio", response_model=list[SearchResultResponse])
+def search_audio(request: SearchRequest) -> list[SearchResultResponse]:
+    """Search audio chunks using acoustic histogram distance."""
     return _execute_search(request, AudioSearchIndex)
 
 

@@ -1,5 +1,5 @@
 """
-Fase 4 — Benchmark Imagen (Fashion Product samples)
+Fase 4 - Benchmark Imagen (Fashion200K)
 Mide latencia, throughput, RAM, I/O y precisión@K del VisualSearchIndex
 y compara contra pgvector HNSW (si Docker está disponible).
 
@@ -31,7 +31,7 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 N_CLUSTERS       = 50
 N_QUERIES        = 50
 K                = 10
-DEFAULT_PATCH_SIZE = 32   # Tiny ImageNet: 64x64 → patches de 32x32
+DEFAULT_PATCH_SIZE = 32
 DEFAULT_STRIDE     = 16
 CODEBOOK_SAMPLE  = 5_000  # máx imágenes para entrenar KMeans (limita RAM)
 SPLITTER   = SplitImage(patch_size=DEFAULT_PATCH_SIZE, stride=DEFAULT_STRIDE)

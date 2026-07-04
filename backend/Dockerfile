@@ -24,6 +24,8 @@ RUN python -m nltk.downloader punkt_tab stopwords
 
 COPY backend /app/backend
 COPY db /app/db
+COPY scripts /app/scripts
+COPY experiments /app/experiments
 COPY data/samples /app/data/samples
 COPY pytest.ini /app/pytest.ini
 

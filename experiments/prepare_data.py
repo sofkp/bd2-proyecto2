@@ -1,7 +1,7 @@
 """
-Fase 4 — Preparación de datos
-Genera manifiestos JSON para las 3 escalas × 3 modalidades.
-Salida: experiments/data/
+Fase 4 - Preparacion de datos.
+Genera manifiestos para las 3 modalidades oficiales:
+texto = AG News, audio = FMA 100K, imagen = Fashion200K.
 """
 
 import json
@@ -14,12 +14,12 @@ sys.path.insert(0, str(ROOT))
 OUT_DIR = Path(__file__).parent / "data"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-GTZAN_DIR = ROOT / "datasets" / "audio" / "Data" / "genres_original"
-ARXIV_DIR = ROOT / "data" / "full" / "arxiv"
-IMG_DIR   = ROOT / "data" / "samples" / "images"
-
-# ~59 chunks/song con window=1s hop=0.5s sobre 30s clips
-AUDIO_SCALES = {"1k": 17, "10k": 170, "60k": 1000}
+AUDIO_DIRS = [
+    ROOT / "data" / "full" / "audio" / "fma_100k",
+    ROOT / "data" / "full" / "audio",
+]
+AUDIO_SCALES = {"1k": 1_000, "10k": 10_000, "100k": 100_000}
+AUDIO_EXTENSIONS = {".wav", ".mp3", ".ogg", ".flac"}
 
 
 def _save(name: str, data: list) -> Path:
@@ -29,58 +29,52 @@ def _save(name: str, data: list) -> Path:
 
 
 def build_audio_manifests() -> None:
-    all_wavs = sorted(GTZAN_DIR.rglob("*.wav"))
-    if not all_wavs:
-        print("  [WARN] No se encontraron WAVs en", GTZAN_DIR)
+    audio_files = []
+    seen = set()
+    for audio_dir in AUDIO_DIRS:
+        if not audio_dir.exists():
+            continue
+        for path in sorted(audio_dir.rglob("*")):
+            if path.suffix.lower() not in AUDIO_EXTENSIONS:
+                continue
+            resolved = path.resolve()
+            if resolved in seen:
+                continue
+            seen.add(resolved)
+            audio_files.append(path)
+
+    if not audio_files:
+        print("  [WARN] No se encontraron archivos de audio en data/full/audio/fma_100k")
         return
+
     for label, n_songs in AUDIO_SCALES.items():
-        songs = all_wavs[:n_songs]
+        songs = audio_files[:n_songs]
         manifest = [
             {"path": str(p), "genre": p.parent.name, "song_id": p.stem}
             for p in songs
         ]
         out = _save(f"audio_{label}.json", manifest)
-        print(f"  audio {label:>3}: {len(songs):>4} songs → ~{len(songs)*59:>6} chunks  →  {out.name}")
+        print(f"  audio {label:>4}: {len(songs):>6} archivos  ->  {out.name}")
 
 
 def build_text_manifests() -> None:
-    arxiv_files = sorted(ARXIV_DIR.glob("*.txt"))
-    manifest_1k = [
-        {"path": str(p), "source": "arxiv", "category": "cs"}
-        for p in arxiv_files
-    ]
-    out = _save("text_1k.json", manifest_1k)
-    print(f"  text  1k : {len(manifest_1k):>4} arxiv docs  →  {out.name}")
+    from experiments.prepare_text_data import main as prepare_text
 
-    try:
-        from sklearn.datasets import fetch_20newsgroups
-        print("  Descargando 20newsgroups (puede tardar la primera vez)...")
-        ng = fetch_20newsgroups(subset="train", remove=("headers", "footers", "quotes"))
-        items = [
-            {"text": t[:3000], "source": "20news", "category": ng.target_names[c]}
-            for t, c in zip(ng.data, ng.target)
-            if len(t.strip()) > 80
-        ]
-        manifest_10k = items[:10000]
-        out = _save("text_10k.json", manifest_10k)
-        print(f"  text 10k : {len(manifest_10k):>4} 20newsgroups docs  →  {out.name}")
-    except Exception as exc:
-        print(f"  [WARN] 20newsgroups no disponible: {exc}")
+    prepare_text()
 
 
 def build_image_manifests() -> None:
-    jpgs = sorted(IMG_DIR.glob("*.jpg"))
-    manifest = [{"path": str(p), "id": p.stem} for p in jpgs]
-    out = _save("image_100.json", manifest)
-    print(f"  images   : {len(manifest):>4} JPGs  →  {out.name}")
+    from experiments.prepare_image_data import main as prepare_image
+
+    prepare_image()
 
 
 if __name__ == "__main__":
     print("Generando manifiestos para Fase 4...\n")
-    print("[AUDIO]")
+    print("[AUDIO - FMA]")
     build_audio_manifests()
-    print("\n[TEXTO]")
+    print("\n[TEXTO - AG News]")
     build_text_manifests()
-    print("\n[IMÁGENES]")
+    print("\n[IMAGEN - Fashion200K]")
     build_image_manifests()
-    print(f"\nListo — manifiestos guardados en {OUT_DIR}")
+    print(f"\nListo - manifiestos guardados en {OUT_DIR}")

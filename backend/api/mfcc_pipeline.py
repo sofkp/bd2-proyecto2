@@ -1,5 +1,6 @@
 import io
 from pathlib import Path
+from urllib.parse import quote
 
 import numpy as np
 import librosa
@@ -10,8 +11,11 @@ from backend.src.index.audio_search import AudioSearchIndex
 from backend.src.split.split_audio import SplitAudio
 
 N_CLUSTERS = 50
-MAX_FILES = 150
 SUPPORTED = {".wav", ".mp3", ".ogg", ".flac"}
+ROOT = Path(__file__).resolve().parents[2]
+DATA_DIR = ROOT / "data"
+DATA_SAMPLES_DIR = DATA_DIR / "samples"
+DATA_FULL_DIR = DATA_DIR / "full"
 
 
 class MFCCPipeline:
@@ -29,9 +33,10 @@ class MFCCPipeline:
     def index_directories(self, audio_dirs: list[Path]) -> None:
         audio_files: list[Path] = []
         for audio_dir in audio_dirs:
-            for ext in SUPPORTED:
-                audio_files.extend(audio_dir.rglob(f"*{ext}"))
-        audio_files = sorted(audio_files)[:MAX_FILES]
+            found = sorted(
+                f for f in audio_dir.rglob("*") if f.suffix.lower() in SUPPORTED
+            )
+            audio_files.extend(found)
 
         if not audio_files:
             return
@@ -48,13 +53,13 @@ class MFCCPipeline:
                     continue
                 all_frames.append(frames)
                 genre = audio_file.parent.name
-                url_prefix = "audio-samples" if "samples" in audio_file.parts else "audio"
+                file_id = self._file_id(audio_file)
                 per_file.append({
-                    "file_id": audio_file.stem,
+                    "file_id": file_id,
                     "filename": audio_file.name,
                     "genre": genre,
                     "windows": windows,
-                    "audio_url": f"/{url_prefix}/{genre}/{audio_file.name}",
+                    "audio_url": self._audio_url(audio_file),
                 })
             except Exception:
                 continue
@@ -128,6 +133,26 @@ class MFCCPipeline:
         if norm > 0:
             hist /= norm
         return hist
+
+    def _file_id(self, audio_file: Path) -> str:
+        try:
+            rel = audio_file.relative_to(DATA_DIR)
+            return "_".join(rel.with_suffix("").parts)
+        except ValueError:
+            return f"{audio_file.parent.name}_{audio_file.stem}"
+
+    def _audio_url(self, audio_file: Path) -> str:
+        try:
+            rel = audio_file.relative_to(DATA_SAMPLES_DIR / "audio")
+            return "/audio-samples/" + quote(rel.as_posix())
+        except ValueError:
+            pass
+
+        try:
+            rel = audio_file.relative_to(DATA_FULL_DIR)
+            return "/audio-full/" + quote(rel.as_posix())
+        except ValueError:
+            return ""
 
 
 mfcc_pipeline = MFCCPipeline()
