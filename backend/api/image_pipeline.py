@@ -11,7 +11,7 @@ from backend.src.index.visual_search import VisualSearchIndex
 from backend.src.split.split_image import SplitImage
 
 N_CLUSTERS = 100
-MAX_IMAGES = 100
+MAX_IMAGES = 150
 SUPPORTED = {".jpg", ".jpeg", ".png", ".webp"}
 
 COLOR_H_BINS = 12
@@ -30,18 +30,26 @@ class ImagePipeline:
         self._index = VisualSearchIndex()
         self.ready = False
         self.indexed_images = 0
-        self._images_dir: Path | None = None
 
     def index_directory(self, images_dir: Path) -> None:
-        image_files = sorted([
-            f for f in images_dir.iterdir()
-            if f.suffix.lower() in SUPPORTED
-        ])[:MAX_IMAGES]
+        self.index_directories([images_dir])
+
+    def index_directories(self, images_dirs: list[Path]) -> None:
+        # Se respeta el orden de images_dirs: cada carpeta reserva su cupo
+        # antes de pasar a la siguiente, para que una carpeta grande (ej.
+        # data/full) no desplace por completo a otra (ej. data/samples).
+        image_files: list[Path] = []
+        for images_dir in images_dirs:
+            remaining = MAX_IMAGES - len(image_files)
+            if remaining <= 0:
+                break
+            found = sorted(
+                f for f in images_dir.rglob("*") if f.suffix.lower() in SUPPORTED
+            )
+            image_files.extend(found[:remaining])
 
         if not image_files:
             return
-
-        self._images_dir = images_dir
 
         per_image: list[dict] = []
         all_desc: list[np.ndarray] = []
@@ -55,9 +63,16 @@ class ImagePipeline:
                 if desc.shape[0] == 0:
                     continue
                 all_desc.append(desc)
+                # Prefijo con la carpeta padre: evita colisiones de chunk_id
+                # entre fuentes distintas (samples vs. data/full/tiny_imagenet)
+                # que puedan compartir el mismo nombre de archivo.
+                img_id = f"{img_file.parent.name}_{img_file.stem}"
+                url_prefix = "images-full" if "full" in img_file.parts else "images"
                 per_image.append({
-                    "img_id": img_file.stem,
+                    "img_id": img_id,
                     "filename": img_file.name,
+                    "image_url": f"/{url_prefix}/{img_file.parent.name}/{img_file.name}"
+                        if url_prefix == "images-full" else f"/{url_prefix}/{img_file.name}",
                     "patches": patches,
                     "img_array": img_array,
                 })
@@ -79,7 +94,7 @@ class ImagePipeline:
                 "histogram": hist.tolist(),
                 "metadata": {
                     "filename": item["filename"],
-                    "image_url": f"/images/{item['filename']}",
+                    "image_url": item["image_url"],
                     "title": item["img_id"].replace("_", " ").title(),
                 },
             })
