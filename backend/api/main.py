@@ -15,6 +15,7 @@ from backend.api.mfcc_pipeline import mfcc_pipeline
 from backend.api import postgres_indexer
 
 IMAGES_DIR = Path(__file__).parent.parent.parent / "data" / "samples" / "images"
+IMAGES_FULL_DIR = Path(__file__).parent.parent.parent / "data" / "full" / "tiny_imagenet"
 AUDIO_DIR = Path(__file__).parent.parent.parent / "data" / "full" / "audio"
 AUDIO_SAMPLES_DIR = Path(__file__).parent.parent.parent / "data" / "samples" / "audio"
 
@@ -24,14 +25,17 @@ async def lifespan(app: FastAPI):
     root = Path(__file__).parent.parent.parent
     sample_dir = root / "data" / "samples" / "text"
     arxiv_dir = root / "data" / "full" / "arxiv"
-    text_pipeline.index_directories([sample_dir, arxiv_dir])
+    agnews_dir = root / "data" / "full" / "agnews"
+    text_dirs = [sample_dir, arxiv_dir, agnews_dir]
+    text_pipeline.index_directories(text_dirs)
 
     spotify_csv = Path(__file__).parent.parent.parent / "data" / "full" / "spotify_songs.csv"
     if spotify_csv.exists():
         music_pipeline.load_csv(spotify_csv)
 
-    if IMAGES_DIR.exists():
-        image_pipeline.index_directory(IMAGES_DIR)
+    image_dirs = [d for d in (IMAGES_DIR, IMAGES_FULL_DIR) if d.exists()]
+    if image_dirs:
+        image_pipeline.index_directories(image_dirs)
 
     audio_sample_dir = root / "data" / "samples" / "audio"
     audio_full_dir = root / "data" / "full" / "audio"
@@ -45,7 +49,7 @@ async def lifespan(app: FastAPI):
     # PostgreSQL: crear schema y poblar con los mismos datos
     try:
         postgres_indexer.create_schema()
-        postgres_indexer.index_text([sample_dir, arxiv_dir])
+        postgres_indexer.index_text(text_dirs)
         if image_pipeline.ready:
             postgres_indexer.index_images(
                 image_pipeline._index._histograms,
@@ -74,6 +78,9 @@ app.add_middleware(
 
 IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 app.mount("/images", StaticFiles(directory=str(IMAGES_DIR)), name="images")
+
+if IMAGES_FULL_DIR.exists():
+    app.mount("/images-full", StaticFiles(directory=str(IMAGES_FULL_DIR)), name="images-full")
 
 if AUDIO_DIR.exists():
     app.mount("/audio", StaticFiles(directory=str(AUDIO_DIR)), name="audio")
