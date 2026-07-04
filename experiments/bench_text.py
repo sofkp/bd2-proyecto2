@@ -1,5 +1,5 @@
 """
-Fase 4 — Benchmark Texto (ArXiv + 20 Newsgroups)
+Fase 4 — Benchmark Texto (AG News)
 Mide latencia, throughput, RAM, I/O y precisión@K del InvertedIndex + SPIMI
 y compara contra PostgreSQL GIN (si Docker está disponible).
 
@@ -36,8 +36,8 @@ SPLITTER    = SplitText(min_chars=40, max_chars=800)
 EXTRACTOR   = TFIDFExtractor(language="english")
 
 
-def _load_chunks_arxiv(manifest: list[dict]) -> list[dict]:
-    """Carga y fragmenta papers ArXiv desde archivos .txt."""
+def _load_chunks_from_files(manifest: list[dict]) -> list[dict]:
+    """Carga y fragmenta documentos desde archivos .txt."""
     all_chunks = []
     for item in manifest:
         try:
@@ -143,8 +143,8 @@ def run_scale(label: str) -> dict:
 
     # ── Paso 1: cargar y fragmentar ────────────────────────────────────────────
     t0 = time.perf_counter()
-    is_arxiv = "path" in manifest[0]
-    chunks = _load_chunks_arxiv(manifest) if is_arxiv else _load_chunks_inline(manifest)
+    has_file_paths = "path" in manifest[0]
+    chunks = _load_chunks_from_files(manifest) if has_file_paths else _load_chunks_inline(manifest)
     split_ms = (time.perf_counter() - t0) * 1000
     print(f"  Paso 1/4 split → {len(chunks)} chunks  ({split_ms:.0f}ms)")
 

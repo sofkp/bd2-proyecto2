@@ -123,16 +123,17 @@ Los datos NO están en el repo. Cada integrante los descarga localmente con
 
 | Nombre | Modalidad principal | Cómo descargarlo |
 |---|---|---|
-| SciMMIR | Texto + Imagen (papers arXiv con figuras) | `./scripts/download_data.sh arxiv` |
-| Spotify songs | Audio + Lyrics | `./scripts/download_data.sh spotify` |
-| Fashion product images | Imagen | `./scripts/download_data.sh fashion` |
+| AG News | Texto | `./scripts/download_data.sh agnews` |
+| FMA 100K WAV | Audio | `./scripts/download_data.sh fma-audio` o `docker compose --profile datasets run --rm datasets` |
+| Fashion200K | Imagen | `./scripts/download_data.sh fashion200k` |
 
 ### Estructura local esperada (generada por el script)
 ```plaintext
 data/
 ├── samples/   # en git — muestra chica para tests
 └── full/      # en .gitignore — datos reales, solo local
-    ├── scimmir/
+    ├── agnews/
+    ├── fashion200k/
     ├── .kaggle_cache/
     └── (kaggle datasets aquí)
 ```

@@ -1,7 +1,7 @@
 """
-Fase 4 — Benchmark Audio (GTZAN)
+Fase 4 - Benchmark Audio (FMA 100K)
 Mide latencia, throughput, RAM, I/O y precisión@K del AudioSearchIndex
-para escalas 1K, 10K y ~60K chunks. Cada canción es 1 entrada del índice.
+para escalas 1K, 10K y 100K archivos. Cada cancion es 1 entrada del indice.
 
 Uso:
     python experiments/bench_audio.py
@@ -33,6 +33,22 @@ N_QUERIES   = 50
 K           = 10
 SPLITTER    = SplitAudio(sample_rate=22050, window_seconds=1.0, hop_seconds=0.5)
 EXTRACTOR   = MFCCExtractor(n_mfcc=20, sample_rate=22050)
+
+
+def _resolve_data_path(path: str) -> str:
+    candidate = Path(path)
+    if candidate.exists():
+        return str(candidate)
+
+    normalized = path.replace("\\", "/")
+    for marker in ("data/full/", "data/samples/"):
+        if marker in normalized:
+            rel = normalized.split(marker, 1)[1]
+            mapped = ROOT / marker.rstrip("/") / rel
+            if mapped.exists():
+                return str(mapped)
+
+    return path
 
 
 def _frames_sample(path: str, max_frames: int = 100) -> np.ndarray:
@@ -111,7 +127,7 @@ def _try_pgvector_audio_search(
 
 
 def run_scale(label: str) -> dict:
-    """Ejecuta benchmark para una escala dada (1k, 10k, 60k)."""
+    """Ejecuta benchmark para una escala dada (1k, 10k, 100k)."""
     manifest_path = DATA_DIR / f"audio_{label}.json"
     if not manifest_path.exists():
         print(f"  [SKIP] Manifiesto no encontrado: {manifest_path.name}")
@@ -128,7 +144,7 @@ def run_scale(label: str) -> dict:
     t0 = time.perf_counter()
     frame_samples = []
     for s in songs:
-        sample = _frames_sample(s["path"])
+        sample = _frames_sample(_resolve_data_path(s["path"]))
         if sample.shape[0] > 0:
             frame_samples.append(sample)
     frame_matrix = np.vstack(frame_samples) if frame_samples else np.empty((0, 20))
@@ -151,7 +167,7 @@ def run_scale(label: str) -> dict:
     n_indexed   = 0
     for s in songs:
         try:
-            chunks   = SPLITTER.split_file(s["path"], document_id=s["song_id"])
+            chunks   = SPLITTER.split_file(_resolve_data_path(s["path"]), document_id=s["song_id"])
             windows  = [c["content"] for c in chunks]
             hist     = _build_histogram(windows, kmeans)
             index.add_record({
@@ -232,7 +248,7 @@ def run_scale(label: str) -> dict:
 if __name__ == "__main__":
     np.random.seed(42)
     results = []
-    for label in ["1k", "10k", "60k"]:
+    for label in ["1k", "10k", "100k"]:
         r = run_scale(label)
         if r:
             results.append(r)

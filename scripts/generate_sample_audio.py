@@ -1,7 +1,7 @@
 """
 Genera clips de audio sintéticos cortos para data/samples/audio/, de modo
 que el pipeline de audio (MFCC + Codebook) tenga datos de ejemplo listos
-para indexar sin depender de la descarga de GTZAN (data/full/audio).
+para indexar sin depender de la descarga de FMA (data/full/audio/fma_100k).
 
 No requiere numpy/scipy: usa únicamente los módulos wave y math/random
 de la librería estándar.

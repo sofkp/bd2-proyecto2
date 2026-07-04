@@ -56,7 +56,7 @@ def plot_audio_latency():
     if any(v > 0 for v in pgvector_lat_plot):
         ax.bar(x + w / 2, pgvector_lat_plot, w, label="pgvector HNSW", color=COLORS["pgvector"])
 
-    ax.set_xlabel("Escala (chunks)", fontsize=12, fontweight="bold")
+    ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Latencia promedio (ms)", fontsize=12, fontweight="bold")
     ax.set_title("Audio: Latencia promedio por escala", fontsize=14, fontweight="bold")
     ax.set_xticks(x)
@@ -85,7 +85,7 @@ def plot_audio_throughput():
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.bar(scales, qps, color=COLORS["custom"], edgecolor="black", linewidth=1.5)
 
-    ax.set_xlabel("Escala (chunks)", fontsize=12, fontweight="bold")
+    ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Throughput (QPS)", fontsize=12, fontweight="bold")
     ax.set_title("Audio: Throughput por escala", fontsize=14, fontweight="bold")
     ax.grid(axis="y", alpha=0.3)
@@ -171,7 +171,7 @@ def plot_text_latency():
     if any(v > 0 for v in gin_lat_plot):
         ax.bar(x + w / 2, gin_lat_plot, w, label="PostgreSQL GIN", color=COLORS["postgre"])
 
-    ax.set_xlabel("Escala (chunks)", fontsize=12, fontweight="bold")
+    ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Latencia promedio (ms)", fontsize=12, fontweight="bold")
     ax.set_title("Texto: Latencia promedio por escala", fontsize=14, fontweight="bold")
     ax.set_xticks(x)
@@ -200,7 +200,7 @@ def plot_text_throughput():
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.bar(scales, qps, color=COLORS["custom"], edgecolor="black", linewidth=1.5)
 
-    ax.set_xlabel("Escala (chunks)", fontsize=12, fontweight="bold")
+    ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Throughput (QPS)", fontsize=12, fontweight="bold")
     ax.set_title("Texto: Throughput por escala", fontsize=14, fontweight="bold")
     ax.grid(axis="y", alpha=0.3)
@@ -324,7 +324,7 @@ def plot_text_precision():
     if any(v > 0 for v in gin_prec):
         ax.bar(x + w / 2, gin_prec, w, label="PostgreSQL GIN",         color=COLORS["postgre"], edgecolor="black")
 
-    ax.set_xlabel("Escala (chunks)", fontsize=12, fontweight="bold")
+    ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Precision@10", fontsize=12, fontweight="bold")
     ax.set_title("Texto: Precision@10 por escala (Custom vs GIN)", fontsize=14, fontweight="bold")
     ax.set_xticks(x)
@@ -363,7 +363,7 @@ def plot_text_ram():
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.bar(scales, ram, color="#e67e22", edgecolor="black", linewidth=1.5)
 
-    ax.set_xlabel("Escala (chunks)", fontsize=12, fontweight="bold")
+    ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("RAM pico (MB)", fontsize=12, fontweight="bold")
     ax.set_title("Texto: Consumo de RAM por escala", fontsize=14, fontweight="bold")
     ax.grid(axis="y", alpha=0.3)
@@ -379,7 +379,7 @@ def plot_text_ram():
 
 
 def plot_scalability():
-    """Gráfico: Curvas de escalabilidad latencia vs chunks para todas las modalidades."""
+    """Gráfico: Curvas de escalabilidad latencia vs documentos/archivos para todas las modalidades."""
     audio_path = RESULTS_DIR / "audio_results.json"
     text_path  = RESULTS_DIR / "text_results.json"
     image_path = RESULTS_DIR / "image_results.json"

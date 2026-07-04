@@ -42,6 +42,20 @@ services:
       timeout: 5s
       retries: 10
 
+  datasets:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    profiles: ["datasets"]
+    environment:
+      KAGGLE_USERNAME: ${KAGGLE_USERNAME:-}
+      KAGGLE_KEY: ${KAGGLE_KEY:-}
+      KAGGLEHUB_CACHE: /app/data/full/.kaggle_cache
+    volumes:
+      - ./data:/app/data
+      - ./experiments:/app/experiments
+    command: ["bash", "scripts/download_data.sh", "all"]
+
   frontend:
     build:
       context: ./frontend

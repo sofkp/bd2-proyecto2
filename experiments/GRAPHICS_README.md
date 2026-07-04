@@ -7,7 +7,7 @@ Ubicación: `experiments/grafica_analisis/`
 ### Audio
 | Gráfico | Descripción | Uso en Informe |
 |---------|------------|-----------------|
-| `audio_latency.png` | Latencia (ms) por escala: 1K, 10K, 60K | Tabla comparativa Audio vs pgvector |
+| `audio_latency.png` | Latencia (ms) por escala: 1K, 10K, 100K | Tabla comparativa Audio vs pgvector |
 | `audio_throughput.png` | QPS por escala | Análisis escalabilidad |
 | `audio_precision.png` | Precision@10 por escala | Validación de recuperación |
 
@@ -37,11 +37,11 @@ Ubicación: `experiments/grafica_analisis/`
 - ✅ Imagen 100: 0.219ms latencia, 4,564 QPS
 
 ### En Progreso
-- 🔄 Audio 60K: Ejecutándose (MFCC + KMeans, ~20 min)
-- ⏳ pgvector HNSW: Pendiente captura después de 60K
+- 🔄 Audio 100K: Pendiente de regenerar con FMA (MFCC + KMeans)
+- ⏳ pgvector HNSW: Pendiente captura después de 100K
 
 ### Pendiente
-- ❌ Integración pgvector en gráficos (datos se agregan cuando termine 60K)
+- ❌ Integración pgvector en gráficos (datos se agregan cuando termine 100K)
 - ❌ Actualizar analisis.tex con rutas de gráficos e insertar \includegraphics
 
 ## 🛠️ Reproducibilidad

@@ -46,17 +46,17 @@ markdown## 5. Responsabilidades
 Los datasets NO se versionan en git. Se descargan localmente con:
 
 ```bash
-./scripts/download_data.sh arxiv    # SciMMIR — texto + imágenes (arXiv)
-./scripts/download_data.sh spotify  # audio + lyrics (~44 MB)
-./scripts/download_data.sh fashion  # imágenes fashion (decenas de GB)
+./scripts/download_data.sh agnews          # texto
+./scripts/download_data.sh fma-audio       # audio crudo WAV para MFCC
+./scripts/download_data.sh fashion200k     # imagen de ropa
 ```
 
 Requiere token de Kaggle una vez: Kaggle → Settings → API → Create New Token → guardar en `~/.kaggle/kaggle.json`
 
 | Dataset | Modalidad | Fuente |
 |---|---|---|
-| SciMMIR (arXiv) | Texto + Imagen | HuggingFace: `m-a-p/SciMMIR` |
-| Spotify songs | Audio + Texto | Kaggle: `imuhammad/audio-features-and-lyrics-of-spotify-songs` |
-| Fashion product images | Imagen | Kaggle: `paramaggarwal/fashion-product-images-dataset` |
+| AG News | Texto | HuggingFace: `fancyzhx/ag_news` |
+| FMA 100K WAV | Audio | Kaggle: `noahbadoa/fma-dataset-100k-music-wav-files` |
+| Fashion200K | Imagen | HuggingFace: `Marqo/fashion200k` |
 
 `data/full/` está en `.gitignore`. Solo `data/samples/` se versiona.
