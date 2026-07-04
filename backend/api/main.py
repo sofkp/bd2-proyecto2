@@ -16,6 +16,7 @@ from backend.api import postgres_indexer
 
 IMAGES_DIR = Path(__file__).parent.parent.parent / "data" / "samples" / "images"
 AUDIO_DIR = Path(__file__).parent.parent.parent / "data" / "full" / "audio"
+AUDIO_SAMPLES_DIR = Path(__file__).parent.parent.parent / "data" / "samples" / "audio"
 
 
 @asynccontextmanager
@@ -32,9 +33,14 @@ async def lifespan(app: FastAPI):
     if IMAGES_DIR.exists():
         image_pipeline.index_directory(IMAGES_DIR)
 
-    audio_dir = root / "data" / "full" / "audio"
-    if audio_dir.exists() and any(audio_dir.rglob("*.wav")):
-        mfcc_pipeline.index_directory(audio_dir)
+    audio_sample_dir = root / "data" / "samples" / "audio"
+    audio_full_dir = root / "data" / "full" / "audio"
+    audio_dirs = [
+        d for d in (audio_sample_dir, audio_full_dir)
+        if d.exists() and any(d.rglob("*.wav"))
+    ]
+    if audio_dirs:
+        mfcc_pipeline.index_directories(audio_dirs)
 
     # PostgreSQL: crear schema y poblar con los mismos datos
     try:
@@ -71,6 +77,9 @@ app.mount("/images", StaticFiles(directory=str(IMAGES_DIR)), name="images")
 
 if AUDIO_DIR.exists():
     app.mount("/audio", StaticFiles(directory=str(AUDIO_DIR)), name="audio")
+
+if AUDIO_SAMPLES_DIR.exists():
+    app.mount("/audio-samples", StaticFiles(directory=str(AUDIO_SAMPLES_DIR)), name="audio-samples")
 
 app.include_router(search_router)
 app.include_router(pipeline_router)
