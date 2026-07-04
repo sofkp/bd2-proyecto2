@@ -867,8 +867,21 @@ export default function Home() {
               </div>
             )}
 
+            {/* Sin Resultados */}
+            {hasSearched && !isLoading && results.length === 0 && (
+              <div className="flex-1 flex flex-col items-center justify-center text-center p-8 gap-3 border border-dashed border-zinc-800 rounded-2xl">
+                <Search className="h-8 w-8 text-zinc-700" />
+                <div>
+                  <span className="block text-sm font-semibold text-zinc-400">Sin resultados</span>
+                  <span className="block text-xs text-zinc-600 mt-1">
+                    No se encontró nada para esa consulta. Prueba con otros términos o revisa que el idioma coincida con los datos indexados (mayormente en inglés).
+                  </span>
+                </div>
+              </div>
+            )}
+
             {/* Mostrar Resultados */}
-            {hasSearched && !isLoading && (
+            {hasSearched && !isLoading && results.length > 0 && (
               <div className="flex flex-col gap-4">
                 {/* Resultados Texto */}
                 {modality === "text" && results.map((item, idx) => (
