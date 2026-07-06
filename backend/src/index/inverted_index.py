@@ -26,6 +26,28 @@ class InvertedIndex:
         """Add one codebook histogram record to the index."""
         self.add_histogram(validate_histogram_record(record))
 
+    def build_with_spimi(self, records: list[dict], block_size: int = 1000) -> int:
+        """Build the posting map with SPIMI blocks and keep histograms for scoring."""
+        from backend.src.index.spimi import SpimiIndexer
+
+        self._postings = {}
+        self._histograms = {}
+        self._metadata = {}
+
+        validated = [validate_histogram_record(record) for record in records]
+        for record in validated:
+            if record.modality != "text":
+                raise ValueError("inverted index only accepts text histograms")
+            if record.chunk_id in self._histograms:
+                raise ValueError(f"chunk_id already indexed: {record.chunk_id}")
+            self._histograms[record.chunk_id] = record.histogram
+            self._metadata[record.chunk_id] = record.metadata
+
+        indexer = SpimiIndexer(block_size=block_size)
+        blocks = indexer.create_blocks(records)
+        self._postings = indexer.merge_blocks(blocks)
+        return len(blocks)
+
     def add_histogram(self, record: HistogramRecord) -> None:
         """Index one validated text histogram."""
         if record.modality != "text":

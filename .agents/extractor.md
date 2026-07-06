@@ -114,7 +114,7 @@ experiments/
 - `psycopg2` → consultas PostgreSQL para comparativas
 
 ## 7. Parámetros importantes
-- TF-IDF: `max_features` configurable (default 5000)
-- SIFT: `nfeatures` configurable (default 500)
+- TF-IDF: `max_features` configurable (default 5120)
+- SIFT: `nfeatures` configurable (default 512)
 - MFCC: `n_mfcc` configurable (default 13)
 - Comparativas: cargas 1K, 10K, 100K chunks

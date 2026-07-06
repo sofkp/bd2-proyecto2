@@ -11,6 +11,7 @@ import json
 import sys
 import time
 import tracemalloc
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
@@ -29,7 +30,7 @@ DATA_DIR    = Path(__file__).parent / "data"
 RESULTS_DIR = Path(__file__).parent / "results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-CODEBOOK_K  = 500
+CODEBOOK_K  = 1000
 N_QUERIES   = 50
 K           = 10
 SPLITTER    = SplitText(min_chars=40, max_chars=800)
@@ -68,6 +69,19 @@ def _load_chunks_inline(manifest: list[dict]) -> list[dict]:
 
 
 # Mantener alias para compatibilidad con código antiguo
+def _ensure_unique_chunk_ids(chunks: list[dict]) -> list[dict]:
+    seen: dict[str, int] = {}
+    for idx, chunk in enumerate(chunks):
+        base_id = chunk["chunk_id"]
+        count = seen.get(base_id, 0)
+        seen[base_id] = count + 1
+        if count == 0:
+            continue
+        chunk.setdefault("metadata", {})["source_chunk_id"] = base_id
+        chunk["chunk_id"] = f"{base_id}__dup{count}_{idx}"
+    return chunks
+
+
 _load_chunks_newsgroups = _load_chunks_inline
 
 
@@ -145,6 +159,7 @@ def run_scale(label: str) -> dict:
     t0 = time.perf_counter()
     has_file_paths = "path" in manifest[0]
     chunks = _load_chunks_from_files(manifest) if has_file_paths else _load_chunks_inline(manifest)
+    chunks = _ensure_unique_chunk_ids(chunks)
     split_ms = (time.perf_counter() - t0) * 1000
     print(f"  Paso 1/4 split → {len(chunks)} chunks  ({split_ms:.0f}ms)")
 
@@ -163,19 +178,21 @@ def run_scale(label: str) -> dict:
 
     # ── Paso 4: histogramas + índice ───────────────────────────────────────────
     t0 = time.perf_counter()
-    index = InvertedIndex()
+    records: list[dict] = []
     histograms: dict[str, np.ndarray] = {}
     categories: dict[str, str] = {}
     for chunk, ctf in zip(chunks, chunks_tf):
         hist = _build_histogram(ctf, cb.codebook)
         cid  = chunk["chunk_id"]
         cat  = chunk.get("metadata", {}).get("category", "unknown")
-        index.add_record({
+        records.append({
             "chunk_id": cid, "modality": "text",
             "histogram": hist.tolist(), "metadata": {"category": cat},
         })
         histograms[cid] = hist
         categories[cid] = cat
+    index = InvertedIndex()
+    spimi_blocks = index.build_with_spimi(records, block_size=1000)
     index_ms  = (time.perf_counter() - t0) * 1000
     build_ms  = (time.perf_counter() - t_total) * 1000
 
@@ -188,14 +205,23 @@ def run_scale(label: str) -> dict:
     # ── Consultas propias ──────────────────────────────────────────────────────
     chunk_ids = list(histograms.keys())
     qids = np.random.choice(chunk_ids, size=min(N_QUERIES, len(chunk_ids)), replace=False)
-    latencies, precisions = [], []
+    category_counts = Counter(categories.values())
+    latencies, precisions, recalls = [], [], []
+    tp_values, fp_values, fn_values = [], [], []
     for qid in qids:
         t0 = time.perf_counter()
-        results = index.search(histograms[qid], k=K)
+        results = [r for r in index.search(histograms[qid], k=K + 1) if r.chunk_id != qid][:K]
         latencies.append((time.perf_counter() - t0) * 1000)
         qcat = categories[qid]
-        rel  = sum(1 for r in results if r.metadata.get("category") == qcat)
-        precisions.append(rel / len(results) if results else 0.0)
+        tp = sum(1 for r in results if r.metadata.get("category") == qcat)
+        fp = len(results) - tp
+        total_relevant = max(category_counts[qcat] - 1, 0)
+        fn = max(total_relevant - tp, 0)
+        precisions.append(tp / (tp + fp) if (tp + fp) else 0.0)
+        recalls.append(tp / (tp + fn) if (tp + fn) else 0.0)
+        tp_values.append(tp)
+        fp_values.append(fp)
+        fn_values.append(fn)
 
     avg_lat    = float(np.mean(latencies))
     throughput = 1000.0 / avg_lat if avg_lat > 0 else 0.0
@@ -204,22 +230,29 @@ def run_scale(label: str) -> dict:
     pg_ok = _index_chunks_pg(chunks)
     gin_latencies: list[float] = []
     gin_precisions: list[float] = []
+    gin_recalls: list[float] = []
     if pg_ok:
         chunk_content = {c["chunk_id"]: c["content"] for c in chunks}
         for qid in qids[:min(20, len(qids))]:
             query_text = chunk_content.get(qid, "")[:200]
-            rows, lat = _try_gin_search(query_text, k=K)
+            rows, lat = _try_gin_search(query_text, k=K + 1)
+            rows = [r for r in rows if r["chunk_id"] != qid][:K]
             if lat >= 0 and rows:
                 gin_latencies.append(lat)
                 qcat = categories[qid]
-                rel = sum(1 for r in rows if categories.get(r["chunk_id"], "") == qcat)
-                gin_precisions.append(rel / len(rows))
+                tp = sum(1 for r in rows if categories.get(r["chunk_id"], "") == qcat)
+                fp = len(rows) - tp
+                total_relevant = max(category_counts[qcat] - 1, 0)
+                fn = max(total_relevant - tp, 0)
+                gin_precisions.append(tp / (tp + fp) if (tp + fp) else 0.0)
+                gin_recalls.append(tp / (tp + fn) if (tp + fn) else 0.0)
     gin_avg   = round(float(np.mean(gin_latencies)), 3)  if gin_latencies  else None
     gin_p_at_k = round(float(np.mean(gin_precisions)), 4) if gin_precisions else None
+    gin_r_at_k = round(float(np.mean(gin_recalls)), 4) if gin_recalls else None
 
     result = {
         "scale": label, "n_source_docs": len(manifest), "n_chunks": len(chunks),
-        "n_codewords": len(cb.codebook), "k": K,
+        "n_codewords": len(cb.codebook), "spimi_blocks": spimi_blocks, "k": K,
         "split_ms": round(split_ms, 1), "extract_ms": round(extract_ms, 1),
         "codebook_ms": round(codebook_ms, 1), "index_ms": round(index_ms, 1),
         "build_total_ms": round(build_ms, 1),
@@ -229,8 +262,13 @@ def run_scale(label: str) -> dict:
         "peak_ram_mb": round(peak_ram / 1024 ** 2, 2),
         "io_read_mb": round(io_reads, 2),
         "precision_at_k": round(float(np.mean(precisions)), 4),
+        "recall_at_k": round(float(np.mean(recalls)), 4),
+        "avg_tp_at_k": round(float(np.mean(tp_values)), 2),
+        "avg_fp_at_k": round(float(np.mean(fp_values)), 2),
+        "avg_fn_at_k": round(float(np.mean(fn_values)), 2),
         "gin_avg_latency_ms": gin_avg,
         "gin_precision_at_k": gin_p_at_k,
+        "gin_recall_at_k": gin_r_at_k,
         "gin_available": gin_avg is not None,
     }
     print(f"  → {len(chunks)} chunks | lat={avg_lat:.2f}ms | QPS={throughput:.0f} "

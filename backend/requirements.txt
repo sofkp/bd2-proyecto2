@@ -15,3 +15,4 @@ uvicorn
 python-multipart
 psycopg2-binary
 kagglehub
+datasets

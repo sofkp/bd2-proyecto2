@@ -15,6 +15,7 @@ class TextPipeline:
         self._codebook = CodebookText(top_k=200)
         self._index = InvertedIndex()
         self._vocab: dict = {}
+        self.spimi_blocks = 0
         self.ready = False
         self.indexed_docs: int = 0
         self.indexed_chunks: int = 0
@@ -22,11 +23,14 @@ class TextPipeline:
     def index_directory(self, data_dir: Path) -> None:
         self.index_directories([data_dir])
 
-    def index_directories(self, dirs: list[Path]) -> None:
+    def index_directories(self, dirs: list[Path], max_files: int | None = None) -> None:
         txt_files: list[Path] = []
         for d in dirs:
             if d.exists():
                 txt_files.extend(sorted(d.glob("*.txt")))
+            if max_files is not None and len(txt_files) >= max_files:
+                txt_files = txt_files[:max_files]
+                break
 
         if not txt_files:
             return
@@ -52,6 +56,7 @@ class TextPipeline:
                     chunk["metadata"].get("source_path", "")).stem
 
         self._index = InvertedIndex()
+        records: list[dict] = []
         for chunk, feat in zip(all_chunks, extracted):
             histogram = self._build_histogram(feat["tf"])
             doc_id = chunk.get("doc_id") or chunk["chunk_id"].rsplit("_text_", 1)[0]
@@ -67,18 +72,20 @@ class TextPipeline:
             if not snippet:
                 snippet = content.strip()[:300]
 
-            self._index.add_record({
+            records.append({
                 "chunk_id": chunk["chunk_id"],
                 "modality": "text",
                 "histogram": histogram.tolist(),
                 "metadata": {
                     "title": title,
                     "snippet": snippet,
+                    "content": content,
                     "source": Path(chunk["metadata"].get("source_path", "")).stem,
                     "doc_id": doc_id,
                 },
             })
 
+        self.spimi_blocks = self._index.build_with_spimi(records, block_size=1000)
         self.ready = True
         self.indexed_docs = len(txt_files)
         self.indexed_chunks = len(all_chunks)
@@ -114,7 +121,12 @@ class TextPipeline:
         n = len(histograms)
         dim = int(next(iter(histograms.values())).shape[0]) if n > 0 else 0
         index_mb = round(n * dim * 4 / (1024 * 1024), 3)
-        return {"n_comparisons": n, "vector_dim": dim, "index_mb": index_mb}
+        return {
+            "n_comparisons": n,
+            "vector_dim": dim,
+            "index_mb": index_mb,
+            "spimi_blocks": getattr(self, "spimi_blocks", 0),
+        }
 
     def _build_histogram(self, tf: dict) -> np.ndarray:
         size = len(self._vocab)
@@ -123,7 +135,7 @@ class TextPipeline:
             if word in self._vocab:
                 idx = self._vocab[word]["index"]
                 idf = self._vocab[word]["idf"]
-                hist[idx] = count * idf
+                hist[idx] = self._extractor.tf_weight(count) * idf
         return hist
 
 

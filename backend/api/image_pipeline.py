@@ -4,11 +4,10 @@ from pathlib import Path
 import cv2
 import numpy as np
 from PIL import Image
-from sklearn.cluster import KMeans
 
+from backend.src.codebook.codebook_kmeans import VectorCodebook
 from backend.src.extractor.sift import SIFTExtractor
 from backend.src.index.visual_search import VisualSearchIndex
-from backend.src.split.split_image import SplitImage
 
 N_CLUSTERS = 100
 MAX_IMAGES = 150
@@ -24,9 +23,8 @@ COLOR_W = 0.4
 
 class ImagePipeline:
     def __init__(self) -> None:
-        self._splitter = SplitImage(patch_size=224, stride=112)
         self._extractor = SIFTExtractor()
-        self._kmeans: KMeans | None = None
+        self._codebook: VectorCodebook | None = None
         self._index = VisualSearchIndex()
         self.ready = False
         self.indexed_images = 0
@@ -34,13 +32,14 @@ class ImagePipeline:
     def index_directory(self, images_dir: Path) -> None:
         self.index_directories([images_dir])
 
-    def index_directories(self, images_dirs: list[Path]) -> None:
+    def index_directories(self, images_dirs: list[Path], max_images: int | None = None) -> None:
+        limit = max_images if max_images is not None else MAX_IMAGES
         # Se respeta el orden de images_dirs: cada carpeta reserva su cupo
         # antes de pasar a la siguiente, para que una carpeta grande (ej.
         # data/full) no desplace por completo a otra (ej. data/samples).
         image_files: list[Path] = []
         for images_dir in images_dirs:
-            remaining = MAX_IMAGES - len(image_files)
+            remaining = limit - len(image_files)
             if remaining <= 0:
                 break
             found = sorted(
@@ -57,9 +56,7 @@ class ImagePipeline:
         for img_file in image_files:
             try:
                 img_array = np.array(Image.open(img_file).convert("RGB"), dtype=np.uint8)
-                chunks = self._splitter.split_image(img_array, document_id=img_file.stem)
-                patches = [c["content"] for c in chunks]
-                desc = self._extractor.extract(patches)
+                desc = self._extractor.extract([img_array])
                 if desc.shape[0] == 0:
                     continue
                 all_desc.append(desc)
@@ -73,7 +70,6 @@ class ImagePipeline:
                     "filename": img_file.name,
                     "image_url": f"/{url_prefix}/{img_file.parent.name}/{img_file.name}"
                         if url_prefix == "images-full" else f"/{url_prefix}/{img_file.name}",
-                    "patches": patches,
                     "img_array": img_array,
                 })
             except Exception:
@@ -83,11 +79,11 @@ class ImagePipeline:
             return
 
         stacked = np.vstack(all_desc)
-        self._kmeans = KMeans(n_clusters=N_CLUSTERS, random_state=42, n_init="auto")
-        self._kmeans.fit(stacked)
+        self._codebook = VectorCodebook(n_clusters=N_CLUSTERS, random_state=42)
+        self._codebook.build_codebook(stacked)
 
         for item in per_image:
-            hist = self._build_histogram(item["patches"], item["img_array"])
+            hist = self._build_histogram(item["img_array"])
             self._index.add_record({
                 "chunk_id": item["img_id"],
                 "modality": "image",
@@ -103,14 +99,12 @@ class ImagePipeline:
         self.indexed_images = len(per_image)
 
     def search(self, image_bytes: bytes, k: int = 10) -> list[dict]:
-        if not self.ready or self._kmeans is None:
+        if not self.ready or self._codebook is None:
             return []
 
         img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
         img_array = np.array(img, dtype=np.uint8)
-        chunks = self._splitter.split_image(img_array, document_id="query")
-        patches = [c["content"] for c in chunks]
-        query_hist = self._build_histogram(patches, img_array)
+        query_hist = self._build_histogram(img_array)
 
         results = self._index.search(query_hist, k=k)
         return [
@@ -140,14 +134,12 @@ class ImagePipeline:
         norm = np.linalg.norm(hist)
         return hist / norm if norm > 0 else hist
 
-    def _build_histogram(self, patches: list[np.ndarray], img_array: np.ndarray | None = None) -> np.ndarray:
+    def _build_histogram(self, img_array: np.ndarray | None = None) -> np.ndarray:
         sift_hist = np.zeros(N_CLUSTERS, dtype=np.float32)
-        if self._kmeans is not None and patches:
-            per_patch = self._extractor.transform(patches)
-            for desc in per_patch:
-                if desc.shape[0] == 0:
-                    continue
-                for c in self._kmeans.predict(desc):
+        if self._codebook is not None and img_array is not None:
+            desc = self._extractor.extract([img_array])
+            if desc.shape[0] > 0:
+                for c in self._codebook.predict(desc):
                     sift_hist[c] += 1.0
             norm = np.linalg.norm(sift_hist)
             if norm > 0:

@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS pg_text_docs (
 );
 CREATE INDEX IF NOT EXISTS idx_pg_text_gin ON pg_text_docs USING GIN(tsv);
 
--- Imágenes: pgvector HNSW (SIFT BoVW, 50 dims)
+-- Imágenes: pgvector HNSW (100 visual words SIFT + 16 bins HSV)
 CREATE TABLE IF NOT EXISTS pg_image_docs (
     id        SERIAL PRIMARY KEY,
     chunk_id  TEXT UNIQUE NOT NULL,
@@ -33,7 +33,7 @@ CREATE INDEX IF NOT EXISTS idx_pg_image_hnsw
     ON pg_image_docs USING hnsw(embedding vector_l2_ops)
     WITH (m = 16, ef_construction = 64);
 
--- Audio: pgvector HNSW (MFCC BoW, 50 dims)
+-- Audio: pgvector HNSW (MFCC BoW, 512 dims)
 CREATE TABLE IF NOT EXISTS pg_audio_docs (
     id        SERIAL PRIMARY KEY,
     chunk_id  TEXT UNIQUE NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS pg_audio_docs (
     genre     TEXT,
     title     TEXT,
     audio_url TEXT,
-    embedding vector(50)
+    embedding vector(512)
 );
 CREATE INDEX IF NOT EXISTS idx_pg_audio_hnsw
     ON pg_audio_docs USING hnsw(embedding vector_l2_ops)

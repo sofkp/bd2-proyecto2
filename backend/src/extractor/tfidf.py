@@ -150,9 +150,7 @@ class TFIDFExtractor(BaseExtractor):
                 if term not in self.vocabulary_:
                     continue
                 j = self.vocabulary_[term]
-                # TF logarítmico: 1 + log(conteo) — evita valores negativos
-                tf = 1.0 + math.log(count)
-                matrix[i, j] = tf * self.idf_[j]
+                matrix[i, j] = self.tf_weight(count) * self.idf_[j]
 
             # Normalizar la fila con L2
             norm = np.linalg.norm(matrix[i])
@@ -241,6 +239,23 @@ class TFIDFExtractor(BaseExtractor):
             tokens = [self._stemmer.stem(t) for t in tokens]
 
         return tokens
+
+    @staticmethod
+    def tf_weight(count: int) -> float:
+        """
+        Pondera un conteo crudo de término con TF logarítmico: 1 + log(count).
+
+        Es la misma fórmula que usa transform() internamente. Se expone como
+        método público para que otros consumidores del "tf" crudo que
+        devuelve extract() (el Codebook con vocabulario restringido a
+        top-k, los pipelines de la app, los benchmarks) puedan calcular
+        el mismo peso sin reimplementar la fórmula por su cuenta — evita
+        que el TF-IDF "real" (aquí) y el que arma cada histograma queden
+        desincronizados.
+        """
+        if count <= 0:
+            return 0.0
+        return 1.0 + math.log(count)
 
     def get_feature_names(self) -> list[str]:
         """Retorna los términos en orden de índice de vocabulario."""

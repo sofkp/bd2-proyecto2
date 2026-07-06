@@ -1,87 +1,5002 @@
 [
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00000.wav",
-    "genre": "blues",
-    "song_id": "blues.00000"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000002.mp3",
+    "genre": "000",
+    "song_id": "000002"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00001.wav",
-    "genre": "blues",
-    "song_id": "blues.00001"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000003.mp3",
+    "genre": "000",
+    "song_id": "000003"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00002.wav",
-    "genre": "blues",
-    "song_id": "blues.00002"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000005.mp3",
+    "genre": "000",
+    "song_id": "000005"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00003.wav",
-    "genre": "blues",
-    "song_id": "blues.00003"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000010.mp3",
+    "genre": "000",
+    "song_id": "000010"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00004.wav",
-    "genre": "blues",
-    "song_id": "blues.00004"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000020.mp3",
+    "genre": "000",
+    "song_id": "000020"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00005.wav",
-    "genre": "blues",
-    "song_id": "blues.00005"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000026.mp3",
+    "genre": "000",
+    "song_id": "000026"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00006.wav",
-    "genre": "blues",
-    "song_id": "blues.00006"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000030.mp3",
+    "genre": "000",
+    "song_id": "000030"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00007.wav",
-    "genre": "blues",
-    "song_id": "blues.00007"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000046.mp3",
+    "genre": "000",
+    "song_id": "000046"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00008.wav",
-    "genre": "blues",
-    "song_id": "blues.00008"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000048.mp3",
+    "genre": "000",
+    "song_id": "000048"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00009.wav",
-    "genre": "blues",
-    "song_id": "blues.00009"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000134.mp3",
+    "genre": "000",
+    "song_id": "000134"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00010.wav",
-    "genre": "blues",
-    "song_id": "blues.00010"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000135.mp3",
+    "genre": "000",
+    "song_id": "000135"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00011.wav",
-    "genre": "blues",
-    "song_id": "blues.00011"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000136.mp3",
+    "genre": "000",
+    "song_id": "000136"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00012.wav",
-    "genre": "blues",
-    "song_id": "blues.00012"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000137.mp3",
+    "genre": "000",
+    "song_id": "000137"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00013.wav",
-    "genre": "blues",
-    "song_id": "blues.00013"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000138.mp3",
+    "genre": "000",
+    "song_id": "000138"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00014.wav",
-    "genre": "blues",
-    "song_id": "blues.00014"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000139.mp3",
+    "genre": "000",
+    "song_id": "000139"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00015.wav",
-    "genre": "blues",
-    "song_id": "blues.00015"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000140.mp3",
+    "genre": "000",
+    "song_id": "000140"
   },
   {
-    "path": "/Users/karolaytamayo/Documents/bd2/bd2-proyecto2/bd2-proyecto2/datasets/audio/Data/genres_original/blues/blues.00016.wav",
-    "genre": "blues",
-    "song_id": "blues.00016"
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000141.mp3",
+    "genre": "000",
+    "song_id": "000141"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000142.mp3",
+    "genre": "000",
+    "song_id": "000142"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000144.mp3",
+    "genre": "000",
+    "song_id": "000144"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000145.mp3",
+    "genre": "000",
+    "song_id": "000145"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000146.mp3",
+    "genre": "000",
+    "song_id": "000146"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000147.mp3",
+    "genre": "000",
+    "song_id": "000147"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000148.mp3",
+    "genre": "000",
+    "song_id": "000148"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000149.mp3",
+    "genre": "000",
+    "song_id": "000149"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000150.mp3",
+    "genre": "000",
+    "song_id": "000150"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000151.mp3",
+    "genre": "000",
+    "song_id": "000151"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000152.mp3",
+    "genre": "000",
+    "song_id": "000152"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000153.mp3",
+    "genre": "000",
+    "song_id": "000153"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000154.mp3",
+    "genre": "000",
+    "song_id": "000154"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000155.mp3",
+    "genre": "000",
+    "song_id": "000155"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000156.mp3",
+    "genre": "000",
+    "song_id": "000156"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000157.mp3",
+    "genre": "000",
+    "song_id": "000157"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000158.mp3",
+    "genre": "000",
+    "song_id": "000158"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000159.mp3",
+    "genre": "000",
+    "song_id": "000159"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000160.mp3",
+    "genre": "000",
+    "song_id": "000160"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000161.mp3",
+    "genre": "000",
+    "song_id": "000161"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000162.mp3",
+    "genre": "000",
+    "song_id": "000162"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000163.mp3",
+    "genre": "000",
+    "song_id": "000163"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000164.mp3",
+    "genre": "000",
+    "song_id": "000164"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000165.mp3",
+    "genre": "000",
+    "song_id": "000165"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000166.mp3",
+    "genre": "000",
+    "song_id": "000166"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000167.mp3",
+    "genre": "000",
+    "song_id": "000167"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000168.mp3",
+    "genre": "000",
+    "song_id": "000168"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000169.mp3",
+    "genre": "000",
+    "song_id": "000169"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000170.mp3",
+    "genre": "000",
+    "song_id": "000170"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000171.mp3",
+    "genre": "000",
+    "song_id": "000171"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000172.mp3",
+    "genre": "000",
+    "song_id": "000172"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000173.mp3",
+    "genre": "000",
+    "song_id": "000173"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000174.mp3",
+    "genre": "000",
+    "song_id": "000174"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000175.mp3",
+    "genre": "000",
+    "song_id": "000175"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000176.mp3",
+    "genre": "000",
+    "song_id": "000176"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000177.mp3",
+    "genre": "000",
+    "song_id": "000177"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000178.mp3",
+    "genre": "000",
+    "song_id": "000178"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000179.mp3",
+    "genre": "000",
+    "song_id": "000179"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000181.mp3",
+    "genre": "000",
+    "song_id": "000181"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000182.mp3",
+    "genre": "000",
+    "song_id": "000182"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000183.mp3",
+    "genre": "000",
+    "song_id": "000183"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000184.mp3",
+    "genre": "000",
+    "song_id": "000184"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000185.mp3",
+    "genre": "000",
+    "song_id": "000185"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000188.mp3",
+    "genre": "000",
+    "song_id": "000188"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000189.mp3",
+    "genre": "000",
+    "song_id": "000189"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000190.mp3",
+    "genre": "000",
+    "song_id": "000190"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000191.mp3",
+    "genre": "000",
+    "song_id": "000191"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000192.mp3",
+    "genre": "000",
+    "song_id": "000192"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000193.mp3",
+    "genre": "000",
+    "song_id": "000193"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000194.mp3",
+    "genre": "000",
+    "song_id": "000194"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000195.mp3",
+    "genre": "000",
+    "song_id": "000195"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000196.mp3",
+    "genre": "000",
+    "song_id": "000196"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000197.mp3",
+    "genre": "000",
+    "song_id": "000197"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000198.mp3",
+    "genre": "000",
+    "song_id": "000198"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000199.mp3",
+    "genre": "000",
+    "song_id": "000199"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000200.mp3",
+    "genre": "000",
+    "song_id": "000200"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000201.mp3",
+    "genre": "000",
+    "song_id": "000201"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000202.mp3",
+    "genre": "000",
+    "song_id": "000202"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000203.mp3",
+    "genre": "000",
+    "song_id": "000203"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000204.mp3",
+    "genre": "000",
+    "song_id": "000204"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000205.mp3",
+    "genre": "000",
+    "song_id": "000205"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000206.mp3",
+    "genre": "000",
+    "song_id": "000206"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000207.mp3",
+    "genre": "000",
+    "song_id": "000207"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000208.mp3",
+    "genre": "000",
+    "song_id": "000208"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000209.mp3",
+    "genre": "000",
+    "song_id": "000209"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000210.mp3",
+    "genre": "000",
+    "song_id": "000210"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000211.mp3",
+    "genre": "000",
+    "song_id": "000211"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000212.mp3",
+    "genre": "000",
+    "song_id": "000212"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000213.mp3",
+    "genre": "000",
+    "song_id": "000213"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000226.mp3",
+    "genre": "000",
+    "song_id": "000226"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000228.mp3",
+    "genre": "000",
+    "song_id": "000228"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000236.mp3",
+    "genre": "000",
+    "song_id": "000236"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000237.mp3",
+    "genre": "000",
+    "song_id": "000237"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000238.mp3",
+    "genre": "000",
+    "song_id": "000238"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000246.mp3",
+    "genre": "000",
+    "song_id": "000246"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000247.mp3",
+    "genre": "000",
+    "song_id": "000247"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000248.mp3",
+    "genre": "000",
+    "song_id": "000248"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000249.mp3",
+    "genre": "000",
+    "song_id": "000249"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000250.mp3",
+    "genre": "000",
+    "song_id": "000250"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000251.mp3",
+    "genre": "000",
+    "song_id": "000251"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000252.mp3",
+    "genre": "000",
+    "song_id": "000252"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000253.mp3",
+    "genre": "000",
+    "song_id": "000253"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000254.mp3",
+    "genre": "000",
+    "song_id": "000254"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000255.mp3",
+    "genre": "000",
+    "song_id": "000255"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000256.mp3",
+    "genre": "000",
+    "song_id": "000256"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000257.mp3",
+    "genre": "000",
+    "song_id": "000257"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000258.mp3",
+    "genre": "000",
+    "song_id": "000258"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000273.mp3",
+    "genre": "000",
+    "song_id": "000273"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000274.mp3",
+    "genre": "000",
+    "song_id": "000274"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000275.mp3",
+    "genre": "000",
+    "song_id": "000275"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000276.mp3",
+    "genre": "000",
+    "song_id": "000276"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000277.mp3",
+    "genre": "000",
+    "song_id": "000277"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000281.mp3",
+    "genre": "000",
+    "song_id": "000281"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000282.mp3",
+    "genre": "000",
+    "song_id": "000282"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000284.mp3",
+    "genre": "000",
+    "song_id": "000284"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000285.mp3",
+    "genre": "000",
+    "song_id": "000285"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000293.mp3",
+    "genre": "000",
+    "song_id": "000293"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000294.mp3",
+    "genre": "000",
+    "song_id": "000294"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000297.mp3",
+    "genre": "000",
+    "song_id": "000297"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000300.mp3",
+    "genre": "000",
+    "song_id": "000300"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000303.mp3",
+    "genre": "000",
+    "song_id": "000303"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000304.mp3",
+    "genre": "000",
+    "song_id": "000304"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000305.mp3",
+    "genre": "000",
+    "song_id": "000305"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000306.mp3",
+    "genre": "000",
+    "song_id": "000306"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000307.mp3",
+    "genre": "000",
+    "song_id": "000307"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000308.mp3",
+    "genre": "000",
+    "song_id": "000308"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000309.mp3",
+    "genre": "000",
+    "song_id": "000309"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000310.mp3",
+    "genre": "000",
+    "song_id": "000310"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000311.mp3",
+    "genre": "000",
+    "song_id": "000311"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000312.mp3",
+    "genre": "000",
+    "song_id": "000312"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000313.mp3",
+    "genre": "000",
+    "song_id": "000313"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000314.mp3",
+    "genre": "000",
+    "song_id": "000314"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000315.mp3",
+    "genre": "000",
+    "song_id": "000315"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000316.mp3",
+    "genre": "000",
+    "song_id": "000316"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000317.mp3",
+    "genre": "000",
+    "song_id": "000317"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000318.mp3",
+    "genre": "000",
+    "song_id": "000318"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000319.mp3",
+    "genre": "000",
+    "song_id": "000319"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000320.mp3",
+    "genre": "000",
+    "song_id": "000320"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000321.mp3",
+    "genre": "000",
+    "song_id": "000321"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000322.mp3",
+    "genre": "000",
+    "song_id": "000322"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000323.mp3",
+    "genre": "000",
+    "song_id": "000323"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000324.mp3",
+    "genre": "000",
+    "song_id": "000324"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000325.mp3",
+    "genre": "000",
+    "song_id": "000325"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000326.mp3",
+    "genre": "000",
+    "song_id": "000326"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000327.mp3",
+    "genre": "000",
+    "song_id": "000327"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000328.mp3",
+    "genre": "000",
+    "song_id": "000328"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000330.mp3",
+    "genre": "000",
+    "song_id": "000330"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000331.mp3",
+    "genre": "000",
+    "song_id": "000331"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000332.mp3",
+    "genre": "000",
+    "song_id": "000332"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000333.mp3",
+    "genre": "000",
+    "song_id": "000333"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000334.mp3",
+    "genre": "000",
+    "song_id": "000334"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000335.mp3",
+    "genre": "000",
+    "song_id": "000335"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000336.mp3",
+    "genre": "000",
+    "song_id": "000336"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000337.mp3",
+    "genre": "000",
+    "song_id": "000337"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000338.mp3",
+    "genre": "000",
+    "song_id": "000338"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000339.mp3",
+    "genre": "000",
+    "song_id": "000339"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000340.mp3",
+    "genre": "000",
+    "song_id": "000340"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000341.mp3",
+    "genre": "000",
+    "song_id": "000341"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000342.mp3",
+    "genre": "000",
+    "song_id": "000342"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000343.mp3",
+    "genre": "000",
+    "song_id": "000343"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000344.mp3",
+    "genre": "000",
+    "song_id": "000344"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000345.mp3",
+    "genre": "000",
+    "song_id": "000345"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000346.mp3",
+    "genre": "000",
+    "song_id": "000346"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000347.mp3",
+    "genre": "000",
+    "song_id": "000347"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000348.mp3",
+    "genre": "000",
+    "song_id": "000348"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000349.mp3",
+    "genre": "000",
+    "song_id": "000349"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000350.mp3",
+    "genre": "000",
+    "song_id": "000350"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000351.mp3",
+    "genre": "000",
+    "song_id": "000351"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000352.mp3",
+    "genre": "000",
+    "song_id": "000352"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000353.mp3",
+    "genre": "000",
+    "song_id": "000353"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000354.mp3",
+    "genre": "000",
+    "song_id": "000354"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000355.mp3",
+    "genre": "000",
+    "song_id": "000355"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000356.mp3",
+    "genre": "000",
+    "song_id": "000356"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000357.mp3",
+    "genre": "000",
+    "song_id": "000357"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000358.mp3",
+    "genre": "000",
+    "song_id": "000358"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000359.mp3",
+    "genre": "000",
+    "song_id": "000359"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000360.mp3",
+    "genre": "000",
+    "song_id": "000360"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000361.mp3",
+    "genre": "000",
+    "song_id": "000361"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000362.mp3",
+    "genre": "000",
+    "song_id": "000362"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000363.mp3",
+    "genre": "000",
+    "song_id": "000363"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000364.mp3",
+    "genre": "000",
+    "song_id": "000364"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000365.mp3",
+    "genre": "000",
+    "song_id": "000365"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000366.mp3",
+    "genre": "000",
+    "song_id": "000366"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000367.mp3",
+    "genre": "000",
+    "song_id": "000367"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000368.mp3",
+    "genre": "000",
+    "song_id": "000368"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000369.mp3",
+    "genre": "000",
+    "song_id": "000369"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000370.mp3",
+    "genre": "000",
+    "song_id": "000370"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000371.mp3",
+    "genre": "000",
+    "song_id": "000371"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000384.mp3",
+    "genre": "000",
+    "song_id": "000384"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000385.mp3",
+    "genre": "000",
+    "song_id": "000385"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000386.mp3",
+    "genre": "000",
+    "song_id": "000386"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000387.mp3",
+    "genre": "000",
+    "song_id": "000387"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000393.mp3",
+    "genre": "000",
+    "song_id": "000393"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000394.mp3",
+    "genre": "000",
+    "song_id": "000394"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000395.mp3",
+    "genre": "000",
+    "song_id": "000395"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000396.mp3",
+    "genre": "000",
+    "song_id": "000396"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000397.mp3",
+    "genre": "000",
+    "song_id": "000397"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000398.mp3",
+    "genre": "000",
+    "song_id": "000398"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000399.mp3",
+    "genre": "000",
+    "song_id": "000399"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000400.mp3",
+    "genre": "000",
+    "song_id": "000400"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000401.mp3",
+    "genre": "000",
+    "song_id": "000401"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000402.mp3",
+    "genre": "000",
+    "song_id": "000402"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000403.mp3",
+    "genre": "000",
+    "song_id": "000403"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000404.mp3",
+    "genre": "000",
+    "song_id": "000404"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000405.mp3",
+    "genre": "000",
+    "song_id": "000405"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000406.mp3",
+    "genre": "000",
+    "song_id": "000406"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000407.mp3",
+    "genre": "000",
+    "song_id": "000407"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000408.mp3",
+    "genre": "000",
+    "song_id": "000408"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000410.mp3",
+    "genre": "000",
+    "song_id": "000410"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000411.mp3",
+    "genre": "000",
+    "song_id": "000411"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000412.mp3",
+    "genre": "000",
+    "song_id": "000412"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000414.mp3",
+    "genre": "000",
+    "song_id": "000414"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000416.mp3",
+    "genre": "000",
+    "song_id": "000416"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000417.mp3",
+    "genre": "000",
+    "song_id": "000417"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000418.mp3",
+    "genre": "000",
+    "song_id": "000418"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000419.mp3",
+    "genre": "000",
+    "song_id": "000419"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000420.mp3",
+    "genre": "000",
+    "song_id": "000420"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000421.mp3",
+    "genre": "000",
+    "song_id": "000421"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000422.mp3",
+    "genre": "000",
+    "song_id": "000422"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000423.mp3",
+    "genre": "000",
+    "song_id": "000423"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000424.mp3",
+    "genre": "000",
+    "song_id": "000424"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000425.mp3",
+    "genre": "000",
+    "song_id": "000425"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000426.mp3",
+    "genre": "000",
+    "song_id": "000426"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000427.mp3",
+    "genre": "000",
+    "song_id": "000427"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000428.mp3",
+    "genre": "000",
+    "song_id": "000428"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000429.mp3",
+    "genre": "000",
+    "song_id": "000429"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000430.mp3",
+    "genre": "000",
+    "song_id": "000430"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000431.mp3",
+    "genre": "000",
+    "song_id": "000431"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000432.mp3",
+    "genre": "000",
+    "song_id": "000432"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000433.mp3",
+    "genre": "000",
+    "song_id": "000433"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000434.mp3",
+    "genre": "000",
+    "song_id": "000434"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000435.mp3",
+    "genre": "000",
+    "song_id": "000435"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000436.mp3",
+    "genre": "000",
+    "song_id": "000436"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000437.mp3",
+    "genre": "000",
+    "song_id": "000437"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000438.mp3",
+    "genre": "000",
+    "song_id": "000438"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000439.mp3",
+    "genre": "000",
+    "song_id": "000439"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000440.mp3",
+    "genre": "000",
+    "song_id": "000440"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000441.mp3",
+    "genre": "000",
+    "song_id": "000441"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000442.mp3",
+    "genre": "000",
+    "song_id": "000442"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000443.mp3",
+    "genre": "000",
+    "song_id": "000443"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000444.mp3",
+    "genre": "000",
+    "song_id": "000444"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000445.mp3",
+    "genre": "000",
+    "song_id": "000445"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000446.mp3",
+    "genre": "000",
+    "song_id": "000446"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000447.mp3",
+    "genre": "000",
+    "song_id": "000447"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000448.mp3",
+    "genre": "000",
+    "song_id": "000448"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000449.mp3",
+    "genre": "000",
+    "song_id": "000449"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000450.mp3",
+    "genre": "000",
+    "song_id": "000450"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000451.mp3",
+    "genre": "000",
+    "song_id": "000451"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000452.mp3",
+    "genre": "000",
+    "song_id": "000452"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000458.mp3",
+    "genre": "000",
+    "song_id": "000458"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000459.mp3",
+    "genre": "000",
+    "song_id": "000459"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000461.mp3",
+    "genre": "000",
+    "song_id": "000461"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000462.mp3",
+    "genre": "000",
+    "song_id": "000462"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000463.mp3",
+    "genre": "000",
+    "song_id": "000463"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000464.mp3",
+    "genre": "000",
+    "song_id": "000464"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000465.mp3",
+    "genre": "000",
+    "song_id": "000465"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000466.mp3",
+    "genre": "000",
+    "song_id": "000466"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000467.mp3",
+    "genre": "000",
+    "song_id": "000467"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000468.mp3",
+    "genre": "000",
+    "song_id": "000468"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000469.mp3",
+    "genre": "000",
+    "song_id": "000469"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000470.mp3",
+    "genre": "000",
+    "song_id": "000470"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000471.mp3",
+    "genre": "000",
+    "song_id": "000471"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000472.mp3",
+    "genre": "000",
+    "song_id": "000472"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000473.mp3",
+    "genre": "000",
+    "song_id": "000473"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000474.mp3",
+    "genre": "000",
+    "song_id": "000474"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000475.mp3",
+    "genre": "000",
+    "song_id": "000475"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000476.mp3",
+    "genre": "000",
+    "song_id": "000476"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000477.mp3",
+    "genre": "000",
+    "song_id": "000477"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000478.mp3",
+    "genre": "000",
+    "song_id": "000478"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000479.mp3",
+    "genre": "000",
+    "song_id": "000479"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000480.mp3",
+    "genre": "000",
+    "song_id": "000480"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000481.mp3",
+    "genre": "000",
+    "song_id": "000481"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000482.mp3",
+    "genre": "000",
+    "song_id": "000482"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000483.mp3",
+    "genre": "000",
+    "song_id": "000483"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000484.mp3",
+    "genre": "000",
+    "song_id": "000484"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000485.mp3",
+    "genre": "000",
+    "song_id": "000485"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000486.mp3",
+    "genre": "000",
+    "song_id": "000486"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000487.mp3",
+    "genre": "000",
+    "song_id": "000487"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000489.mp3",
+    "genre": "000",
+    "song_id": "000489"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000490.mp3",
+    "genre": "000",
+    "song_id": "000490"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000491.mp3",
+    "genre": "000",
+    "song_id": "000491"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000492.mp3",
+    "genre": "000",
+    "song_id": "000492"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000493.mp3",
+    "genre": "000",
+    "song_id": "000493"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000495.mp3",
+    "genre": "000",
+    "song_id": "000495"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000496.mp3",
+    "genre": "000",
+    "song_id": "000496"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000497.mp3",
+    "genre": "000",
+    "song_id": "000497"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000498.mp3",
+    "genre": "000",
+    "song_id": "000498"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000500.mp3",
+    "genre": "000",
+    "song_id": "000500"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000501.mp3",
+    "genre": "000",
+    "song_id": "000501"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000502.mp3",
+    "genre": "000",
+    "song_id": "000502"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000503.mp3",
+    "genre": "000",
+    "song_id": "000503"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000504.mp3",
+    "genre": "000",
+    "song_id": "000504"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000506.mp3",
+    "genre": "000",
+    "song_id": "000506"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000507.mp3",
+    "genre": "000",
+    "song_id": "000507"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000508.mp3",
+    "genre": "000",
+    "song_id": "000508"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000509.mp3",
+    "genre": "000",
+    "song_id": "000509"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000510.mp3",
+    "genre": "000",
+    "song_id": "000510"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000511.mp3",
+    "genre": "000",
+    "song_id": "000511"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000512.mp3",
+    "genre": "000",
+    "song_id": "000512"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000513.mp3",
+    "genre": "000",
+    "song_id": "000513"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000514.mp3",
+    "genre": "000",
+    "song_id": "000514"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000515.mp3",
+    "genre": "000",
+    "song_id": "000515"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000516.mp3",
+    "genre": "000",
+    "song_id": "000516"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000517.mp3",
+    "genre": "000",
+    "song_id": "000517"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000520.mp3",
+    "genre": "000",
+    "song_id": "000520"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000521.mp3",
+    "genre": "000",
+    "song_id": "000521"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000522.mp3",
+    "genre": "000",
+    "song_id": "000522"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000523.mp3",
+    "genre": "000",
+    "song_id": "000523"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000524.mp3",
+    "genre": "000",
+    "song_id": "000524"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000525.mp3",
+    "genre": "000",
+    "song_id": "000525"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000526.mp3",
+    "genre": "000",
+    "song_id": "000526"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000527.mp3",
+    "genre": "000",
+    "song_id": "000527"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000528.mp3",
+    "genre": "000",
+    "song_id": "000528"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000529.mp3",
+    "genre": "000",
+    "song_id": "000529"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000530.mp3",
+    "genre": "000",
+    "song_id": "000530"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000531.mp3",
+    "genre": "000",
+    "song_id": "000531"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000532.mp3",
+    "genre": "000",
+    "song_id": "000532"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000533.mp3",
+    "genre": "000",
+    "song_id": "000533"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000534.mp3",
+    "genre": "000",
+    "song_id": "000534"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000535.mp3",
+    "genre": "000",
+    "song_id": "000535"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000536.mp3",
+    "genre": "000",
+    "song_id": "000536"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000537.mp3",
+    "genre": "000",
+    "song_id": "000537"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000538.mp3",
+    "genre": "000",
+    "song_id": "000538"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000539.mp3",
+    "genre": "000",
+    "song_id": "000539"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000540.mp3",
+    "genre": "000",
+    "song_id": "000540"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000541.mp3",
+    "genre": "000",
+    "song_id": "000541"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000542.mp3",
+    "genre": "000",
+    "song_id": "000542"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000543.mp3",
+    "genre": "000",
+    "song_id": "000543"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000544.mp3",
+    "genre": "000",
+    "song_id": "000544"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000545.mp3",
+    "genre": "000",
+    "song_id": "000545"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000546.mp3",
+    "genre": "000",
+    "song_id": "000546"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000547.mp3",
+    "genre": "000",
+    "song_id": "000547"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000548.mp3",
+    "genre": "000",
+    "song_id": "000548"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000549.mp3",
+    "genre": "000",
+    "song_id": "000549"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000550.mp3",
+    "genre": "000",
+    "song_id": "000550"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000554.mp3",
+    "genre": "000",
+    "song_id": "000554"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000555.mp3",
+    "genre": "000",
+    "song_id": "000555"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000556.mp3",
+    "genre": "000",
+    "song_id": "000556"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000557.mp3",
+    "genre": "000",
+    "song_id": "000557"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000558.mp3",
+    "genre": "000",
+    "song_id": "000558"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000559.mp3",
+    "genre": "000",
+    "song_id": "000559"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000560.mp3",
+    "genre": "000",
+    "song_id": "000560"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000561.mp3",
+    "genre": "000",
+    "song_id": "000561"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000562.mp3",
+    "genre": "000",
+    "song_id": "000562"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000563.mp3",
+    "genre": "000",
+    "song_id": "000563"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000564.mp3",
+    "genre": "000",
+    "song_id": "000564"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000565.mp3",
+    "genre": "000",
+    "song_id": "000565"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000566.mp3",
+    "genre": "000",
+    "song_id": "000566"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000567.mp3",
+    "genre": "000",
+    "song_id": "000567"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000568.mp3",
+    "genre": "000",
+    "song_id": "000568"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000569.mp3",
+    "genre": "000",
+    "song_id": "000569"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000570.mp3",
+    "genre": "000",
+    "song_id": "000570"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000571.mp3",
+    "genre": "000",
+    "song_id": "000571"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000572.mp3",
+    "genre": "000",
+    "song_id": "000572"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000573.mp3",
+    "genre": "000",
+    "song_id": "000573"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000574.mp3",
+    "genre": "000",
+    "song_id": "000574"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000575.mp3",
+    "genre": "000",
+    "song_id": "000575"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000576.mp3",
+    "genre": "000",
+    "song_id": "000576"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000577.mp3",
+    "genre": "000",
+    "song_id": "000577"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000578.mp3",
+    "genre": "000",
+    "song_id": "000578"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000579.mp3",
+    "genre": "000",
+    "song_id": "000579"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000580.mp3",
+    "genre": "000",
+    "song_id": "000580"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000583.mp3",
+    "genre": "000",
+    "song_id": "000583"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000584.mp3",
+    "genre": "000",
+    "song_id": "000584"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000585.mp3",
+    "genre": "000",
+    "song_id": "000585"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000586.mp3",
+    "genre": "000",
+    "song_id": "000586"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000587.mp3",
+    "genre": "000",
+    "song_id": "000587"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000588.mp3",
+    "genre": "000",
+    "song_id": "000588"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000589.mp3",
+    "genre": "000",
+    "song_id": "000589"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000590.mp3",
+    "genre": "000",
+    "song_id": "000590"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000591.mp3",
+    "genre": "000",
+    "song_id": "000591"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000592.mp3",
+    "genre": "000",
+    "song_id": "000592"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000593.mp3",
+    "genre": "000",
+    "song_id": "000593"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000601.mp3",
+    "genre": "000",
+    "song_id": "000601"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000602.mp3",
+    "genre": "000",
+    "song_id": "000602"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000603.mp3",
+    "genre": "000",
+    "song_id": "000603"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000604.mp3",
+    "genre": "000",
+    "song_id": "000604"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000605.mp3",
+    "genre": "000",
+    "song_id": "000605"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000606.mp3",
+    "genre": "000",
+    "song_id": "000606"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000607.mp3",
+    "genre": "000",
+    "song_id": "000607"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000608.mp3",
+    "genre": "000",
+    "song_id": "000608"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000609.mp3",
+    "genre": "000",
+    "song_id": "000609"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000610.mp3",
+    "genre": "000",
+    "song_id": "000610"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000611.mp3",
+    "genre": "000",
+    "song_id": "000611"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000612.mp3",
+    "genre": "000",
+    "song_id": "000612"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000613.mp3",
+    "genre": "000",
+    "song_id": "000613"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000614.mp3",
+    "genre": "000",
+    "song_id": "000614"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000615.mp3",
+    "genre": "000",
+    "song_id": "000615"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000616.mp3",
+    "genre": "000",
+    "song_id": "000616"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000617.mp3",
+    "genre": "000",
+    "song_id": "000617"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000618.mp3",
+    "genre": "000",
+    "song_id": "000618"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000619.mp3",
+    "genre": "000",
+    "song_id": "000619"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000620.mp3",
+    "genre": "000",
+    "song_id": "000620"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000621.mp3",
+    "genre": "000",
+    "song_id": "000621"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000622.mp3",
+    "genre": "000",
+    "song_id": "000622"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000623.mp3",
+    "genre": "000",
+    "song_id": "000623"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000624.mp3",
+    "genre": "000",
+    "song_id": "000624"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000625.mp3",
+    "genre": "000",
+    "song_id": "000625"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000626.mp3",
+    "genre": "000",
+    "song_id": "000626"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000627.mp3",
+    "genre": "000",
+    "song_id": "000627"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000628.mp3",
+    "genre": "000",
+    "song_id": "000628"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000629.mp3",
+    "genre": "000",
+    "song_id": "000629"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000630.mp3",
+    "genre": "000",
+    "song_id": "000630"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000631.mp3",
+    "genre": "000",
+    "song_id": "000631"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000633.mp3",
+    "genre": "000",
+    "song_id": "000633"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000634.mp3",
+    "genre": "000",
+    "song_id": "000634"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000635.mp3",
+    "genre": "000",
+    "song_id": "000635"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000637.mp3",
+    "genre": "000",
+    "song_id": "000637"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000638.mp3",
+    "genre": "000",
+    "song_id": "000638"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000639.mp3",
+    "genre": "000",
+    "song_id": "000639"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000640.mp3",
+    "genre": "000",
+    "song_id": "000640"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000641.mp3",
+    "genre": "000",
+    "song_id": "000641"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000642.mp3",
+    "genre": "000",
+    "song_id": "000642"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000643.mp3",
+    "genre": "000",
+    "song_id": "000643"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000644.mp3",
+    "genre": "000",
+    "song_id": "000644"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000645.mp3",
+    "genre": "000",
+    "song_id": "000645"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000646.mp3",
+    "genre": "000",
+    "song_id": "000646"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000647.mp3",
+    "genre": "000",
+    "song_id": "000647"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000648.mp3",
+    "genre": "000",
+    "song_id": "000648"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000649.mp3",
+    "genre": "000",
+    "song_id": "000649"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000650.mp3",
+    "genre": "000",
+    "song_id": "000650"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000651.mp3",
+    "genre": "000",
+    "song_id": "000651"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000652.mp3",
+    "genre": "000",
+    "song_id": "000652"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000653.mp3",
+    "genre": "000",
+    "song_id": "000653"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000654.mp3",
+    "genre": "000",
+    "song_id": "000654"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000655.mp3",
+    "genre": "000",
+    "song_id": "000655"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000656.mp3",
+    "genre": "000",
+    "song_id": "000656"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000657.mp3",
+    "genre": "000",
+    "song_id": "000657"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000658.mp3",
+    "genre": "000",
+    "song_id": "000658"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000659.mp3",
+    "genre": "000",
+    "song_id": "000659"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000660.mp3",
+    "genre": "000",
+    "song_id": "000660"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000661.mp3",
+    "genre": "000",
+    "song_id": "000661"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000662.mp3",
+    "genre": "000",
+    "song_id": "000662"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000663.mp3",
+    "genre": "000",
+    "song_id": "000663"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000664.mp3",
+    "genre": "000",
+    "song_id": "000664"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000665.mp3",
+    "genre": "000",
+    "song_id": "000665"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000666.mp3",
+    "genre": "000",
+    "song_id": "000666"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000667.mp3",
+    "genre": "000",
+    "song_id": "000667"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000668.mp3",
+    "genre": "000",
+    "song_id": "000668"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000669.mp3",
+    "genre": "000",
+    "song_id": "000669"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000670.mp3",
+    "genre": "000",
+    "song_id": "000670"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000671.mp3",
+    "genre": "000",
+    "song_id": "000671"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000672.mp3",
+    "genre": "000",
+    "song_id": "000672"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000673.mp3",
+    "genre": "000",
+    "song_id": "000673"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000674.mp3",
+    "genre": "000",
+    "song_id": "000674"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000675.mp3",
+    "genre": "000",
+    "song_id": "000675"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000676.mp3",
+    "genre": "000",
+    "song_id": "000676"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000677.mp3",
+    "genre": "000",
+    "song_id": "000677"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000678.mp3",
+    "genre": "000",
+    "song_id": "000678"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000679.mp3",
+    "genre": "000",
+    "song_id": "000679"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000680.mp3",
+    "genre": "000",
+    "song_id": "000680"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000681.mp3",
+    "genre": "000",
+    "song_id": "000681"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000682.mp3",
+    "genre": "000",
+    "song_id": "000682"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000683.mp3",
+    "genre": "000",
+    "song_id": "000683"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000684.mp3",
+    "genre": "000",
+    "song_id": "000684"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000685.mp3",
+    "genre": "000",
+    "song_id": "000685"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000686.mp3",
+    "genre": "000",
+    "song_id": "000686"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000687.mp3",
+    "genre": "000",
+    "song_id": "000687"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000688.mp3",
+    "genre": "000",
+    "song_id": "000688"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000689.mp3",
+    "genre": "000",
+    "song_id": "000689"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000690.mp3",
+    "genre": "000",
+    "song_id": "000690"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000691.mp3",
+    "genre": "000",
+    "song_id": "000691"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000692.mp3",
+    "genre": "000",
+    "song_id": "000692"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000693.mp3",
+    "genre": "000",
+    "song_id": "000693"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000694.mp3",
+    "genre": "000",
+    "song_id": "000694"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000695.mp3",
+    "genre": "000",
+    "song_id": "000695"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000696.mp3",
+    "genre": "000",
+    "song_id": "000696"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000697.mp3",
+    "genre": "000",
+    "song_id": "000697"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000698.mp3",
+    "genre": "000",
+    "song_id": "000698"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000699.mp3",
+    "genre": "000",
+    "song_id": "000699"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000700.mp3",
+    "genre": "000",
+    "song_id": "000700"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000701.mp3",
+    "genre": "000",
+    "song_id": "000701"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000702.mp3",
+    "genre": "000",
+    "song_id": "000702"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000703.mp3",
+    "genre": "000",
+    "song_id": "000703"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000704.mp3",
+    "genre": "000",
+    "song_id": "000704"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000705.mp3",
+    "genre": "000",
+    "song_id": "000705"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000706.mp3",
+    "genre": "000",
+    "song_id": "000706"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000707.mp3",
+    "genre": "000",
+    "song_id": "000707"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000708.mp3",
+    "genre": "000",
+    "song_id": "000708"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000709.mp3",
+    "genre": "000",
+    "song_id": "000709"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000711.mp3",
+    "genre": "000",
+    "song_id": "000711"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000712.mp3",
+    "genre": "000",
+    "song_id": "000712"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000713.mp3",
+    "genre": "000",
+    "song_id": "000713"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000714.mp3",
+    "genre": "000",
+    "song_id": "000714"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000715.mp3",
+    "genre": "000",
+    "song_id": "000715"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000716.mp3",
+    "genre": "000",
+    "song_id": "000716"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000717.mp3",
+    "genre": "000",
+    "song_id": "000717"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000718.mp3",
+    "genre": "000",
+    "song_id": "000718"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000719.mp3",
+    "genre": "000",
+    "song_id": "000719"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000720.mp3",
+    "genre": "000",
+    "song_id": "000720"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000721.mp3",
+    "genre": "000",
+    "song_id": "000721"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000722.mp3",
+    "genre": "000",
+    "song_id": "000722"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000723.mp3",
+    "genre": "000",
+    "song_id": "000723"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000725.mp3",
+    "genre": "000",
+    "song_id": "000725"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000726.mp3",
+    "genre": "000",
+    "song_id": "000726"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000727.mp3",
+    "genre": "000",
+    "song_id": "000727"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000728.mp3",
+    "genre": "000",
+    "song_id": "000728"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000729.mp3",
+    "genre": "000",
+    "song_id": "000729"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000730.mp3",
+    "genre": "000",
+    "song_id": "000730"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000731.mp3",
+    "genre": "000",
+    "song_id": "000731"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000734.mp3",
+    "genre": "000",
+    "song_id": "000734"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000735.mp3",
+    "genre": "000",
+    "song_id": "000735"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000736.mp3",
+    "genre": "000",
+    "song_id": "000736"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000737.mp3",
+    "genre": "000",
+    "song_id": "000737"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000738.mp3",
+    "genre": "000",
+    "song_id": "000738"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000739.mp3",
+    "genre": "000",
+    "song_id": "000739"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000740.mp3",
+    "genre": "000",
+    "song_id": "000740"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000741.mp3",
+    "genre": "000",
+    "song_id": "000741"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000742.mp3",
+    "genre": "000",
+    "song_id": "000742"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000743.mp3",
+    "genre": "000",
+    "song_id": "000743"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000744.mp3",
+    "genre": "000",
+    "song_id": "000744"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000745.mp3",
+    "genre": "000",
+    "song_id": "000745"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000747.mp3",
+    "genre": "000",
+    "song_id": "000747"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000748.mp3",
+    "genre": "000",
+    "song_id": "000748"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000749.mp3",
+    "genre": "000",
+    "song_id": "000749"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000750.mp3",
+    "genre": "000",
+    "song_id": "000750"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000751.mp3",
+    "genre": "000",
+    "song_id": "000751"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000752.mp3",
+    "genre": "000",
+    "song_id": "000752"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000753.mp3",
+    "genre": "000",
+    "song_id": "000753"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000754.mp3",
+    "genre": "000",
+    "song_id": "000754"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000755.mp3",
+    "genre": "000",
+    "song_id": "000755"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000756.mp3",
+    "genre": "000",
+    "song_id": "000756"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000757.mp3",
+    "genre": "000",
+    "song_id": "000757"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000758.mp3",
+    "genre": "000",
+    "song_id": "000758"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000759.mp3",
+    "genre": "000",
+    "song_id": "000759"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000760.mp3",
+    "genre": "000",
+    "song_id": "000760"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000761.mp3",
+    "genre": "000",
+    "song_id": "000761"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000762.mp3",
+    "genre": "000",
+    "song_id": "000762"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000763.mp3",
+    "genre": "000",
+    "song_id": "000763"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000764.mp3",
+    "genre": "000",
+    "song_id": "000764"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000765.mp3",
+    "genre": "000",
+    "song_id": "000765"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000766.mp3",
+    "genre": "000",
+    "song_id": "000766"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000767.mp3",
+    "genre": "000",
+    "song_id": "000767"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000768.mp3",
+    "genre": "000",
+    "song_id": "000768"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000769.mp3",
+    "genre": "000",
+    "song_id": "000769"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000770.mp3",
+    "genre": "000",
+    "song_id": "000770"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000771.mp3",
+    "genre": "000",
+    "song_id": "000771"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000772.mp3",
+    "genre": "000",
+    "song_id": "000772"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000773.mp3",
+    "genre": "000",
+    "song_id": "000773"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000774.mp3",
+    "genre": "000",
+    "song_id": "000774"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000775.mp3",
+    "genre": "000",
+    "song_id": "000775"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000776.mp3",
+    "genre": "000",
+    "song_id": "000776"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000777.mp3",
+    "genre": "000",
+    "song_id": "000777"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000778.mp3",
+    "genre": "000",
+    "song_id": "000778"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000779.mp3",
+    "genre": "000",
+    "song_id": "000779"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000780.mp3",
+    "genre": "000",
+    "song_id": "000780"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000781.mp3",
+    "genre": "000",
+    "song_id": "000781"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000782.mp3",
+    "genre": "000",
+    "song_id": "000782"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000783.mp3",
+    "genre": "000",
+    "song_id": "000783"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000784.mp3",
+    "genre": "000",
+    "song_id": "000784"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000785.mp3",
+    "genre": "000",
+    "song_id": "000785"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000786.mp3",
+    "genre": "000",
+    "song_id": "000786"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000787.mp3",
+    "genre": "000",
+    "song_id": "000787"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000788.mp3",
+    "genre": "000",
+    "song_id": "000788"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000789.mp3",
+    "genre": "000",
+    "song_id": "000789"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000790.mp3",
+    "genre": "000",
+    "song_id": "000790"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000791.mp3",
+    "genre": "000",
+    "song_id": "000791"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000792.mp3",
+    "genre": "000",
+    "song_id": "000792"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000793.mp3",
+    "genre": "000",
+    "song_id": "000793"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000794.mp3",
+    "genre": "000",
+    "song_id": "000794"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000795.mp3",
+    "genre": "000",
+    "song_id": "000795"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000796.mp3",
+    "genre": "000",
+    "song_id": "000796"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000797.mp3",
+    "genre": "000",
+    "song_id": "000797"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000798.mp3",
+    "genre": "000",
+    "song_id": "000798"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000799.mp3",
+    "genre": "000",
+    "song_id": "000799"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000800.mp3",
+    "genre": "000",
+    "song_id": "000800"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000801.mp3",
+    "genre": "000",
+    "song_id": "000801"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000803.mp3",
+    "genre": "000",
+    "song_id": "000803"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000804.mp3",
+    "genre": "000",
+    "song_id": "000804"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000805.mp3",
+    "genre": "000",
+    "song_id": "000805"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000806.mp3",
+    "genre": "000",
+    "song_id": "000806"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000807.mp3",
+    "genre": "000",
+    "song_id": "000807"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000814.mp3",
+    "genre": "000",
+    "song_id": "000814"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000815.mp3",
+    "genre": "000",
+    "song_id": "000815"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000816.mp3",
+    "genre": "000",
+    "song_id": "000816"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000817.mp3",
+    "genre": "000",
+    "song_id": "000817"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000818.mp3",
+    "genre": "000",
+    "song_id": "000818"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000819.mp3",
+    "genre": "000",
+    "song_id": "000819"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000820.mp3",
+    "genre": "000",
+    "song_id": "000820"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000821.mp3",
+    "genre": "000",
+    "song_id": "000821"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000822.mp3",
+    "genre": "000",
+    "song_id": "000822"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000823.mp3",
+    "genre": "000",
+    "song_id": "000823"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000824.mp3",
+    "genre": "000",
+    "song_id": "000824"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000825.mp3",
+    "genre": "000",
+    "song_id": "000825"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000826.mp3",
+    "genre": "000",
+    "song_id": "000826"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000827.mp3",
+    "genre": "000",
+    "song_id": "000827"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000828.mp3",
+    "genre": "000",
+    "song_id": "000828"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000829.mp3",
+    "genre": "000",
+    "song_id": "000829"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000830.mp3",
+    "genre": "000",
+    "song_id": "000830"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000831.mp3",
+    "genre": "000",
+    "song_id": "000831"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000832.mp3",
+    "genre": "000",
+    "song_id": "000832"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000833.mp3",
+    "genre": "000",
+    "song_id": "000833"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000834.mp3",
+    "genre": "000",
+    "song_id": "000834"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000835.mp3",
+    "genre": "000",
+    "song_id": "000835"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000836.mp3",
+    "genre": "000",
+    "song_id": "000836"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000837.mp3",
+    "genre": "000",
+    "song_id": "000837"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000838.mp3",
+    "genre": "000",
+    "song_id": "000838"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000839.mp3",
+    "genre": "000",
+    "song_id": "000839"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000840.mp3",
+    "genre": "000",
+    "song_id": "000840"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000841.mp3",
+    "genre": "000",
+    "song_id": "000841"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000842.mp3",
+    "genre": "000",
+    "song_id": "000842"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000843.mp3",
+    "genre": "000",
+    "song_id": "000843"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000844.mp3",
+    "genre": "000",
+    "song_id": "000844"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000845.mp3",
+    "genre": "000",
+    "song_id": "000845"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000846.mp3",
+    "genre": "000",
+    "song_id": "000846"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000847.mp3",
+    "genre": "000",
+    "song_id": "000847"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000850.mp3",
+    "genre": "000",
+    "song_id": "000850"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000851.mp3",
+    "genre": "000",
+    "song_id": "000851"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000852.mp3",
+    "genre": "000",
+    "song_id": "000852"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000853.mp3",
+    "genre": "000",
+    "song_id": "000853"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000854.mp3",
+    "genre": "000",
+    "song_id": "000854"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000855.mp3",
+    "genre": "000",
+    "song_id": "000855"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000856.mp3",
+    "genre": "000",
+    "song_id": "000856"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000857.mp3",
+    "genre": "000",
+    "song_id": "000857"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000858.mp3",
+    "genre": "000",
+    "song_id": "000858"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000859.mp3",
+    "genre": "000",
+    "song_id": "000859"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000860.mp3",
+    "genre": "000",
+    "song_id": "000860"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000861.mp3",
+    "genre": "000",
+    "song_id": "000861"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000862.mp3",
+    "genre": "000",
+    "song_id": "000862"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000863.mp3",
+    "genre": "000",
+    "song_id": "000863"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000864.mp3",
+    "genre": "000",
+    "song_id": "000864"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000866.mp3",
+    "genre": "000",
+    "song_id": "000866"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000868.mp3",
+    "genre": "000",
+    "song_id": "000868"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000869.mp3",
+    "genre": "000",
+    "song_id": "000869"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000870.mp3",
+    "genre": "000",
+    "song_id": "000870"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000871.mp3",
+    "genre": "000",
+    "song_id": "000871"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000872.mp3",
+    "genre": "000",
+    "song_id": "000872"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000873.mp3",
+    "genre": "000",
+    "song_id": "000873"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000874.mp3",
+    "genre": "000",
+    "song_id": "000874"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000875.mp3",
+    "genre": "000",
+    "song_id": "000875"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000876.mp3",
+    "genre": "000",
+    "song_id": "000876"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000877.mp3",
+    "genre": "000",
+    "song_id": "000877"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000878.mp3",
+    "genre": "000",
+    "song_id": "000878"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000879.mp3",
+    "genre": "000",
+    "song_id": "000879"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000880.mp3",
+    "genre": "000",
+    "song_id": "000880"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000881.mp3",
+    "genre": "000",
+    "song_id": "000881"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000882.mp3",
+    "genre": "000",
+    "song_id": "000882"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000883.mp3",
+    "genre": "000",
+    "song_id": "000883"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000885.mp3",
+    "genre": "000",
+    "song_id": "000885"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000886.mp3",
+    "genre": "000",
+    "song_id": "000886"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000887.mp3",
+    "genre": "000",
+    "song_id": "000887"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000888.mp3",
+    "genre": "000",
+    "song_id": "000888"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000889.mp3",
+    "genre": "000",
+    "song_id": "000889"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000890.mp3",
+    "genre": "000",
+    "song_id": "000890"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000891.mp3",
+    "genre": "000",
+    "song_id": "000891"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000892.mp3",
+    "genre": "000",
+    "song_id": "000892"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000893.mp3",
+    "genre": "000",
+    "song_id": "000893"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000894.mp3",
+    "genre": "000",
+    "song_id": "000894"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000895.mp3",
+    "genre": "000",
+    "song_id": "000895"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000896.mp3",
+    "genre": "000",
+    "song_id": "000896"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000897.mp3",
+    "genre": "000",
+    "song_id": "000897"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000898.mp3",
+    "genre": "000",
+    "song_id": "000898"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000899.mp3",
+    "genre": "000",
+    "song_id": "000899"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000900.mp3",
+    "genre": "000",
+    "song_id": "000900"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000901.mp3",
+    "genre": "000",
+    "song_id": "000901"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000902.mp3",
+    "genre": "000",
+    "song_id": "000902"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000903.mp3",
+    "genre": "000",
+    "song_id": "000903"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000904.mp3",
+    "genre": "000",
+    "song_id": "000904"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000905.mp3",
+    "genre": "000",
+    "song_id": "000905"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000906.mp3",
+    "genre": "000",
+    "song_id": "000906"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000907.mp3",
+    "genre": "000",
+    "song_id": "000907"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000908.mp3",
+    "genre": "000",
+    "song_id": "000908"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000909.mp3",
+    "genre": "000",
+    "song_id": "000909"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000910.mp3",
+    "genre": "000",
+    "song_id": "000910"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000911.mp3",
+    "genre": "000",
+    "song_id": "000911"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000912.mp3",
+    "genre": "000",
+    "song_id": "000912"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000913.mp3",
+    "genre": "000",
+    "song_id": "000913"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000914.mp3",
+    "genre": "000",
+    "song_id": "000914"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000915.mp3",
+    "genre": "000",
+    "song_id": "000915"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000916.mp3",
+    "genre": "000",
+    "song_id": "000916"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000917.mp3",
+    "genre": "000",
+    "song_id": "000917"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000918.mp3",
+    "genre": "000",
+    "song_id": "000918"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000919.mp3",
+    "genre": "000",
+    "song_id": "000919"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000920.mp3",
+    "genre": "000",
+    "song_id": "000920"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000921.mp3",
+    "genre": "000",
+    "song_id": "000921"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000922.mp3",
+    "genre": "000",
+    "song_id": "000922"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000923.mp3",
+    "genre": "000",
+    "song_id": "000923"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000924.mp3",
+    "genre": "000",
+    "song_id": "000924"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000925.mp3",
+    "genre": "000",
+    "song_id": "000925"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000926.mp3",
+    "genre": "000",
+    "song_id": "000926"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000927.mp3",
+    "genre": "000",
+    "song_id": "000927"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000928.mp3",
+    "genre": "000",
+    "song_id": "000928"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000929.mp3",
+    "genre": "000",
+    "song_id": "000929"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000930.mp3",
+    "genre": "000",
+    "song_id": "000930"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000931.mp3",
+    "genre": "000",
+    "song_id": "000931"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000932.mp3",
+    "genre": "000",
+    "song_id": "000932"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000933.mp3",
+    "genre": "000",
+    "song_id": "000933"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000934.mp3",
+    "genre": "000",
+    "song_id": "000934"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000935.mp3",
+    "genre": "000",
+    "song_id": "000935"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000936.mp3",
+    "genre": "000",
+    "song_id": "000936"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000937.mp3",
+    "genre": "000",
+    "song_id": "000937"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000938.mp3",
+    "genre": "000",
+    "song_id": "000938"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000939.mp3",
+    "genre": "000",
+    "song_id": "000939"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000940.mp3",
+    "genre": "000",
+    "song_id": "000940"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000941.mp3",
+    "genre": "000",
+    "song_id": "000941"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000942.mp3",
+    "genre": "000",
+    "song_id": "000942"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000943.mp3",
+    "genre": "000",
+    "song_id": "000943"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000944.mp3",
+    "genre": "000",
+    "song_id": "000944"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000945.mp3",
+    "genre": "000",
+    "song_id": "000945"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000946.mp3",
+    "genre": "000",
+    "song_id": "000946"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000947.mp3",
+    "genre": "000",
+    "song_id": "000947"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000948.mp3",
+    "genre": "000",
+    "song_id": "000948"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000949.mp3",
+    "genre": "000",
+    "song_id": "000949"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000950.mp3",
+    "genre": "000",
+    "song_id": "000950"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000951.mp3",
+    "genre": "000",
+    "song_id": "000951"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000952.mp3",
+    "genre": "000",
+    "song_id": "000952"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000953.mp3",
+    "genre": "000",
+    "song_id": "000953"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000954.mp3",
+    "genre": "000",
+    "song_id": "000954"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000955.mp3",
+    "genre": "000",
+    "song_id": "000955"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000956.mp3",
+    "genre": "000",
+    "song_id": "000956"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000957.mp3",
+    "genre": "000",
+    "song_id": "000957"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000958.mp3",
+    "genre": "000",
+    "song_id": "000958"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000959.mp3",
+    "genre": "000",
+    "song_id": "000959"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000960.mp3",
+    "genre": "000",
+    "song_id": "000960"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000961.mp3",
+    "genre": "000",
+    "song_id": "000961"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000962.mp3",
+    "genre": "000",
+    "song_id": "000962"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000963.mp3",
+    "genre": "000",
+    "song_id": "000963"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000964.mp3",
+    "genre": "000",
+    "song_id": "000964"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000965.mp3",
+    "genre": "000",
+    "song_id": "000965"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000966.mp3",
+    "genre": "000",
+    "song_id": "000966"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000967.mp3",
+    "genre": "000",
+    "song_id": "000967"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000968.mp3",
+    "genre": "000",
+    "song_id": "000968"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000969.mp3",
+    "genre": "000",
+    "song_id": "000969"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000970.mp3",
+    "genre": "000",
+    "song_id": "000970"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000971.mp3",
+    "genre": "000",
+    "song_id": "000971"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000972.mp3",
+    "genre": "000",
+    "song_id": "000972"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000973.mp3",
+    "genre": "000",
+    "song_id": "000973"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000974.mp3",
+    "genre": "000",
+    "song_id": "000974"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000975.mp3",
+    "genre": "000",
+    "song_id": "000975"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000976.mp3",
+    "genre": "000",
+    "song_id": "000976"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000977.mp3",
+    "genre": "000",
+    "song_id": "000977"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000978.mp3",
+    "genre": "000",
+    "song_id": "000978"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000979.mp3",
+    "genre": "000",
+    "song_id": "000979"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000980.mp3",
+    "genre": "000",
+    "song_id": "000980"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000981.mp3",
+    "genre": "000",
+    "song_id": "000981"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000982.mp3",
+    "genre": "000",
+    "song_id": "000982"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000983.mp3",
+    "genre": "000",
+    "song_id": "000983"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000984.mp3",
+    "genre": "000",
+    "song_id": "000984"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000985.mp3",
+    "genre": "000",
+    "song_id": "000985"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000986.mp3",
+    "genre": "000",
+    "song_id": "000986"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000987.mp3",
+    "genre": "000",
+    "song_id": "000987"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000988.mp3",
+    "genre": "000",
+    "song_id": "000988"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000989.mp3",
+    "genre": "000",
+    "song_id": "000989"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000990.mp3",
+    "genre": "000",
+    "song_id": "000990"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000991.mp3",
+    "genre": "000",
+    "song_id": "000991"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000992.mp3",
+    "genre": "000",
+    "song_id": "000992"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000993.mp3",
+    "genre": "000",
+    "song_id": "000993"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000995.mp3",
+    "genre": "000",
+    "song_id": "000995"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000996.mp3",
+    "genre": "000",
+    "song_id": "000996"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000997.mp3",
+    "genre": "000",
+    "song_id": "000997"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000998.mp3",
+    "genre": "000",
+    "song_id": "000998"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/000/000999.mp3",
+    "genre": "000",
+    "song_id": "000999"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001000.mp3",
+    "genre": "001",
+    "song_id": "001000"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001001.mp3",
+    "genre": "001",
+    "song_id": "001001"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001002.mp3",
+    "genre": "001",
+    "song_id": "001002"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001003.mp3",
+    "genre": "001",
+    "song_id": "001003"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001004.mp3",
+    "genre": "001",
+    "song_id": "001004"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001006.mp3",
+    "genre": "001",
+    "song_id": "001006"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001007.mp3",
+    "genre": "001",
+    "song_id": "001007"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001009.mp3",
+    "genre": "001",
+    "song_id": "001009"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001013.mp3",
+    "genre": "001",
+    "song_id": "001013"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001014.mp3",
+    "genre": "001",
+    "song_id": "001014"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001015.mp3",
+    "genre": "001",
+    "song_id": "001015"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001016.mp3",
+    "genre": "001",
+    "song_id": "001016"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001017.mp3",
+    "genre": "001",
+    "song_id": "001017"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001018.mp3",
+    "genre": "001",
+    "song_id": "001018"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001019.mp3",
+    "genre": "001",
+    "song_id": "001019"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001020.mp3",
+    "genre": "001",
+    "song_id": "001020"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001021.mp3",
+    "genre": "001",
+    "song_id": "001021"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001022.mp3",
+    "genre": "001",
+    "song_id": "001022"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001023.mp3",
+    "genre": "001",
+    "song_id": "001023"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001024.mp3",
+    "genre": "001",
+    "song_id": "001024"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001025.mp3",
+    "genre": "001",
+    "song_id": "001025"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001026.mp3",
+    "genre": "001",
+    "song_id": "001026"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001027.mp3",
+    "genre": "001",
+    "song_id": "001027"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001028.mp3",
+    "genre": "001",
+    "song_id": "001028"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001029.mp3",
+    "genre": "001",
+    "song_id": "001029"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001030.mp3",
+    "genre": "001",
+    "song_id": "001030"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001031.mp3",
+    "genre": "001",
+    "song_id": "001031"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001032.mp3",
+    "genre": "001",
+    "song_id": "001032"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001033.mp3",
+    "genre": "001",
+    "song_id": "001033"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001034.mp3",
+    "genre": "001",
+    "song_id": "001034"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001035.mp3",
+    "genre": "001",
+    "song_id": "001035"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001036.mp3",
+    "genre": "001",
+    "song_id": "001036"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001037.mp3",
+    "genre": "001",
+    "song_id": "001037"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001038.mp3",
+    "genre": "001",
+    "song_id": "001038"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001039.mp3",
+    "genre": "001",
+    "song_id": "001039"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001040.mp3",
+    "genre": "001",
+    "song_id": "001040"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001041.mp3",
+    "genre": "001",
+    "song_id": "001041"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001042.mp3",
+    "genre": "001",
+    "song_id": "001042"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001043.mp3",
+    "genre": "001",
+    "song_id": "001043"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001044.mp3",
+    "genre": "001",
+    "song_id": "001044"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001045.mp3",
+    "genre": "001",
+    "song_id": "001045"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001046.mp3",
+    "genre": "001",
+    "song_id": "001046"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001047.mp3",
+    "genre": "001",
+    "song_id": "001047"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001048.mp3",
+    "genre": "001",
+    "song_id": "001048"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001049.mp3",
+    "genre": "001",
+    "song_id": "001049"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001050.mp3",
+    "genre": "001",
+    "song_id": "001050"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001051.mp3",
+    "genre": "001",
+    "song_id": "001051"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001052.mp3",
+    "genre": "001",
+    "song_id": "001052"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001058.mp3",
+    "genre": "001",
+    "song_id": "001058"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001059.mp3",
+    "genre": "001",
+    "song_id": "001059"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001060.mp3",
+    "genre": "001",
+    "song_id": "001060"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001061.mp3",
+    "genre": "001",
+    "song_id": "001061"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001062.mp3",
+    "genre": "001",
+    "song_id": "001062"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001063.mp3",
+    "genre": "001",
+    "song_id": "001063"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001064.mp3",
+    "genre": "001",
+    "song_id": "001064"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001066.mp3",
+    "genre": "001",
+    "song_id": "001066"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001067.mp3",
+    "genre": "001",
+    "song_id": "001067"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001068.mp3",
+    "genre": "001",
+    "song_id": "001068"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001069.mp3",
+    "genre": "001",
+    "song_id": "001069"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001070.mp3",
+    "genre": "001",
+    "song_id": "001070"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001071.mp3",
+    "genre": "001",
+    "song_id": "001071"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001072.mp3",
+    "genre": "001",
+    "song_id": "001072"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001073.mp3",
+    "genre": "001",
+    "song_id": "001073"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001074.mp3",
+    "genre": "001",
+    "song_id": "001074"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001075.mp3",
+    "genre": "001",
+    "song_id": "001075"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001076.mp3",
+    "genre": "001",
+    "song_id": "001076"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001077.mp3",
+    "genre": "001",
+    "song_id": "001077"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001078.mp3",
+    "genre": "001",
+    "song_id": "001078"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001079.mp3",
+    "genre": "001",
+    "song_id": "001079"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001080.mp3",
+    "genre": "001",
+    "song_id": "001080"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001081.mp3",
+    "genre": "001",
+    "song_id": "001081"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001082.mp3",
+    "genre": "001",
+    "song_id": "001082"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001083.mp3",
+    "genre": "001",
+    "song_id": "001083"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001084.mp3",
+    "genre": "001",
+    "song_id": "001084"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001085.mp3",
+    "genre": "001",
+    "song_id": "001085"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001086.mp3",
+    "genre": "001",
+    "song_id": "001086"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001087.mp3",
+    "genre": "001",
+    "song_id": "001087"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001088.mp3",
+    "genre": "001",
+    "song_id": "001088"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001089.mp3",
+    "genre": "001",
+    "song_id": "001089"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001090.mp3",
+    "genre": "001",
+    "song_id": "001090"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001091.mp3",
+    "genre": "001",
+    "song_id": "001091"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001092.mp3",
+    "genre": "001",
+    "song_id": "001092"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001093.mp3",
+    "genre": "001",
+    "song_id": "001093"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001094.mp3",
+    "genre": "001",
+    "song_id": "001094"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001095.mp3",
+    "genre": "001",
+    "song_id": "001095"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001096.mp3",
+    "genre": "001",
+    "song_id": "001096"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001097.mp3",
+    "genre": "001",
+    "song_id": "001097"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001098.mp3",
+    "genre": "001",
+    "song_id": "001098"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001099.mp3",
+    "genre": "001",
+    "song_id": "001099"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001100.mp3",
+    "genre": "001",
+    "song_id": "001100"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001101.mp3",
+    "genre": "001",
+    "song_id": "001101"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001102.mp3",
+    "genre": "001",
+    "song_id": "001102"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001105.mp3",
+    "genre": "001",
+    "song_id": "001105"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001106.mp3",
+    "genre": "001",
+    "song_id": "001106"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001107.mp3",
+    "genre": "001",
+    "song_id": "001107"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001108.mp3",
+    "genre": "001",
+    "song_id": "001108"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001110.mp3",
+    "genre": "001",
+    "song_id": "001110"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001111.mp3",
+    "genre": "001",
+    "song_id": "001111"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001113.mp3",
+    "genre": "001",
+    "song_id": "001113"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001116.mp3",
+    "genre": "001",
+    "song_id": "001116"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001117.mp3",
+    "genre": "001",
+    "song_id": "001117"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001118.mp3",
+    "genre": "001",
+    "song_id": "001118"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001119.mp3",
+    "genre": "001",
+    "song_id": "001119"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001120.mp3",
+    "genre": "001",
+    "song_id": "001120"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001121.mp3",
+    "genre": "001",
+    "song_id": "001121"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001122.mp3",
+    "genre": "001",
+    "song_id": "001122"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001123.mp3",
+    "genre": "001",
+    "song_id": "001123"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001124.mp3",
+    "genre": "001",
+    "song_id": "001124"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001125.mp3",
+    "genre": "001",
+    "song_id": "001125"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001126.mp3",
+    "genre": "001",
+    "song_id": "001126"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001127.mp3",
+    "genre": "001",
+    "song_id": "001127"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001128.mp3",
+    "genre": "001",
+    "song_id": "001128"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001129.mp3",
+    "genre": "001",
+    "song_id": "001129"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001130.mp3",
+    "genre": "001",
+    "song_id": "001130"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001131.mp3",
+    "genre": "001",
+    "song_id": "001131"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001133.mp3",
+    "genre": "001",
+    "song_id": "001133"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001135.mp3",
+    "genre": "001",
+    "song_id": "001135"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001136.mp3",
+    "genre": "001",
+    "song_id": "001136"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001138.mp3",
+    "genre": "001",
+    "song_id": "001138"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001140.mp3",
+    "genre": "001",
+    "song_id": "001140"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001141.mp3",
+    "genre": "001",
+    "song_id": "001141"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001142.mp3",
+    "genre": "001",
+    "song_id": "001142"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001143.mp3",
+    "genre": "001",
+    "song_id": "001143"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001144.mp3",
+    "genre": "001",
+    "song_id": "001144"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001145.mp3",
+    "genre": "001",
+    "song_id": "001145"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001146.mp3",
+    "genre": "001",
+    "song_id": "001146"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001147.mp3",
+    "genre": "001",
+    "song_id": "001147"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001148.mp3",
+    "genre": "001",
+    "song_id": "001148"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001149.mp3",
+    "genre": "001",
+    "song_id": "001149"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001150.mp3",
+    "genre": "001",
+    "song_id": "001150"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001151.mp3",
+    "genre": "001",
+    "song_id": "001151"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001152.mp3",
+    "genre": "001",
+    "song_id": "001152"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001153.mp3",
+    "genre": "001",
+    "song_id": "001153"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001154.mp3",
+    "genre": "001",
+    "song_id": "001154"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001155.mp3",
+    "genre": "001",
+    "song_id": "001155"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001156.mp3",
+    "genre": "001",
+    "song_id": "001156"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001157.mp3",
+    "genre": "001",
+    "song_id": "001157"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001158.mp3",
+    "genre": "001",
+    "song_id": "001158"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001159.mp3",
+    "genre": "001",
+    "song_id": "001159"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001160.mp3",
+    "genre": "001",
+    "song_id": "001160"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001161.mp3",
+    "genre": "001",
+    "song_id": "001161"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001162.mp3",
+    "genre": "001",
+    "song_id": "001162"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001163.mp3",
+    "genre": "001",
+    "song_id": "001163"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001164.mp3",
+    "genre": "001",
+    "song_id": "001164"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001165.mp3",
+    "genre": "001",
+    "song_id": "001165"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001166.mp3",
+    "genre": "001",
+    "song_id": "001166"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001167.mp3",
+    "genre": "001",
+    "song_id": "001167"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001168.mp3",
+    "genre": "001",
+    "song_id": "001168"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001169.mp3",
+    "genre": "001",
+    "song_id": "001169"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001170.mp3",
+    "genre": "001",
+    "song_id": "001170"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001171.mp3",
+    "genre": "001",
+    "song_id": "001171"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001172.mp3",
+    "genre": "001",
+    "song_id": "001172"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001173.mp3",
+    "genre": "001",
+    "song_id": "001173"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001174.mp3",
+    "genre": "001",
+    "song_id": "001174"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001175.mp3",
+    "genre": "001",
+    "song_id": "001175"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001176.mp3",
+    "genre": "001",
+    "song_id": "001176"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001177.mp3",
+    "genre": "001",
+    "song_id": "001177"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001178.mp3",
+    "genre": "001",
+    "song_id": "001178"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001179.mp3",
+    "genre": "001",
+    "song_id": "001179"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001180.mp3",
+    "genre": "001",
+    "song_id": "001180"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001181.mp3",
+    "genre": "001",
+    "song_id": "001181"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001182.mp3",
+    "genre": "001",
+    "song_id": "001182"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001183.mp3",
+    "genre": "001",
+    "song_id": "001183"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001184.mp3",
+    "genre": "001",
+    "song_id": "001184"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001185.mp3",
+    "genre": "001",
+    "song_id": "001185"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001186.mp3",
+    "genre": "001",
+    "song_id": "001186"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001187.mp3",
+    "genre": "001",
+    "song_id": "001187"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001188.mp3",
+    "genre": "001",
+    "song_id": "001188"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001189.mp3",
+    "genre": "001",
+    "song_id": "001189"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001190.mp3",
+    "genre": "001",
+    "song_id": "001190"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001191.mp3",
+    "genre": "001",
+    "song_id": "001191"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001192.mp3",
+    "genre": "001",
+    "song_id": "001192"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001193.mp3",
+    "genre": "001",
+    "song_id": "001193"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001194.mp3",
+    "genre": "001",
+    "song_id": "001194"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001195.mp3",
+    "genre": "001",
+    "song_id": "001195"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001196.mp3",
+    "genre": "001",
+    "song_id": "001196"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001197.mp3",
+    "genre": "001",
+    "song_id": "001197"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001198.mp3",
+    "genre": "001",
+    "song_id": "001198"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001199.mp3",
+    "genre": "001",
+    "song_id": "001199"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001201.mp3",
+    "genre": "001",
+    "song_id": "001201"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001202.mp3",
+    "genre": "001",
+    "song_id": "001202"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001203.mp3",
+    "genre": "001",
+    "song_id": "001203"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001204.mp3",
+    "genre": "001",
+    "song_id": "001204"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001205.mp3",
+    "genre": "001",
+    "song_id": "001205"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001206.mp3",
+    "genre": "001",
+    "song_id": "001206"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001207.mp3",
+    "genre": "001",
+    "song_id": "001207"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001208.mp3",
+    "genre": "001",
+    "song_id": "001208"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001209.mp3",
+    "genre": "001",
+    "song_id": "001209"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001210.mp3",
+    "genre": "001",
+    "song_id": "001210"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001211.mp3",
+    "genre": "001",
+    "song_id": "001211"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001212.mp3",
+    "genre": "001",
+    "song_id": "001212"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001213.mp3",
+    "genre": "001",
+    "song_id": "001213"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001214.mp3",
+    "genre": "001",
+    "song_id": "001214"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001215.mp3",
+    "genre": "001",
+    "song_id": "001215"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001216.mp3",
+    "genre": "001",
+    "song_id": "001216"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001217.mp3",
+    "genre": "001",
+    "song_id": "001217"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001218.mp3",
+    "genre": "001",
+    "song_id": "001218"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001219.mp3",
+    "genre": "001",
+    "song_id": "001219"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001220.mp3",
+    "genre": "001",
+    "song_id": "001220"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001221.mp3",
+    "genre": "001",
+    "song_id": "001221"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001222.mp3",
+    "genre": "001",
+    "song_id": "001222"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001223.mp3",
+    "genre": "001",
+    "song_id": "001223"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001224.mp3",
+    "genre": "001",
+    "song_id": "001224"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001225.mp3",
+    "genre": "001",
+    "song_id": "001225"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001226.mp3",
+    "genre": "001",
+    "song_id": "001226"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001227.mp3",
+    "genre": "001",
+    "song_id": "001227"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001228.mp3",
+    "genre": "001",
+    "song_id": "001228"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001229.mp3",
+    "genre": "001",
+    "song_id": "001229"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001230.mp3",
+    "genre": "001",
+    "song_id": "001230"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001231.mp3",
+    "genre": "001",
+    "song_id": "001231"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001232.mp3",
+    "genre": "001",
+    "song_id": "001232"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001233.mp3",
+    "genre": "001",
+    "song_id": "001233"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001234.mp3",
+    "genre": "001",
+    "song_id": "001234"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001235.mp3",
+    "genre": "001",
+    "song_id": "001235"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001236.mp3",
+    "genre": "001",
+    "song_id": "001236"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001237.mp3",
+    "genre": "001",
+    "song_id": "001237"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001238.mp3",
+    "genre": "001",
+    "song_id": "001238"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001240.mp3",
+    "genre": "001",
+    "song_id": "001240"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001241.mp3",
+    "genre": "001",
+    "song_id": "001241"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001242.mp3",
+    "genre": "001",
+    "song_id": "001242"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001243.mp3",
+    "genre": "001",
+    "song_id": "001243"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001244.mp3",
+    "genre": "001",
+    "song_id": "001244"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001245.mp3",
+    "genre": "001",
+    "song_id": "001245"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001246.mp3",
+    "genre": "001",
+    "song_id": "001246"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001247.mp3",
+    "genre": "001",
+    "song_id": "001247"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001248.mp3",
+    "genre": "001",
+    "song_id": "001248"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001249.mp3",
+    "genre": "001",
+    "song_id": "001249"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001250.mp3",
+    "genre": "001",
+    "song_id": "001250"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001251.mp3",
+    "genre": "001",
+    "song_id": "001251"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001252.mp3",
+    "genre": "001",
+    "song_id": "001252"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001253.mp3",
+    "genre": "001",
+    "song_id": "001253"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001254.mp3",
+    "genre": "001",
+    "song_id": "001254"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001255.mp3",
+    "genre": "001",
+    "song_id": "001255"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001256.mp3",
+    "genre": "001",
+    "song_id": "001256"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001257.mp3",
+    "genre": "001",
+    "song_id": "001257"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001258.mp3",
+    "genre": "001",
+    "song_id": "001258"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001259.mp3",
+    "genre": "001",
+    "song_id": "001259"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001260.mp3",
+    "genre": "001",
+    "song_id": "001260"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001261.mp3",
+    "genre": "001",
+    "song_id": "001261"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001262.mp3",
+    "genre": "001",
+    "song_id": "001262"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001263.mp3",
+    "genre": "001",
+    "song_id": "001263"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001264.mp3",
+    "genre": "001",
+    "song_id": "001264"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001265.mp3",
+    "genre": "001",
+    "song_id": "001265"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001266.mp3",
+    "genre": "001",
+    "song_id": "001266"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001267.mp3",
+    "genre": "001",
+    "song_id": "001267"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001268.mp3",
+    "genre": "001",
+    "song_id": "001268"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001269.mp3",
+    "genre": "001",
+    "song_id": "001269"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001270.mp3",
+    "genre": "001",
+    "song_id": "001270"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001271.mp3",
+    "genre": "001",
+    "song_id": "001271"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001272.mp3",
+    "genre": "001",
+    "song_id": "001272"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001273.mp3",
+    "genre": "001",
+    "song_id": "001273"
+  },
+  {
+    "path": "/app/data/full/audio/fma_100k/fma_large/001/001274.mp3",
+    "genre": "001",
+    "song_id": "001274"
   }
 ]

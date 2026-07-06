@@ -34,7 +34,7 @@ def pg_search_text(request: PgTextRequest) -> dict:
             with conn.cursor() as cur:
                 cur.execute(
                     """
-                    SELECT chunk_id, title, snippet, source,
+                    SELECT chunk_id, title, snippet, source, content,
                            ts_rank(tsv, plainto_tsquery('english', %s)) AS score
                     FROM pg_text_docs
                     WHERE tsv @@ plainto_tsquery('english', %s)
@@ -55,6 +55,7 @@ def pg_search_text(request: PgTextRequest) -> dict:
             "metadata": {
                 "title": r["title"] or r["chunk_id"],
                 "snippet": r["snippet"] or "",
+                "content": r["content"] or r["snippet"] or "",
                 "source": r["source"] or "",
             },
         }
@@ -75,9 +76,7 @@ async def pg_search_image(file: UploadFile = File(...), k: int = 10) -> dict:
     from PIL import Image
     img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
     img_array = np.array(img, dtype=np.uint8)
-    chunks = image_pipeline._splitter.split_image(img_array, document_id="query")
-    patches = [c["content"] for c in chunks]
-    query_hist = image_pipeline._build_histogram(patches, img_array)
+    query_hist = image_pipeline._build_histogram(img_array)
 
     t0 = time.perf_counter()
     try:

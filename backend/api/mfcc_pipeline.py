@@ -4,13 +4,13 @@ from urllib.parse import quote
 
 import numpy as np
 import librosa
-from sklearn.cluster import MiniBatchKMeans
 
+from backend.src.codebook.codebook_kmeans import VectorCodebook
 from backend.src.extractor.mfcc import MFCCExtractor
 from backend.src.index.audio_search import AudioSearchIndex
 from backend.src.split.split_audio import SplitAudio
 
-N_CLUSTERS = 50
+N_CLUSTERS = 512
 SUPPORTED = {".wav", ".mp3", ".ogg", ".flac"}
 ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
@@ -22,7 +22,7 @@ class MFCCPipeline:
     def __init__(self) -> None:
         self._splitter = SplitAudio(sample_rate=22050, window_seconds=3.0, hop_seconds=1.5)
         self._extractor = MFCCExtractor(n_mfcc=20, sample_rate=22050)
-        self._kmeans: MiniBatchKMeans | None = None
+        self._codebook: VectorCodebook | None = None
         self._index = AudioSearchIndex()
         self.ready = False
         self.indexed_files = 0
@@ -30,13 +30,16 @@ class MFCCPipeline:
     def index_directory(self, audio_dir: Path) -> None:
         self.index_directories([audio_dir])
 
-    def index_directories(self, audio_dirs: list[Path]) -> None:
+    def index_directories(self, audio_dirs: list[Path], max_files: int | None = None) -> None:
         audio_files: list[Path] = []
         for audio_dir in audio_dirs:
             found = sorted(
                 f for f in audio_dir.rglob("*") if f.suffix.lower() in SUPPORTED
             )
             audio_files.extend(found)
+            if max_files is not None and len(audio_files) >= max_files:
+                audio_files = audio_files[:max_files]
+                break
 
         if not audio_files:
             return
@@ -68,10 +71,11 @@ class MFCCPipeline:
             return
 
         stacked = np.vstack(all_frames)
-        self._kmeans = MiniBatchKMeans(
-            n_clusters=N_CLUSTERS, random_state=42, n_init=3, max_iter=100, batch_size=1024
+        self._codebook = VectorCodebook(
+            n_clusters=N_CLUSTERS, random_state=42, minibatch=True,
+            n_init=3, max_iter=100, batch_size=1024,
         )
-        self._kmeans.fit(stacked)
+        self._codebook.build_codebook(stacked)
 
         for item in per_file:
             hist = self._build_histogram(item["windows"])
@@ -91,7 +95,7 @@ class MFCCPipeline:
         self.indexed_files = len(per_file)
 
     def search(self, audio_bytes: bytes, k: int = 10) -> list[dict]:
-        if not self.ready or self._kmeans is None:
+        if not self.ready or self._codebook is None:
             return []
 
         audio, _ = librosa.load(io.BytesIO(audio_bytes), sr=22050, mono=True)
@@ -118,14 +122,14 @@ class MFCCPipeline:
 
     def _build_histogram(self, windows: list[np.ndarray]) -> np.ndarray:
         hist = np.zeros(N_CLUSTERS, dtype=np.float32)
-        if self._kmeans is None or not windows:
+        if self._codebook is None or not windows:
             return hist
 
         for window in windows:
             frames = self._extractor.extract([window])  # (n_frames, n_mfcc) de una ventana
             if frames.shape[0] == 0:
                 continue
-            assignments = self._kmeans.predict(frames)
+            assignments = self._codebook.predict(frames)
             for c in assignments:
                 hist[c] += 1.0
 

@@ -26,6 +26,68 @@ COLORS = {
     "pgvector": "#3498db",  # Azul
 }
 
+MODALITY_SPECS = {
+    "audio": {
+        "path": RESULTS_DIR / "audio_results.json",
+        "label": "Audio",
+        "size_key": "n_songs",
+        "db_latency_key": "pgvector_avg_latency_ms",
+        "db_precision_key": "pgvector_precision_at_k",
+        "db_recall_key": "pgvector_recall_at_k",
+        "db_label": "pgvector",
+    },
+    "text": {
+        "path": RESULTS_DIR / "text_results.json",
+        "label": "Texto",
+        "size_key": "n_source_docs",
+        "db_latency_key": "gin_avg_latency_ms",
+        "db_precision_key": "gin_precision_at_k",
+        "db_recall_key": "gin_recall_at_k",
+        "db_label": "GIN",
+    },
+    "image": {
+        "path": RESULTS_DIR / "image_results.json",
+        "label": "Imagen",
+        "size_key": "n_images",
+        "db_latency_key": "pgvector_avg_latency_ms",
+        "db_precision_key": "pgvector_precision_at_k",
+        "db_recall_key": "pgvector_recall_at_k",
+        "db_label": "pgvector",
+    },
+}
+
+SCALE_ORDER = ["1k", "10k", "100k"]
+
+
+def _load_results_by_scale(path: Path) -> dict[str, dict]:
+    if not path.exists():
+        return {}
+    return {r["scale"]: r for r in json.loads(path.read_text()) if r}
+
+
+def _available_scales() -> list[str]:
+    seen = set()
+    for spec in MODALITY_SPECS.values():
+        seen.update(_load_results_by_scale(spec["path"]).keys())
+    ordered = [s for s in SCALE_ORDER if s in seen]
+    ordered.extend(sorted(seen - set(ordered)))
+    return ordered
+
+
+def _annotate_bars(ax, bars, values, y_offset):
+    for bar, value in zip(bars, values):
+        if value is None:
+            continue
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            bar.get_height() + y_offset,
+            f"{value:.3f}",
+            ha="center",
+            va="bottom",
+            fontsize=8,
+            fontweight="bold",
+        )
+
 
 def plot_audio_latency():
     """Gráfico: Latencia promedio (Audio) - Custom vs pgvector por escala."""
@@ -549,6 +611,215 @@ def plot_precision_comparison():
 
 
 
+def plot_scalability():
+    """Grafico: curvas de latencia por archivos/documentos fuente."""
+    fig, ax = plt.subplots(figsize=(12, 7))
+
+    plotted = False
+    markers = {"audio": "o", "text": "s", "image": "^"}
+    colors = {"audio": COLORS["pgvector"], "text": COLORS["custom"], "image": COLORS["postgre"]}
+
+    for modality, spec in MODALITY_SPECS.items():
+        results = list(_load_results_by_scale(spec["path"]).values())
+        if not results:
+            continue
+        sizes = [r.get(spec["size_key"]) for r in results]
+        latencies = [r["avg_latency_ms"] for r in results]
+        ax.plot(
+            sizes,
+            latencies,
+            marker=markers[modality],
+            color=colors[modality],
+            linewidth=2.5,
+            markersize=8,
+            label=f'{spec["label"]} (Custom)',
+        )
+        for x, y in zip(sizes, latencies):
+            ax.annotate(f"{y:.2f}ms", (x, y), textcoords="offset points",
+                        xytext=(5, 8), fontsize=9)
+        plotted = True
+
+    if not plotted:
+        print("  [SKIP] No hay datos para escalabilidad")
+        plt.close(fig)
+        return
+
+    ax.set_xlabel("Numero de archivos/documentos fuente", fontsize=12, fontweight="bold")
+    ax.set_ylabel("Latencia promedio (ms)", fontsize=12, fontweight="bold")
+    ax.set_title("Escalabilidad: Latencia vs archivos/documentos fuente",
+                 fontsize=14, fontweight="bold")
+    ax.legend(fontsize=11)
+    ax.grid(alpha=0.3)
+
+    out = GRAPHICS_DIR / "scalability_latency.png"
+    fig.tight_layout()
+    fig.savefig(out, dpi=150)
+    print(f"  [OK] {out.name}")
+    plt.close(fig)
+
+
+def plot_comparison_all_modalities():
+    """Grafico: latencia Custom vs PostgreSQL para cada modalidad y escala."""
+    scales = _available_scales()
+    if not scales:
+        print("  [SKIP] No hay datos suficientes para comparacion global de latencia")
+        return
+
+    for scale in scales:
+        labels = []
+        custom_lat = []
+        db_lat = []
+
+        for spec in MODALITY_SPECS.values():
+            result = _load_results_by_scale(spec["path"]).get(scale)
+            if not result:
+                continue
+            labels.append(spec["label"])
+            custom_lat.append(result["avg_latency_ms"])
+            db_lat.append(result.get(spec["db_latency_key"]))
+
+        if not labels:
+            continue
+
+        fig, ax = plt.subplots(figsize=(11, 6))
+        x = np.arange(len(labels))
+        w = 0.35
+        db_plot = [v if v is not None else 0 for v in db_lat]
+        max_y = max(custom_lat + db_plot) if custom_lat or db_plot else 1
+
+        bars1 = ax.bar(x - w / 2, custom_lat, w, label="Indice propio",
+                       color=COLORS["custom"], edgecolor="black")
+        bars2 = ax.bar(x + w / 2, db_plot, w, label="PostgreSQL (GIN/pgvector)",
+                       color=COLORS["pgvector"], edgecolor="black")
+
+        ax.set_ylabel("Latencia promedio (ms)", fontsize=12, fontweight="bold")
+        ax.set_title(f"Latencia por modalidad: Custom vs PostgreSQL ({scale.upper()})",
+                     fontsize=14, fontweight="bold")
+        ax.set_xticks(x)
+        ax.set_xticklabels(labels, fontsize=11)
+        ax.legend(fontsize=10)
+        ax.grid(axis="y", alpha=0.3)
+        ax.set_ylim([0, max_y * 1.2 if max_y > 0 else 1])
+
+        _annotate_bars(ax, bars1, custom_lat, max_y * 0.02)
+        _annotate_bars(ax, bars2, db_lat, max_y * 0.02)
+        for i, value in enumerate(db_lat):
+            if value is None:
+                ax.text(i + w / 2, max_y * 0.03, "N/M", ha="center", fontsize=9, fontweight="bold")
+
+        out = GRAPHICS_DIR / f"comparison_latency_{scale.lower()}.png"
+        fig.tight_layout()
+        fig.savefig(out, dpi=150)
+        print(f"  [OK] {out.name}")
+        plt.close(fig)
+
+
+def plot_precision_comparison():
+    """Grafico: Precision@K Custom vs PostgreSQL para cada modalidad y escala."""
+    scales = _available_scales()
+    if not scales:
+        print("  [SKIP] No hay datos para comparacion de precision")
+        return
+
+    for scale in scales:
+        modalities, custom_prec, db_prec = [], [], []
+
+        for spec in MODALITY_SPECS.values():
+            result = _load_results_by_scale(spec["path"]).get(scale)
+            if not result:
+                continue
+            modalities.append(spec["label"])
+            custom_prec.append(result["precision_at_k"])
+            db_prec.append(result.get(spec["db_precision_key"]))
+
+        if not modalities:
+            continue
+
+        fig, ax = plt.subplots(figsize=(11, 6))
+        x = np.arange(len(modalities))
+        w = 0.35
+        db_plot = [v if v is not None else 0 for v in db_prec]
+
+        bars1 = ax.bar(x - w / 2, custom_prec, w, label="Indice propio",
+                       color=COLORS["custom"], edgecolor="black")
+        bars2 = ax.bar(x + w / 2, db_plot, w, label="PostgreSQL (GIN/pgvector)",
+                       color=COLORS["pgvector"], edgecolor="black")
+
+        ax.set_ylabel("Precision@10", fontsize=12, fontweight="bold")
+        ax.set_title(f"Precision@10 por modalidad: Custom vs PostgreSQL ({scale.upper()})",
+                     fontsize=14, fontweight="bold")
+        ax.set_xticks(x)
+        ax.set_xticklabels(modalities, fontsize=11)
+        ax.set_ylim([0, 1.2])
+        ax.legend(fontsize=10)
+        ax.grid(axis="y", alpha=0.3)
+
+        _annotate_bars(ax, bars1, custom_prec, 0.02)
+        _annotate_bars(ax, bars2, db_prec, 0.02)
+        for i, value in enumerate(db_prec):
+            if value is None:
+                ax.text(i + w / 2, 0.04, "N/M", ha="center", fontsize=9, fontweight="bold")
+
+        out = GRAPHICS_DIR / f"comparison_precision_{scale.lower()}.png"
+        fig.tight_layout()
+        fig.savefig(out, dpi=150)
+        print(f"  [OK] {out.name}")
+        plt.close(fig)
+
+
+def plot_recall_comparison():
+    """Grafico: Recall@K Custom vs PostgreSQL para cada modalidad y escala."""
+    scales = _available_scales()
+    if not scales:
+        print("  [SKIP] No hay datos para comparacion de recall")
+        return
+
+    for scale in scales:
+        modalities, custom_recall, db_recall = [], [], []
+
+        for spec in MODALITY_SPECS.values():
+            result = _load_results_by_scale(spec["path"]).get(scale)
+            if not result or "recall_at_k" not in result:
+                continue
+            modalities.append(spec["label"])
+            custom_recall.append(result["recall_at_k"])
+            db_recall.append(result.get(spec["db_recall_key"]))
+
+        if not modalities:
+            continue
+
+        fig, ax = plt.subplots(figsize=(11, 6))
+        x = np.arange(len(modalities))
+        w = 0.35
+        db_plot = [v if v is not None else 0 for v in db_recall]
+
+        bars1 = ax.bar(x - w / 2, custom_recall, w, label="Indice propio",
+                       color=COLORS["custom"], edgecolor="black")
+        bars2 = ax.bar(x + w / 2, db_plot, w, label="PostgreSQL (GIN/pgvector)",
+                       color=COLORS["pgvector"], edgecolor="black")
+
+        ax.set_ylabel("Recall@10", fontsize=12, fontweight="bold")
+        ax.set_title(f"Recall@10 por modalidad: Custom vs PostgreSQL ({scale.upper()})",
+                     fontsize=14, fontweight="bold")
+        ax.set_xticks(x)
+        ax.set_xticklabels(modalities, fontsize=11)
+        ax.set_ylim([0, 1.2])
+        ax.legend(fontsize=10)
+        ax.grid(axis="y", alpha=0.3)
+
+        _annotate_bars(ax, bars1, custom_recall, 0.02)
+        _annotate_bars(ax, bars2, db_recall, 0.02)
+        for i, value in enumerate(db_recall):
+            if value is None:
+                ax.text(i + w / 2, 0.04, "N/M", ha="center", fontsize=9, fontweight="bold")
+
+        out = GRAPHICS_DIR / f"comparison_recall_{scale.lower()}.png"
+        fig.tight_layout()
+        fig.savefig(out, dpi=150)
+        print(f"  [OK] {out.name}")
+        plt.close(fig)
+
+
 def main():
     """Genera todos los graficos comparativos disponibles."""
     print("Generando graficos...\n[Audio]")
@@ -570,6 +841,7 @@ def main():
     plot_comparison_all_modalities()
     plot_scalability()
     plot_precision_comparison()
+    plot_recall_comparison()
 
     print(f"\nGráficos guardados en: {GRAPHICS_DIR}/")
 

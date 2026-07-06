@@ -11,48 +11,49 @@ import json
 import sys
 import time
 import tracemalloc
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
+import cv2
 import numpy as np
 import psutil
 from sklearn.cluster import MiniBatchKMeans
 
 from backend.src.extractor.sift import SIFTExtractor
 from backend.src.index.visual_search import VisualSearchIndex
-from backend.src.split.split_image import SplitImage
 
 DATA_DIR    = Path(__file__).parent / "data"
 RESULTS_DIR = Path(__file__).parent / "results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-N_CLUSTERS       = 50
+N_CLUSTERS       = 100
+COLOR_H_BINS     = 12
+COLOR_S_BINS     = 4
+COLOR_DIM        = COLOR_H_BINS + COLOR_S_BINS
+SIFT_W           = 0.6
+COLOR_W          = 0.4
 N_QUERIES        = 50
 K                = 10
-DEFAULT_PATCH_SIZE = 32
-DEFAULT_STRIDE     = 16
 CODEBOOK_SAMPLE  = 5_000  # máx imágenes para entrenar KMeans (limita RAM)
-SPLITTER   = SplitImage(patch_size=DEFAULT_PATCH_SIZE, stride=DEFAULT_STRIDE)
 EXTRACTOR  = SIFTExtractor()
 
 
 def _descriptors_sample(path: str, max_kp: int = 30) -> np.ndarray:
     """
     Extrae muestra de descriptores SIFT de una imagen para entrenar KMeans.
-    Retorna array (n, 128) o vacío. No retiene patches en memoria.
+    Retorna array (n, 128) o vacío. No retiene la imagen en memoria.
     """
     try:
-        chunks = SPLITTER.split_file(path)
-        patches = [c["content"] for c in chunks]
-        descs_list = EXTRACTOR.transform(patches)
-        rows = []
-        for d in descs_list:
-            if d.shape[0] > 0:
-                idx = np.random.choice(d.shape[0], size=min(max_kp, d.shape[0]), replace=False)
-                rows.append(d[idx])
-        return np.vstack(rows) if rows else np.empty((0, 128), dtype=np.float32)
+        from PIL import Image
+        img = np.array(Image.open(path).convert("RGB"), dtype=np.uint8)
+        desc = EXTRACTOR.extract([img])
+        if desc.shape[0] > max_kp:
+            idx = np.random.choice(desc.shape[0], size=max_kp, replace=False)
+            desc = desc[idx]
+        return desc if desc.shape[0] else np.empty((0, 128), dtype=np.float32)
     except Exception:
         return np.empty((0, 128), dtype=np.float32)
 
@@ -60,18 +61,42 @@ def _descriptors_sample(path: str, max_kp: int = 30) -> np.ndarray:
 def _image_histogram(path: str, kmeans: MiniBatchKMeans) -> np.ndarray:
     """Construye histograma BoVW de una imagen sin retener descriptores."""
     hist = np.zeros(N_CLUSTERS, dtype=np.float32)
+    img = None
     try:
-        chunks  = SPLITTER.split_file(path)
-        patches = [c["content"] for c in chunks]
-        descs_list = EXTRACTOR.transform(patches)
-        for d in descs_list:
-            if d.shape[0] > 0:
-                for c in kmeans.predict(d):
-                    hist[c] += 1.0
+        from PIL import Image
+        img = np.array(Image.open(path).convert("RGB"), dtype=np.uint8)
+        desc = EXTRACTOR.extract([img])
+        if desc.shape[0] > 0:
+            for c in kmeans.predict(desc):
+                hist[c] += 1.0
     except Exception:
         pass
     norm = np.linalg.norm(hist)
+    sift_hist = hist / norm if norm > 0 else hist
+    color_hist = _color_histogram(img) if img is not None else np.zeros(COLOR_DIM, dtype=np.float32)
+    return np.concatenate([sift_hist * SIFT_W, color_hist * COLOR_W])
+
+
+def _color_histogram(img: np.ndarray) -> np.ndarray:
+    hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+    foreground = ~((hsv[:, :, 2] > 230) & (hsv[:, :, 1] < 40))
+    if foreground.sum() < 200:
+        foreground = np.ones(hsv.shape[:2], dtype=bool)
+    h_hist = np.histogram(hsv[:, :, 0][foreground], bins=COLOR_H_BINS, range=(0, 180))[0].astype(np.float32)
+    s_hist = np.histogram(hsv[:, :, 1][foreground], bins=COLOR_S_BINS, range=(0, 256))[0].astype(np.float32)
+    hist = np.concatenate([h_hist, s_hist])
+    norm = np.linalg.norm(hist)
     return hist / norm if norm > 0 else hist
+
+
+def _unique_chunk_id(item: dict, seen: dict[str, int]) -> str:
+    base_id = item["id"]
+    count = seen.get(base_id, 0)
+    seen[base_id] = count + 1
+    if count == 0:
+        return base_id
+    path_stem = Path(item["path"]).stem
+    return f"{base_id}__dup{count}_{path_stem}"
 
 
 def _try_pgvector_search(query_vec: np.ndarray, k: int = 10) -> tuple[list, float]:
@@ -140,22 +165,27 @@ def run_scale(label: str) -> dict:
     histograms  = {}
     categories  = {}
     valid_items = []
+    seen_ids: dict[str, int] = {}
     for item in manifest:
         hist = _image_histogram(item["path"], kmeans)
         if hist.sum() == 0:
             continue   # imagen sin keypoints detectables
+        chunk_id = _unique_chunk_id(item, seen_ids)
         index.add_record({
-            "chunk_id": item["id"], "modality": "image",
+            "chunk_id": chunk_id, "modality": "image",
             "histogram": hist.tolist(),
             "metadata": {
                 "filename": Path(item["path"]).name,
-                "id":       item["id"],
+                "id":       chunk_id,
+                "source_id": item["id"],
                 "category": item.get("category", "unknown"),
             },
         })
-        histograms[item["id"]] = hist
-        categories[item["id"]] = item.get("category", "unknown")
-        valid_items.append(item)
+        histograms[chunk_id] = hist
+        categories[chunk_id] = item.get("category", "unknown")
+        valid_item = dict(item)
+        valid_item["chunk_id"] = chunk_id
+        valid_items.append(valid_item)
     index_ms = (time.perf_counter() - t0) * 1000
     build_ms  = (time.perf_counter() - t_total) * 1000
 
@@ -168,15 +198,25 @@ def run_scale(label: str) -> dict:
     # ── Paso 4: consultas ─────────────────────────────────────────────────────
     img_ids = list(histograms.keys())
     qids = np.random.choice(img_ids, size=min(N_QUERIES, len(img_ids)), replace=False)
+    category_counts = Counter(categories.values())
     latencies: list[float]  = []
     precisions: list[float] = []
+    recalls: list[float] = []
+    tp_values, fp_values, fn_values = [], [], []
     for qid in qids:
         t0 = time.perf_counter()
-        results = index.search(histograms[qid], k=K)
+        results = [r for r in index.search(histograms[qid], k=K + 1) if r.chunk_id != qid][:K]
         latencies.append((time.perf_counter() - t0) * 1000)
         qcat = categories[qid]
-        rel  = sum(1 for r in results if r.metadata.get("category") == qcat)
-        precisions.append(rel / len(results) if results else 0.0)
+        tp = sum(1 for r in results if r.metadata.get("category") == qcat)
+        fp = len(results) - tp
+        total_relevant = max(category_counts[qcat] - 1, 0)
+        fn = max(total_relevant - tp, 0)
+        precisions.append(tp / (tp + fp) if (tp + fp) else 0.0)
+        recalls.append(tp / (tp + fn) if (tp + fn) else 0.0)
+        tp_values.append(tp)
+        fp_values.append(fp)
+        fn_values.append(fn)
 
     avg_lat    = float(np.mean(latencies))
     throughput = 1000.0 / avg_lat if avg_lat > 0 else 0.0
@@ -188,8 +228,8 @@ def run_scale(label: str) -> dict:
         from backend.api.db import get_conn, vec_to_pg
         create_schema()
         rows_pg = [
-            (item["id"], Path(item["path"]).name, "", item["id"],
-             vec_to_pg(histograms[item["id"]]))
+            (item["chunk_id"], Path(item["path"]).name, "", item["chunk_id"],
+             vec_to_pg(histograms[item["chunk_id"]]))
             for item in valid_items
         ]
         with get_conn() as conn:
@@ -210,20 +250,27 @@ def run_scale(label: str) -> dict:
 
     pg_latencies: list[float] = []
     pg_precisions: list[float] = []
+    pg_recalls: list[float] = []
     if pg_ok:
         for qid in qids[:min(20, len(qids))]:
-            rows, lat = _try_pgvector_search(histograms[qid], k=K)
+            rows, lat = _try_pgvector_search(histograms[qid], k=K + 1)
+            rows = [r for r in rows if r["chunk_id"] != qid][:K]
             if lat >= 0:
                 pg_latencies.append(lat)
                 qcat = categories[qid]
-                rel  = sum(1 for r in rows if categories.get(r["chunk_id"], "") == qcat)
-                pg_precisions.append(rel / len(rows) if rows else 0.0)
+                tp = sum(1 for r in rows if categories.get(r["chunk_id"], "") == qcat)
+                fp = len(rows) - tp
+                total_relevant = max(category_counts[qcat] - 1, 0)
+                fn = max(total_relevant - tp, 0)
+                pg_precisions.append(tp / (tp + fp) if (tp + fp) else 0.0)
+                pg_recalls.append(tp / (tp + fn) if (tp + fn) else 0.0)
     pg_avg    = round(float(np.mean(pg_latencies)),  3) if pg_latencies  else None
     pg_p_at_k = round(float(np.mean(pg_precisions)), 4) if pg_precisions else None
+    pg_r_at_k = round(float(np.mean(pg_recalls)), 4) if pg_recalls else None
 
     result = {
         "scale": label, "n_images": len(manifest), "n_indexed": len(valid_items),
-        "n_codewords": N_CLUSTERS, "k": K,
+        "n_codewords": N_CLUSTERS, "vector_dim": N_CLUSTERS + COLOR_DIM, "k": K,
         "extract_ms":    round(extract_ms, 1),
         "codebook_ms":   round(codebook_ms, 1),
         "index_ms":      round(index_ms, 1),
@@ -234,8 +281,13 @@ def run_scale(label: str) -> dict:
         "peak_ram_mb":   round(peak_ram / 1024 ** 2, 2),
         "io_read_mb":    round(io_reads, 2),
         "precision_at_k": round(float(np.mean(precisions)), 4),
+        "recall_at_k": round(float(np.mean(recalls)), 4),
+        "avg_tp_at_k": round(float(np.mean(tp_values)), 2),
+        "avg_fp_at_k": round(float(np.mean(fp_values)), 2),
+        "avg_fn_at_k": round(float(np.mean(fn_values)), 2),
         "pgvector_avg_latency_ms": pg_avg,
         "pgvector_precision_at_k": pg_p_at_k,
+        "pgvector_recall_at_k": pg_r_at_k,
         "pgvector_available": pg_avg is not None,
     }
     print(f"  → {len(valid_items)} imgs | lat={avg_lat:.3f}ms | QPS={throughput:.0f} "

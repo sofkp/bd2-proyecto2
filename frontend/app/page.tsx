@@ -9,100 +9,62 @@ import {
   Zap, 
   BarChart3, 
   Layers, 
-  ArrowRight,
   Upload,
   Music,
   FileText,
   Play,
   Pause,
-  AlertCircle
+  X
 } from "lucide-react";
 
-// --- DATOS SIMULADOS PARA DEMOSTRACIONES (FALLBACK) ---
-const MOCK_TEXT_RESULTS = [
-  {
-    id: "agnews_042",
-    title: "Technology Markets React to New Search Infrastructure",
-    similarity: 0.9421,
-    category: "Sci/Tech",
-    snippet: "We propose a novel framework for learning shared vector spaces (embeddings) across different modalities. By using a visual codebook combined with contrastive learning, our method outperforms state-of-the-art architectures in both latency and recall..."
-  },
-  {
-    id: "agnews_108",
-    title: "Business Analysts Compare Database Search Performance",
-    similarity: 0.8872,
-    category: "Business",
-    snippet: "This paper analyzes the trade-offs of storing quantized image descriptors (codewords) in traditional inverted indexes vs storing raw high-dimensional embeddings in pgvector. Experimental results show that the codebook approach reduces disk I/O by 4x..."
-  },
-  {
-    id: "agnews_012",
-    title: "Researchers Benchmark Multimodal Retrieval Systems",
-    similarity: 0.8143,
-    category: "Sci/Tech",
-    snippet: "A common paradigm for multimodal retrieval consists of splitting raw data into atomic chunks, extracting local SIFT/MFCC features, clustering them with K-Means to build a joint codebook, and query execution using inverted lists..."
-  }
-];
+type ApiMetadata = {
+  title?: string;
+  source?: string;
+  snippet?: string;
+  content?: string;
+  image_url?: string;
+  genre?: string;
+  audio_url?: string | null;
+};
 
-const MOCK_IMAGE_RESULTS = [
-  {
-    id: "fashion200k_001",
-    title: "Fashion200K: Zapatilla deportiva",
-    similarity: 0.9634,
-    price: "S/ 389.00",
-    category: "Calzado Deportivo",
-    imgUrl: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80"
-  },
-  {
-    id: "fashion200k_002",
-    title: "Fashion200K: Zapatilla running",
-    similarity: 0.8912,
-    price: "S/ 249.00",
-    category: "Calzado Running",
-    imgUrl: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&q=80"
-  },
-  {
-    id: "fashion200k_003",
-    title: "Fashion200K: Calzado casual",
-    similarity: 0.8245,
-    price: "S/ 299.00",
-    category: "Calzado Casual",
-    imgUrl: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=400&q=80"
-  }
-];
+type ApiResult = {
+  chunk_id: string;
+  score: number;
+  metadata: ApiMetadata;
+};
 
-const MOCK_AUDIO_RESULTS = [
-  {
-    id: "fma_001",
-    title: "Midnight City Groove",
-    artist: "The Synthwave Project",
-    similarity: 0.9512,
-    duration: "3:42",
-    genres: "Electronic, Synthwave"
-  },
-  {
-    id: "fma_002",
-    title: "Electric Dreams",
-    artist: "Retro Wave Orchestra",
-    similarity: 0.8741,
-    duration: "4:05",
-    genres: "Electronic, Retro"
-  },
-  {
-    id: "fma_003",
-    title: "Starlight Disco",
-    artist: "Neon Horizon",
-    similarity: 0.8105,
-    duration: "3:18",
-    genres: "Disco, Pop"
-  }
-];
+type ApiStats = {
+  query_ms?: number;
+  index_mb?: number;
+  n_comparisons?: number;
+  vector_dim?: number;
+};
+
+type SearchResponse = {
+  results?: ApiResult[];
+  stats?: ApiStats;
+};
+
+type ResultItem = {
+  id: string;
+  title: string;
+  similarity: number;
+  category?: string;
+  snippet?: string;
+  fullText?: string;
+  imgUrl?: string;
+  price?: string;
+  artist?: string;
+  duration?: string;
+  genres?: string;
+  audio_url?: string | null;
+};
 
 export default function Home() {
   // Estados de Configuración
   const [modality, setModality] = useState<"text" | "image" | "audio">("text");
   const [approach, setApproach] = useState<"custom" | "postgres">("custom");
   const [queryText, setQueryText] = useState("");
-  const [kValue, setKValue] = useState(500);
   const [topN, setTopN] = useState(5);
   const [pdfFile, setPdfFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
@@ -230,7 +192,8 @@ export default function Home() {
   // Estados de Ejecución y Resultados
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<ResultItem[]>([]);
+  const [selectedTextResult, setSelectedTextResult] = useState<ResultItem | null>(null);
   const [stats, setStats] = useState({
     time: 0,
     queryMs: 0,
@@ -243,6 +206,7 @@ export default function Home() {
   const handleSearch = async () => {
     setIsLoading(true);
     setHasSearched(false);
+    setSelectedTextResult(null);
 
     const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
     const t0 = performance.now();
@@ -263,11 +227,13 @@ export default function Home() {
         form.append("file", pdfFile);
         const res = await fetch(`${API_URL}/pipeline/search/text/pdf?k=${topN}`, { method: "POST", body: form });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
+        const data = (await res.json()) as SearchResponse;
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
-        setResults((data.results ?? data).map((r: any) => ({
+        setResults((data.results ?? []).map((r: ApiResult) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
-          category: r.metadata.source || "AG News", snippet: r.metadata.snippet || "",
+          category: r.metadata.source || "AG News",
+          snippet: r.metadata.snippet || "",
+          fullText: r.metadata.content || r.metadata.snippet || "",
         })));
         applyStats(data.stats ?? {}, elapsed);
 
@@ -277,11 +243,13 @@ export default function Home() {
           body: JSON.stringify({ query: queryText, k: topN }),
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
+        const data = (await res.json()) as SearchResponse;
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
-        setResults((data.results ?? data).map((r: any) => ({
+        setResults((data.results ?? []).map((r: ApiResult) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
-          category: r.metadata.source || "AG News", snippet: r.metadata.snippet || "",
+          category: r.metadata.source || "AG News",
+          snippet: r.metadata.snippet || "",
+          fullText: r.metadata.content || r.metadata.snippet || "",
         })));
         applyStats(data.stats ?? {}, elapsed);
 
@@ -290,9 +258,9 @@ export default function Home() {
         form.append("file", audioFileRaw);
         const res = await fetch(`${API_URL}/pipeline/search/audio-file?k=${topN}`, { method: "POST", body: form });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
+        const data = (await res.json()) as SearchResponse;
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
-        setResults((data.results ?? data).map((r: any) => ({
+        setResults((data.results ?? []).map((r: ApiResult) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id,
           artist: r.metadata.genre || "", similarity: r.score, duration: "–", genres: r.metadata.genre || "",
           audio_url: r.metadata.audio_url || null,
@@ -304,9 +272,9 @@ export default function Home() {
         form.append("file", imageFile);
         const res = await fetch(`${API_URL}/pipeline/search/image?k=${topN}`, { method: "POST", body: form });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
+        const data = (await res.json()) as SearchResponse;
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
-        setResults((data.results ?? data).map((r: any) => ({
+        setResults((data.results ?? []).map((r: ApiResult) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
           category: "Imagen", imgUrl: `${API_URL}${r.metadata.image_url}`,
         })));
@@ -317,11 +285,13 @@ export default function Home() {
           method: "POST", headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: queryText, k: topN }),
         });
-        const data = await res.json();
+        const data = (await res.json()) as SearchResponse;
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
-        setResults((data.results ?? []).map((r: any) => ({
+        setResults((data.results ?? []).map((r: ApiResult) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
-          category: r.metadata.source || "AG News", snippet: r.metadata.snippet || "",
+          category: r.metadata.source || "AG News",
+          snippet: r.metadata.snippet || "",
+          fullText: r.metadata.content || r.metadata.snippet || "",
         })));
         applyStats({ query_ms: data.stats?.query_ms, n_comparisons: data.stats?.n_comparisons }, elapsed);
 
@@ -329,9 +299,9 @@ export default function Home() {
         const form = new FormData();
         form.append("file", imageFile);
         const res = await fetch(`${API_URL}/postgres/search/image?k=${topN}`, { method: "POST", body: form });
-        const data = await res.json();
+        const data = (await res.json()) as SearchResponse;
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
-        setResults((data.results ?? []).map((r: any) => ({
+        setResults((data.results ?? []).map((r: ApiResult) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id, similarity: r.score,
           category: "Imagen", imgUrl: `${API_URL}${r.metadata.image_url}`,
         })));
@@ -341,9 +311,9 @@ export default function Home() {
         const form = new FormData();
         form.append("file", audioFileRaw);
         const res = await fetch(`${API_URL}/postgres/search/audio?k=${topN}`, { method: "POST", body: form });
-        const data = await res.json();
+        const data = (await res.json()) as SearchResponse;
         const elapsed = parseFloat((performance.now() - t0).toFixed(2));
-        setResults((data.results ?? []).map((r: any) => ({
+        setResults((data.results ?? []).map((r: ApiResult) => ({
           id: r.chunk_id, title: r.metadata.title || r.chunk_id,
           artist: r.metadata.genre || "", similarity: r.score, duration: "–",
           genres: r.metadata.genre || "", audio_url: r.metadata.audio_url || null,
@@ -734,21 +704,15 @@ export default function Home() {
               <div className="flex justify-between items-center text-xs">
                 <span className="font-semibold text-zinc-400">Tamaño K (Codewords)</span>
                 <span className="font-bold text-purple-400">
-                  {modality === "text" ? "200 words" : modality === "image" ? "100 clusters" : "50 clusters"}
+                  {modality === "text" ? "1000 words" : modality === "image" ? "100 clusters" : "512 clusters"}
                 </span>
               </div>
-              <div className="w-full bg-zinc-900 rounded-full h-1.5">
-                <div
-                  className="bg-purple-600 h-1.5 rounded-full transition-all"
-                  style={{ width: modality === "text" ? "10%" : modality === "image" ? "5%" : "2.5%" }}
-                />
-              </div>
-              <span className="text-[10px] text-zinc-600">
+              <span className="text-[10px] text-zinc-500">
                 {modality === "text"
-                  ? "Top-200 palabras por TF-IDF · fijo al indexar"
+                  ? "Top-1000 palabras por TF-IDF · fijo al indexar"
                   : modality === "image"
                   ? "100 visual words · KMeans sobre descriptores SIFT"
-                  : "50 acoustic words · MiniBatchKMeans sobre MFCC"}
+                  : "512 acoustic words · MiniBatchKMeans sobre MFCC"}
               </span>
             </div>
 
@@ -884,8 +848,13 @@ export default function Home() {
             {hasSearched && !isLoading && results.length > 0 && (
               <div className="flex flex-col gap-4">
                 {/* Resultados Texto */}
-                {modality === "text" && results.map((item, idx) => (
-                  <div key={item.id} className="bg-zinc-950 p-5 rounded-2xl border border-zinc-900 hover:border-zinc-800 transition-all flex flex-col gap-2">
+                {modality === "text" && results.map((item, idx) => {
+                  const rowId = `${item.id}-${idx}`;
+                  const fullText = item.fullText || item.snippet || "";
+                  const canOpen = fullText.length > 0;
+
+                  return (
+                  <div key={rowId} className="bg-zinc-950 p-5 rounded-2xl border border-zinc-900 hover:border-zinc-800 transition-all flex flex-col gap-2">
                     <div className="flex items-center justify-between gap-4">
                       <span className="text-[10px] bg-purple-950/40 text-purple-400 font-bold px-2 py-0.5 rounded-md border border-purple-900/50">
                         #{idx + 1} · {item.id}
@@ -899,8 +868,19 @@ export default function Home() {
                     <p className="text-xs text-zinc-400 leading-relaxed mt-2 border-l-2 border-purple-600 pl-3">
                       {item.snippet}
                     </p>
+                    {canOpen && (
+                      <button
+                        type="button"
+                        onClick={() => setSelectedTextResult(item)}
+                        className="mt-1 inline-flex w-fit items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-2.5 py-1 text-[10px] font-semibold text-zinc-300 hover:border-purple-700 hover:text-purple-300 transition-all"
+                      >
+                        <FileText className="h-3 w-3" />
+                        Ver texto completo
+                      </button>
+                    )}
                   </div>
-                ))}
+                  );
+                })}
 
                 {/* Resultados Imagen */}
                 {modality === "image" && (
@@ -981,6 +961,44 @@ export default function Home() {
           <span>Desarrollado para la asignatura de Base de Datos II</span>
         </div>
       </footer>
+
+      {selectedTextResult && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 px-4 py-6 backdrop-blur-sm">
+          <div className="flex max-h-[86vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 shadow-2xl shadow-black/60">
+            <div className="flex items-start justify-between gap-4 border-b border-zinc-900 bg-zinc-950 px-5 py-4">
+              <div className="min-w-0">
+                <span className="mb-2 inline-flex max-w-full items-center rounded-md border border-purple-900/50 bg-purple-950/40 px-2 py-0.5 text-[10px] font-bold text-purple-300">
+                  {selectedTextResult.id}
+                </span>
+                <h3 className="text-sm font-bold text-white">{selectedTextResult.title}</h3>
+                <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] font-medium text-zinc-500">
+                  <span>{selectedTextResult.category || "Documento"}</span>
+                  <span className="h-1 w-1 rounded-full bg-zinc-700" />
+                  <span className="text-emerald-400">
+                    {(selectedTextResult.similarity * 100).toFixed(2)}% similitud
+                  </span>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedTextResult(null)}
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-zinc-800 bg-zinc-900 text-zinc-400 transition-colors hover:border-purple-700 hover:text-white"
+                aria-label="Cerrar vista de documento"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+
+            <div className="min-h-0 overflow-y-auto px-5 py-4">
+              <div className="border-l-2 border-purple-600 pl-4">
+                <p className="whitespace-pre-wrap text-sm leading-7 text-zinc-300">
+                  {selectedTextResult.fullText || selectedTextResult.snippet}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
