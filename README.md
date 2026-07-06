@@ -491,14 +491,6 @@ Después de la presentación se corrigieron varios puntos observados durante la 
 | Los resultados de texto solo mostraban un snippet. | El backend devuelve `content` y el frontend permite abrir el texto completo del resultado. PostgreSQL GIN también retorna `content`. | `backend/api/pipeline_state.py`, `backend/api/routes/postgres.py`, `frontend/app/page.tsx` |
 | Los datasets viejos no cubrían bien 1K, 10K y 100K archivos por modalidad. | Se actualizó la preparación a AG News, Fashion200K y FMA 100K WAV, con manifests por documentos/archivos fuente. | `scripts/download_data.sh`, `experiments/prepare_data.py`, `experiments/prepare_*_data.py` |
 
-Notas:
-
-- SPIMI se usa solo en texto porque su estructura natural es un índice invertido de postings por término/codeword.
-- En imagen y audio el índice propio sigue siendo búsqueda vectorial lineal sobre histogramas; la comparación escalable se realiza con pgvector/HNSW.
-- El tamaño del codebook acústico es un hiperparámetro empírico. Se eligió 512 para usar un vocabulario más expresivo y cercano a configuraciones de Bag-of-Audio-Words con cientos de palabras acústicas.
-- Para que FMA 100K sea ejecutable en tiempos razonables, cada archivo de audio se resume con los primeros 10 segundos decodificables. La unidad experimental sigue siendo el archivo/canción, no cada ventana interna.
-- Si PostgreSQL ya había creado `pg_audio_docs` con `vector(50)`, se debe recrear el volumen para usar `vector(512)`.
-
 ## 10. Análisis de resultados
 
 Los resultados post-entrega reemplazan la interpretación numérica de la primera corrida, porque ahora se ejecutan sobre datasets actualizados y con escalas definidas por documentos/archivos fuente.
@@ -544,11 +536,9 @@ La conclusión principal es que no hay un ganador único. La implementación pro
 
 El proyecto logró unificar texto, imagen y audio bajo una arquitectura común. Aunque cada modalidad usa técnicas distintas, todas terminan en histogramas de codewords que pueden indexarse y compararse.
 
-Los experimentos post-entrega muestran que no existe un único enfoque ganador para todas las modalidades. En texto, PostgreSQL GIN fue la alternativa más fuerte: mantuvo precisión perfecta en la corrida y latencias bajas incluso con 100K documentos. El índice propio con SPIMI sigue siendo valioso porque permite explicar y controlar todo el proceso de construcción del índice invertido, pero su latencia crece cuando aumenta el número de candidatos.
+Los experimentos post-entrega muestran que no existe un único enfoque ganador para todas las modalidades. En texto, PostgreSQL GIN fue la alternativa más fuerte ya que mantuvo precisión perfecta en la corrida y latencias bajas incluso con 100K documentos. El índice propio con SPIMI sigue siendo valioso porque permite explicar y controlar todo el proceso de construcción del índice invertido, pero su latencia crece cuando aumenta el número de candidatos.
 
 En imagen y audio, los índices propios fueron competitivos en escalas pequeñas por trabajar en memoria, pero su búsqueda lineal sobre histogramas se vuelve costosa al llegar a 100K archivos. pgvector/HNSW ofrece una ruta más estable para escalar y mantener persistencia dentro de PostgreSQL. La precisión en imagen se mantuvo razonable para un enfoque SIFT/BoVW/HSV clásico, mientras que audio fue la modalidad más difícil por la variabilidad de las canciones y la ambigüedad de los géneros.
-
-Las correcciones post-presentación alinearon mejor el sistema con la metodología vista en clase: SPIMI se usa en texto, SIFT se aplica sobre la imagen completa, audio usa un vocabulario acústico más expresivo de 512 clusters y la experimentación reporta métricas de efectividad con TP, FP, FN, Precision@10 y Recall@10.
 
 Como mejoras futuras, se propone aumentar el número de visual words, probar embeddings modernos para imagen/audio, afinar parámetros HNSW, reportar Recall@10 también en texto y seguir optimizando el tiempo de construcción para datasets grandes.
 
