@@ -1,4 +1,6 @@
+import json
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 from backend.src.index.inverted_index import Posting
@@ -60,6 +62,64 @@ class SpimiIndexer:
             blocks.append(self._build_block(len(blocks), current))
         return blocks
 
+    def create_block_files(
+        self,
+        records: list[dict[str, Any]],
+        output_dir: str | Path,
+    ) -> list[Path]:
+        """Create SPIMI blocks and persist each partial block to disk."""
+        out = Path(output_dir)
+        out.mkdir(parents=True, exist_ok=True)
+
+        block_files: list[Path] = []
+        current: dict[int, list[Posting]] = {}
+        records_in_block = 0
+        block_id = 0
+
+        for record in records:
+            histogram_record = validate_histogram_record(record)
+            if histogram_record.modality != "text":
+                raise ValueError("SPIMI only accepts text histograms")
+
+            self._add_histogram(
+                current,
+                histogram_record.chunk_id,
+                histogram_record.histogram,
+            )
+            records_in_block += 1
+            if records_in_block == self.block_size:
+                block = self._build_block(block_id, current)
+                block_files.append(self.write_block(block, out))
+                current = {}
+                records_in_block = 0
+                block_id += 1
+
+        if current:
+            block = self._build_block(block_id, current)
+            block_files.append(self.write_block(block, out))
+
+        return block_files
+
+    def write_block(self, block: SpimiBlock, output_dir: str | Path) -> Path:
+        """Write one SPIMI block as JSON in secondary storage."""
+        out = Path(output_dir)
+        out.mkdir(parents=True, exist_ok=True)
+        path = out / f"spimi_block_{block.block_id:05d}.json"
+        path.write_text(json.dumps(block.to_dict(), ensure_ascii=False), encoding="utf-8")
+        return path
+
+    def read_block(self, path: str | Path) -> SpimiBlock:
+        """Read one persisted SPIMI block from disk."""
+        raw = json.loads(Path(path).read_text(encoding="utf-8"))
+        postings = {
+            int(codeword): [
+                Posting(item["chunk_id"], float(item["frequency"]))
+                for item in items
+            ]
+            for codeword, items in raw["postings"].items()
+        }
+        return SpimiBlock(block_id=int(raw["block_id"]), postings=postings)
+
     def merge_blocks(self, blocks: list[SpimiBlock]) -> dict[int, list[Posting]]:
         """Merge SPIMI blocks into one inverted index posting map."""
         merged: dict[int, list[Posting]] = {}
@@ -71,6 +131,11 @@ class SpimiIndexer:
             codeword: sorted(postings, key=lambda item: item.chunk_id)
             for codeword, postings in sorted(merged.items())
         }
+
+    def merge_block_files(self, block_files: list[str | Path]) -> dict[int, list[Posting]]:
+        """Merge persisted SPIMI blocks from disk."""
+        blocks = [self.read_block(path) for path in block_files]
+        return self.merge_blocks(blocks)
 
     def _add_histogram(
         self,

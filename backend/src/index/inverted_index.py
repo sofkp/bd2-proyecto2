@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import numpy as np
 
@@ -26,8 +28,13 @@ class InvertedIndex:
         """Add one codebook histogram record to the index."""
         self.add_histogram(validate_histogram_record(record))
 
-    def build_with_spimi(self, records: list[dict], block_size: int = 1000) -> int:
-        """Build the posting map with SPIMI blocks and keep histograms for scoring."""
+    def build_with_spimi(
+        self,
+        records: list[dict],
+        block_size: int = 1000,
+        work_dir: str | Path | None = None,
+    ) -> int:
+        """Build postings through SPIMI blocks persisted in secondary storage."""
         from backend.src.index.spimi import SpimiIndexer
 
         self._postings = {}
@@ -44,9 +51,15 @@ class InvertedIndex:
             self._metadata[record.chunk_id] = record.metadata
 
         indexer = SpimiIndexer(block_size=block_size)
-        blocks = indexer.create_blocks(records)
-        self._postings = indexer.merge_blocks(blocks)
-        return len(blocks)
+        if work_dir is not None:
+            block_files = indexer.create_block_files(records, work_dir)
+            self._postings = indexer.merge_block_files(block_files)
+            return len(block_files)
+
+        with TemporaryDirectory(prefix="spimi_blocks_") as tmp:
+            block_files = indexer.create_block_files(records, tmp)
+            self._postings = indexer.merge_block_files(block_files)
+            return len(block_files)
 
     def add_histogram(self, record: HistogramRecord) -> None:
         """Index one validated text histogram."""

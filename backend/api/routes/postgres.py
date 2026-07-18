@@ -1,4 +1,5 @@
 import time
+import re
 
 from fastapi import APIRouter, File, UploadFile
 from pydantic import BaseModel, Field
@@ -26,6 +27,12 @@ def _wrap(results, query_ms: float, index_type: str) -> dict:
     }
 
 
+def _or_tsquery(query: str) -> str:
+    """Build a simple OR tsquery from alphanumeric terms."""
+    terms = re.findall(r"[A-Za-z0-9]+", query.lower())
+    return " | ".join(terms) if terms else "emptyqueryterm"
+
+
 @router.post("/search/text")
 def pg_search_text(request: PgTextRequest) -> dict:
     t0 = time.perf_counter()
@@ -34,18 +41,23 @@ def pg_search_text(request: PgTextRequest) -> dict:
             with conn.cursor() as cur:
                 cur.execute(
                     """
+                    WITH q AS (
+                        SELECT
+                            websearch_to_tsquery('english', %s) AS web_q,
+                            to_tsquery('english', %s) AS or_q
+                    )
                     SELECT chunk_id, title, snippet, source, content,
-                           ts_rank(tsv, plainto_tsquery('english', %s)) AS score
-                    FROM pg_text_docs
-                    WHERE tsv @@ plainto_tsquery('english', %s)
+                           ts_rank(tsv, q.web_q) + 0.5 * ts_rank(tsv, q.or_q) AS score
+                    FROM pg_text_docs, q
+                    WHERE tsv @@ q.web_q OR tsv @@ q.or_q
                     ORDER BY score DESC
                     LIMIT %s
                     """,
-                    (request.query, request.query, request.k),
+                    (request.query, _or_tsquery(request.query), request.k),
                 )
                 rows = cur.fetchall()
     except Exception as e:
-        return _wrap([], 0.0, "GIN tsvector")
+        return _wrap([], 0.0, "GIN tsvector websearch/OR")
 
     ms = (time.perf_counter() - t0) * 1000
     results = [
@@ -61,7 +73,7 @@ def pg_search_text(request: PgTextRequest) -> dict:
         }
         for r in rows
     ]
-    return _wrap(results, ms, "GIN tsvector")
+    return _wrap(results, ms, "GIN tsvector websearch/OR")
 
 
 @router.post("/search/image")

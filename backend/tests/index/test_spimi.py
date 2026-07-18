@@ -57,3 +57,34 @@ def test_spimi_indexer_rejects_invalid_block_size() -> None:
     """Block size must be positive."""
     with pytest.raises(ValueError, match="block_size"):
         SpimiIndexer(block_size=0)
+
+
+def test_create_block_files_persists_blocks_to_disk(tmp_path) -> None:
+    """SPIMI should materialize partial blocks in secondary storage."""
+    records = [
+        {"chunk_id": "a", "modality": "text", "histogram": [1, 0]},
+        {"chunk_id": "b", "modality": "text", "histogram": [0, 2]},
+    ]
+
+    block_files = SpimiIndexer(block_size=1).create_block_files(records, tmp_path)
+
+    assert [path.name for path in block_files] == [
+        "spimi_block_00000.json",
+        "spimi_block_00001.json",
+    ]
+    assert all(path.exists() for path in block_files)
+
+
+def test_read_block_restores_postings_from_disk(tmp_path) -> None:
+    """Persisted SPIMI blocks should be readable before merging."""
+    indexer = SpimiIndexer(block_size=10)
+    block = indexer.create_blocks(
+        [{"chunk_id": "a", "modality": "text", "histogram": [2]}]
+    )[0]
+
+    path = indexer.write_block(block, tmp_path)
+    restored = indexer.read_block(path)
+
+    assert restored.block_id == block.block_id
+    assert restored.postings[0][0].chunk_id == "a"
+    assert restored.postings[0][0].frequency == 2.0

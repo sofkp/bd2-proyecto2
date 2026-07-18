@@ -44,6 +44,24 @@ def test_get_histogram_returns_stored_vector() -> None:
     assert np.array_equal(index.get_histogram("a"), np.array([1.0, 2.0]))
 
 
+def test_build_with_spimi_uses_persisted_blocks(tmp_path) -> None:
+    """SPIMI-backed builds should be able to use a secondary-storage directory."""
+    index = InvertedIndex()
+    records = [
+        {"chunk_id": "a", "modality": "text", "histogram": [1, 0]},
+        {"chunk_id": "b", "modality": "text", "histogram": [0, 1]},
+    ]
+
+    n_blocks = index.build_with_spimi(records, block_size=1, work_dir=tmp_path)
+
+    assert n_blocks == 2
+    assert sorted(path.name for path in tmp_path.iterdir()) == [
+        "spimi_block_00000.json",
+        "spimi_block_00001.json",
+    ]
+    assert [posting.chunk_id for posting in index.get_postings(0)] == ["a"]
+
+
 def test_add_record_rejects_non_text_modality() -> None:
     """The inverted index should only receive text histograms."""
     index = InvertedIndex()
@@ -62,4 +80,3 @@ def test_add_record_rejects_duplicate_chunk_id() -> None:
 
     with pytest.raises(ValueError, match="already indexed"):
         index.add_record(record)
-
