@@ -320,21 +320,66 @@ Los resultados guardados en `experiments/results/` son:
 | Audio | 10K | 9,989 | 28.916 | 13.540 | 0.122 | 0.115 | 0.0018 | 0.0018 |
 | Audio | 100K | 99,847 | 313.680 | 317.831 | 0.026 | 0.020 | 0.0004 | 0.0003 |
 
-## 14. Análisis
+## 14. Gráficas Generadas
+
+Las gráficas finales se generan con `experiments/plot_results.py` y quedan guardadas en `experiments/grafica_analisis/`. Estas figuras complementan la tabla anterior porque permiten ver más claramente cómo cambian la latencia, la precisión y el recall cuando aumenta la escala.
+
+### 14.1. Comparación Por Escala
+
+| Escala | Latencia | Precisión |
+| --- | --- | --- |
+| 1K | ![Comparación de latencia 1K](../experiments/grafica_analisis/comparison_latency_1k.png) | ![Comparación de precisión 1K](../experiments/grafica_analisis/comparison_precision_1k.png) |
+| 10K | ![Comparación de latencia 10K](../experiments/grafica_analisis/comparison_latency_10k.png) | ![Comparación de precisión 10K](../experiments/grafica_analisis/comparison_precision_10k.png) |
+| 100K | ![Comparación de latencia 100K](../experiments/grafica_analisis/comparison_latency_100k.png) | ![Comparación de precisión 100K](../experiments/grafica_analisis/comparison_precision_100k.png) |
+
+Gráfica de escalabilidad general:
+
+![Escalabilidad de latencia](../experiments/grafica_analisis/scalability_latency.png)
+
+### 14.2. Gráficas Por Modalidad
+
+| Modalidad | Latencia | Precisión |
+| --- | --- | --- |
+| Texto | ![Latencia en texto](../experiments/grafica_analisis/text_latency.png) | ![Precisión en texto](../experiments/grafica_analisis/text_precision.png) |
+| Imagen | ![Latencia en imagen](../experiments/grafica_analisis/image_latency.png) | ![Precisión en imagen](../experiments/grafica_analisis/image_precision.png) |
+| Audio | ![Latencia en audio](../experiments/grafica_analisis/audio_latency.png) | ![Precisión en audio](../experiments/grafica_analisis/audio_precision.png) |
+
+### 14.3. Gráficas De Apoyo
+
+| Aspecto | Gráfica |
+| --- | --- |
+| Throughput textual | ![Throughput en texto](../experiments/grafica_analisis/text_throughput.png) |
+| Uso de RAM en texto | ![Uso de RAM en texto](../experiments/grafica_analisis/text_ram.png) |
+| Throughput de audio | ![Throughput en audio](../experiments/grafica_analisis/audio_throughput.png) |
+| Recall en 100K | ![Recall por modalidad en 100K](../experiments/grafica_analisis/comparison_recall_100k.png) |
+
+## 15. Análisis
 
 ### Texto
 
-PostgreSQL GIN mantiene una efectividad ligeramente mayor en 10K y 100K documentos, con Precision@10 de 0.730 y 0.795 respectivamente. El índice propio queda cerca en calidad, con 0.690 y 0.766 en esas mismas escalas.
+Texto es la modalidad donde la comparación con PostgreSQL resulta más directa, porque ambos enfoques trabajan sobre contenido textual y estructuras pensadas para recuperación de información. La implementación propia representa cada documento como un histograma TF-IDF sobre un vocabulario de 1000 términos y luego usa un índice invertido con ranking por similitud coseno. PostgreSQL, por su parte, usa `tsvector`, un índice GIN y ranking con `ts_rank`.
 
-En latencia, el índice propio es más rápido en 1K y 10K, mientras que PostgreSQL GIN pasa a ser más rápido en 100K. Esto tiene sentido porque el índice propio debe rankear más candidatos conforme crece la colección, mientras que GIN aprovecha una estructura especializada y persistente. En la corrida final de 100K, SPIMI generó 101 bloques y el pico de memoria reportado fue de 1761.82 MB.
+En 1K, el índice propio tiene mejor latencia que PostgreSQL GIN: 1.171 ms frente a 10.951 ms. Esto ocurre porque en una colección pequeña el costo de consultar PostgreSQL y usar el motor SQL puede ser mayor que recorrer una estructura propia en memoria. En 10K se mantiene la misma tendencia: el índice propio tarda 13.322 ms y PostgreSQL GIN 35.115 ms.
+
+En 100K la relación cambia. PostgreSQL GIN baja a 113.094 ms, mientras que el índice propio sube a 187.956 ms. Esto tiene sentido porque, conforme aumenta la colección, el índice propio debe rankear más candidatos y depende más de estructuras en memoria. En cambio, GIN aprovecha una estructura persistente optimizada para búsqueda full-text. En esta escala, SPIMI generó 101 bloques y el pico de memoria reportado fue de 1761.82 MB, lo que también evidencia que la construcción del índice textual ya está trabajando con un volumen considerable.
+
+En efectividad, los resultados son bastante cercanos. En 1K, el índice propio obtiene Precision@10 de 0.584 y PostgreSQL 0.550. En 10K y 100K, PostgreSQL queda ligeramente por encima, con 0.730 y 0.795 frente a 0.690 y 0.766 del índice propio. Esto indica que GIN logra ordenar un poco mejor los primeros resultados en escalas mayores, pero la diferencia no es tan grande.
+
+El Recall@10 en texto es bajo, especialmente en 10K y 100K, porque el ground truth se define por categoría de AG News. Cada categoría contiene muchos documentos relevantes, pero el sistema solo devuelve 10 resultados. Por eso, aunque el Top 10 pueda tener varios documentos correctos, la proporción respecto al total de relevantes sigue siendo pequeña. En este caso, Precision@10 describe mejor la calidad inmediata del ranking que Recall@10.
 
 ### Imagen
 
-La latencia es directamente proporcional a la colección. Esto se observó ya que pasa de 2.587 ms en 1K a 22.953 ms en 10K y 315.680 ms en 100K. El crecimiento se explica porque el índice propio compara contra muchos más histogramas conforme aumenta la escala.
+Cada imagen se describe con histogramas basados en SIFT, RootSIFT y color HSV, formando un vector de 116 dimensiones. Esta representación permite capturar tanto patrones locales de forma/textura como información general de color. La implementación propia compara estos histogramas con distancia L2, mientras que PostgreSQL usa pgvector/HNSW.
 
-pgvector/HNSW, en cambio, mantiene una latencia mucho más estable: 9.866 ms en 1K, 11.108 ms en 10K y 14.839 ms en 100K. Esto muestra la ventaja de usar una estructura aproximada especializada cuando la colección ya es grande. En 100K, pgvector es claramente más rápido, aunque la precisión queda bastante cercana entre ambos enfoques: 0.314 para el índice propio y 0.295 para pgvector.
+En 1K, la implementación propia es más rápida que pgvector: 2.587 ms frente a 9.866 ms. Igual que en texto, para una colección pequeña el costo de una búsqueda directa en memoria puede ser menor que pasar por PostgreSQL. Sin embargo, al crecer la escala, la diferencia cambia de forma clara. En 10K, el índice propio sube a 22.953 ms, mientras pgvector se mantiene en 11.108 ms. En 100K, la diferencia ya es muy marcada: 315.680 ms para la implementación propia contra 14.839 ms para pgvector.
 
-La precisión visual no es muy alta en términos absolutos porque Fashion200K tiene categorías amplias y visualmente ambiguas. Dos prendas pueden compartir categoría pero diferir mucho en color, forma o estilo; también puede ocurrir lo contrario, que dos imágenes sean visualmente parecidas aunque no tengan exactamente la misma etiqueta. Por eso Precision@10 es más útil para observar la calidad inmediata del ranking, mientras que Recall@10 queda bajo porque solo se recuperan 10 resultados de una cantidad grande de posibles relevantes por categoría.
+Este comportamiento muestra una limitación importante del índice visual propio: la búsqueda crece casi linealmente porque compara contra muchos histogramas en memoria. pgvector/HNSW, en cambio, mantiene una latencia mucho más estable porque utiliza una estructura aproximada de vecinos cercanos. Por ende, para colecciones grandes, pgvector es claramente más conveniente.
+
+En precisión, los dos enfoques quedan bastante cerca. En 1K, la implementación propia obtiene 0.242 y pgvector 0.225. En 10K, pgvector supera ligeramente al índice propio con 0.310 frente a 0.284. En 100K, el índice propio vuelve a quedar un poco por encima, con 0.314 frente a 0.295. Estas diferencias pequeñas sugieren que ambos están trabajando sobre una representación visual similar y que el cambio principal entre ellos está más en la estructura de búsqueda que en la calidad del descriptor.
+
+La precisión visual no es muy alta en términos absolutos porque Fashion200K tiene categorías amplias y visualmente ambiguas. Dos prendas pueden compartir categoría pero diferir mucho en color, forma, textura o estilo. También puede pasar lo contrario: dos imágenes pueden verse muy parecidas aunque no tengan exactamente la misma etiqueta. Esto afecta la evaluación porque el ground truth por categoría no siempre coincide con la percepción visual humana.
+
+El Recall@10 queda bajo por la misma razón que en texto y audio: se recuperan solo 10 resultados dentro de categorías con muchos elementos relevantes. Por eso, en imagen, Precision@10 es más útil para analizar si los primeros resultados que vería el usuario son razonables, mientras que Recall@10 funciona más como una medida de cobertura global.
 
 ### Audio
 
@@ -346,7 +391,7 @@ En latencia, el comportamiento también cambia con la escala. En 1K y 10K pgvect
 
 El Recall@10 es bajo en todas las escalas porque se compara un Top 10 contra grupos de relevantes muy grandes. Por ejemplo, si una categoría tiene cientos o miles de canciones, recuperar 10 resultados limita naturalmente el recall máximo observable. Por eso, para audio, Precision@10 describe mejor si los primeros resultados son razonables para el usuario, mientras que Recall@10 sirve más como referencia de cobertura global.
 
-## 15. Trade-Offs
+## 16. Trade-Offs
 
 | Enfoque | Ventajas | Limitaciones |
 | --- | --- | --- |
@@ -354,13 +399,13 @@ El Recall@10 es bajo en todas las escalas porque se compara un Top 10 contra gru
 | PostgreSQL GIN | Muy fuerte para texto, persistente, integrado con SQL | Solo aplica directamente a texto |
 | pgvector HNSW | Persistencia y búsqueda vectorial aproximada | Requiere ajustar parámetros y mantener la base |
 
-## 16. Conclusiones
+## 17. Conclusiones
 
 El proyecto integra texto, imagen y audio bajo una arquitectura común de recuperación. Aunque cada modalidad necesita extractores distintos, todas terminan en representaciones comparables que pueden indexarse y rankearse.
 
 La comparación muestra que no hay una solución única para todos los casos. Los índices propios son útiles para entender y controlar el proceso de recuperación. Por otro lado, PostgreSQL y pgvector ofrecen una alternativa más preparada para persistencia y escalabilidad.
 
-## 17. Trabajo Futuro
+## 18. Trabajo Futuro
 
 - Ejecutar más experimentos con distintos tamaños de diccionario textual.
 - Guardar codebooks entrenados para reducir tiempos de arranque.

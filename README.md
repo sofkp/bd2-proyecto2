@@ -2,8 +2,8 @@
 
 Este proyecto es un buscador multimodal para texto, imágenes y audio. La idea fue construir un mismo flujo de recuperación para datos de naturalezas distintas y comparar nuestra implementación con alternativas en PostgreSQL.
 
-- Informe técnico completo: [docs/INFORME_TECNICO.md](docs/INFORME_TECNICO.md)
-- Presentación en PDF: [bd2_proyecto2.pdf](bd2_proyecto2.pdf)
+- Informe técnico completo: [docs/informe.md](docs/informe.md)
+- Presentación en PDF: [docs/bd2_proyecto2.pdf](docs/bd2_proyecto2.pdf)
 - Presentación original: [Canva](https://canva.link/6w43yqgg9iwkh0e)
 
 ## Sobre El Proyecto
@@ -299,6 +299,28 @@ Los resultados guardados están en:
 - `experiments/results/text_results.json`
 - `experiments/results/image_results.json`
 - `experiments/results/audio_results.json`
+
+Las gráficas finales están en `experiments/grafica_analisis/`.
+
+### Comparación Por Escala
+
+| Escala | Latencia | Precisión |
+| --- | --- | --- |
+| 1K | ![Comparación de latencia 1K](experiments/grafica_analisis/comparison_latency_1k.png) | ![Comparación de precisión 1K](experiments/grafica_analisis/comparison_precision_1k.png) |
+| 10K | ![Comparación de latencia 10K](experiments/grafica_analisis/comparison_latency_10k.png) | ![Comparación de precisión 10K](experiments/grafica_analisis/comparison_precision_10k.png) |
+| 100K | ![Comparación de latencia 100K](experiments/grafica_analisis/comparison_latency_100k.png) | ![Comparación de precisión 100K](experiments/grafica_analisis/comparison_precision_100k.png) |
+
+Gráfica de escalabilidad general:
+
+![Escalabilidad de latencia](experiments/grafica_analisis/scalability_latency.png)
+
+### Gráficas Por Modalidad
+
+| Modalidad | Latencia | Precisión |
+| --- | --- | --- |
+| Texto | ![Latencia en texto](experiments/grafica_analisis/text_latency.png) | ![Precisión en texto](experiments/grafica_analisis/text_precision.png) |
+| Imagen | ![Latencia en imagen](experiments/grafica_analisis/image_latency.png) | ![Precisión en imagen](experiments/grafica_analisis/image_precision.png) |
+| Audio | ![Latencia en audio](experiments/grafica_analisis/audio_latency.png) | ![Precisión en audio](experiments/grafica_analisis/audio_precision.png) |
 
 ### Resumen:
 
