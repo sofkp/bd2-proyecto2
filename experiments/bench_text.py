@@ -8,6 +8,7 @@ Uso:
 """
 
 import json
+import re
 import sys
 import time
 import tracemalloc
@@ -86,7 +87,7 @@ _load_chunks_newsgroups = _load_chunks_inline
 
 
 def _build_histogram(chunk_tf: dict, codebook: dict) -> np.ndarray:
-    hist = np.zeros(CODEBOOK_K, dtype=np.float32)
+    hist = np.zeros(len(codebook), dtype=np.float32)
     for word, count in chunk_tf.get("tf", {}).items():
         if word in codebook:
             idx = codebook[word]["index"]
@@ -123,19 +124,32 @@ def _index_chunks_pg(chunks: list[dict]) -> bool:
         return False
 
 
+def _or_tsquery(query: str) -> str:
+    """Construye una tsquery OR simple a partir de terminos alfanumericos."""
+    terms = re.findall(r"[A-Za-z0-9]+", query.lower())
+    return " | ".join(terms) if terms else "emptyqueryterm"
+
+
 def _try_gin_search(query: str, k: int = 10) -> tuple[list, float]:
-    """Intenta consulta GIN en PostgreSQL. Retorna (results, latency_ms)."""
+    """Intenta consulta GIN flexible en PostgreSQL. Retorna (results, latency_ms)."""
     try:
         from backend.api.db import get_conn
+        or_query = _or_tsquery(query)
         t0 = time.perf_counter()
         with get_conn() as conn:
             with conn.cursor() as cur:
                 cur.execute(
-                    """SELECT chunk_id, ts_rank(tsv, plainto_tsquery('english',%s)) AS score
-                       FROM pg_text_docs
-                       WHERE tsv @@ plainto_tsquery('english',%s)
+                    """WITH q AS (
+                           SELECT
+                             websearch_to_tsquery('english', %s) AS web_q,
+                             to_tsquery('english', %s) AS or_q
+                       )
+                       SELECT chunk_id,
+                              ts_rank(tsv, q.web_q) + 0.5 * ts_rank(tsv, q.or_q) AS score
+                       FROM pg_text_docs, q
+                       WHERE tsv @@ q.web_q OR tsv @@ q.or_q
                        ORDER BY score DESC LIMIT %s""",
-                    (query, query, k),
+                    (query, or_query, k),
                 )
                 rows = cur.fetchall()
         return rows, (time.perf_counter() - t0) * 1000
@@ -143,13 +157,13 @@ def _try_gin_search(query: str, k: int = 10) -> tuple[list, float]:
         return [], -1.0
 
 
-def run_scale(label: str) -> dict:
+def run_scale(label: str, codebook_k: int = CODEBOOK_K) -> dict:
     manifest_path = DATA_DIR / f"text_{label}.json"
     if not manifest_path.exists():
         print(f"  [SKIP] Manifiesto no encontrado: {manifest_path.name}")
         return {}
     manifest = json.loads(manifest_path.read_text())
-    print(f"\n[{label.upper()}] {len(manifest)} documentos fuente")
+    print(f"\n[{label.upper()}] {len(manifest)} documentos fuente | codebook_k={codebook_k}")
 
     tracemalloc.start()
     io_before  = psutil.disk_io_counters()
@@ -171,7 +185,7 @@ def run_scale(label: str) -> dict:
 
     # ── Paso 3: codebook ───────────────────────────────────────────────────────
     t0 = time.perf_counter()
-    cb = CodebookText(top_k=CODEBOOK_K)
+    cb = CodebookText(top_k=codebook_k)
     cb.build_codebook(chunks_tf)
     codebook_ms = (time.perf_counter() - t0) * 1000
     print(f"  Paso 3/4 codebook ({len(cb.codebook)} términos)  ({codebook_ms:.0f}ms)")
@@ -179,7 +193,6 @@ def run_scale(label: str) -> dict:
     # ── Paso 4: histogramas + índice ───────────────────────────────────────────
     t0 = time.perf_counter()
     records: list[dict] = []
-    histograms: dict[str, np.ndarray] = {}
     categories: dict[str, str] = {}
     for chunk, ctf in zip(chunks, chunks_tf):
         hist = _build_histogram(ctf, cb.codebook)
@@ -187,9 +200,8 @@ def run_scale(label: str) -> dict:
         cat  = chunk.get("metadata", {}).get("category", "unknown")
         records.append({
             "chunk_id": cid, "modality": "text",
-            "histogram": hist.tolist(), "metadata": {"category": cat},
+            "histogram": hist, "metadata": {"category": cat},
         })
-        histograms[cid] = hist
         categories[cid] = cat
     index = InvertedIndex()
     spimi_blocks = index.build_with_spimi(records, block_size=1000)
@@ -203,14 +215,24 @@ def run_scale(label: str) -> dict:
     print(f"  Paso 4/4 índice ({len(index)} chunks)  ({index_ms:.0f}ms)")
 
     # ── Consultas propias ──────────────────────────────────────────────────────
-    chunk_ids = list(histograms.keys())
-    qids = np.random.choice(chunk_ids, size=min(N_QUERIES, len(chunk_ids)), replace=False)
+    chunk_ids = list(categories.keys())
     category_counts = Counter(categories.values())
+    valid_queries = [
+        qid for qid in chunk_ids
+        if categories[qid] != "unknown" and category_counts[categories[qid]] > 1
+    ]
+    if not valid_queries:
+        valid_queries = chunk_ids
+    qids = np.random.choice(
+        valid_queries,
+        size=min(N_QUERIES, len(valid_queries)),
+        replace=False,
+    )
     latencies, precisions, recalls = [], [], []
     tp_values, fp_values, fn_values = [], [], []
     for qid in qids:
         t0 = time.perf_counter()
-        results = [r for r in index.search(histograms[qid], k=K + 1) if r.chunk_id != qid][:K]
+        results = [r for r in index.search(index.get_histogram(qid), k=K + 1) if r.chunk_id != qid][:K]
         latencies.append((time.perf_counter() - t0) * 1000)
         qcat = categories[qid]
         tp = sum(1 for r in results if r.metadata.get("category") == qcat)
@@ -253,6 +275,9 @@ def run_scale(label: str) -> dict:
     result = {
         "scale": label, "n_source_docs": len(manifest), "n_chunks": len(chunks),
         "n_codewords": len(cb.codebook), "spimi_blocks": spimi_blocks, "k": K,
+        "effectiveness_metric": "precision@k and recall@k by dataset category",
+        "ground_truth": "AG News category; query document excluded from top-k",
+        "n_eval_queries": int(len(qids)),
         "split_ms": round(split_ms, 1), "extract_ms": round(extract_ms, 1),
         "codebook_ms": round(codebook_ms, 1), "index_ms": round(index_ms, 1),
         "build_total_ms": round(build_ms, 1),
@@ -284,9 +309,25 @@ if __name__ == "__main__":
         "--scales", nargs="+", default=["1k", "10k", "100k"],
         help="Escalas a ejecutar (default: 1k 10k 100k)"
     )
+    parser.add_argument(
+        "--codebook-sizes", nargs="+", type=int, default=None,
+        help="Evalua distintos tamaños de diccionario y guarda text_codebook_k_results.json"
+    )
     args = parser.parse_args()
 
     np.random.seed(42)
+
+    if args.codebook_sizes:
+        results = []
+        for label in args.scales:
+            for size in args.codebook_sizes:
+                r = run_scale(label, codebook_k=size)
+                if r:
+                    results.append(r)
+        out = RESULTS_DIR / "text_codebook_k_results.json"
+        out.write_text(json.dumps(results, indent=2))
+        print(f"\nResultados de sensibilidad k guardados en {out}")
+        raise SystemExit(0)
 
     # Cargar resultados existentes para no perder otras escalas
     out = RESULTS_DIR / "text_results.json"

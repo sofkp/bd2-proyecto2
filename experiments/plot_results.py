@@ -21,9 +21,11 @@ GRAPHICS_DIR.mkdir(parents=True, exist_ok=True)
 # Configurar estilo
 plt.style.use("seaborn-v0_8-darkgrid")
 COLORS = {
-    "custom": "#2ecc71",  # Verde
-    "postgre": "#e74c3c",  # Rojo
-    "pgvector": "#3498db",  # Azul
+    "custom": "#7c4fa0",   
+    "postgre": "#d4845a",
+    "pgvector": "#3aaa72",
+    "ram": "#b89fd4",
+    "edge": "#3d2f52",
 }
 
 MODALITY_SPECS = {
@@ -145,7 +147,7 @@ def plot_audio_throughput():
     qps = [r["throughput_qps"] for r in results]
 
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.bar(scales, qps, color=COLORS["custom"], edgecolor="black", linewidth=1.5)
+    ax.bar(scales, qps, color=COLORS["custom"], edgecolor=COLORS["edge"], linewidth=1.5)
 
     ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Throughput (QPS)", fontsize=12, fontweight="bold")
@@ -179,9 +181,9 @@ def plot_audio_precision():
     x = np.arange(len(scales))
     w = 0.35
 
-    ax.bar(x - w / 2, precision,    w, label="AudioSearchIndex (Custom)", color=COLORS["custom"], edgecolor="black")
+    ax.bar(x - w / 2, precision, w, label="AudioSearchIndex (Custom)", color=COLORS["custom"], edgecolor=COLORS["edge"])
     if any(v > 0 for v in pg_precision):
-        ax.bar(x + w / 2, pg_precision, w, label="pgvector HNSW",              color=COLORS["pgvector"], edgecolor="black")
+        ax.bar(x + w / 2, pg_precision, w, label="pgvector HNSW", color=COLORS["pgvector"], edgecolor=COLORS["edge"])
 
     ax.set_xlabel("Escala (canciones)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Precision@10", fontsize=12, fontweight="bold")
@@ -260,7 +262,7 @@ def plot_text_throughput():
     qps = [r["throughput_qps"] for r in results]
 
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.bar(scales, qps, color=COLORS["custom"], edgecolor="black", linewidth=1.5)
+    ax.bar(scales, qps, color=COLORS["custom"], edgecolor=COLORS["edge"], linewidth=1.5)
 
     ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Throughput (QPS)", fontsize=12, fontweight="bold")
@@ -340,9 +342,9 @@ def plot_image_precision():
     x = np.arange(len(scales))
     w = 0.35
 
-    ax.bar(x - w / 2, precision, w, label="VisualSearchIndex (Custom)", color=COLORS["custom"],   edgecolor="black")
+    ax.bar(x - w / 2, precision, w, label="VisualSearchIndex (Custom)", color=COLORS["custom"], edgecolor=COLORS["edge"])
     if any(v > 0 for v in pg_prec):
-        ax.bar(x + w / 2, pg_prec,  w, label="pgvector HNSW",             color=COLORS["pgvector"], edgecolor="black")
+        ax.bar(x + w / 2, pg_prec, w, label="pgvector HNSW", color=COLORS["pgvector"], edgecolor=COLORS["edge"])
 
     ax.set_xlabel("Escala (imágenes)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Precision@10", fontsize=12, fontweight="bold")
@@ -382,9 +384,9 @@ def plot_text_precision():
     x = np.arange(len(scales))
     w = 0.35
 
-    ax.bar(x - w / 2, precision, w, label="InvertedIndex (Custom)", color=COLORS["custom"], edgecolor="black")
+    ax.bar(x - w / 2, precision, w, label="InvertedIndex (Custom)", color=COLORS["custom"], edgecolor=COLORS["edge"])
     if any(v > 0 for v in gin_prec):
-        ax.bar(x + w / 2, gin_prec, w, label="PostgreSQL GIN",         color=COLORS["postgre"], edgecolor="black")
+        ax.bar(x + w / 2, gin_prec, w, label="PostgreSQL GIN", color=COLORS["postgre"], edgecolor=COLORS["edge"])
 
     ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("Precision@10", fontsize=12, fontweight="bold")
@@ -423,7 +425,7 @@ def plot_text_ram():
     ram = [r["peak_ram_mb"] for r in results]
 
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.bar(scales, ram, color="#e67e22", edgecolor="black", linewidth=1.5)
+    ax.bar(scales, ram, color=COLORS["ram"], edgecolor=COLORS["edge"], linewidth=1.5)
 
     ax.set_xlabel("Escala (documentos/archivos)", fontsize=12, fontweight="bold")
     ax.set_ylabel("RAM pico (MB)", fontsize=12, fontweight="bold")
@@ -585,9 +587,6 @@ def plot_precision_comparison():
     x = np.arange(len(modalities))
     w = 0.35
 
-    bars1 = ax.bar(x - w / 2, custom_prec, w, label="Índice propio (Custom)", color=COLORS["custom"], edgecolor="black")
-    bars2 = ax.bar(x + w / 2, db_prec,     w, label="pgvector / GIN (PostgreSQL)", color=COLORS["pgvector"], edgecolor="black")
-
     ax.set_ylabel("Precision@10", fontsize=12, fontweight="bold")
     ax.set_title("Comparativa de Precisión@10: Índice Propio vs PostgreSQL (escala 10K)",
                  fontsize=14, fontweight="bold")
@@ -688,9 +687,9 @@ def plot_comparison_all_modalities():
         max_y = max(custom_lat + db_plot) if custom_lat or db_plot else 1
 
         bars1 = ax.bar(x - w / 2, custom_lat, w, label="Indice propio",
-                       color=COLORS["custom"], edgecolor="black")
+                       color=COLORS["custom"], edgecolor=COLORS["edge"])
         bars2 = ax.bar(x + w / 2, db_plot, w, label="PostgreSQL (GIN/pgvector)",
-                       color=COLORS["pgvector"], edgecolor="black")
+                       color=COLORS["pgvector"], edgecolor=COLORS["edge"])
 
         ax.set_ylabel("Latencia promedio (ms)", fontsize=12, fontweight="bold")
         ax.set_title(f"Latencia por modalidad: Custom vs PostgreSQL ({scale.upper()})",
@@ -741,9 +740,9 @@ def plot_precision_comparison():
         db_plot = [v if v is not None else 0 for v in db_prec]
 
         bars1 = ax.bar(x - w / 2, custom_prec, w, label="Indice propio",
-                       color=COLORS["custom"], edgecolor="black")
+                       color=COLORS["custom"], edgecolor=COLORS["edge"])
         bars2 = ax.bar(x + w / 2, db_plot, w, label="PostgreSQL (GIN/pgvector)",
-                       color=COLORS["pgvector"], edgecolor="black")
+                       color=COLORS["pgvector"], edgecolor=COLORS["edge"])
 
         ax.set_ylabel("Precision@10", fontsize=12, fontweight="bold")
         ax.set_title(f"Precision@10 por modalidad: Custom vs PostgreSQL ({scale.upper()})",
@@ -794,9 +793,9 @@ def plot_recall_comparison():
         db_plot = [v if v is not None else 0 for v in db_recall]
 
         bars1 = ax.bar(x - w / 2, custom_recall, w, label="Indice propio",
-                       color=COLORS["custom"], edgecolor="black")
+                       color=COLORS["custom"], edgecolor=COLORS["edge"])
         bars2 = ax.bar(x + w / 2, db_plot, w, label="PostgreSQL (GIN/pgvector)",
-                       color=COLORS["pgvector"], edgecolor="black")
+                       color=COLORS["pgvector"], edgecolor=COLORS["edge"])
 
         ax.set_ylabel("Recall@10", fontsize=12, fontweight="bold")
         ax.set_title(f"Recall@10 por modalidad: Custom vs PostgreSQL ({scale.upper()})",
@@ -818,6 +817,92 @@ def plot_recall_comparison():
         fig.savefig(out, dpi=150)
         print(f"  [OK] {out.name}")
         plt.close(fig)
+
+
+def plot_summary_latency_10k():
+    """Grafico resumen: latencia del indice propio por modalidad en escala comparable."""
+    data = []
+    for modality in ("audio", "text", "image"):
+        spec = MODALITY_SPECS[modality]
+        result = _load_results_by_scale(spec["path"]).get("10k")
+        if result:
+            data.append((f"{spec['label']} (10K)", result["avg_latency_ms"]))
+
+    if not data:
+        print("  [SKIP] No hay datos para resumen global de latencia")
+        return
+
+    labels = [item[0] for item in data]
+    latencies = [item[1] for item in data]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    bars = ax.bar(labels, latencies, color=COLORS["custom"], edgecolor=COLORS["edge"], linewidth=1.5)
+    ax.set_ylabel("Latencia promedio (ms)", fontsize=12, fontweight="bold")
+    ax.set_title("Comparacion de latencia por modalidad (indice propio, 10K)",
+                 fontsize=14, fontweight="bold")
+    ax.grid(axis="y", alpha=0.3)
+
+    max_y = max(latencies)
+    for bar, value in zip(bars, latencies):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            value + max_y * 0.04,
+            f"{value:.2f} ms",
+            ha="center",
+            fontsize=10,
+            fontweight="bold",
+        )
+
+    out = GRAPHICS_DIR / "comparison_all_latency.png"
+    fig.tight_layout()
+    fig.savefig(out, dpi=150)
+    print(f"  [OK] {out.name}")
+    plt.close(fig)
+
+
+def plot_summary_precision_10k():
+    """Grafico resumen: Precision@10 propia vs PostgreSQL en escala 10K."""
+    modalities, custom_prec, db_prec = [], [], []
+    for modality in ("audio", "text", "image"):
+        spec = MODALITY_SPECS[modality]
+        result = _load_results_by_scale(spec["path"]).get("10k")
+        if not result:
+            continue
+        modalities.append(f"{spec['label']} (10K)")
+        custom_prec.append(result["precision_at_k"])
+        db_prec.append(result.get(spec["db_precision_key"]))
+
+    if not modalities:
+        print("  [SKIP] No hay datos para resumen global de precision")
+        return
+
+    fig, ax = plt.subplots(figsize=(11, 6))
+    x = np.arange(len(modalities))
+    w = 0.35
+    db_plot = [value if value is not None else 0 for value in db_prec]
+
+    bars1 = ax.bar(x - w / 2, custom_prec, w, label="Indice propio",
+                   color=COLORS["custom"], edgecolor=COLORS["edge"])
+    bars2 = ax.bar(x + w / 2, db_plot, w, label="PostgreSQL (GIN/pgvector)",
+                   color=COLORS["pgvector"], edgecolor=COLORS["edge"])
+
+    ax.set_ylabel("Precision@10", fontsize=12, fontweight="bold")
+    ax.set_title("Comparacion de Precision@10 por modalidad (10K)",
+                 fontsize=14, fontweight="bold")
+    ax.set_xticks(x)
+    ax.set_xticklabels(modalities, fontsize=11)
+    ax.set_ylim([0, 1.2])
+    ax.legend(fontsize=10)
+    ax.grid(axis="y", alpha=0.3)
+
+    _annotate_bars(ax, bars1, custom_prec, 0.02)
+    _annotate_bars(ax, bars2, db_prec, 0.02)
+
+    out = GRAPHICS_DIR / "comparison_precision.png"
+    fig.tight_layout()
+    fig.savefig(out, dpi=150)
+    print(f"  [OK] {out.name}")
+    plt.close(fig)
 
 
 def main():
@@ -842,6 +927,8 @@ def main():
     plot_scalability()
     plot_precision_comparison()
     plot_recall_comparison()
+    plot_summary_latency_10k()
+    plot_summary_precision_10k()
 
     print(f"\nGráficos guardados en: {GRAPHICS_DIR}/")
 
