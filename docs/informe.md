@@ -344,15 +344,6 @@ Gráfica de escalabilidad general:
 | Imagen | ![Latencia en imagen](../experiments/grafica_analisis/image_latency.png) | ![Precisión en imagen](../experiments/grafica_analisis/image_precision.png) |
 | Audio | ![Latencia en audio](../experiments/grafica_analisis/audio_latency.png) | ![Precisión en audio](../experiments/grafica_analisis/audio_precision.png) |
 
-### 14.3. Gráficas De Apoyo
-
-| Aspecto | Gráfica |
-| --- | --- |
-| Throughput textual | ![Throughput en texto](../experiments/grafica_analisis/text_throughput.png) |
-| Uso de RAM en texto | ![Uso de RAM en texto](../experiments/grafica_analisis/text_ram.png) |
-| Throughput de audio | ![Throughput en audio](../experiments/grafica_analisis/audio_throughput.png) |
-| Recall en 100K | ![Recall por modalidad en 100K](../experiments/grafica_analisis/comparison_recall_100k.png) |
-
 ## 15. Análisis
 
 ### Texto
